@@ -158,6 +158,7 @@ class ViewController: UIViewController {
         
         // TO-DO LIST
         // ** pause game when home button is pressed
+        // binbucket
         
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
         
@@ -219,8 +220,6 @@ class ViewController: UIViewController {
         
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
-        
-        // add comment
         
     }
 
