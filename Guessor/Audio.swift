@@ -70,6 +70,7 @@ extension ViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Sound for just pressing a button
     func pressButtonSound() {
         if (count == 0){
             buttonPressSound.enableRate = false

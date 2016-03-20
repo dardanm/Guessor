@@ -108,6 +108,7 @@ class ViewController: UIViewController {
     @IBOutlet var tryAgainLabel: UIButton!
     // "try aagain" function
     @IBAction func tryAgain(sender: AnyObject) {
+        stopTimer()
         tryAgain()
     }
     
@@ -1742,8 +1743,9 @@ class ViewController: UIViewController {
             levelCompleteOptions()
             disableButtons()
             stopTimer()
-            tryAgain()
+            resetRoll()
         }
+        
         if lives == 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}
         if lives == 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}
         if lives == 0 {lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)}

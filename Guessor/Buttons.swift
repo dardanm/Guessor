@@ -14,6 +14,7 @@ extension ViewController {
     
     // ========= GUI / BUTTONS
     
+    // set shadow options for buttons -- condense?
     func shadowOptions() {
         firstNumber.layer.shadowRadius = 0
         firstNumber.layer.shadowOpacity = 1
@@ -68,26 +69,27 @@ extension ViewController {
         buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
     }
     
-    func greenBackgroundOptions(){
-        self.buttonOneOptionsColors()
-        self.buttonOneOptionsText()
-        self.buttonTwoOptionsColors()
-        self.buttonTwoOptionsText()
-        self.buttonThreeOptionsText()
-        self.buttonThreeOptionsColors()
-        self.buttonFourOptionsColors()
-        self.buttonFourOptionsText()
-        self.buttonFiveOptionsColors()
-        self.buttonFiveOptionsText()
-        self.buttonSixOptionsText()
-        self.buttonSixOptionsColors()
-        self.buttonSevenOptionsColors()
-        self.buttonSevenOptionsText()
-        self.buttonEightOptionsColors()
-        self.buttonEightOptionsText()
-        self.buttonNineOptionsText()
-        self.buttonNineOptionsColors()
-    }
+    
+//    func greenBackgroundOptions(){
+//        self.buttonOneOptionsColors()
+//        self.buttonOneOptionsText()
+//        self.buttonTwoOptionsColors()
+//        self.buttonTwoOptionsText()
+//        self.buttonThreeOptionsText()
+//        self.buttonThreeOptionsColors()
+//        self.buttonFourOptionsColors()
+//        self.buttonFourOptionsText()
+//        self.buttonFiveOptionsColors()
+//        self.buttonFiveOptionsText()
+//        self.buttonSixOptionsText()
+//        self.buttonSixOptionsColors()
+//        self.buttonSevenOptionsColors()
+//        self.buttonSevenOptionsText()
+//        self.buttonEightOptionsColors()
+//        self.buttonEightOptionsText()
+//        self.buttonNineOptionsText()
+//        self.buttonNineOptionsColors()
+//    }
     
     func disableButtons(){
         buttonOneLabel.enabled = false

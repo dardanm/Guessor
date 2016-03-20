@@ -50,10 +50,61 @@ extension ViewController {
     // Try Again
     func tryAgain(){
         
-        print("before generated numbers")
-        print("top first number " + "\(firstNumber.text)")
-        print("bottom first number " + "\(buttonOneText.text)")
-        print(" ")
+        enableButtons()
+        
+        // top numbers randomize
+        numberOneOptionsColors()
+        numberOneOptionsText()
+        
+        numberTwoOptionsColors()
+        numberTwoOptionsText()
+        
+        numberThreeOptionsColors()
+        numberThreeOptionsText()
+        
+        numberFourOptionsColors()
+        numberFourOptionsText()
+        
+        // bottom numbers randomize
+        buttonOneOptionsText()
+        buttonTwoOptionsText()
+        buttonThreeOptionsText()
+        buttonFourOptionsText()
+        buttonFiveOptionsText()
+        buttonSixOptionsText()
+        buttonSevenOptionsText()
+        buttonEightOptionsText()
+        buttonNineOptionsText()
+        
+        buttonOneOptionsColors()
+        buttonTwoOptionsColors()
+        buttonThreeOptionsColors()
+        buttonFourOptionsColors()
+        buttonFiveOptionsColors()
+        buttonSixOptionsColors()
+        buttonSevenOptionsColors()
+        buttonEightOptionsColors()
+        buttonNineOptionsColors()
+        
+        shadowOptions()
+        
+        startTimer()
+        
+        count = 10 + 1
+        scoreKeep = 0
+        score.text = "0" + "\(scoreKeep)"
+        lives = 3
+        runOrNot = 4
+        
+        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
+        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
+        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        
+        tryAgainLabel.layer.opacity = 0
+    }
+    
+    // Reset Roll
+    func resetRoll(){
         
         enableButtons()
         
@@ -90,25 +141,15 @@ extension ViewController {
         buttonEightOptionsColors()
         buttonNineOptionsColors()
         
-        print("after generated numbers")
-        print("top first number " + "\(firstNumber.text)")
-        print("bottom first number " + "\(buttonOneText.text)")
-        
         shadowOptions()
         
         startTimer()
         
-        count = 10
+        count = 10 + 1
+        runOrNot = 4
         scoreKeep = 0
         score.text = "0" + "\(scoreKeep)"
-        lives = 3
-        runOrNot = 4
-        
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        
-        tryAgainLabel.layer.opacity = 0
+
     }
     
     
