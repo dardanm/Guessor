@@ -182,6 +182,8 @@ class ViewController: UIViewController {
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
         
+        tryAgain()
+        
     }
 
     
@@ -1708,11 +1710,6 @@ class ViewController: UIViewController {
         if count == 0 {
             progressTimer.progress = 0.0
         }
-        
-        if lives == 0  || score == 4 {
-//            timer.invalidate()
-            
-        }
 
         countDownLabel.text = String(count)
         
@@ -1722,6 +1719,31 @@ class ViewController: UIViewController {
         if (count == 0){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
+    }
+    
+    func gameFinish(){
+        
+        if ( count == 0 ){
+            disableButtons()
+            tryAgain()
+            tryAgainLabel.layer.opacity = 1
+            tryAgainLabel.enabled = true
+        }
+        if ( lives == 0 ){
+            disableButtons()
+            tryAgainLabel.layer.opacity = 1
+            tryAgainLabel.enabled = true
+        }
+        if scoreKeep == 4 {
+            levelCompleteOptions()
+            disableButtons()
+            tryAgain()
+            // time pause
+            //            timer.invalidate()
+        }
+        if lives == 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+        if lives == 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+        if lives == 0 {lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)}
     }
     
 
