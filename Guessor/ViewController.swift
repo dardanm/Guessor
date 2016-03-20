@@ -101,45 +101,8 @@ class ViewController: UIViewController {
     @IBOutlet var tryAgainLabel: UIButton!
     
     @IBAction func tryAgain(sender: AnyObject) {
-        enableButtons()
-        
-        numberOneOptionsColors()
-        numberTwoOptionsColors()
-        numberThreeOptionsColors()
-        numberFourOptionsColors()
-        
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
-        
-        buttonOneOptionsColors()
-        buttonTwoOptionsColors()
-        buttonThreeOptionsColors()
-        buttonFourOptionsColors()
-        buttonFiveOptionsColors()
-        buttonSixOptionsColors()
-        buttonSevenOptionsColors()
-        buttonEightOptionsColors()
-        buttonNineOptionsColors()
-        
-        shadowOptions()
-        
-        count = 10
-        scoreKeep = 0
-        score.text = "0" + "\(scoreKeep)"
-        lives = 3
-        
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        
-        tryAgainLabel.layer.opacity = 0
+
+        tryAgain()
         
     }
     
@@ -1746,8 +1709,9 @@ class ViewController: UIViewController {
             progressTimer.progress = 0.0
         }
         
-        if lives == 0 {
+        if lives == 0  || score == 4 {
 //            timer.invalidate()
+            
         }
 
         countDownLabel.text = String(count)

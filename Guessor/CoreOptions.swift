@@ -137,6 +137,7 @@ extension ViewController {
         if scoreKeep == 4 {
             levelCompleteOptions()
             disableButtons()
+            tryAgain()
             // time pause
             //            timer.invalidate()
         }
@@ -198,7 +199,50 @@ extension ViewController {
         return [UIInterfaceOrientationMask.Portrait ,UIInterfaceOrientationMask.PortraitUpsideDown]
     }
     
-    
+    // Try Again
+    func tryAgain(){
+        
+        enableButtons()
+        
+        numberOneOptionsColors()
+        numberTwoOptionsColors()
+        numberThreeOptionsColors()
+        numberFourOptionsColors()
+        
+        buttonOneOptionsText()
+        buttonTwoOptionsText()
+        buttonThreeOptionsText()
+        buttonFourOptionsText()
+        buttonFiveOptionsText()
+        buttonSixOptionsText()
+        buttonSevenOptionsText()
+        buttonEightOptionsText()
+        buttonNineOptionsText()
+        
+        buttonOneOptionsColors()
+        buttonTwoOptionsColors()
+        buttonThreeOptionsColors()
+        buttonFourOptionsColors()
+        buttonFiveOptionsColors()
+        buttonSixOptionsColors()
+        buttonSevenOptionsColors()
+        buttonEightOptionsColors()
+        buttonNineOptionsColors()
+        
+        shadowOptions()
+        
+        count = 10
+        scoreKeep = 0
+        score.text = "0" + "\(scoreKeep)"
+        lives = 3
+        
+        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
+        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
+        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        
+        tryAgainLabel.layer.opacity = 0
+        
+    }
     
     
     
