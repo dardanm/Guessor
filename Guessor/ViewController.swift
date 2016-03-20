@@ -48,15 +48,15 @@ class ViewController: UIViewController {
     @IBOutlet var buttonNineLabel: UIButton!
     
     // initialized bottom buttons
-    var buttonOne:Int = 0
-    var buttonTwo:Int = 0
-    var buttonThree:Int = 0
-    var buttonFour:Int = 0
-    var buttonFive:Int = 0
-    var buttonSix:Int = 0
-    var buttonSeven:Int = 0
-    var buttonEight:Int = 0
-    var buttonNine:Int = 0
+    var buttonOne:String = "0"
+    var buttonTwo:String = "0"
+    var buttonThree:String = "0"
+    var buttonFour:String = "0"
+    var buttonFive:String = "0"
+    var buttonSix:String = "0"
+    var buttonSeven:String = "0"
+    var buttonEight:String = "0"
+    var buttonNine:String = "0"
     
     // LEVEL NUMBER
     var level:Int = 1
@@ -1727,21 +1727,22 @@ class ViewController: UIViewController {
         
         if ( count == 0 ){
             disableButtons()
+            stopTimer()
             tryAgain()
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
         }
         if ( lives == 0 ){
             disableButtons()
+            stopTimer()
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
         }
         if scoreKeep == 4 {
             levelCompleteOptions()
             disableButtons()
+            stopTimer()
             tryAgain()
-            // time pause
-            //            timer.invalidate()
         }
         if lives == 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}
         if lives == 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}

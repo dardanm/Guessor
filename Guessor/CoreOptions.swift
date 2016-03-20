@@ -13,47 +13,11 @@ import QuartzCore
 extension ViewController {
     
 
-    
+    // "level complete" display options
     func levelCompleteOptions(){
         levelComplete.textColor = UIColor (netHex: 0xFFFFFF)
         levelComplete.backgroundColor = UIColor (netHex: 0xA8E6CE)
         levelComplete.layer.opacity = 1.0
-    }
-    
-    func randomizeTopNumbers(){
-        value = Int(arc4random_uniform(3) + 1)
-        switch value {
-        case 1: firstNumber.text = "\(4)"
-        case 2: firstNumber.text = "\(2)"
-        case 3: if secondNumber.text != "\(2)"{
-            firstNumber.text = "\(3)"
-        } else {
-            randomizeTopNumbers()
-            }
-        default: firstNumber.text = "\(20)"
-        }
-        
-        value = Int(arc4random_uniform(3) + 1)
-        switch value {
-        case 1: secondNumber.text = "\(4)"
-        case 2: secondNumber.text = "\(2)"
-        case 3: if firstNumber.text != "\(2)"{
-            secondNumber.text = "\(3)"
-        } else {
-            randomizeTopNumbers()
-            }
-        default: firstNumber.text = "\(20)"
-        }
-    }
-    
-    func wrongAnswer(){
-        if buttonOneText.text == "\(3)" {
-            pressButtonCorrectSound()
-        }
-        
-        if buttonTwoText.text == "\(3)" {
-            pressButtonCorrectSound()
-        }
     }
     
     
@@ -86,12 +50,25 @@ extension ViewController {
     // Try Again
     func tryAgain(){
         
+        print("before generated numbers")
+        print("top first number " + "\(firstNumber.text)")
+        print("bottom first number " + "\(buttonOneText.text)")
+        print(" ")
+        
         enableButtons()
         
+        // top numbers randomize
         numberOneOptionsColors()
+        numberOneOptionsText()
+        
         numberTwoOptionsColors()
+        numberTwoOptionsText()
+        
         numberThreeOptionsColors()
+        numberThreeOptionsText()
+        
         numberFourOptionsColors()
+        numberFourOptionsText()
         
         buttonOneOptionsText()
         buttonTwoOptionsText()
@@ -113,12 +90,19 @@ extension ViewController {
         buttonEightOptionsColors()
         buttonNineOptionsColors()
         
+        print("after generated numbers")
+        print("top first number " + "\(firstNumber.text)")
+        print("bottom first number " + "\(buttonOneText.text)")
+        
         shadowOptions()
+        
+        startTimer()
         
         count = 10
         scoreKeep = 0
         score.text = "0" + "\(scoreKeep)"
         lives = 3
+        runOrNot = 4
         
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
@@ -126,59 +110,6 @@ extension ViewController {
         
         tryAgainLabel.layer.opacity = 0
     }
-    
-    func newGameScreen(){
-        
-        enableButtons()
-        
-        numberOneOptionsColors()
-        numberTwoOptionsColors()
-        numberThreeOptionsColors()
-        numberFourOptionsColors()
-        
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
-        
-        buttonOneOptionsColors()
-        buttonTwoOptionsColors()
-        buttonThreeOptionsColors()
-        buttonFourOptionsColors()
-        buttonFiveOptionsColors()
-        buttonSixOptionsColors()
-        buttonSevenOptionsColors()
-        buttonEightOptionsColors()
-        buttonNineOptionsColors()
-        
-        shadowOptions()
-        
-        count = 10
-        scoreKeep = 0
-        score.text = "0" + "\(scoreKeep)"
-        lives = 3
-        
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        
-        tryAgainLabel.layer.opacity = 0
-        
-    }
-    
-
-    
-    
-    
-    
-    
-    
-    
     
     
 }
