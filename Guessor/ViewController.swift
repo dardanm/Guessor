@@ -15,15 +15,17 @@ class ViewController: UIViewController {
     // score label
     @IBOutlet var score: UILabel!
     
+    // xp label
     @IBOutlet var xpLabel: UILabel!
 
+    // top numbers text
     @IBOutlet var firstNumber: UILabel!
     @IBOutlet var secondNumber: UILabel!
     @IBOutlet var thirdNumber: UILabel!
     @IBOutlet var fourthNumber: UILabel!
 
 
-    // button one text
+    // bottom buttons text
     @IBOutlet var buttonOneText: UILabel!
     @IBOutlet var buttonTwoText: UILabel!
     @IBOutlet var buttonThreeText: UILabel!
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
     @IBOutlet var buttonEightText: UILabel!
     @IBOutlet var buttonNineText: UILabel!
 
+    // bottom buttons background
     @IBOutlet var buttonOneLabel: UIButton!
     @IBOutlet var buttonTwoLabel: UIButton!
     @IBOutlet var buttonThreeLabel: UIButton!
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
     @IBOutlet var buttonEightLabel: UIButton!
     @IBOutlet var buttonNineLabel: UIButton!
     
+    // initialized bottom buttons
     var buttonOne:Int = 0
     var buttonTwo:Int = 0
     var buttonThree:Int = 0
@@ -66,6 +70,7 @@ class ViewController: UIViewController {
     // level complete
     @IBOutlet var levelComplete: UILabel!
     
+    // initalize audio
     var buttonPressSound: AVAudioPlayer!
     var buttonPressCorrectSound: AVAudioPlayer!
     var backgroundMusicPlayer = AVAudioPlayer()
@@ -93,22 +98,31 @@ class ViewController: UIViewController {
     // PROGRESS BAR
     @IBOutlet var progressTimer: UIProgressView!
     
-    
+    // used to compare colors -- double check
     @IBOutlet var testingLabel: UILabel!
     
+    // "generate" button
     @IBOutlet var generateLabel: UIButton!
 
+    // "try again" button background
     @IBOutlet var tryAgainLabel: UIButton!
-    
+    // "try aagain" function
     @IBAction func tryAgain(sender: AnyObject) {
-
         tryAgain()
-        
     }
     
+    // hide status bar
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    func startTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+    }
+    func stopTimer(){
+        timer.invalidate()
+    }
+    
     
     
     // ========= MAIN
@@ -117,15 +131,13 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        // writing text where text text write
-        
         // TO-DO LIST
         // ** pause game when home button is pressed
         // binbucket
         
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        startTimer()
         
         countDownLabel.textColor = UIColor(netHex: 0xf36723)
         
@@ -138,7 +150,7 @@ class ViewController: UIViewController {
         
         prefersStatusBarHidden()
         
-        // TOP Number Background color
+        // top numbers randomize
         numberOneOptionsColors()
         numberOneOptionsText()
         
@@ -151,8 +163,7 @@ class ViewController: UIViewController {
         numberFourOptionsColors()
         numberFourOptionsText()
         
-//      Button numbers randomize
-        
+        // bottom buttons randomize numbers
         buttonOneOptionsText()
         buttonTwoOptionsText()
         buttonThreeOptionsText()
@@ -163,6 +174,7 @@ class ViewController: UIViewController {
         buttonEightOptionsText()
         buttonNineOptionsText()
         
+        // bottom buttons randomize background colors
         buttonOneOptionsColors()
         buttonTwoOptionsColors()
         buttonThreeOptionsColors()
@@ -173,6 +185,7 @@ class ViewController: UIViewController {
         buttonEightOptionsColors()
         buttonNineOptionsColors()
         
+        // set shadow options for buttons
         shadowOptions()
         
         // try again
@@ -181,8 +194,6 @@ class ViewController: UIViewController {
 
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
-        
-        tryAgain()
         
     }
 
@@ -1655,22 +1666,12 @@ class ViewController: UIViewController {
 
     }
 
-
+    // when back button is pressed, stop background music
     @IBAction func backOption(sender: AnyObject) {
         backgroundMusicPlayer.stop()
     }
-
-
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
-    }
-    
+    // timer + timer progress bar
     func update() {
         
         if count != 0 {
@@ -1721,6 +1722,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // check if game is finished
     func gameFinish(){
         
         if ( count == 0 ){
@@ -1745,11 +1747,6 @@ class ViewController: UIViewController {
         if lives == 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}
         if lives == 0 {lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)}
     }
-    
-
-    
-    
-
 
 
 
