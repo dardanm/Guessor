@@ -12,11 +12,15 @@ import QuartzCore
 
 class ViewController: UIViewController {
     
+    // level
+    @IBOutlet weak var level: UILabel!
+    
     // score label
     @IBOutlet var score: UILabel!
     
     // xp label
     @IBOutlet var xpLabel: UILabel!
+    var xp:Int = 0
 
     // top numbers text
     @IBOutlet var firstNumber: UILabel!
@@ -59,7 +63,7 @@ class ViewController: UIViewController {
     var buttonNine:String = "0"
     
     // LEVEL NUMBER
-    var level:Int = 1
+    var levelText:Int = 1
     
     // multiply top-left # by top-right #
     var numMultiply = 0

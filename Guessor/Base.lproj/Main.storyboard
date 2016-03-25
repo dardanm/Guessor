@@ -1464,6 +1464,7 @@
                         <outlet property="firstNumber" destination="jhP-hq-PgZ" id="wPN-ei-QyT"/>
                         <outlet property="fourthNumber" destination="CLo-Mj-wGH" id="Y1I-fs-hab"/>
                         <outlet property="generateLabel" destination="Axr-7v-xDS" id="58S-bX-7zf"/>
+                        <outlet property="level" destination="bj2-fG-YPc" id="ggt-JW-u0u"/>
                         <outlet property="levelComplete" destination="GEf-oK-Wcr" id="tw8-rf-Vbq"/>
                         <outlet property="lifeOne" destination="0pB-y6-KD8" id="uL7-Ae-SU0"/>
                         <outlet property="lifeThree" destination="byT-f1-swE" id="Uv4-md-MWI"/>

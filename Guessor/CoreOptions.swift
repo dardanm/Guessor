@@ -109,12 +109,10 @@ extension ViewController {
         
         startTimer()
         
-//        count = 10 + 1
+//      count = 10 + 1
         scoreKeep = 0
         score.text = "0" + "\(scoreKeep)"
         levelComplete.layer.opacity = 0.0
-        
-        bugTestNumbers()
         
         // top numbers randomize
         numberOneOptionsColors()
@@ -150,21 +148,40 @@ extension ViewController {
         buttonEightOptionsColors()
         buttonNineOptionsColors()
         
-        bugTestNumbers()
-        
         shadowOptions()
     }
     
     func correctAnswer(){
         pressButtonCorrectSound()
         
-        xpProgressBar.progress += 0.1
+        updateLevel()
         
         // TIMER COUNT
         count++
         // PROGRESS BAR
         progressTimer.progress = progressTimer.progress + 0.1
         countDownLabel.text = String(count)
+        
+    }
+    
+    func updateLevel(){
+        
+        level.text = "LEVEL \(levelText)"
+        
+        if levelText == 1 {
+            xp += 10
+            xpLabel.text = "\(xp) / 120"
+            xpProgressBar.progress += 0.10
+            if xp == 100 {
+                levelText = 2
+            }
+        }
+        if levelText == 2 {
+            xp += 20
+            xpLabel.text = "\(xp) / 520"
+            xpProgressBar.progress += 0.05
+        }
+        
         
     }
     
