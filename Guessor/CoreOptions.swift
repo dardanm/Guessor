@@ -52,6 +52,18 @@ extension ViewController {
         
         enableButtons()
         
+        startTimer()
+        
+        count = 10 + 1
+        scoreKeep = 0
+        score.text = "0" + "\(scoreKeep)"
+        lives = 3
+        runOrNot = 4
+        
+        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
+        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
+        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        
         // top numbers randomize
         numberOneOptionsColors()
         numberOneOptionsText()
@@ -88,23 +100,20 @@ extension ViewController {
         
         shadowOptions()
         
-        startTimer()
-        
-        count = 10 + 1
-        scoreKeep = 0
-        score.text = "0" + "\(scoreKeep)"
-        lives = 3
-        runOrNot = 4
-        
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        
         tryAgainLabel.layer.opacity = 0
     }
     
     // Reset Roll
     func resetRoll(){
+        
+        startTimer()
+        
+        count = 10 + 1
+        runOrNot = 4
+        scoreKeep = 0
+        score.text = "0" + "\(scoreKeep)"
+        runOrNot = 4
+        levelComplete.layer.opacity = 0.0
         
         enableButtons()
         
@@ -142,14 +151,13 @@ extension ViewController {
         buttonNineOptionsColors()
         
         shadowOptions()
+    }
+    
+    func correctAnswer(){
+         pressButtonCorrectSound()
         
-        startTimer()
+        xpProgressBar.progress += 0.1
         
-        count = 10 + 1
-        runOrNot = 4
-        scoreKeep = 0
-        score.text = "0" + "\(scoreKeep)"
-
     }
     
     

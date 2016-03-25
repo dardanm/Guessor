@@ -112,6 +112,8 @@ class ViewController: UIViewController {
         tryAgain()
     }
     
+    @IBOutlet weak var xpProgressBar: UIProgressView!
+    
     // hide status bar
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -139,6 +141,9 @@ class ViewController: UIViewController {
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
         
         startTimer()
+        
+        xpProgressBar.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 8)
+        xpProgressBar.progress = 0.0
         
         countDownLabel.textColor = UIColor(netHex: 0xf36723)
         
@@ -240,7 +245,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -271,7 +276,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -302,7 +307,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -333,7 +338,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -399,7 +404,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -430,7 +435,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -461,7 +466,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -492,7 +497,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -560,7 +565,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -591,7 +596,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -622,7 +627,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -653,7 +658,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -720,7 +725,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -751,7 +756,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -782,7 +787,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -813,7 +818,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -880,7 +885,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -911,7 +916,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -942,7 +947,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -973,7 +978,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1040,7 +1045,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1071,7 +1076,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1102,7 +1107,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1133,7 +1138,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1200,7 +1205,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1231,7 +1236,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1262,7 +1267,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1293,7 +1298,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1360,7 +1365,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1391,7 +1396,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1422,7 +1427,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1453,7 +1458,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1520,7 +1525,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1551,7 +1556,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1582,7 +1587,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1613,7 +1618,7 @@ class ViewController: UIViewController {
                     } else {
                         score.text = "\(scoreKeep++ + 1)"
                     }
-                    pressButtonCorrectSound()
+                    correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
@@ -1683,7 +1688,7 @@ class ViewController: UIViewController {
             progressTimer.progress = 1.0
         }
         if count == 9 {
-        progressTimer.progress = 0.9
+            progressTimer.progress = 0.9
         }
         if count == 8 {
             progressTimer.progress = 0.8
@@ -1744,6 +1749,10 @@ class ViewController: UIViewController {
             disableButtons()
             stopTimer()
             resetRoll()
+        }
+        
+        if xpProgressBar.progress == 1.0 {
+            xpProgressBar.progress = 0.0
         }
         
         if lives == 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}

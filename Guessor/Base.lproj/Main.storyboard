@@ -1475,6 +1475,7 @@
                         <outlet property="thirdNumber" destination="FFx-KX-8l7" id="Bwq-89-2PF"/>
                         <outlet property="tryAgainLabel" destination="DLU-wt-WE7" id="sZH-ot-2vH"/>
                         <outlet property="xpLabel" destination="vnf-Cy-RMZ" id="nA9-kO-zgv"/>
+                        <outlet property="xpProgressBar" destination="HxD-aC-mEg" id="0FV-ld-aAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rJ-lN-ssg" sceneMemberID="firstResponder"/>
