@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0C51491CA5C67200925709 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C51481CA5C67200925709 /* Main.swift */; };
 		DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC11325F1C83D06600B19DCD /* AppDelegate.swift */; };
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
 		DC90B8541C7966D500CCC033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90B8531C7966D500CCC033 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0C51481CA5C67200925709 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DC11325F1C83D06600B19DCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		DC90B84E1C7966D500CCC033 /* Guessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				DC90B8531C7966D500CCC033 /* ViewController.swift */,
+				DC0C51481CA5C67200925709 /* Main.swift */,
 				DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */,
 				DCAAC8C11C9E3494000F5C99 /* Buttons.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
@@ -177,6 +180,7 @@
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
+				DC0C51491CA5C67200925709 /* Main.swift in Sources */,
 				DC90B8541C7966D500CCC033 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

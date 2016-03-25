@@ -109,7 +109,6 @@ extension ViewController {
         startTimer()
         
         count = 10 + 1
-        runOrNot = 4
         scoreKeep = 0
         score.text = "0" + "\(scoreKeep)"
         runOrNot = 4
@@ -130,6 +129,7 @@ extension ViewController {
         numberFourOptionsColors()
         numberFourOptionsText()
         
+        // bottom numbers randomize
         buttonOneOptionsText()
         buttonTwoOptionsText()
         buttonThreeOptionsText()
