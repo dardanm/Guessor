@@ -18,12 +18,7 @@ extension ViewController {
         do {
             self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonCorrect", ofType: "mp3")!))
             self.buttonPressCorrectSound.play()
-            // TIMER COUNT
-            count++
-            // PROGRESS BAR
-            progressTimer.progress = progressTimer.progress + 0.1
-            countDownLabel.text = String(count)
-            // EXP
+
             
         } catch {
             print("Error")

@@ -41,6 +41,8 @@ extension ViewController {
         
         prefersStatusBarHidden()
         
+        runOrNot = 4
+        
         // top numbers randomize
         numberOneOptionsColors()
         numberOneOptionsText()
@@ -90,6 +92,10 @@ extension ViewController {
     
     // timer + timer progress bar
     func update() {
+        
+        if scoreKeep == 0 {
+            runOrNot = 4
+        }
         
         if count != 0 {
             count--
@@ -143,19 +149,21 @@ extension ViewController {
     func gameFinish(){
         
         if ( count == 0 ){
+            runOrNot = 4
             disableButtons()
             stopTimer()
-            tryAgain()
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
         }
         if ( lives == 0 ){
+            runOrNot = 4
             disableButtons()
             stopTimer()
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
         }
         if scoreKeep == 4 {
+            runOrNot = 4
             levelCompleteOptions()
             disableButtons()
             stopTimer()
