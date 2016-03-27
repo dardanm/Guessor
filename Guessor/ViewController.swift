@@ -290,26 +290,26 @@ class ViewController: UIViewController {
     @IBAction func buttonOneRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-        if buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonOneText.text == firstNumber.text{
-            runOrNot--
-        }
+            if buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonOneText.text == firstNumber.text{
+                runOrNot -= 1
+            }
         }
         
         if runOrNot == 3 {
-        if buttonOneLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonOneText.text == secondNumber.text {
-            runOrNot--
-        }
+            if buttonOneLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonOneText.text == secondNumber.text {
+                runOrNot -= 1
+            }
         }
         
         if runOrNot == 2 {
             if buttonOneLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonOneText.text == thirdNumber.text {
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonOneLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonOneText.text == fourthNumber.text {
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
@@ -451,25 +451,25 @@ class ViewController: UIViewController {
       
         if runOrNot == 4 {
             if buttonTwoLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonTwoText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonTwoLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonTwoText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonTwoLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonTwoText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonTwoLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonTwoText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
@@ -611,25 +611,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonThreeLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonThreeText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonThreeLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonThreeText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonThreeLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonThreeText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonThreeLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonThreeText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
@@ -771,25 +771,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonFourLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonFourText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonFourLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonFourText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonFourLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonFourText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonFourLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonFourText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
@@ -931,25 +931,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonFiveLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonFiveText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonFiveLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonFiveText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonFiveLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonFiveText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonFiveLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonFiveText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
@@ -1091,25 +1091,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonSixLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonSixText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonSixLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonSixText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonSixLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonSixText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonSixLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonSixText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
@@ -1251,25 +1251,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonSevenLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonSevenText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonSevenLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonSevenText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonSevenLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonSevenText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonSevenLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonSevenText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
@@ -1411,25 +1411,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonEightLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonEightText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonEightLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonEightText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonEightLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonEightText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonEightLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonEightText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
@@ -1571,25 +1571,25 @@ class ViewController: UIViewController {
         
         if runOrNot == 4 {
             if buttonNineLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonNineText.text == firstNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
             if buttonNineLabel.backgroundColor!.isEqual(secondNumber.backgroundColor) && buttonNineText.text == secondNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
             if buttonNineLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor) && buttonNineText.text == thirdNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
             if buttonNineLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor) && buttonNineText.text == fourthNumber.text{
-                runOrNot--
+                runOrNot -= 1
             }
         }
 
