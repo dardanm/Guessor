@@ -114,40 +114,42 @@ extension ViewController {
         score.text = "0" + "\(scoreKeep)"
         levelComplete.layer.opacity = 0.0
         
+        delay(0.5){
         // top numbers randomize
-        numberOneOptionsColors()
-        numberOneOptionsText()
+        self.numberOneOptionsColors()
+        self.numberOneOptionsText()
         
-        numberTwoOptionsColors()
-        numberTwoOptionsText()
+        self.numberTwoOptionsColors()
+        self.numberTwoOptionsText()
         
-        numberThreeOptionsColors()
-        numberThreeOptionsText()
+        self.numberThreeOptionsColors()
+        self.numberThreeOptionsText()
         
-        numberFourOptionsColors()
-        numberFourOptionsText()
+        self.numberFourOptionsColors()
+        self.numberFourOptionsText()
         
         // bottom numbers randomize
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
+        self.buttonOneOptionsText()
+        self.buttonTwoOptionsText()
+        self.buttonThreeOptionsText()
+        self.buttonFourOptionsText()
+        self.buttonFiveOptionsText()
+        self.buttonSixOptionsText()
+        self.buttonSevenOptionsText()
+        self.buttonEightOptionsText()
+        self.buttonNineOptionsText()
         
-        buttonOneOptionsColors()
-        buttonTwoOptionsColors()
-        buttonThreeOptionsColors()
-        buttonFourOptionsColors()
-        buttonFiveOptionsColors()
-        buttonSixOptionsColors()
-        buttonSevenOptionsColors()
-        buttonEightOptionsColors()
-        buttonNineOptionsColors()
-        
+        self.buttonOneOptionsColors()
+        self.buttonTwoOptionsColors()
+        self.buttonThreeOptionsColors()
+        self.buttonFourOptionsColors()
+        self.buttonFiveOptionsColors()
+        self.buttonSixOptionsColors()
+        self.buttonSevenOptionsColors()
+        self.buttonEightOptionsColors()
+        self.buttonNineOptionsColors()
+        }
+            
         shadowOptions()
     }
     
