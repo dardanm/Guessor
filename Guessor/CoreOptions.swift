@@ -110,11 +110,14 @@ extension ViewController {
         startTimer()
         
 //      count = 10 + 1
-        scoreKeep = 0
-        score.text = "0" + "\(scoreKeep)"
-        levelComplete.layer.opacity = 0.0
         
-        delay(0.5){
+        delay(1.0){
+        
+        self.scoreKeep = 0
+        self.score.text = "0" + "\(self.scoreKeep)"
+        self.levelComplete.layer.opacity = 0.0
+            
+            
         // top numbers randomize
         self.numberOneOptionsColors()
         self.numberOneOptionsText()

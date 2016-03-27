@@ -164,7 +164,6 @@ extension ViewController {
         }
         if scoreKeep == 4 {
             runOrNot = 4
-            levelCompleteOptions()
             disableButtons()
             stopTimer()
             resetRoll()

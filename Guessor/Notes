@@ -1,0 +1,9 @@
+NOTES
+
++ CHANGES TO MAKE
+- Each new screen should give 4 answers to top buttons
+    Remove "genrate" button
+
+
++ FIXES
+-- Fix exp bar / exp in general
