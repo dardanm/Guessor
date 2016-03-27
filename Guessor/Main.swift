@@ -98,7 +98,7 @@ extension ViewController {
         }
         
         if count != 0 {
-            count--
+            count -= 1
         }
         
         if count >= 10 {

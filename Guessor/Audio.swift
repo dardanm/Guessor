@@ -32,7 +32,7 @@ extension ViewController {
         do {
             self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonIncorrect", ofType: "mp3")!))
             self.buttonPressCorrectSound.play()
-            count--
+            count -= 1
             progressTimer.progress = progressTimer.progress - 0.1
             countDownLabel.text = String(count)
             

@@ -159,7 +159,7 @@ extension ViewController {
         updateLevel()
         
         // TIMER COUNT
-        count++
+        count += 1
         // PROGRESS BAR
         progressTimer.progress = progressTimer.progress + 0.1
         countDownLabel.text = String(count)
