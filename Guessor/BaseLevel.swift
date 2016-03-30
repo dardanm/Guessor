@@ -120,10 +120,10 @@ class BaseLevel: UIViewController {
     
     @IBOutlet weak var xpProgressBar: UIProgressView!
     
-    // hide status bar
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+//    // hide status bar
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
     
     func startTimer(){
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
@@ -169,9 +169,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -198,9 +198,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -227,9 +227,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -256,9 +256,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -320,9 +320,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -349,9 +349,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -378,9 +378,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -407,9 +407,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -473,9 +473,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -502,9 +502,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -531,9 +531,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -560,9 +560,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -625,9 +625,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -654,9 +654,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -683,9 +683,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -712,9 +712,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -777,9 +777,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -806,9 +806,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -835,9 +835,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -864,9 +864,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -929,9 +929,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -958,9 +958,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -987,9 +987,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1016,9 +1016,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1081,9 +1081,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1110,9 +1110,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1139,9 +1139,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1168,9 +1168,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1233,9 +1233,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1262,9 +1262,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1291,9 +1291,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1320,9 +1320,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1385,9 +1385,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1414,9 +1414,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1443,9 +1443,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
@@ -1472,9 +1472,9 @@ class BaseLevel: UIViewController {
                     score.text = "0\(scoreKeep)"
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
-                    fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
+                    fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {

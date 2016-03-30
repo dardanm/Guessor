@@ -11,7 +11,6 @@
 		DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC11325F1C83D06600B19DCD /* AppDelegate.swift */; };
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
 		DC90B8541C7966D500CCC033 /* BaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90B8531C7966D500CCC033 /* BaseLevel.swift */; };
-		DC90B8571C7966D500CCC033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC90B8551C7966D500CCC033 /* Main.storyboard */; };
 		DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC90B8581C7966D500CCC033 /* Assets.xcassets */; };
 		DC90B8691C7981FC00CCC033 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC90B8681C7981FC00CCC033 /* AVFoundation.framework */; };
 		DC9CE1D81CA7883800817C02 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DC9CE1D71CA7883800817C02 /* Notes */; };
@@ -22,6 +21,14 @@
 		DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */; };
 		DCAAC8C21C9E3494000F5C99 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAAC8C11C9E3494000F5C99 /* Buttons.swift */; };
 		DCAAC8C41C9E3572000F5C99 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAAC8C31C9E3572000F5C99 /* Audio.swift */; };
+		DCB3C1831CAC70D200B6BB87 /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C1821CAC70D200B6BB87 /* launchimage.png */; };
+		DCB3C1841CAC728B00B6BB87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC90B8551C7966D500CCC033 /* Main.storyboard */; };
+		DCB3C1861CAC735E00B6BB87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */; };
+		DCB3C18D1CAC761300B6BB87 /* GuessorAppIcon3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C18B1CAC761300B6BB87 /* GuessorAppIcon3x.png */; };
+		DCB3C18E1CAC761300B6BB87 /* GuessorAppIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C18C1CAC761300B6BB87 /* GuessorAppIcon2x.png */; };
+		DCB3C1901CAC78DA00B6BB87 /* LaunchImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C18F1CAC78DA00B6BB87 /* LaunchImage1.png */; };
+		DCB3C1921CAC7D0500B6BB87 /* Myriad-Pro-Semibold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C1911CAC7D0500B6BB87 /* Myriad-Pro-Semibold-Italic.ttf */; };
+		DCB3C1941CAC7E6E00B6BB87 /* launcherimage.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB3C1931CAC7E6E00B6BB87 /* launcherimage.png */; };
 		DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */; };
 		DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */; };
 		DCDE3AD51CAB5FD400C8F559 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */; };
@@ -45,6 +52,13 @@
 		DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreOptions.swift; sourceTree = "<group>"; };
 		DCAAC8C11C9E3494000F5C99 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		DCAAC8C31C9E3572000F5C99 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		DCB3C1821CAC70D200B6BB87 /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
+		DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCB3C18B1CAC761300B6BB87 /* GuessorAppIcon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuessorAppIcon3x.png; sourceTree = "<group>"; };
+		DCB3C18C1CAC761300B6BB87 /* GuessorAppIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuessorAppIcon2x.png; sourceTree = "<group>"; };
+		DCB3C18F1CAC78DA00B6BB87 /* LaunchImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage1.png; sourceTree = "<group>"; };
+		DCB3C1911CAC7D0500B6BB87 /* Myriad-Pro-Semibold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Semibold-Italic.ttf"; sourceTree = "<group>"; };
+		DCB3C1931CAC7E6E00B6BB87 /* launcherimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcherimage.png; sourceTree = "<group>"; };
 		DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joystix monospace.ttf"; sourceTree = "<group>"; };
 		DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
@@ -88,13 +102,20 @@
 				DCAAC8BB1C9E1B53000F5C99 /* buttonIncorrect.mp3 */,
 				DCAAC8B71C9E1841000F5C99 /* buttonCorrect.mp3 */,
 				DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */,
+				DCB3C1911CAC7D0500B6BB87 /* Myriad-Pro-Semibold-Italic.ttf */,
 				DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */,
 				DCAAC8B11C9E14FA000F5C99 /* background.mp3 */,
 				DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */,
 				DC90B8551C7966D500CCC033 /* Main.storyboard */,
+				DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */,
 				DC5AAD2F1C868083006B8BD3 /* Start.swift */,
+				DCB3C1931CAC7E6E00B6BB87 /* launcherimage.png */,
 				DC90B8581C7966D500CCC033 /* Assets.xcassets */,
+				DCB3C1821CAC70D200B6BB87 /* launchimage.png */,
+				DCB3C18F1CAC78DA00B6BB87 /* LaunchImage1.png */,
 				DC90B85D1C7966D500CCC033 /* Info.plist */,
+				DCB3C18B1CAC761300B6BB87 /* GuessorAppIcon3x.png */,
+				DCB3C18C1CAC761300B6BB87 /* GuessorAppIcon2x.png */,
 			);
 			path = Guessor;
 			sourceTree = "<group>";
@@ -174,13 +195,20 @@
 				DCAAC8BE1C9E1CB4000F5C99 /* button.png in Resources */,
 				DCAAC8BC1C9E1B53000F5C99 /* buttonIncorrect.mp3 in Resources */,
 				DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */,
+				DCB3C18E1CAC761300B6BB87 /* GuessorAppIcon2x.png in Resources */,
 				DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */,
-				DC90B8571C7966D500CCC033 /* Main.storyboard in Resources */,
+				DCB3C1921CAC7D0500B6BB87 /* Myriad-Pro-Semibold-Italic.ttf in Resources */,
 				DCDE3AD51CAB5FD400C8F559 /* PressStart2P.ttf in Resources */,
+				DCB3C1841CAC728B00B6BB87 /* Main.storyboard in Resources */,
+				DCB3C1831CAC70D200B6BB87 /* launchimage.png in Resources */,
 				DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */,
 				DCAAC8B81C9E1841000F5C99 /* buttonCorrect.mp3 in Resources */,
+				DCB3C1941CAC7E6E00B6BB87 /* launcherimage.png in Resources */,
+				DCB3C1861CAC735E00B6BB87 /* LaunchScreen.storyboard in Resources */,
 				DC9CE1D81CA7883800817C02 /* Notes in Resources */,
+				DCB3C18D1CAC761300B6BB87 /* GuessorAppIcon3x.png in Resources */,
 				DCAAC8B21C9E14FA000F5C99 /* background.mp3 in Resources */,
+				DCB3C1901CAC78DA00B6BB87 /* LaunchImage1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,9 +328,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Guessor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meha.Guessor2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,9 +344,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Guessor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meha.Guessor2;
 				PRODUCT_NAME = "$(TARGET_NAME)";

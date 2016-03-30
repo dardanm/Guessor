@@ -108,8 +108,10 @@ extension BaseLevel {
         enableButtons()
         
         startTimer()
+
+        count += 2
+        countDownLabel.text = "\(count)"
         
-        count = 10 + 1
         
         delay(0.5){
         
@@ -175,7 +177,7 @@ extension BaseLevel {
         
         if levelText == 1 {
             xp += 10
-            xpLabel.text = "\(xp) / 120"
+            xpLabel.text = "\(xp)"
             xpProgressBar.progress += 0.10
             if xp == 100 {
                 levelText = 2
@@ -233,6 +235,44 @@ extension BaseLevel {
         print(" ")
     }
     
+    func updateTimer(){
+        
+        
+        
+        if count >= 10 {
+            progressTimer.progress = 1.0
+        }
+        if count == 9 {
+            progressTimer.progress = 0.9
+        }
+        if count == 8 {
+            progressTimer.progress = 0.8
+        }
+        if count == 7 {
+            progressTimer.progress = 0.7
+        }
+        if count == 6 {
+            progressTimer.progress = 0.6
+        }
+        if count == 5 {
+            progressTimer.progress = 0.5
+        }
+        if count == 4 {
+            progressTimer.progress = 0.4
+        }
+        if count == 3 {
+            progressTimer.progress = 0.3
+        }
+        if count == 2 {
+            progressTimer.progress = 0.2
+        }
+        if count == 1 {
+            progressTimer.progress = 0.1
+        }
+        if count == 0 {
+            progressTimer.progress = 0.0
+        }
+    }
     
     
     

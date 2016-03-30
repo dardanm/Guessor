@@ -39,6 +39,19 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
+        // round buttons
+        self.firstNumber.layer.cornerRadius = 5.0
+        self.firstNumber.clipsToBounds = true
+        
+        self.secondNumber.layer.cornerRadius = 5.0
+        self.secondNumber.clipsToBounds = true
+        
+        self.thirdNumber.layer.cornerRadius = 5.0
+        self.thirdNumber.clipsToBounds = true
+        
+        self.fourthNumber.layer.cornerRadius = 5.0
+        self.fourthNumber.clipsToBounds = true
+        
         prefersStatusBarHidden()
         
         runOrNot = 4
@@ -124,15 +137,29 @@ extension BaseLevel {
             progressTimer.progress = 0.0
         }
         
+        if count == 0 || lives == 0 {
+            stopTimer()
+            tryAgainLabel.layer.opacity = 1.0
+            tryAgainLabel.enabled = true
+        }
+        
         countDownLabel.text = String(count)
         
         if (count == 1 || count == 2 || count == 3){
-            countDownLabel.textColor = UIColor(netHex: 0xfc913a)
+            countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
+
         if (count == 0){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
         
+        if count > 3 {
+            countDownLabel.textColor = UIColor(netHex: 0xf36723)
+        }
+        
+        if xpProgressBar.progress == 1.0 {
+            levelText += 1
+        }
 //        if (buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor)) {
 //            print("match!")
 //        } else {
