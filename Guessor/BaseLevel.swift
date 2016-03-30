@@ -51,6 +51,9 @@ class BaseLevel: UIViewController {
     @IBOutlet var buttonEightLabel: UIButton!
     @IBOutlet var buttonNineLabel: UIButton!
     
+    @IBOutlet weak var Time: UILabel!
+    @IBOutlet weak var Battery: UILabel!
+    
     // initialized bottom buttons
     var buttonOne:String = "0"
     var buttonTwo:String = "0"
@@ -116,14 +119,19 @@ class BaseLevel: UIViewController {
         tryAgain()
     }
     
+    // get time
+    let date = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+
+    
     var matchingAnswer:Bool = false
     
     @IBOutlet weak var xpProgressBar: UIProgressView!
     
-//    // hide status bar
-//    override func prefersStatusBarHidden() -> Bool {
-//        return true
-//    }
+    // hide status bar
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     func startTimer(){
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)

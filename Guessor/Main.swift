@@ -23,6 +23,21 @@ extension BaseLevel {
         
         // BUGS
         
+        // Battery
+        UIDevice.currentDevice().batteryMonitoringEnabled = true
+        func batteryLevel() -> Float {
+            return UIDevice.currentDevice().batteryLevel
+        }
+        Battery.text = "\(Int(batteryLevel()*100))"
+        
+        // Time
+        let components = calendar.components([ .Hour, .Minute, .Second], fromDate: date)
+        let hour = components.hour
+        let minutes = components.minute
+//      Time.text = "\(hour):\(minutes)"
+        
+        print(batteryLevel())
+        
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
         
         startTimer()
