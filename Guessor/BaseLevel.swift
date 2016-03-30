@@ -51,8 +51,7 @@ class BaseLevel: UIViewController {
     @IBOutlet var buttonEightLabel: UIButton!
     @IBOutlet var buttonNineLabel: UIButton!
     
-    @IBOutlet weak var Time: UILabel!
-    @IBOutlet weak var Battery: UILabel!
+    @IBOutlet weak var batteryProgress: UIProgressView!
     
     // initialized bottom buttons
     var buttonOne:String = "0"
@@ -93,6 +92,9 @@ class BaseLevel: UIViewController {
     // timer label
     @IBOutlet var countDownLabel: UILabel!
     
+    // battery
+    var batteryNumber:Int = 100
+    
     // timer
     var count = 10
     var timer = NSTimer()
@@ -132,6 +134,9 @@ class BaseLevel: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+
+
     
     func startTimer(){
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)

@@ -185,7 +185,7 @@ extension BaseLevel {
         }
         if levelText == 2 {
             xp += 20
-            xpLabel.text = "\(xp) / 520"
+            xpLabel.text = "\(xp)"
             xpProgressBar.progress += 0.05
         }
         

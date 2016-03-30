@@ -28,16 +28,17 @@ extension BaseLevel {
         func batteryLevel() -> Float {
             return UIDevice.currentDevice().batteryLevel
         }
-        Battery.text = "\(Int(batteryLevel()*100))"
         
-        // Time
-        let components = calendar.components([ .Hour, .Minute, .Second], fromDate: date)
-        let hour = components.hour
-        let minutes = components.minute
-//      Time.text = "\(hour):\(minutes)"
+        batteryNumber = Int(UIDevice.currentDevice().batteryLevel*100)
         
-        print(batteryLevel())
+        batteryProgress.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 5)
+        batteryProgressKeep()
+        // battery check timer
+        var batteryTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("batteryProgressKeep"), userInfo: nil, repeats: true)
+
         
+        
+        // Timer
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
         
         startTimer()
@@ -104,6 +105,96 @@ extension BaseLevel {
         
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
+        
+    }
+    
+    func batteryProgressKeep(){
+        
+        
+        if batteryNumber == 100{
+            batteryProgress.progress = 1.00
+        }
+        if batteryNumber == 95{
+            batteryProgress.progress = 0.95
+        }
+        if batteryNumber == 90{
+            batteryProgress.progress = 0.90
+        }
+        if batteryNumber == 85{
+            batteryProgress.progress = 0.85
+        }
+        if batteryNumber == 80{
+            batteryProgress.progress = 0.80
+        }
+        if batteryNumber == 75{
+            batteryProgress.progress = 0.75
+        }
+        if batteryNumber == 70{
+            batteryProgress.progress = 0.70
+        }
+        if batteryNumber == 65{
+            batteryProgress.progress = 0.65
+        }
+        if batteryNumber == 60{
+            batteryProgress.progress = 0.60
+        }
+        if batteryNumber == 55{
+            batteryProgress.progress = 0.55
+        }
+        if batteryNumber == 50{
+            batteryProgress.progress = 0.50
+        }
+        if batteryNumber == 45{
+            batteryProgress.progress = 0.45
+        }
+        if batteryNumber == 40{
+            batteryProgress.progress = 0.40
+        }
+        if batteryNumber == 35{
+            batteryProgress.progress = 0.35
+        }
+        if batteryNumber == 30{
+            batteryProgress.progress = 0.30
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+        if batteryNumber == 25{
+            batteryProgress.progress = 0.25
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+        if batteryNumber == 20{
+            batteryProgress.progress = 0.20
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+        if batteryNumber == 15{
+            batteryProgress.progress = 0.15
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+        if batteryNumber == 10{
+            batteryProgress.progress = 0.10
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+        if batteryNumber == 5{
+            batteryProgress.progress = 0.05
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+        
+        if batteryNumber <= 2{
+            batteryProgress.progress = 0.02
+            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
+
+//            batteryProgress.progressTintColor = UIColor (netHex: 0xf0a31b)
+
+        
+        if batteryNumber >= 50{
+            batteryProgress.progressTintColor = UIColor (netHex: 0x97f40d)
+        }
+        
+        // testing battery
+        if batteryNumber > 0{
+        batteryNumber -= 5
+        print(batteryNumber)
+        }
         
     }
     
@@ -174,6 +265,11 @@ extension BaseLevel {
         
         if xpProgressBar.progress == 1.0 {
             levelText += 1
+          
+        
+            
+            
+            
         }
 //        if (buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor)) {
 //            print("match!")
@@ -181,6 +277,8 @@ extension BaseLevel {
 //            buttonOneOptionsText()
 //            buttonOneOptionsColors()
 //        }
+        
+        
         
     }
     
