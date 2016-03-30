@@ -44,28 +44,17 @@ extension BaseLevel {
         runOrNot = 4
         
         // top numbers randomize
+        generateTopButtons()
         numberOneOptionsColors()
-        numberOneOptionsText()
         
         numberTwoOptionsColors()
-        numberTwoOptionsText()
         
         numberThreeOptionsColors()
-        numberThreeOptionsText()
         
         numberFourOptionsColors()
-        numberFourOptionsText()
         
         // bottom buttons randomize numbers
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
+        generateBottomButtons()
         
         // bottom buttons randomize background colors
         buttonOneOptionsColors()
@@ -143,6 +132,14 @@ extension BaseLevel {
         if (count == 0){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
+        
+        if (buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor)) {
+            print("match!")
+        } else {
+            buttonOneOptionsText()
+            buttonOneOptionsColors()
+        }
+        
     }
     
     // check if game is finished

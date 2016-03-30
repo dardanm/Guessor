@@ -318,6 +318,7 @@ extension BaseLevel {
         }
     }
     
+    func generateTopButtons(){
     
     // number one random numbers
     func numberOneOptionsText(){
@@ -383,6 +384,11 @@ extension BaseLevel {
         default: fourthNumber.text = "O"
         }
     }
+        
+    }// generate top four buttons end
+    
+    
+    func generateBottomButtons(){
     
     // button one random numbers
     func buttonOneOptionsText(){
@@ -528,6 +534,225 @@ extension BaseLevel {
         default: buttonNineText.text = "O"
         }
     }
+        
+    } // end generate bottom buttons
 
+    
+    
+    
+    
+    // number one random numbers
+    func numberOneOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: firstNumber.text = "O"
+        case 2: firstNumber.text = "O"
+        case 3: firstNumber.text = "O"
+        case 4: firstNumber.text = ">"
+        case 5: firstNumber.text = ">"
+        case 6: firstNumber.text = ">"
+        case 7: firstNumber.text = "<"
+        case 8: firstNumber.text = "<"
+        case 9: firstNumber.text = "<"
+        default: firstNumber.text = "O"
+        }
+    }
+    // number two random numbers
+    func numberTwoOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: secondNumber.text = "O"
+        case 2: secondNumber.text = "O"
+        case 3: secondNumber.text = "O"
+        case 4: secondNumber.text = ">"
+        case 5: secondNumber.text = ">"
+        case 6: secondNumber.text = ">"
+        case 7: secondNumber.text = "<"
+        case 8: secondNumber.text = "<"
+        case 9: secondNumber.text = "<"
+        default: secondNumber.text = "O"
+        }
+    }
+    // number three random numbers
+    func numberThreeOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: thirdNumber.text = "O"
+        case 2: thirdNumber.text = "O"
+        case 3: thirdNumber.text = "O"
+        case 4: thirdNumber.text = ">"
+        case 5: thirdNumber.text = ">"
+        case 6: thirdNumber.text = ">"
+        case 7: thirdNumber.text = "<"
+        case 8: thirdNumber.text = "<"
+        case 9: thirdNumber.text = "<"
+        default: thirdNumber.text = "O"
+        }
+    }
+    // number four random numbers
+    func numberFourOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: fourthNumber.text = "O"
+        case 2: fourthNumber.text = "O"
+        case 3: fourthNumber.text = "O"
+        case 4: fourthNumber.text = ">"
+        case 5: fourthNumber.text = ">"
+        case 6: fourthNumber.text = ">"
+        case 7: fourthNumber.text = "<"
+        case 8: fourthNumber.text = "<"
+        case 9: fourthNumber.text = "<"
+        default: fourthNumber.text = "O"
+        }
+    }
+
+    // button one random numbers
+    func buttonOneOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonOneText.text = "O"
+        case 2: buttonOneText.text = "O"
+        case 3: buttonOneText.text = "O"
+        case 4: buttonOneText.text = ">"
+        case 5: buttonOneText.text = ">"
+        case 6: buttonOneText.text = ">"
+        case 7: buttonOneText.text = "<"
+        case 8: buttonOneText.text = "<"
+        case 9: buttonOneText.text = "<"
+        default: buttonOneText.text = "O"
+        }
+    }
+    // button two random numbers
+    func buttonTwoOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonTwoText.text = "O"
+        case 2: buttonTwoText.text = "O"
+        case 3: buttonTwoText.text = "O"
+        case 4: buttonTwoText.text = ">"
+        case 5: buttonTwoText.text = ">"
+        case 6: buttonTwoText.text = ">"
+        case 7: buttonTwoText.text = "<"
+        case 8: buttonTwoText.text = "<"
+        case 9: buttonTwoText.text = "<"
+        default: buttonTwoText.text = "O"
+        }
+    }
+    // button three random numbers
+    func buttonThreeOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonThreeText.text = "O"
+        case 2: buttonThreeText.text = "O"
+        case 3: buttonThreeText.text = "O"
+        case 4: buttonThreeText.text = ">"
+        case 5: buttonThreeText.text = ">"
+        case 6: buttonThreeText.text = ">"
+        case 7: buttonThreeText.text = "<"
+        case 8: buttonThreeText.text = "<"
+        case 9: buttonThreeText.text = "<"
+        default: buttonThreeText.text = "O"
+        }
+    }
+    // button four random numbers
+    func buttonFourOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonFourText.text = "O"
+        case 2: buttonFourText.text = "O"
+        case 3: buttonFourText.text = "O"
+        case 4: buttonFourText.text = ">"
+        case 5: buttonFourText.text = ">"
+        case 6: buttonFourText.text = ">"
+        case 7: buttonFourText.text = "<"
+        case 8: buttonFourText.text = "<"
+        case 9: buttonFourText.text = "<"
+        default: buttonFourText.text = "O"
+        }
+    }
+    // button five random numbers
+    func buttonFiveOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonFiveText.text = "O"
+        case 2: buttonFiveText.text = "O"
+        case 3: buttonFiveText.text = "O"
+        case 4: buttonFiveText.text = ">"
+        case 5: buttonFiveText.text = ">"
+        case 6: buttonFiveText.text = ">"
+        case 7: buttonFiveText.text = "<"
+        case 8: buttonFiveText.text = "<"
+        case 9: buttonFiveText.text = "<"
+        default: buttonFiveText.text = "O"
+        }
+    }
+    // button six random numbers
+    func buttonSixOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonSixText.text = "O"
+        case 2: buttonSixText.text = "O"
+        case 3: buttonSixText.text = "O"
+        case 4: buttonSixText.text = ">"
+        case 5: buttonSixText.text = ">"
+        case 6: buttonSixText.text = ">"
+        case 7: buttonSixText.text = "<"
+        case 8: buttonSixText.text = "<"
+        case 9: buttonSixText.text = "<"
+        default: buttonSixText.text = "O"
+        }
+    }
+    // button seven random numbers
+    func buttonSevenOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonSevenText.text = "O"
+        case 2: buttonSevenText.text = "O"
+        case 3: buttonSevenText.text = "O"
+        case 4: buttonSevenText.text = ">"
+        case 5: buttonSevenText.text = ">"
+        case 6: buttonSevenText.text = ">"
+        case 7: buttonSevenText.text = "<"
+        case 8: buttonSevenText.text = "<"
+        case 9: buttonSevenText.text = "<"
+        default: buttonSevenText.text = "O"
+        }
+    }
+    // button eight random numbers
+    func buttonEightOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonEightText.text = "O"
+        case 2: buttonEightText.text = "O"
+        case 3: buttonEightText.text = "O"
+        case 4: buttonEightText.text = ">"
+        case 5: buttonEightText.text = ">"
+        case 6: buttonEightText.text = ">"
+        case 7: buttonEightText.text = "<"
+        case 8: buttonEightText.text = "<"
+        case 9: buttonEightText.text = "<"
+        default: buttonEightText.text = "O"
+        }
+    }
+    // button nine random numbers
+    func buttonNineOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonNineText.text = "O"
+        case 2: buttonNineText.text = "O"
+        case 3: buttonNineText.text = "O"
+        case 4: buttonNineText.text = ">"
+        case 5: buttonNineText.text = ">"
+        case 6: buttonNineText.text = ">"
+        case 7: buttonNineText.text = "<"
+        case 8: buttonNineText.text = "<"
+        case 9: buttonNineText.text = "<"
+        default: buttonNineText.text = "O"
+        }
+    }
+    
+    
+    
+    
     
 }

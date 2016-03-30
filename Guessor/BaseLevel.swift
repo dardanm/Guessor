@@ -116,6 +116,8 @@ class BaseLevel: UIViewController {
         tryAgain()
     }
     
+    var matchingAnswer:Bool = false
+    
     @IBOutlet weak var xpProgressBar: UIProgressView!
     
     // hide status bar
@@ -171,6 +173,7 @@ class BaseLevel: UIViewController {
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -199,6 +202,7 @@ class BaseLevel: UIViewController {
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -227,6 +231,7 @@ class BaseLevel: UIViewController {
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -255,6 +260,7 @@ class BaseLevel: UIViewController {
                     buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -318,6 +324,7 @@ class BaseLevel: UIViewController {
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -346,6 +353,7 @@ class BaseLevel: UIViewController {
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -374,6 +382,7 @@ class BaseLevel: UIViewController {
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -402,6 +411,7 @@ class BaseLevel: UIViewController {
                     buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -467,6 +477,7 @@ class BaseLevel: UIViewController {
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -495,6 +506,7 @@ class BaseLevel: UIViewController {
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -523,6 +535,7 @@ class BaseLevel: UIViewController {
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -551,6 +564,7 @@ class BaseLevel: UIViewController {
                     buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -615,6 +629,7 @@ class BaseLevel: UIViewController {
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -643,6 +658,7 @@ class BaseLevel: UIViewController {
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -671,6 +687,7 @@ class BaseLevel: UIViewController {
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -699,6 +716,7 @@ class BaseLevel: UIViewController {
                     buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -763,6 +781,7 @@ class BaseLevel: UIViewController {
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -791,6 +810,7 @@ class BaseLevel: UIViewController {
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -819,6 +839,7 @@ class BaseLevel: UIViewController {
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -847,6 +868,7 @@ class BaseLevel: UIViewController {
                     buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -911,6 +933,7 @@ class BaseLevel: UIViewController {
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -939,6 +962,7 @@ class BaseLevel: UIViewController {
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -967,6 +991,7 @@ class BaseLevel: UIViewController {
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -995,6 +1020,7 @@ class BaseLevel: UIViewController {
                     buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1059,6 +1085,7 @@ class BaseLevel: UIViewController {
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1087,6 +1114,7 @@ class BaseLevel: UIViewController {
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1115,6 +1143,7 @@ class BaseLevel: UIViewController {
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1143,6 +1172,7 @@ class BaseLevel: UIViewController {
                     buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1207,6 +1237,7 @@ class BaseLevel: UIViewController {
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1235,6 +1266,7 @@ class BaseLevel: UIViewController {
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1263,6 +1295,7 @@ class BaseLevel: UIViewController {
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1291,6 +1324,7 @@ class BaseLevel: UIViewController {
                     buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1355,6 +1389,7 @@ class BaseLevel: UIViewController {
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1383,6 +1418,7 @@ class BaseLevel: UIViewController {
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1411,6 +1447,7 @@ class BaseLevel: UIViewController {
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1439,6 +1476,7 @@ class BaseLevel: UIViewController {
                     buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0x8ef32f)
                     fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
+                    matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
@@ -1464,6 +1502,7 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
             if buttonNineLabel.backgroundColor!.isEqual(firstNumber.backgroundColor) && buttonNineText.text == firstNumber.text{
                 runOrNot -= 1
+                
             }
         }
         
@@ -1491,8 +1530,16 @@ class BaseLevel: UIViewController {
     @IBAction func backOption(sender: AnyObject) {
         backgroundMusicPlayer.stop()
     }
+    
+    
+    
+    
+    
+    
+    
+    
 
-}
+} // end
 
 
 
