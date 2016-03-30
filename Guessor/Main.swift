@@ -133,12 +133,12 @@ extension BaseLevel {
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
         
-        if (buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor)) {
-            print("match!")
-        } else {
-            buttonOneOptionsText()
-            buttonOneOptionsColors()
-        }
+//        if (buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor)) {
+//            print("match!")
+//        } else {
+//            buttonOneOptionsText()
+//            buttonOneOptionsColors()
+//        }
         
     }
     

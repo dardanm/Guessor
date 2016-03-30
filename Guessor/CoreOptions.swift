@@ -54,7 +54,7 @@ extension BaseLevel {
         
         startTimer()
         
-//        count = 10 + 1
+        count = 10 + 1
         scoreKeep = 0
         score.text = "0\(scoreKeep)"
         lives = 3
@@ -109,7 +109,7 @@ extension BaseLevel {
         
         startTimer()
         
-//      count = 10 + 1
+        count = 10 + 1
         
         delay(0.5){
         

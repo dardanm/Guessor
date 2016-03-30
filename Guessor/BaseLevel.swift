@@ -91,7 +91,7 @@ class BaseLevel: UIViewController {
     @IBOutlet var countDownLabel: UILabel!
     
     // timer
-    var count = 100
+    var count = 10
     var timer = NSTimer()
     
     // switch variable
