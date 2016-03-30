@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
-extension ViewController {
+extension BaseLevel {
     
     // ========= GUI / BUTTONS
     

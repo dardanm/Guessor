@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
-extension ViewController {
+extension BaseLevel {
     
 
     // "level complete" display options
@@ -56,7 +56,7 @@ extension ViewController {
         
 //        count = 10 + 1
         scoreKeep = 0
-        score.text = "0" + "\(scoreKeep)"
+        score.text = "0\(scoreKeep)"
         lives = 3
         
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
@@ -111,10 +111,10 @@ extension ViewController {
         
 //      count = 10 + 1
         
-        delay(1.0){
+        delay(0.5){
         
         self.scoreKeep = 0
-        self.score.text = "0" + "\(self.scoreKeep)"
+        self.score.text = "0\(self.scoreKeep)"
         self.levelComplete.layer.opacity = 0.0
             
             
