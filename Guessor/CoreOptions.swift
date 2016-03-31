@@ -56,7 +56,7 @@ extension BaseLevel {
         
         count = 10 + 1
         scoreKeep = 0
-        score.text = "0\(scoreKeep)"
+        self.score.text = "0\(self.scoreKeep) / 04"
         lives = 3
         
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
@@ -116,7 +116,7 @@ extension BaseLevel {
         delay(0.5){
         
         self.scoreKeep = 0
-        self.score.text = "0\(self.scoreKeep)"
+        self.score.text = "0\(self.scoreKeep) / 04"
         self.levelComplete.layer.opacity = 0.0
             
             

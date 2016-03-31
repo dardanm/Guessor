@@ -35,7 +35,7 @@ extension BaseLevel {
         batteryProgress.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 5)
         batteryProgressKeep()
         // battery check timer
-        var batteryTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("batteryProgressKeep"), userInfo: nil, repeats: true)
+        var batteryTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(BaseLevel.batteryProgressKeep), userInfo: nil, repeats: true)
 
         
         
@@ -112,6 +112,10 @@ extension BaseLevel {
     func batteryProgressKeep(){
         
         batteryProgress.progress = UIDevice.currentDevice().batteryLevel
+        
+        if batteryNumber <= 30{
+           batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+        }
         
 //        if batteryNumber == 100{
 //            batteryProgress.progress = 1.00
