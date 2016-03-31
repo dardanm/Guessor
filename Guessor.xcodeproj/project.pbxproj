@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0633931CACB51C007FBB82 /* Myriad-Pro-Black_31623.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0633921CACB51C007FBB82 /* Myriad-Pro-Black_31623.ttf */; };
 		DC0C51491CA5C67200925709 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C51481CA5C67200925709 /* Main.swift */; };
 		DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC11325F1C83D06600B19DCD /* AppDelegate.swift */; };
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0633921CACB51C007FBB82 /* Myriad-Pro-Black_31623.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Black_31623.ttf"; sourceTree = "<group>"; };
 		DC0C51481CA5C67200925709 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DC11325F1C83D06600B19DCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */,
 				DCAAC8B11C9E14FA000F5C99 /* background.mp3 */,
 				DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */,
+				DC0633921CACB51C007FBB82 /* Myriad-Pro-Black_31623.ttf */,
 				DC90B8551C7966D500CCC033 /* Main.storyboard */,
 				DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */,
 				DC5AAD2F1C868083006B8BD3 /* Start.swift */,
@@ -194,6 +197,7 @@
 			files = (
 				DCAAC8BE1C9E1CB4000F5C99 /* button.png in Resources */,
 				DCAAC8BC1C9E1B53000F5C99 /* buttonIncorrect.mp3 in Resources */,
+				DC0633931CACB51C007FBB82 /* Myriad-Pro-Black_31623.ttf in Resources */,
 				DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */,
 				DCB3C18E1CAC761300B6BB87 /* GuessorAppIcon2x.png in Resources */,
 				DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */,
