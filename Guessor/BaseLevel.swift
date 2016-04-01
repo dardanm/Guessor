@@ -187,10 +187,7 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -199,10 +196,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonOneLabel.layer.shadowRadius = 0
-                    buttonOneLabel.layer.shadowOpacity = 1
-                    buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -213,10 +206,7 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -225,10 +215,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonOneLabel.layer.shadowRadius = 0
-                    buttonOneLabel.layer.shadowOpacity = 1
-                    buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -239,10 +225,7 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -251,10 +234,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonOneLabel.layer.shadowRadius = 0
-                    buttonOneLabel.layer.shadowOpacity = 1
-                    buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -265,10 +244,7 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -277,10 +253,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonOneLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonOneLabel.layer.shadowRadius = 0
-                    buttonOneLabel.layer.shadowOpacity = 1
-                    buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -327,9 +299,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -338,10 +308,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonTwoLabel.layer.shadowRadius = 0
-                    buttonTwoLabel.layer.shadowOpacity = 1
-                    buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -353,9 +319,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -364,10 +328,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonTwoLabel.layer.shadowRadius = 0
-                    buttonTwoLabel.layer.shadowOpacity = 1
-                    buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -379,9 +339,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -390,10 +348,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonTwoLabel.layer.shadowRadius = 0
-                    buttonTwoLabel.layer.shadowOpacity = 1
-                    buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -405,9 +359,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -416,10 +368,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonTwoLabel.layer.shadowRadius = 0
-                    buttonTwoLabel.layer.shadowOpacity = 1
-                    buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -468,9 +416,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -479,10 +425,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonThreeLabel.layer.shadowRadius = 0
-                    buttonThreeLabel.layer.shadowOpacity = 1
-                    buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -494,9 +436,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -505,10 +445,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonThreeLabel.layer.shadowRadius = 0
-                    buttonThreeLabel.layer.shadowOpacity = 1
-                    buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -520,9 +456,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -531,10 +465,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonThreeLabel.layer.shadowRadius = 0
-                    buttonThreeLabel.layer.shadowOpacity = 1
-                    buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -546,9 +476,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -557,10 +485,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonThreeLabel.layer.shadowRadius = 0
-                    buttonThreeLabel.layer.shadowOpacity = 1
-                    buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -608,9 +532,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -619,10 +541,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFourLabel.layer.shadowRadius = 0
-                    buttonFourLabel.layer.shadowOpacity = 1
-                    buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -634,9 +552,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -645,10 +561,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFourLabel.layer.shadowRadius = 0
-                    buttonFourLabel.layer.shadowOpacity = 1
-                    buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -660,9 +572,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -671,10 +581,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFourLabel.layer.shadowRadius = 0
-                    buttonFourLabel.layer.shadowOpacity = 1
-                    buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -686,9 +592,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -697,10 +601,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFourLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFourLabel.layer.shadowRadius = 0
-                    buttonFourLabel.layer.shadowOpacity = 1
-                    buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -748,9 +648,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -759,10 +657,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFiveLabel.layer.shadowRadius = 0
-                    buttonFiveLabel.layer.shadowOpacity = 1
-                    buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -774,9 +668,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -785,10 +677,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFiveLabel.layer.shadowRadius = 0
-                    buttonFiveLabel.layer.shadowOpacity = 1
-                    buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -800,9 +688,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -811,10 +697,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFiveLabel.layer.shadowRadius = 0
-                    buttonFiveLabel.layer.shadowOpacity = 1
-                    buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -826,9 +708,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -837,10 +717,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonFiveLabel.layer.shadowRadius = 0
-                    buttonFiveLabel.layer.shadowOpacity = 1
-                    buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -888,9 +764,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -899,10 +773,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSixLabel.layer.shadowRadius = 0
-                    buttonSixLabel.layer.shadowOpacity = 1
-                    buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -914,9 +784,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -925,10 +793,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSixLabel.layer.shadowRadius = 0
-                    buttonSixLabel.layer.shadowOpacity = 1
-                    buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -940,9 +804,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -951,10 +813,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSixLabel.layer.shadowRadius = 0
-                    buttonSixLabel.layer.shadowOpacity = 1
-                    buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -966,9 +824,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -977,10 +833,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSixLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSixLabel.layer.shadowRadius = 0
-                    buttonSixLabel.layer.shadowOpacity = 1
-                    buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1028,9 +880,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1039,10 +889,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSevenLabel.layer.shadowRadius = 0
-                    buttonSevenLabel.layer.shadowOpacity = 1
-                    buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1054,9 +900,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1065,10 +909,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSevenLabel.layer.shadowRadius = 0
-                    buttonSevenLabel.layer.shadowOpacity = 1
-                    buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1080,9 +920,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1091,10 +929,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSevenLabel.layer.shadowRadius = 0
-                    buttonSevenLabel.layer.shadowOpacity = 1
-                    buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1106,9 +940,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1117,10 +949,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonSevenLabel.layer.shadowRadius = 0
-                    buttonSevenLabel.layer.shadowOpacity = 1
-                    buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1168,9 +996,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1179,10 +1005,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonEightLabel.layer.shadowRadius = 0
-                    buttonEightLabel.layer.shadowOpacity = 1
-                    buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1194,9 +1016,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1205,10 +1025,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonEightLabel.layer.shadowRadius = 0
-                    buttonEightLabel.layer.shadowOpacity = 1
-                    buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1220,9 +1036,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1231,10 +1045,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonEightLabel.layer.shadowRadius = 0
-                    buttonEightLabel.layer.shadowOpacity = 1
-                    buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1246,9 +1056,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1257,10 +1065,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonEightLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonEightLabel.layer.shadowRadius = 0
-                    buttonEightLabel.layer.shadowOpacity = 1
-                    buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1308,9 +1112,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     firstNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    firstNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1319,10 +1121,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonNineLabel.layer.shadowRadius = 0
-                    buttonNineLabel.layer.shadowOpacity = 1
-                    buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1334,9 +1132,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     secondNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    secondNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1345,10 +1141,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonNineLabel.layer.shadowRadius = 0
-                    buttonNineLabel.layer.shadowOpacity = 1
-                    buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1360,9 +1152,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     thirdNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    thirdNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1371,10 +1161,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonNineLabel.layer.shadowRadius = 0
-                    buttonNineLabel.layer.shadowOpacity = 1
-                    buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
@@ -1386,9 +1172,7 @@ class BaseLevel: UIViewController {
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     fourthNumber.backgroundColor = UIColor(netHex: 0xa5f107)
-                    fourthNumber.layer.shadowColor = UIColor(netHex: 0x7ad524).CGColor
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1397,10 +1181,6 @@ class BaseLevel: UIViewController {
                     // red color button - incorrect choice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
-                    buttonNineLabel.layer.shadowColor = UIColor(netHex: 0xdf3131).CGColor
-                    buttonNineLabel.layer.shadowRadius = 0
-                    buttonNineLabel.layer.shadowOpacity = 1
-                    buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
                 }
         }
         
