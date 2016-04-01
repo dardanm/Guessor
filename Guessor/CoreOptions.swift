@@ -78,7 +78,7 @@ extension BaseLevel {
         
         startTimer()
         
-        count += 2
+        count += 3
         updateTimerBar()
         self.countDownLabel.text = "\(count)"
         

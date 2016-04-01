@@ -135,7 +135,14 @@ class BaseLevel: UIViewController {
         return true
     }
     
-
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.progressTimer.setProgress(1.0, animated: true)
+        })
+    }
 
     
     func startTimer(){

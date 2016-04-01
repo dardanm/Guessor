@@ -109,7 +109,6 @@ extension BaseLevel {
         if UIDevice.currentDevice().batteryLevel <= 0.2{
            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
         }
-    
         
     }
     
