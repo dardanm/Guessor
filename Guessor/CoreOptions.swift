@@ -54,7 +54,10 @@ extension BaseLevel {
         
         startTimer()
         
-        count = 10 + 1
+        count = 10
+        self.countDownLabel.text = "\(count)"
+        updateTimerBar()
+        
         scoreKeep = 0
         self.score.text = "0\(self.scoreKeep) / 04"
         lives = 3
@@ -63,39 +66,7 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
-        // top numbers randomize
-        numberOneOptionsColors()
-        numberOneOptionsText()
-        
-        numberTwoOptionsColors()
-        numberTwoOptionsText()
-        
-        numberThreeOptionsColors()
-        numberThreeOptionsText()
-        
-        numberFourOptionsColors()
-        numberFourOptionsText()
-        
-        // bottom numbers randomize
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
-        
-        buttonOneOptionsColors()
-        buttonTwoOptionsColors()
-        buttonThreeOptionsColors()
-        buttonFourOptionsColors()
-        buttonFiveOptionsColors()
-        buttonSixOptionsColors()
-        buttonSevenOptionsColors()
-        buttonEightOptionsColors()
-        buttonNineOptionsColors()
+        self.generateTopAndBottomButtons()
         
         shadowOptions()
         
@@ -105,13 +76,14 @@ extension BaseLevel {
     // Reset Roll
     func resetRoll(){
         
-        enableButtons()
-        
         startTimer()
-
-        count += 2
-        countDownLabel.text = "\(count)"
         
+        count += 2
+        updateTimerBar()
+        self.countDownLabel.text = "\(count)"
+        
+        if lives >= 1 {
+        enableButtons()
         
         delay(0.5){
         
@@ -119,42 +91,38 @@ extension BaseLevel {
         self.score.text = "0\(self.scoreKeep) / 04"
         self.levelComplete.layer.opacity = 0.0
             
+        self.generateTopAndBottomButtons()
             
-        // top numbers randomize
-        self.numberOneOptionsColors()
-        self.numberOneOptionsText()
-        
-        self.numberTwoOptionsColors()
-        self.numberTwoOptionsText()
-        
-        self.numberThreeOptionsColors()
-        self.numberThreeOptionsText()
-        
-        self.numberFourOptionsColors()
-        self.numberFourOptionsText()
-        
-        // bottom numbers randomize
-        self.buttonOneOptionsText()
-        self.buttonTwoOptionsText()
-        self.buttonThreeOptionsText()
-        self.buttonFourOptionsText()
-        self.buttonFiveOptionsText()
-        self.buttonSixOptionsText()
-        self.buttonSevenOptionsText()
-        self.buttonEightOptionsText()
-        self.buttonNineOptionsText()
-        
-        self.buttonOneOptionsColors()
-        self.buttonTwoOptionsColors()
-        self.buttonThreeOptionsColors()
-        self.buttonFourOptionsColors()
-        self.buttonFiveOptionsColors()
-        self.buttonSixOptionsColors()
-        self.buttonSevenOptionsColors()
-        self.buttonEightOptionsColors()
-        self.buttonNineOptionsColors()
+        self.shadowOptions()
         }
             
+        }
+    }
+    
+    func resetRollZeroCount(){
+        
+        lives -= 1
+        updateLivesLeftIcons()
+        
+        if lives > 0{
+        delay(0.5){
+        self.startTimer()
+        
+        self.count = 10
+        self.updateTimerBar()
+        self.countDownLabel.text = "\(self.count)"
+        
+        self.enableButtons()
+        
+        self.scoreKeep = 0
+        self.score.text = "0\(self.scoreKeep) / 04"
+        self.levelComplete.layer.opacity = 0.0
+        
+        self.generateTopAndBottomButtons()
+        }
+
+        }
+        
         shadowOptions()
     }
     
@@ -164,10 +132,13 @@ extension BaseLevel {
         updateLevel()
         
         // TIMER COUNT
+        if scoreKeep <= 3 {
         count += 1
+        }
         // PROGRESS BAR
         progressTimer.progress = progressTimer.progress + 0.1
         countDownLabel.text = String(count)
+        updateTimerBar()
         
     }
     
@@ -176,7 +147,7 @@ extension BaseLevel {
         level.text = "LEVEL \(levelText)"
         
         if levelText == 1 {
-            xp += 10
+            xp += 1
             xpLabel.text = "\(xp)"
             xpProgressBar.progress += 0.10
             if xp == 100 {
@@ -184,7 +155,7 @@ extension BaseLevel {
             }
         }
         if levelText == 2 {
-            xp += 20
+            xp += 2
             xpLabel.text = "\(xp)"
             xpProgressBar.progress += 0.05
         }
@@ -236,9 +207,6 @@ extension BaseLevel {
     }
     
     func updateTimer(){
-        
-        
-        
         if count >= 10 {
             progressTimer.progress = 1.0
         }
@@ -272,6 +240,42 @@ extension BaseLevel {
         if count == 0 {
             progressTimer.progress = 0.0
         }
+    }
+    
+    func generateTopAndBottomButtons(){
+        // top numbers randomize
+        self.numberOneOptionsColors()
+        self.numberOneOptionsText()
+        
+        self.numberTwoOptionsColors()
+        self.numberTwoOptionsText()
+        
+        self.numberThreeOptionsColors()
+        self.numberThreeOptionsText()
+        
+        self.numberFourOptionsColors()
+        self.numberFourOptionsText()
+        
+        // bottom numbers randomize
+        self.buttonOneOptionsText()
+        self.buttonTwoOptionsText()
+        self.buttonThreeOptionsText()
+        self.buttonFourOptionsText()
+        self.buttonFiveOptionsText()
+        self.buttonSixOptionsText()
+        self.buttonSevenOptionsText()
+        self.buttonEightOptionsText()
+        self.buttonNineOptionsText()
+        
+        self.buttonOneOptionsColors()
+        self.buttonTwoOptionsColors()
+        self.buttonThreeOptionsColors()
+        self.buttonFourOptionsColors()
+        self.buttonFiveOptionsColors()
+        self.buttonSixOptionsColors()
+        self.buttonSevenOptionsColors()
+        self.buttonEightOptionsColors()
+        self.buttonNineOptionsColors()
     }
     
     

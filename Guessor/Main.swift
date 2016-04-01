@@ -25,19 +25,12 @@ extension BaseLevel {
         
         // Battery
         UIDevice.currentDevice().batteryMonitoringEnabled = true
-        func batteryLevel() -> Float {
-            return UIDevice.currentDevice().batteryLevel
-        }
         
-//        batteryNumber = Int(UIDevice.currentDevice().batteryLevel*100)
         batteryProgress.progress = UIDevice.currentDevice().batteryLevel
         
         batteryProgress.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 5)
         batteryProgressKeep()
-        // battery check timer
-        var batteryTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(BaseLevel.batteryProgressKeep), userInfo: nil, repeats: true)
 
-        
         
         // Timer
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
@@ -113,108 +106,14 @@ extension BaseLevel {
         
         batteryProgress.progress = UIDevice.currentDevice().batteryLevel
         
-        if batteryNumber <= 30{
+        if UIDevice.currentDevice().batteryLevel <= 0.2{
            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
         }
-        
-//        if batteryNumber == 100{
-//            batteryProgress.progress = 1.00
-//        }
-//        if batteryNumber == 95{
-//            batteryProgress.progress = 0.95
-//        }
-//        if batteryNumber == 90{
-//            batteryProgress.progress = 0.90
-//        }
-//        if batteryNumber == 85{
-//            batteryProgress.progress = 0.85
-//        }
-//        if batteryNumber == 80{
-//            batteryProgress.progress = 0.80
-//        }
-//        if batteryNumber == 75{
-//            batteryProgress.progress = 0.75
-//        }
-//        if batteryNumber == 70{
-//            batteryProgress.progress = 0.70
-//        }
-//        if batteryNumber == 65{
-//            batteryProgress.progress = 0.65
-//        }
-//        if batteryNumber == 60{
-//            batteryProgress.progress = 0.60
-//        }
-//        if batteryNumber == 55{
-//            batteryProgress.progress = 0.55
-//        }
-//        if batteryNumber == 50{
-//            batteryProgress.progress = 0.50
-//        }
-//        if batteryNumber == 45{
-//            batteryProgress.progress = 0.45
-//        }
-//        if batteryNumber == 40{
-//            batteryProgress.progress = 0.40
-//        }
-//        if batteryNumber == 35{
-//            batteryProgress.progress = 0.35
-//        }
-//        if batteryNumber == 30{
-//            batteryProgress.progress = 0.30
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//        if batteryNumber == 25{
-//            batteryProgress.progress = 0.25
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//        if batteryNumber == 20{
-//            batteryProgress.progress = 0.20
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//        if batteryNumber == 15{
-//            batteryProgress.progress = 0.15
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//        if batteryNumber == 10{
-//            batteryProgress.progress = 0.10
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//        if batteryNumber == 5{
-//            batteryProgress.progress = 0.05
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//        
-//        if batteryNumber <= 2{
-//            batteryProgress.progress = 0.02
-//            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
-//        }
-//
-////            batteryProgress.progressTintColor = UIColor (netHex: 0xf0a31b)
-//
-//        
-//        if batteryNumber >= 50{
-//            batteryProgress.progressTintColor = UIColor (netHex: 0x97f40d)
-//        }
-//        
-//        // testing battery
-//        if batteryNumber > 0{
-//        batteryNumber -= 5
-//        print(batteryNumber)
-//        }
+    
         
     }
     
-    // timer + timer progress bar
-    func update() {
-        
-        if scoreKeep == 0 {
-            runOrNot = 4
-        }
-        
-        if count != 0 {
-            count -= 1
-        }
-        
+    func updateTimerBar(){
         if count >= 10 {
             progressTimer.progress = 1.0
         }
@@ -249,18 +148,10 @@ extension BaseLevel {
             progressTimer.progress = 0.0
         }
         
-        if count == 0 || lives == 0 {
-            stopTimer()
-            tryAgainLabel.layer.opacity = 1.0
-            tryAgainLabel.enabled = true
-        }
-        
-        countDownLabel.text = String(count)
-        
         if (count == 1 || count == 2 || count == 3){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
-
+        
         if (count == 0){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
@@ -269,21 +160,56 @@ extension BaseLevel {
             countDownLabel.textColor = UIColor(netHex: 0xf36723)
         }
         
+    }
+    
+    func updateLivesLeftIcons(){
+        if lives <= 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+        if lives <= 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+        if lives <= 0 {lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+    }
+    
+    // timer + timer progress bar
+    func update() {
+        
+        if count > 0 {
+            count -= 1
+        }
+        
+        updateTimerBar()
+        updateLivesLeftIcons()
+        
+        if scoreKeep == 0 {
+            runOrNot = 4
+        }
+        
+        if count == 0 && lives > 0{
+            runOrNot = 4
+            disableButtons()
+            stopTimer()
+            resetRollZeroCount()
+        }
+        
+        // don't remove
+        countDownLabel.text = String(count)
+
         if xpProgressBar.progress == 1.0 {
             levelText += 1
-          
-        
-            
-            
-            
         }
-//        if (buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor)) {
-//            print("match!")
-//        } else {
-//            buttonOneOptionsText()
-//            buttonOneOptionsColors()
-//        }
         
+        if lives == 0 {
+            
+            self.countDownLabel.text = "\(count)"
+            updateTimerBar()
+            stopTimer()
+            runOrNot = 4
+            disableButtons()
+            tryAgainLabel.layer.opacity = 1
+            tryAgainLabel.enabled = true
+        }
+        
+        if xpProgressBar.progress == 1.0 {
+            xpProgressBar.progress = 0.0
+        }
         
         
     }
@@ -291,20 +217,9 @@ extension BaseLevel {
     // check if game is finished
     func gameFinish(){
         
-        if ( count == 0 ){
-            runOrNot = 4
-            disableButtons()
-            stopTimer()
-            tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.enabled = true
-        }
-        if ( lives == 0 ){
-            runOrNot = 4
-            disableButtons()
-            stopTimer()
-            tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.enabled = true
-        }
+        updateLivesLeftIcons()
+
+        
         if scoreKeep == 4 {
             runOrNot = 4
             disableButtons()
@@ -312,13 +227,10 @@ extension BaseLevel {
             resetRoll()
         }
         
-        if xpProgressBar.progress == 1.0 {
-            xpProgressBar.progress = 0.0
-        }
         
-        if lives == 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}
-        if lives == 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}
-        if lives == 0 {lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+
+        
+
     }
     
     
