@@ -14,10 +14,7 @@ class BaseLevel: UIViewController {
     
     // level
     @IBOutlet weak var level: UILabel!
-    
-    // score label
-    @IBOutlet var score: UILabel!
-    
+
     // xp label
     @IBOutlet var xpLabel: UILabel!
     var xp:Int = 0
@@ -72,9 +69,6 @@ class BaseLevel: UIViewController {
 
     // keep track of score 0/30
     var scoreKeep:Int = 0
-
-    // level complete
-    @IBOutlet var levelComplete: UILabel!
     
     // initalize audio
     var buttonPressSound: AVAudioPlayer!
@@ -107,14 +101,12 @@ class BaseLevel: UIViewController {
     // PROGRESS BAR
     @IBOutlet var progressTimer: UIProgressView!
     
-    // used to compare colors -- double check
-    @IBOutlet var testingLabel: UILabel!
-    
     // "generate" button
     @IBOutlet var generateLabel: UIButton!
 
     // "try again" button background
     @IBOutlet var tryAgainLabel: UIButton!
+    
     // "try aagain" function
     @IBAction func tryAgain(sender: AnyObject) {
         stopTimer()
@@ -124,7 +116,6 @@ class BaseLevel: UIViewController {
     // get time
     let date = NSDate()
     let calendar = NSCalendar.currentCalendar()
-
     
     var matchingAnswer:Bool = false
     
@@ -152,7 +143,10 @@ class BaseLevel: UIViewController {
         timer.invalidate()
     }
     
+
+    
     @IBAction func generateButtonNumbers(sender: AnyObject) {
+        
         buttonOneOptionsText()
         buttonTwoOptionsText()
         buttonThreeOptionsText()
@@ -176,6 +170,12 @@ class BaseLevel: UIViewController {
         shadowOptions()
         
     }
+
+    @IBAction func generateButtonRelease(sender: AnyObject) {
+
+    }
+
+    
     
     // BUTTON #1 PRESS
     @IBAction func buttonOneDown(sender: AnyObject) {
@@ -185,7 +185,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -212,7 +211,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -239,7 +237,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonOneText.text == thirdNumber.text && buttonOneLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -266,7 +263,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonOneText.text == fourthNumber.text && buttonOneLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -328,7 +324,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -355,7 +350,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -382,7 +376,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonTwoText.text == thirdNumber.text && buttonTwoLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -409,7 +402,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonTwoText.text == fourthNumber.text && buttonTwoLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -473,7 +465,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -500,7 +491,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -527,7 +517,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonThreeText.text == thirdNumber.text && buttonThreeLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -554,7 +543,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonThreeText.text == fourthNumber.text && buttonThreeLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -617,7 +605,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -644,7 +631,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -671,7 +657,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonFourText.text == thirdNumber.text && buttonFourLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -698,7 +683,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonFourText.text == fourthNumber.text && buttonFourLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFourLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -761,7 +745,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -788,7 +771,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -815,7 +797,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonFiveText.text == thirdNumber.text && buttonFiveLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -842,7 +823,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonFiveText.text == fourthNumber.text && buttonFiveLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -905,7 +885,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -932,7 +911,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -959,7 +937,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonSixText.text == thirdNumber.text && buttonSixLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -986,7 +963,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonSixText.text == fourthNumber.text && buttonSixLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSixLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1049,7 +1025,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1076,7 +1051,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1103,7 +1077,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonSevenText.text == thirdNumber.text && buttonSevenLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1130,7 +1103,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonSevenText.text == fourthNumber.text && buttonSevenLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1193,7 +1165,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1220,7 +1191,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1247,7 +1217,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonEightText.text == thirdNumber.text && buttonEightLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1274,7 +1243,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonEightText.text == fourthNumber.text && buttonEightLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonEightLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1337,7 +1305,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 4 {
                 if buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(firstNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1364,7 +1331,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 3 {
                 if buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(secondNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1391,7 +1357,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 2 {
                 if buttonNineText.text == thirdNumber.text && buttonNineLabel.backgroundColor!.isEqual(thirdNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)
@@ -1418,7 +1383,6 @@ class BaseLevel: UIViewController {
         if runOrNot == 1 {
                 if buttonNineText.text == fourthNumber.text && buttonNineLabel.backgroundColor!.isEqual(fourthNumber.backgroundColor){
                     scoreKeep += 1
-                    score.text = "0\(self.scoreKeep) / 04"
                     correctAnswer()
                     // green color button - correct coice
                     buttonNineLabel.backgroundColor = UIColor(netHex: 0xa5f107)

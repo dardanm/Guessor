@@ -12,14 +12,6 @@ import QuartzCore
 
 extension BaseLevel {
     
-
-    // "level complete" display options
-    func levelCompleteOptions(){
-        levelComplete.textColor = UIColor (netHex: 0xFFFFFF)
-        levelComplete.backgroundColor = UIColor (netHex: 0xA8E6CE)
-        levelComplete.layer.opacity = 1.0
-    }
-    
     
     // LOCK PORTRAIT
     override func shouldAutorotate() -> Bool {
@@ -59,7 +51,6 @@ extension BaseLevel {
         updateTimerBar()
         
         scoreKeep = 0
-        self.score.text = "0\(self.scoreKeep) / 04"
         lives = 3
         
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
@@ -88,8 +79,6 @@ extension BaseLevel {
         delay(0.5){
         
         self.scoreKeep = 0
-        self.score.text = "0\(self.scoreKeep) / 04"
-        self.levelComplete.layer.opacity = 0.0
             
         self.generateTopAndBottomButtons()
             
@@ -115,8 +104,6 @@ extension BaseLevel {
         self.enableButtons()
         
         self.scoreKeep = 0
-        self.score.text = "0\(self.scoreKeep) / 04"
-        self.levelComplete.layer.opacity = 0.0
         
         self.generateTopAndBottomButtons()
         }

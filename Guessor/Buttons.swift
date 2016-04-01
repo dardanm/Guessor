@@ -16,57 +16,57 @@ extension BaseLevel {
     
     // set shadow options for buttons -- condense?
     func shadowOptions() {
-        firstNumber.layer.shadowRadius = 0
-        firstNumber.layer.shadowOpacity = 1
-        firstNumber.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        secondNumber.layer.shadowRadius = 0
-        secondNumber.layer.shadowOpacity = 1
-        secondNumber.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        thirdNumber.layer.shadowRadius = 0
-        thirdNumber.layer.shadowOpacity = 1
-        thirdNumber.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        fourthNumber.layer.shadowRadius = 0
-        fourthNumber.layer.shadowOpacity = 1
-        fourthNumber.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonOneLabel.layer.shadowRadius = 0
-        buttonOneLabel.layer.shadowOpacity = 1
-        buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonTwoLabel.layer.shadowRadius = 0
-        buttonTwoLabel.layer.shadowOpacity = 1
-        buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonThreeLabel.layer.shadowRadius = 0
-        buttonThreeLabel.layer.shadowOpacity = 1
-        buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonFourLabel.layer.shadowRadius = 0
-        buttonFourLabel.layer.shadowOpacity = 1
-        buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonFiveLabel.layer.shadowRadius = 0
-        buttonFiveLabel.layer.shadowOpacity = 1
-        buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonSixLabel.layer.shadowRadius = 0
-        buttonSixLabel.layer.shadowOpacity = 1
-        buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonSevenLabel.layer.shadowRadius = 0
-        buttonSevenLabel.layer.shadowOpacity = 1
-        buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonEightLabel.layer.shadowRadius = 0
-        buttonEightLabel.layer.shadowOpacity = 1
-        buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
-        
-        buttonNineLabel.layer.shadowRadius = 0
-        buttonNineLabel.layer.shadowOpacity = 1
-        buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        firstNumber.layer.shadowRadius = 0
+//        firstNumber.layer.shadowOpacity = 1
+//        firstNumber.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        secondNumber.layer.shadowRadius = 0
+//        secondNumber.layer.shadowOpacity = 1
+//        secondNumber.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        thirdNumber.layer.shadowRadius = 0
+//        thirdNumber.layer.shadowOpacity = 1
+//        thirdNumber.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        fourthNumber.layer.shadowRadius = 0
+//        fourthNumber.layer.shadowOpacity = 1
+//        fourthNumber.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonOneLabel.layer.shadowRadius = 0
+//        buttonOneLabel.layer.shadowOpacity = 1
+//        buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonTwoLabel.layer.shadowRadius = 0
+//        buttonTwoLabel.layer.shadowOpacity = 1
+//        buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonThreeLabel.layer.shadowRadius = 0
+//        buttonThreeLabel.layer.shadowOpacity = 1
+//        buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonFourLabel.layer.shadowRadius = 0
+//        buttonFourLabel.layer.shadowOpacity = 1
+//        buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonFiveLabel.layer.shadowRadius = 0
+//        buttonFiveLabel.layer.shadowOpacity = 1
+//        buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonSixLabel.layer.shadowRadius = 0
+//        buttonSixLabel.layer.shadowOpacity = 1
+//        buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonSevenLabel.layer.shadowRadius = 0
+//        buttonSevenLabel.layer.shadowOpacity = 1
+//        buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonEightLabel.layer.shadowRadius = 0
+//        buttonEightLabel.layer.shadowOpacity = 1
+//        buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
+//        
+//        buttonNineLabel.layer.shadowRadius = 0
+//        buttonNineLabel.layer.shadowOpacity = 1
+//        buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
     }
     
     

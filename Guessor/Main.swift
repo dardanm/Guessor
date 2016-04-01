@@ -21,49 +21,33 @@ extension BaseLevel {
         // TO-DO LIST
         // ** pause game when home button is pressed
         
-        // BUGS
-        
         // Battery
         UIDevice.currentDevice().batteryMonitoringEnabled = true
-        
         batteryProgress.progress = UIDevice.currentDevice().batteryLevel
-        
         batteryProgress.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 5)
         batteryProgressKeep()
 
         
         // Timer
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
-        
         startTimer()
         
+        // "XP" / Coins bar
         xpProgressBar.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 8)
         xpProgressBar.progress = 0.0
         
+        // Coundown timer color
         countDownLabel.textColor = UIColor(netHex: 0xf36723)
         
-        testingLabel.backgroundColor = UIColor (netHex: 0x8ef32f)
-        testingLabel.layer.opacity = 0
-        
+        // Lives Color
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
-        // round buttons
-//        self.firstNumber.layer.cornerRadius = 5.0
-//        self.firstNumber.clipsToBounds = true
-//        
-//        self.secondNumber.layer.cornerRadius = 5.0
-//        self.secondNumber.clipsToBounds = true
-//        
-//        self.thirdNumber.layer.cornerRadius = 5.0
-//        self.thirdNumber.clipsToBounds = true
-//        
-//        self.fourthNumber.layer.cornerRadius = 5.0
-//        self.fourthNumber.clipsToBounds = true
-        
+        // Hide status bar
         prefersStatusBarHidden()
         
+        // Set firstNUmber as first to check button
         runOrNot = 4
         
         // top numbers randomize
@@ -181,7 +165,7 @@ extension BaseLevel {
             runOrNot = 4
         }
         
-        if count == 0 && lives > 0{
+        if count <= 0 && lives > 0{
             runOrNot = 4
             disableButtons()
             stopTimer()
@@ -195,7 +179,7 @@ extension BaseLevel {
             levelText += 1
         }
         
-        if lives == 0 {
+        if lives <= 0 {
             
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
@@ -212,6 +196,7 @@ extension BaseLevel {
         
         
     }
+
     
     // check if game is finished
     func gameFinish(){
@@ -225,10 +210,42 @@ extension BaseLevel {
             stopTimer()
             resetRoll()
         }
-        
-        
 
+        updateLivesLeftIcons()
         
+        if scoreKeep == 0 {
+            runOrNot = 4
+        }
+        
+        if count <= 0 && lives > 0{
+            runOrNot = 4
+            disableButtons()
+            stopTimer()
+            resetRollZeroCount()
+        }
+        
+        // don't remove
+        countDownLabel.text = String(count)
+        
+        if xpProgressBar.progress == 1.0 {
+            levelText += 1
+        }
+        
+        if lives <= 0 {
+            
+            self.countDownLabel.text = "\(count)"
+            updateTimerBar()
+            stopTimer()
+            runOrNot = 4
+            disableButtons()
+            tryAgainLabel.layer.opacity = 1
+            tryAgainLabel.enabled = true
+        }
+        
+        if xpProgressBar.progress == 1.0 {
+            xpProgressBar.progress = 0.0
+        }
+
 
     }
     
