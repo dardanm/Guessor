@@ -50,17 +50,17 @@ extension BaseLevel {
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
         // round buttons
-        self.firstNumber.layer.cornerRadius = 5.0
-        self.firstNumber.clipsToBounds = true
-        
-        self.secondNumber.layer.cornerRadius = 5.0
-        self.secondNumber.clipsToBounds = true
-        
-        self.thirdNumber.layer.cornerRadius = 5.0
-        self.thirdNumber.clipsToBounds = true
-        
-        self.fourthNumber.layer.cornerRadius = 5.0
-        self.fourthNumber.clipsToBounds = true
+//        self.firstNumber.layer.cornerRadius = 5.0
+//        self.firstNumber.clipsToBounds = true
+//        
+//        self.secondNumber.layer.cornerRadius = 5.0
+//        self.secondNumber.clipsToBounds = true
+//        
+//        self.thirdNumber.layer.cornerRadius = 5.0
+//        self.thirdNumber.clipsToBounds = true
+//        
+//        self.fourthNumber.layer.cornerRadius = 5.0
+//        self.fourthNumber.clipsToBounds = true
         
         prefersStatusBarHidden()
         
