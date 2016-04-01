@@ -15,6 +15,7 @@
 		DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC90B8581C7966D500CCC033 /* Assets.xcassets */; };
 		DC90B8691C7981FC00CCC033 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC90B8681C7981FC00CCC033 /* AVFoundation.framework */; };
 		DC9CE1D81CA7883800817C02 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DC9CE1D71CA7883800817C02 /* Notes */; };
+		DCA7353F1CAE202B002CC9DC /* AddTimeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCA7353E1CAE202B002CC9DC /* AddTimeIcon.png */; };
 		DCAAC8B21C9E14FA000F5C99 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCAAC8B11C9E14FA000F5C99 /* background.mp3 */; };
 		DCAAC8B81C9E1841000F5C99 /* buttonCorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCAAC8B71C9E1841000F5C99 /* buttonCorrect.mp3 */; };
 		DCAAC8BC1C9E1B53000F5C99 /* buttonIncorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCAAC8BB1C9E1B53000F5C99 /* buttonIncorrect.mp3 */; };
@@ -47,6 +48,7 @@
 		DC90B85D1C7966D500CCC033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC90B8681C7981FC00CCC033 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DC9CE1D71CA7883800817C02 /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		DCA7353E1CAE202B002CC9DC /* AddTimeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddTimeIcon.png; sourceTree = "<group>"; };
 		DCAAC8B11C9E14FA000F5C99 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		DCAAC8B71C9E1841000F5C99 /* buttonCorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonCorrect.mp3; sourceTree = "<group>"; };
 		DCAAC8BB1C9E1B53000F5C99 /* buttonIncorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonIncorrect.mp3; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				DC11325F1C83D06600B19DCD /* AppDelegate.swift */,
+				DCA7353E1CAE202B002CC9DC /* AddTimeIcon.png */,
 				DCAAC8BD1C9E1CB4000F5C99 /* button.png */,
 				DCF94FD81C9F1AE000231CA3 /* Level 1 */,
 				DCAAC8BB1C9E1B53000F5C99 /* buttonIncorrect.mp3 */,
@@ -199,6 +202,7 @@
 				DCAAC8BC1C9E1B53000F5C99 /* buttonIncorrect.mp3 in Resources */,
 				DC0633951CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf in Resources */,
 				DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */,
+				DCA7353F1CAE202B002CC9DC /* AddTimeIcon.png in Resources */,
 				DCB3C18E1CAC761300B6BB87 /* GuessorAppIcon2x.png in Resources */,
 				DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */,
 				DCB3C1921CAC7D0500B6BB87 /* Myriad-Pro-Semibold-Italic.ttf in Resources */,
