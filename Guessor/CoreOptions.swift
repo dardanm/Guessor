@@ -76,10 +76,10 @@ extension BaseLevel {
         if lives >= 1 {
         enableButtons()
 
-        
-        self.scoreKeep = 0
-            
+        delay(0.5){
         self.generateTopAndBottomButtons()
+        self.scoreKeep = 0
+        }
 
             
         }
@@ -92,6 +92,8 @@ extension BaseLevel {
         
         if lives > 0{
 
+        delay(0.5){
+        self.generateTopAndBottomButtons()
         self.startTimer()
         
         self.count = 10
@@ -102,7 +104,8 @@ extension BaseLevel {
         
         self.scoreKeep = 0
         
-        self.generateTopAndBottomButtons()
+
+        }
 
 
         }
@@ -226,6 +229,9 @@ extension BaseLevel {
     }
     
     func generateTopAndBottomButtons(){
+        
+        generateButtonImages()
+        
         // top numbers randomize
         self.numberOneOptionsColors()
         self.numberOneOptionsText()
