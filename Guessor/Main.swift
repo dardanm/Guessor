@@ -45,9 +45,42 @@ extension BaseLevel {
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
         // Hide Images For Bottom Buttons
+        // 1
         caneB1.hidden = true
         candyB1.hidden = true
         popB1.hidden = true
+        // 2
+        caneB2.hidden = true
+        candyB2.hidden = true
+        popB2.hidden = true
+        // 3
+        caneB3.hidden = true
+        candyB3.hidden = true
+        popB3.hidden = true
+        // 4
+        caneB4.hidden = true
+        candyB4.hidden = true
+        popB4.hidden = true
+        // 5
+        caneB5.hidden = true
+        candyB5.hidden = true
+        popB5.hidden = true
+        // 6
+        caneB6.hidden = true
+        candyB6.hidden = true
+        popB6.hidden = true
+        // 7
+        caneB7.hidden = true
+        candyB7.hidden = true
+        popB7.hidden = true
+        // 8
+        caneB8.hidden = true
+        candyB8.hidden = true
+        popB8.hidden = true
+        // 9
+        caneB9.hidden = true
+        candyB9.hidden = true
+        popB9.hidden = true
         
         // Hide Images For Bottom Buttons
         caneN1.hidden = true

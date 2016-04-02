@@ -46,13 +46,13 @@ extension BaseLevel {
     func numberOneOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: numberOneLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberOneLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         firstNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: numberOneLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberOneLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         firstNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: numberOneLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberOneLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         firstNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: numberOneLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberOneLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         firstNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: numberOneLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -62,13 +62,13 @@ extension BaseLevel {
     func numberTwoOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: numberTwoLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberTwoLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         secondNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: numberTwoLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberTwoLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         secondNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: numberTwoLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberTwoLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         secondNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: numberTwoLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberTwoLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         secondNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: numberTwoLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -78,13 +78,13 @@ extension BaseLevel {
     func numberThreeOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: numberThreeLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberThreeLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: numberThreeLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberThreeLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: numberThreeLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberThreeLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: numberThreeLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberThreeLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: numberThreeLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -94,13 +94,13 @@ extension BaseLevel {
     func numberFourOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: numberFourLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberFourLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: numberFourLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberFourLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: numberFourLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberFourLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: numberFourLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberFourLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: numberFourLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -111,13 +111,13 @@ extension BaseLevel {
     func buttonOneOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonOneLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonOneLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonOneLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonOneLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonOneLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonOneLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonOneLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonOneLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonOneLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonOneLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonOneLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonOneLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -126,13 +126,13 @@ extension BaseLevel {
     func buttonTwoOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonTwoLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonTwoLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonTwoLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -141,13 +141,13 @@ extension BaseLevel {
     func buttonThreeOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonThreeLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonThreeLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonThreeLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -156,13 +156,13 @@ extension BaseLevel {
     func buttonFourOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonFourLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonFourLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonFourLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonFourLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonFourLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonFourLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonFourLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonFourLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonFourLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonFourLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonFourLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonFourLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -171,13 +171,13 @@ extension BaseLevel {
     func buttonFiveOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonFiveLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonFiveLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonFiveLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -186,13 +186,13 @@ extension BaseLevel {
     func buttonSixOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonSixLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonSixLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonSixLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonSixLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonSixLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonSixLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonSixLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonSixLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonSixLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonSixLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonSixLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonSixLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -201,13 +201,13 @@ extension BaseLevel {
     func buttonSevenOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonSevenLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonSevenLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonSevenLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -216,13 +216,13 @@ extension BaseLevel {
     func buttonEightOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonEightLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonEightLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonEightLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonEightLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonEightLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonEightLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonEightLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonEightLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonEightLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonEightLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonEightLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonEightLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -231,13 +231,13 @@ extension BaseLevel {
     func buttonNineOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: buttonNineLabel.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: buttonNineLabel.backgroundColor = UIColor(netHex: 0x99e1c3)
         buttonNineLabel.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: buttonNineLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: buttonNineLabel.backgroundColor = UIColor(netHex: 0xf7b220)
         buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: buttonNineLabel.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: buttonNineLabel.backgroundColor = UIColor(netHex: 0xf77c2c)
         buttonNineLabel.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: buttonNineLabel.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: buttonNineLabel.backgroundColor = UIColor(netHex: 0xa7cfff)
         buttonNineLabel.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
         default: buttonNineLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
@@ -380,8 +380,7 @@ extension BaseLevel {
         }
         
         
-        
-        //button 1
+        // 1
         if buttonOneText.text == "O" {
             caneB1.hidden = false
             candyB1.hidden = true
@@ -397,27 +396,165 @@ extension BaseLevel {
             candyB1.hidden = true
             popB1.hidden = false
         }
+        
+        // 2
+        if buttonTwoText.text == "O" {
+            caneB2.hidden = false
+            candyB2.hidden = true
+            popB2.hidden = true
+        }
+        if buttonTwoText.text == ">" {
+            caneB2.hidden = true
+            candyB2.hidden = false
+            popB2.hidden = true
+        }
+        if buttonTwoText.text == "<" {
+            caneB2.hidden = true
+            candyB2.hidden = true
+            popB2.hidden = false
+        }
+        
+        // 3
+        if buttonThreeText.text == "O" {
+            caneB3.hidden = false
+            candyB3.hidden = true
+            popB3.hidden = true
+        }
+        if buttonThreeText.text == ">" {
+            caneB3.hidden = true
+            candyB3.hidden = false
+            popB3.hidden = true
+        }
+        if buttonThreeText.text == "<" {
+            caneB3.hidden = true
+            candyB3.hidden = true
+            popB3.hidden = false
+        }
+        
+        // 4
+        if buttonFourText.text == "O" {
+            caneB4.hidden = false
+            candyB4.hidden = true
+            popB4.hidden = true
+        }
+        if buttonFourText.text == ">" {
+            caneB4.hidden = true
+            candyB4.hidden = false
+            popB4.hidden = true
+        }
+        if buttonFourText.text == "<" {
+            caneB4.hidden = true
+            candyB4.hidden = true
+            popB4.hidden = false
+        }
+        
+        // 5
+        if buttonFiveText.text == "O" {
+            caneB5.hidden = false
+            candyB5.hidden = true
+            popB5.hidden = true
+        }
+        if buttonFiveText.text == ">" {
+            caneB5.hidden = true
+            candyB5.hidden = false
+            popB5.hidden = true
+        }
+        if buttonFiveText.text == "<" {
+            caneB5.hidden = true
+            candyB5.hidden = true
+            popB5.hidden = false
+        }
+        
+        // 6
+        if buttonSixText.text == "O" {
+            caneB6.hidden = false
+            candyB6.hidden = true
+            popB6.hidden = true
+        }
+        if buttonSixText.text == ">" {
+            caneB6.hidden = true
+            candyB6.hidden = false
+            popB6.hidden = true
+        }
+        if buttonSixText.text == "<" {
+            caneB6.hidden = true
+            candyB6.hidden = true
+            popB6.hidden = false
+        }
+        
+        // 7
+        if buttonSevenText.text == "O" {
+            caneB7.hidden = false
+            candyB7.hidden = true
+            popB7.hidden = true
+        }
+        if buttonSevenText.text == ">" {
+            caneB7.hidden = true
+            candyB7.hidden = false
+            popB7.hidden = true
+        }
+        if buttonSevenText.text == "<" {
+            caneB7.hidden = true
+            candyB7.hidden = true
+            popB7.hidden = false
+        }
+        
+        // 8
+        if buttonEightText.text == "O" {
+            caneB8.hidden = false
+            candyB8.hidden = true
+            popB8.hidden = true
+        }
+        if buttonEightText.text == ">" {
+            caneB8.hidden = true
+            candyB8.hidden = false
+            popB8.hidden = true
+        }
+        if buttonEightText.text == "<" {
+            caneB8.hidden = true
+            candyB8.hidden = true
+            popB8.hidden = false
+        }
+        
+        // 9
+        if buttonNineText.text == "O" {
+            caneB9.hidden = false
+            candyB9.hidden = true
+            popB9.hidden = true
+        }
+        if buttonNineText.text == ">" {
+            caneB9.hidden = true
+            candyB9.hidden = false
+            popB9.hidden = true
+        }
+        if buttonNineText.text == "<" {
+            caneB9.hidden = true
+            candyB9.hidden = true
+            popB9.hidden = false
+        }
+        
+        
+        
+        
     }
 
         
-        // button one random numbers
-        func buttonOneOptionsText(){
-            value = Int(arc4random_uniform(9) + 1)
-            switch value {
-            case 1: buttonOneText.text = "O"
-            case 2: buttonOneText.text = "O"
-            case 3: buttonOneText.text = "O"
-            case 4: buttonOneText.text = ">"
-            case 5: buttonOneText.text = ">"
-            case 6: buttonOneText.text = ">"
-            case 7: buttonOneText.text = "<"
-            case 8: buttonOneText.text = "<"
-            case 9: buttonOneText.text = "<"
-            default: buttonOneText.text = "O"
-            }
+    // button two random numbers
+    func buttonOneOptionsText(){
+        value = Int(arc4random_uniform(9) + 1)
+        switch value {
+        case 1: buttonOneText.text = "O"
+        case 2: buttonOneText.text = "O"
+        case 3: buttonOneText.text = "O"
+        case 4: buttonOneText.text = ">"
+        case 5: buttonOneText.text = ">"
+        case 6: buttonOneText.text = ">"
+        case 7: buttonOneText.text = "<"
+        case 8: buttonOneText.text = "<"
+        case 9: buttonOneText.text = "<"
+        default: buttonOneText.text = "O"
         }
-    
-
+    }
         
     // button two random numbers
     func buttonTwoOptionsText(){

@@ -55,7 +55,7 @@ class BaseLevel: UIViewController {
     @IBOutlet var buttonEightLabel: UIButton!
     @IBOutlet var buttonNineLabel: UIButton!
     
-    // top numbwea pictures
+    // top number pictures
     @IBOutlet var candyN1: UIImageView!
     @IBOutlet var popN1: UIImageView!
     @IBOutlet var caneN1: UIImageView!
@@ -69,15 +69,35 @@ class BaseLevel: UIViewController {
     @IBOutlet var popN4: UIImageView!
     @IBOutlet var caneN4: UIImageView!
     
-    
-    
     //bottom buttons pictures
     @IBOutlet weak var candyB1: UIImageView!
     @IBOutlet weak var popB1: UIImageView!
     @IBOutlet weak var caneB1: UIImageView!
+    @IBOutlet var candyB2: UIImageView!
+    @IBOutlet var popB2: UIImageView!
+    @IBOutlet var caneB2: UIImageView!
+    @IBOutlet var candyB3: UIImageView!
+    @IBOutlet var popB3: UIImageView!
+    @IBOutlet var caneB3: UIImageView!
+    @IBOutlet var candyB4: UIImageView!
+    @IBOutlet var popB4: UIImageView!
+    @IBOutlet var caneB4: UIImageView!
+    @IBOutlet var candyB5: UIImageView!
+    @IBOutlet var popB5: UIImageView!
+    @IBOutlet var caneB5: UIImageView!
+    @IBOutlet var candyB6: UIImageView!
+    @IBOutlet var popB6: UIImageView!
+    @IBOutlet var caneB6: UIImageView!
+    @IBOutlet var candyB7: UIImageView!
+    @IBOutlet var popB7: UIImageView!
+    @IBOutlet var caneB7: UIImageView!
+    @IBOutlet var candyB8: UIImageView!
+    @IBOutlet var popB8: UIImageView!
+    @IBOutlet var caneB8: UIImageView!
+    @IBOutlet var candyB9: UIImageView!
+    @IBOutlet var popB9: UIImageView!
+    @IBOutlet var caneB9: UIImageView!
 
-
-    
     
     @IBOutlet weak var batteryProgress: UIProgressView!
     
@@ -219,8 +239,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -239,8 +259,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -259,8 +279,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -279,8 +299,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -333,8 +353,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -353,8 +373,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -373,8 +393,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -393,8 +413,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -449,8 +469,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -469,8 +489,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -489,8 +509,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -509,8 +529,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -564,8 +584,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -584,8 +604,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -604,8 +624,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -624,8 +644,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -679,8 +699,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -699,8 +719,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -719,8 +739,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -739,8 +759,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -794,8 +814,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -814,8 +834,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -834,8 +854,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -854,8 +874,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -909,8 +929,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -929,8 +949,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -949,8 +969,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -969,8 +989,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1024,8 +1044,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1044,8 +1064,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1064,8 +1084,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1084,8 +1104,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1139,8 +1159,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1159,8 +1179,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1179,8 +1199,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
@@ -1199,8 +1219,8 @@ class BaseLevel: UIViewController {
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x88C425)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x88C425)
+                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
