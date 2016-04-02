@@ -85,8 +85,6 @@ extension BaseLevel {
         buttonEightOptionsText()
         buttonNineOptionsText()
         
-        generateButtonImages()
-        
         // bottom buttons randomize background colors
         buttonOneOptionsColors()
         buttonTwoOptionsColors()
@@ -104,6 +102,8 @@ extension BaseLevel {
         
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
+        
+        generateButtonImages()
         
     }
     
@@ -179,11 +179,16 @@ extension BaseLevel {
             count -= 1
         }
         
+        print("score : \(scoreKeep)")
+        
+        if scoreKeep == 0{
+            runOrNot = 4
+        }
+        
         print(runOrNot)
         
         updateTimerBar()
         updateLivesLeftIcons()
-        generateButtonImages()
         
         if count <= 0 && lives > 0{
             disableButtons()
@@ -213,6 +218,8 @@ extension BaseLevel {
             xpProgressBar.progress = 0.0
         }
         
+        generateButtonImages()
+        
         
     }
 
@@ -221,7 +228,6 @@ extension BaseLevel {
     func gameFinish(){
         
         updateLivesLeftIcons()
-        generateButtonImages()
         
         if scoreKeep == 4 {
             disableButtons()
@@ -260,6 +266,8 @@ extension BaseLevel {
         if xpProgressBar.progress == 1.0 {
             xpProgressBar.progress = 0.0
         }
+        
+        generateButtonImages()
 
 
     }

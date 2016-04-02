@@ -315,7 +315,7 @@ extension BaseLevel {
         // "<" - POP
         
         //number 1
-        if firstNumber.text == "0" {
+        if firstNumber.text == "O" {
             caneN1.hidden = false
             candyN1.hidden = true
             popN1.hidden = true
@@ -332,7 +332,7 @@ extension BaseLevel {
         }
         
         //button 1
-        if buttonOneText.text == "0" {
+        if buttonOneText.text == "O" {
             caneB1.hidden = false
             candyB1.hidden = true
             popB1.hidden = true
