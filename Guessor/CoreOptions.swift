@@ -230,8 +230,6 @@ extension BaseLevel {
     
     func generateTopAndBottomButtons(){
         
-        generateButtonImages()
-        
         // top numbers randomize
         self.numberOneOptionsColors()
         self.numberOneOptionsText()
@@ -265,6 +263,9 @@ extension BaseLevel {
         self.buttonSevenOptionsColors()
         self.buttonEightOptionsColors()
         self.buttonNineOptionsColors()
+        
+        generateButtonImages()
+        
     }
     
     

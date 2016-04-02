@@ -44,99 +44,13 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
-        // Hide Images For Bottom Buttons
-        // 1
-        caneB1.hidden = true
-        candyB1.hidden = true
-        popB1.hidden = true
-        // 2
-        caneB2.hidden = true
-        candyB2.hidden = true
-        popB2.hidden = true
-        // 3
-        caneB3.hidden = true
-        candyB3.hidden = true
-        popB3.hidden = true
-        // 4
-        caneB4.hidden = true
-        candyB4.hidden = true
-        popB4.hidden = true
-        // 5
-        caneB5.hidden = true
-        candyB5.hidden = true
-        popB5.hidden = true
-        // 6
-        caneB6.hidden = true
-        candyB6.hidden = true
-        popB6.hidden = true
-        // 7
-        caneB7.hidden = true
-        candyB7.hidden = true
-        popB7.hidden = true
-        // 8
-        caneB8.hidden = true
-        candyB8.hidden = true
-        popB8.hidden = true
-        // 9
-        caneB9.hidden = true
-        candyB9.hidden = true
-        popB9.hidden = true
-        
-        // Hide Images For Bottom Buttons
-        caneN1.hidden = true
-        candyN1.hidden = true
-        popN1.hidden = true
-        caneN2.hidden = true
-        candyN2.hidden = true
-        popN2.hidden = true
-        caneN3.hidden = true
-        candyN3.hidden = true
-        popN3.hidden = true
-        caneN4.hidden = true
-        candyN4.hidden = true
-        popN4.hidden = true
-        
         // Hide status bar
         prefersStatusBarHidden()
         
         // Set firstNUmber as first to check button
         runOrNot = 4
         
-        // Hide frist number
-
-        
-        // top numbers randomize
-        numberOneOptionsText()
-        numberTwoOptionsText()
-        numberThreeOptionsText()
-        numberFourOptionsText()
-        
-        numberOneOptionsColors()
-        numberTwoOptionsColors()
-        numberThreeOptionsColors()
-        numberFourOptionsColors()
-        
-        // bottom buttons randomize numbers
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
-        
-        // bottom buttons randomize background colors
-        buttonOneOptionsColors()
-        buttonTwoOptionsColors()
-        buttonThreeOptionsColors()
-        buttonFourOptionsColors()
-        buttonFiveOptionsColors()
-        buttonSixOptionsColors()
-        buttonSevenOptionsColors()
-        buttonEightOptionsColors()
-        buttonNineOptionsColors()
+        generateTopAndBottomButtons()
                 
         // try again
         tryAgainLabel.enabled = false
@@ -144,8 +58,7 @@ extension BaseLevel {
         
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
-        
-        generateButtonImages()
+
         
     }
     
