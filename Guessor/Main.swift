@@ -44,11 +44,20 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
+        // Hide Images
+        caneB1.hidden = true
+        candyB1.hidden = true
+        popB1.hidden = true
+        
+        
         // Hide status bar
         prefersStatusBarHidden()
         
         // Set firstNUmber as first to check button
         runOrNot = 4
+        
+        // Hide frist number
+
         
         // top numbers randomize
         generateTopButtons()
@@ -61,7 +70,16 @@ extension BaseLevel {
         numberFourOptionsColors()
         
         // bottom buttons randomize numbers
-        generateBottomButtons()
+        buttonOneOptionsText()
+        buttonTwoOptionsText()
+        buttonThreeOptionsText()
+        buttonFourOptionsText()
+        buttonFiveOptionsText()
+        buttonSixOptionsText()
+        buttonSevenOptionsText()
+        buttonEightOptionsText()
+        buttonNineOptionsText()
+        generateButtonImages()
         
         // bottom buttons randomize background colors
         buttonOneOptionsColors()
@@ -83,6 +101,8 @@ extension BaseLevel {
         
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
+        
+        buttonOneOptionsText()
         
     }
     

@@ -10,6 +10,9 @@
 		DC0633951CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0633941CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf */; };
 		DC0C51491CA5C67200925709 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C51481CA5C67200925709 /* Main.swift */; };
 		DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC11325F1C83D06600B19DCD /* AppDelegate.swift */; };
+		DC4675021CAF49C9001A8422 /* candy.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4674FF1CAF49C9001A8422 /* candy.png */; };
+		DC4675031CAF49C9001A8422 /* cane.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4675001CAF49C9001A8422 /* cane.png */; };
+		DC4675041CAF49C9001A8422 /* pop.png in Resources */ = {isa = PBXBuildFile; fileRef = DC4675011CAF49C9001A8422 /* pop.png */; };
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
 		DC90B8541C7966D500CCC033 /* BaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90B8531C7966D500CCC033 /* BaseLevel.swift */; };
 		DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC90B8581C7966D500CCC033 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		DC0633941CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Black_31623.ttf"; sourceTree = "<group>"; };
 		DC0C51481CA5C67200925709 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DC11325F1C83D06600B19DCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC4674FF1CAF49C9001A8422 /* candy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = candy.png; sourceTree = "<group>"; };
+		DC4675001CAF49C9001A8422 /* cane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cane.png; sourceTree = "<group>"; };
+		DC4675011CAF49C9001A8422 /* pop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop.png; sourceTree = "<group>"; };
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		DC90B84E1C7966D500CCC033 /* Guessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC90B8531C7966D500CCC033 /* BaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevel.swift; sourceTree = "<group>"; };
@@ -80,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC4675051CAF4A20001A8422 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DC4674FF1CAF49C9001A8422 /* candy.png */,
+				DC4675001CAF49C9001A8422 /* cane.png */,
+				DC4675011CAF49C9001A8422 /* pop.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		DC90B8451C7966D500CCC033 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +145,7 @@
 		DCF94FD81C9F1AE000231CA3 /* Level 1 */ = {
 			isa = PBXGroup;
 			children = (
+				DC4675051CAF4A20001A8422 /* Images */,
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
 				DC0C51481CA5C67200925709 /* Main.swift */,
 				DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */,
@@ -212,11 +229,14 @@
 				DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */,
 				DCAAC8B81C9E1841000F5C99 /* buttonCorrect.mp3 in Resources */,
 				DCB3C1941CAC7E6E00B6BB87 /* launcherimage.png in Resources */,
+				DC4675031CAF49C9001A8422 /* cane.png in Resources */,
+				DC4675041CAF49C9001A8422 /* pop.png in Resources */,
 				DCB3C1861CAC735E00B6BB87 /* LaunchScreen.storyboard in Resources */,
 				DC9CE1D81CA7883800817C02 /* Notes in Resources */,
 				DCB3C18D1CAC761300B6BB87 /* GuessorAppIcon3x.png in Resources */,
 				DCAAC8B21C9E14FA000F5C99 /* background.mp3 in Resources */,
 				DCB3C1901CAC78DA00B6BB87 /* LaunchImage1.png in Resources */,
+				DC4675021CAF49C9001A8422 /* candy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
