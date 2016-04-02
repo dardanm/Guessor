@@ -330,6 +330,56 @@ extension BaseLevel {
             candyN1.hidden = true
             popN1.hidden = false
         }
+        //number 2
+        if secondNumber.text == "O" {
+            caneN2.hidden = false
+            candyN2.hidden = true
+            popN2.hidden = true
+        }
+        if secondNumber.text == ">" {
+            caneN2.hidden = true
+            candyN2.hidden = false
+            popN2.hidden = true
+        }
+        if secondNumber.text == "<" {
+            caneN2.hidden = true
+            candyN2.hidden = true
+            popN2.hidden = false
+        }
+        //number 3
+        if thirdNumber.text == "O" {
+            caneN3.hidden = false
+            candyN3.hidden = true
+            popN3.hidden = true
+        }
+        if thirdNumber.text == ">" {
+            caneN3.hidden = true
+            candyN3.hidden = false
+            popN3.hidden = true
+        }
+        if thirdNumber.text == "<" {
+            caneN3.hidden = true
+            candyN3.hidden = true
+            popN3.hidden = false
+        }
+        //number 4
+        if fourthNumber.text == "O" {
+            caneN4.hidden = false
+            candyN4.hidden = true
+            popN4.hidden = true
+        }
+        if fourthNumber.text == ">" {
+            caneN4.hidden = true
+            candyN4.hidden = false
+            popN4.hidden = true
+        }
+        if fourthNumber.text == "<" {
+            caneN4.hidden = true
+            candyN4.hidden = true
+            popN4.hidden = false
+        }
+        
+        
         
         //button 1
         if buttonOneText.text == "O" {

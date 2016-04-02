@@ -53,6 +53,15 @@ extension BaseLevel {
         caneN1.hidden = true
         candyN1.hidden = true
         popN1.hidden = true
+        caneN2.hidden = true
+        candyN2.hidden = true
+        popN2.hidden = true
+        caneN3.hidden = true
+        candyN3.hidden = true
+        popN3.hidden = true
+        caneN4.hidden = true
+        candyN4.hidden = true
+        popN4.hidden = true
         
         // Hide status bar
         prefersStatusBarHidden()

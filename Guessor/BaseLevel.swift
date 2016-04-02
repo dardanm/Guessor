@@ -59,6 +59,15 @@ class BaseLevel: UIViewController {
     @IBOutlet var candyN1: UIImageView!
     @IBOutlet var popN1: UIImageView!
     @IBOutlet var caneN1: UIImageView!
+    @IBOutlet var candyN2: UIImageView!
+    @IBOutlet var popN2: UIImageView!
+    @IBOutlet var caneN2: UIImageView!
+    @IBOutlet var candyN3: UIImageView!
+    @IBOutlet var popN3: UIImageView!
+    @IBOutlet var caneN3: UIImageView!
+    @IBOutlet var candyN4: UIImageView!
+    @IBOutlet var popN4: UIImageView!
+    @IBOutlet var caneN4: UIImageView!
     
     
     
