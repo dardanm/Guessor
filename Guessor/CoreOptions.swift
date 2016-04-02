@@ -43,6 +43,7 @@ extension BaseLevel {
     func tryAgain(){
         
         enableButtons()
+        runOrNot = 4
         
         startTimer()
         
@@ -59,7 +60,6 @@ extension BaseLevel {
         
         self.generateTopAndBottomButtons()
         
-        shadowOptions()
         
         tryAgainLabel.layer.opacity = 0
     }
@@ -68,22 +68,19 @@ extension BaseLevel {
     func resetRoll(){
         
         startTimer()
-        
+
         count += 3
         updateTimerBar()
         self.countDownLabel.text = "\(count)"
         
         if lives >= 1 {
         enableButtons()
-        
-        delay(0.5){
+
         
         self.scoreKeep = 0
             
         self.generateTopAndBottomButtons()
-            
-        self.shadowOptions()
-        }
+
             
         }
     }
@@ -94,7 +91,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if lives > 0{
-        delay(0.5){
+
         self.startTimer()
         
         self.count = 10
@@ -106,11 +103,10 @@ extension BaseLevel {
         self.scoreKeep = 0
         
         self.generateTopAndBottomButtons()
-        }
+
 
         }
         
-        shadowOptions()
     }
     
     func correctAnswer(){

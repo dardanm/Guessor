@@ -14,82 +14,7 @@ extension BaseLevel {
     
     // ========= GUI / BUTTONS
     
-    // set shadow options for buttons -- condense?
-    func shadowOptions() {
-//        firstNumber.layer.shadowRadius = 0
-//        firstNumber.layer.shadowOpacity = 1
-//        firstNumber.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        secondNumber.layer.shadowRadius = 0
-//        secondNumber.layer.shadowOpacity = 1
-//        secondNumber.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        thirdNumber.layer.shadowRadius = 0
-//        thirdNumber.layer.shadowOpacity = 1
-//        thirdNumber.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        fourthNumber.layer.shadowRadius = 0
-//        fourthNumber.layer.shadowOpacity = 1
-//        fourthNumber.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonOneLabel.layer.shadowRadius = 0
-//        buttonOneLabel.layer.shadowOpacity = 1
-//        buttonOneLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonTwoLabel.layer.shadowRadius = 0
-//        buttonTwoLabel.layer.shadowOpacity = 1
-//        buttonTwoLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonThreeLabel.layer.shadowRadius = 0
-//        buttonThreeLabel.layer.shadowOpacity = 1
-//        buttonThreeLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonFourLabel.layer.shadowRadius = 0
-//        buttonFourLabel.layer.shadowOpacity = 1
-//        buttonFourLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonFiveLabel.layer.shadowRadius = 0
-//        buttonFiveLabel.layer.shadowOpacity = 1
-//        buttonFiveLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonSixLabel.layer.shadowRadius = 0
-//        buttonSixLabel.layer.shadowOpacity = 1
-//        buttonSixLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonSevenLabel.layer.shadowRadius = 0
-//        buttonSevenLabel.layer.shadowOpacity = 1
-//        buttonSevenLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonEightLabel.layer.shadowRadius = 0
-//        buttonEightLabel.layer.shadowOpacity = 1
-//        buttonEightLabel.layer.shadowOffset = CGSizeMake(0, 4)
-//        
-//        buttonNineLabel.layer.shadowRadius = 0
-//        buttonNineLabel.layer.shadowOpacity = 1
-//        buttonNineLabel.layer.shadowOffset = CGSizeMake(0, 4)
-    }
-    
-    
-//    func greenBackgroundOptions(){
-//        self.buttonOneOptionsColors()
-//        self.buttonOneOptionsText()
-//        self.buttonTwoOptionsColors()
-//        self.buttonTwoOptionsText()
-//        self.buttonThreeOptionsText()
-//        self.buttonThreeOptionsColors()
-//        self.buttonFourOptionsColors()
-//        self.buttonFourOptionsText()
-//        self.buttonFiveOptionsColors()
-//        self.buttonFiveOptionsText()
-//        self.buttonSixOptionsText()
-//        self.buttonSixOptionsColors()
-//        self.buttonSevenOptionsColors()
-//        self.buttonSevenOptionsText()
-//        self.buttonEightOptionsColors()
-//        self.buttonEightOptionsText()
-//        self.buttonNineOptionsText()
-//        self.buttonNineOptionsColors()
-//    }
+
     
     func disableButtons(){
         buttonOneLabel.enabled = false
@@ -121,15 +46,15 @@ extension BaseLevel {
     func numberOneOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: firstNumber.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberOneLabel.backgroundColor = UIColor(netHex: 0xFAD089)
         firstNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: firstNumber.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberOneLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
         firstNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: firstNumber.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberOneLabel.backgroundColor = UIColor(netHex: 0xb5daff)
         firstNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: firstNumber.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberOneLabel.backgroundColor = UIColor(netHex: 0xfabe28)
         firstNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
-        default: firstNumber.backgroundColor = UIColor(netHex: 0xA8330C)
+        default: numberOneLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
     }
     
@@ -137,15 +62,15 @@ extension BaseLevel {
     func numberTwoOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: secondNumber.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberTwoLabel.backgroundColor = UIColor(netHex: 0xFAD089)
         secondNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: secondNumber.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberTwoLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
         secondNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: secondNumber.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberTwoLabel.backgroundColor = UIColor(netHex: 0xb5daff)
         secondNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: secondNumber.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberTwoLabel.backgroundColor = UIColor(netHex: 0xfabe28)
         secondNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
-        default: secondNumber.backgroundColor = UIColor(netHex: 0xA8330C)
+        default: numberTwoLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
     }
     
@@ -153,15 +78,15 @@ extension BaseLevel {
     func numberThreeOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: thirdNumber.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberThreeLabel.backgroundColor = UIColor(netHex: 0xFAD089)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: thirdNumber.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberThreeLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: thirdNumber.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberThreeLabel.backgroundColor = UIColor(netHex: 0xb5daff)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: thirdNumber.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberThreeLabel.backgroundColor = UIColor(netHex: 0xfabe28)
         thirdNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
-        default: thirdNumber.backgroundColor = UIColor(netHex: 0xA8330C)
+        default: numberThreeLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
     }
     
@@ -169,15 +94,15 @@ extension BaseLevel {
     func numberFourOptionsColors(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: fourthNumber.backgroundColor = UIColor(netHex: 0xFAD089)
+        case 1: numberFourLabel.backgroundColor = UIColor(netHex: 0xFAD089)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0xd0762d).CGColor
-        case 2: fourthNumber.backgroundColor = UIColor(netHex: 0xFF9C5B)
+        case 2: numberFourLabel.backgroundColor = UIColor(netHex: 0xFF9C5B)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0x90c6b1).CGColor
-        case 3: fourthNumber.backgroundColor = UIColor(netHex: 0xb5daff)
+        case 3: numberFourLabel.backgroundColor = UIColor(netHex: 0xb5daff)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0x97c2ed).CGColor
-        case 4: fourthNumber.backgroundColor = UIColor(netHex: 0xfabe28)
+        case 4: numberFourLabel.backgroundColor = UIColor(netHex: 0xfabe28)
         fourthNumber.layer.shadowColor = UIColor(netHex: 0xdfa922).CGColor
-        default: fourthNumber.backgroundColor = UIColor(netHex: 0xA8330C)
+        default: numberFourLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
     }
     
@@ -317,9 +242,7 @@ extension BaseLevel {
         default: buttonNineLabel.backgroundColor = UIColor(netHex: 0xA8330C)
         }
     }
-    
-    func generateTopButtons(){
-    
+
     // number one random numbers
     func numberOneOptionsText(){
         value = Int(arc4random_uniform(9) + 1)
@@ -384,8 +307,6 @@ extension BaseLevel {
         default: fourthNumber.text = "O"
         }
     }
-        
-    }// generate top four buttons end
     
     func generateButtonImages(){
         
@@ -393,6 +314,22 @@ extension BaseLevel {
         // ">" - CANDY
         // "<" - POP
         
+        //number 1
+        if firstNumber.text == "0" {
+            caneN1.hidden = false
+            candyN1.hidden = true
+            popN1.hidden = true
+        }
+        if firstNumber.text == ">" {
+            caneN1.hidden = true
+            candyN1.hidden = false
+            popN1.hidden = true
+        }
+        if firstNumber.text == "<" {
+            caneN1.hidden = true
+            candyN1.hidden = true
+            popN1.hidden = false
+        }
         
         //button 1
         if buttonOneText.text == "0" {
@@ -411,10 +348,9 @@ extension BaseLevel {
             popB1.hidden = false
         }
     }
-    
-    func generateBottomButtons(){
+
         
-        // button two random numbers
+        // button one random numbers
         func buttonOneOptionsText(){
             value = Int(arc4random_uniform(9) + 1)
             switch value {
@@ -561,225 +497,6 @@ extension BaseLevel {
         default: buttonNineText.text = "O"
         }
     }
-        
-    } // end generate bottom buttons
-
-    
-    
-    
-    
-    // number one random numbers
-    func numberOneOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: firstNumber.text = "O"
-        case 2: firstNumber.text = "O"
-        case 3: firstNumber.text = "O"
-        case 4: firstNumber.text = ">"
-        case 5: firstNumber.text = ">"
-        case 6: firstNumber.text = ">"
-        case 7: firstNumber.text = "<"
-        case 8: firstNumber.text = "<"
-        case 9: firstNumber.text = "<"
-        default: firstNumber.text = "O"
-        }
-    }
-    // number two random numbers
-    func numberTwoOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: secondNumber.text = "O"
-        case 2: secondNumber.text = "O"
-        case 3: secondNumber.text = "O"
-        case 4: secondNumber.text = ">"
-        case 5: secondNumber.text = ">"
-        case 6: secondNumber.text = ">"
-        case 7: secondNumber.text = "<"
-        case 8: secondNumber.text = "<"
-        case 9: secondNumber.text = "<"
-        default: secondNumber.text = "O"
-        }
-    }
-    // number three random numbers
-    func numberThreeOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: thirdNumber.text = "O"
-        case 2: thirdNumber.text = "O"
-        case 3: thirdNumber.text = "O"
-        case 4: thirdNumber.text = ">"
-        case 5: thirdNumber.text = ">"
-        case 6: thirdNumber.text = ">"
-        case 7: thirdNumber.text = "<"
-        case 8: thirdNumber.text = "<"
-        case 9: thirdNumber.text = "<"
-        default: thirdNumber.text = "O"
-        }
-    }
-    // number four random numbers
-    func numberFourOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: fourthNumber.text = "O"
-        case 2: fourthNumber.text = "O"
-        case 3: fourthNumber.text = "O"
-        case 4: fourthNumber.text = ">"
-        case 5: fourthNumber.text = ">"
-        case 6: fourthNumber.text = ">"
-        case 7: fourthNumber.text = "<"
-        case 8: fourthNumber.text = "<"
-        case 9: fourthNumber.text = "<"
-        default: fourthNumber.text = "O"
-        }
-    }
-
-    // button one random numbers
-    func buttonOneOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonOneText.text = "O"
-        case 2: buttonOneText.text = "O"
-        case 3: buttonOneText.text = "O"
-        case 4: buttonOneText.text = ">"
-        case 5: buttonOneText.text = ">"
-        case 6: buttonOneText.text = ">"
-        case 7: buttonOneText.text = "<"
-        case 8: buttonOneText.text = "<"
-        case 9: buttonOneText.text = "<"
-        default: buttonOneText.text = "O"
-        }
-    }
-    // button two random numbers
-    func buttonTwoOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonTwoText.text = "O"
-        case 2: buttonTwoText.text = "O"
-        case 3: buttonTwoText.text = "O"
-        case 4: buttonTwoText.text = ">"
-        case 5: buttonTwoText.text = ">"
-        case 6: buttonTwoText.text = ">"
-        case 7: buttonTwoText.text = "<"
-        case 8: buttonTwoText.text = "<"
-        case 9: buttonTwoText.text = "<"
-        default: buttonTwoText.text = "O"
-        }
-    }
-    // button three random numbers
-    func buttonThreeOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonThreeText.text = "O"
-        case 2: buttonThreeText.text = "O"
-        case 3: buttonThreeText.text = "O"
-        case 4: buttonThreeText.text = ">"
-        case 5: buttonThreeText.text = ">"
-        case 6: buttonThreeText.text = ">"
-        case 7: buttonThreeText.text = "<"
-        case 8: buttonThreeText.text = "<"
-        case 9: buttonThreeText.text = "<"
-        default: buttonThreeText.text = "O"
-        }
-    }
-    // button four random numbers
-    func buttonFourOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonFourText.text = "O"
-        case 2: buttonFourText.text = "O"
-        case 3: buttonFourText.text = "O"
-        case 4: buttonFourText.text = ">"
-        case 5: buttonFourText.text = ">"
-        case 6: buttonFourText.text = ">"
-        case 7: buttonFourText.text = "<"
-        case 8: buttonFourText.text = "<"
-        case 9: buttonFourText.text = "<"
-        default: buttonFourText.text = "O"
-        }
-    }
-    // button five random numbers
-    func buttonFiveOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonFiveText.text = "O"
-        case 2: buttonFiveText.text = "O"
-        case 3: buttonFiveText.text = "O"
-        case 4: buttonFiveText.text = ">"
-        case 5: buttonFiveText.text = ">"
-        case 6: buttonFiveText.text = ">"
-        case 7: buttonFiveText.text = "<"
-        case 8: buttonFiveText.text = "<"
-        case 9: buttonFiveText.text = "<"
-        default: buttonFiveText.text = "O"
-        }
-    }
-    // button six random numbers
-    func buttonSixOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonSixText.text = "O"
-        case 2: buttonSixText.text = "O"
-        case 3: buttonSixText.text = "O"
-        case 4: buttonSixText.text = ">"
-        case 5: buttonSixText.text = ">"
-        case 6: buttonSixText.text = ">"
-        case 7: buttonSixText.text = "<"
-        case 8: buttonSixText.text = "<"
-        case 9: buttonSixText.text = "<"
-        default: buttonSixText.text = "O"
-        }
-    }
-    // button seven random numbers
-    func buttonSevenOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonSevenText.text = "O"
-        case 2: buttonSevenText.text = "O"
-        case 3: buttonSevenText.text = "O"
-        case 4: buttonSevenText.text = ">"
-        case 5: buttonSevenText.text = ">"
-        case 6: buttonSevenText.text = ">"
-        case 7: buttonSevenText.text = "<"
-        case 8: buttonSevenText.text = "<"
-        case 9: buttonSevenText.text = "<"
-        default: buttonSevenText.text = "O"
-        }
-    }
-    // button eight random numbers
-    func buttonEightOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonEightText.text = "O"
-        case 2: buttonEightText.text = "O"
-        case 3: buttonEightText.text = "O"
-        case 4: buttonEightText.text = ">"
-        case 5: buttonEightText.text = ">"
-        case 6: buttonEightText.text = ">"
-        case 7: buttonEightText.text = "<"
-        case 8: buttonEightText.text = "<"
-        case 9: buttonEightText.text = "<"
-        default: buttonEightText.text = "O"
-        }
-    }
-    // button nine random numbers
-    func buttonNineOptionsText(){
-        value = Int(arc4random_uniform(9) + 1)
-        switch value {
-        case 1: buttonNineText.text = "O"
-        case 2: buttonNineText.text = "O"
-        case 3: buttonNineText.text = "O"
-        case 4: buttonNineText.text = ">"
-        case 5: buttonNineText.text = ">"
-        case 6: buttonNineText.text = ">"
-        case 7: buttonNineText.text = "<"
-        case 8: buttonNineText.text = "<"
-        case 9: buttonNineText.text = "<"
-        default: buttonNineText.text = "O"
-        }
-    }
-    
-    
-    
     
     
 }

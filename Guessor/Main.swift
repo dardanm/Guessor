@@ -44,11 +44,15 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
-        // Hide Images
+        // Hide Images For Bottom Buttons
         caneB1.hidden = true
         candyB1.hidden = true
         popB1.hidden = true
         
+        // Hide Images For Bottom Buttons
+        caneN1.hidden = true
+        candyN1.hidden = true
+        popN1.hidden = true
         
         // Hide status bar
         prefersStatusBarHidden()
@@ -60,13 +64,14 @@ extension BaseLevel {
 
         
         // top numbers randomize
-        generateTopButtons()
+        numberOneOptionsText()
+        numberTwoOptionsText()
+        numberThreeOptionsText()
+        numberFourOptionsText()
+        
         numberOneOptionsColors()
-        
         numberTwoOptionsColors()
-        
         numberThreeOptionsColors()
-        
         numberFourOptionsColors()
         
         // bottom buttons randomize numbers
@@ -79,6 +84,7 @@ extension BaseLevel {
         buttonSevenOptionsText()
         buttonEightOptionsText()
         buttonNineOptionsText()
+        
         generateButtonImages()
         
         // bottom buttons randomize background colors
@@ -91,18 +97,13 @@ extension BaseLevel {
         buttonSevenOptionsColors()
         buttonEightOptionsColors()
         buttonNineOptionsColors()
-        
-        // set shadow options for buttons
-        shadowOptions()
-        
+                
         // try again
         tryAgainLabel.enabled = false
         tryAgainLabel.layer.opacity = 0
         
         playBackgroundMusic("background.mp3")
         backgroundMusicPlayer.volume = 0.5
-        
-        buttonOneOptionsText()
         
     }
     
@@ -178,15 +179,13 @@ extension BaseLevel {
             count -= 1
         }
         
+        print(runOrNot)
+        
         updateTimerBar()
         updateLivesLeftIcons()
-        
-        if scoreKeep == 0 {
-            runOrNot = 4
-        }
+        generateButtonImages()
         
         if count <= 0 && lives > 0{
-            runOrNot = 4
             disableButtons()
             stopTimer()
             resetRollZeroCount()
@@ -204,8 +203,8 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
             stopTimer()
-            runOrNot = 4
             disableButtons()
+            generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
         }
@@ -222,23 +221,19 @@ extension BaseLevel {
     func gameFinish(){
         
         updateLivesLeftIcons()
-
+        generateButtonImages()
         
         if scoreKeep == 4 {
-            runOrNot = 4
             disableButtons()
             stopTimer()
             resetRoll()
         }
+        
+        
 
         updateLivesLeftIcons()
         
-        if scoreKeep == 0 {
-            runOrNot = 4
-        }
-        
         if count <= 0 && lives > 0{
-            runOrNot = 4
             disableButtons()
             stopTimer()
             resetRollZeroCount()
@@ -256,8 +251,8 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
             stopTimer()
-            runOrNot = 4
             disableButtons()
+            generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
         }
