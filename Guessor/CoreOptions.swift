@@ -140,8 +140,11 @@ extension BaseLevel {
                 levelText = 2
             }
         }
-        if levelText == 2 {
+        if levelText >= 2 {
             xp += 2
+            if runOrNot == 1{
+                xp += 4
+            }
             xpLabel.text = "\(xp)"
             xpProgressBar.progress += 0.05
         }
@@ -296,8 +299,6 @@ extension BaseLevel {
     
     
     func topNumbersEqualSomeBottomButton(){
-
-        var count:Int = 0
         
         if
         (
@@ -359,18 +360,23 @@ extension BaseLevel {
     func realRandomGeneratorFirst(){
         
         repeat{
-            generateBottomButtons()
+            generateTopAndBottomButtons()
             topNumbersEqualSomeBottomButton()
             print("before \(trueOrNot)")
-            numberOneNoMatchCheck()
-            numberTwoNoMatchCheck()
-            numberThreeNoMatchCheck()
-            numberFourNoMatchCheck()
+
+                numberOneNoMatchCheck()
+
+                numberTwoNoMatchCheck()
+ 
+                numberThreeNoMatchCheck()
+
+                numberFourNoMatchCheck()
             while trueOrNot == false {
                 generateBottomButtons()
                 topNumbersEqualSomeBottomButton()
             }
             print("after \(trueOrNot)")
+            print("after \(runOrNot)")
         }
         
         while
@@ -441,7 +447,8 @@ extension BaseLevel {
     
     func numberOneNoMatchCheck(){
         if
-        (   !(buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor))  &&
+        (
+            !(buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor))  &&
             !(buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
             !(buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
             !(buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
@@ -449,7 +456,9 @@ extension BaseLevel {
             !(buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
             !(buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
             !(buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
-            !(buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) )
+            !(buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor))
+            
+            )
         {trueOrNot = false}
     }
     

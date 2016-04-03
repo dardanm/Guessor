@@ -50,7 +50,7 @@ extension BaseLevel {
         // Set firstNUmber as first to check button
         runOrNot = 4
         
-        generateTopAndBottomButtons()
+
         realRandomGeneratorFirst()
 //        realRandomGeneratorFirst()
         

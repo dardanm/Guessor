@@ -205,8 +205,9 @@ class BaseLevel: UIViewController {
     @IBAction func generateButtonNumbers(sender: AnyObject) {
         
 
-        
-        generateBottomButtons()
+        runOrNot = 4
+        scoreKeep = 0
+        generateTopAndBottomButtons()
         realRandomGeneratorFirst()
         
         
