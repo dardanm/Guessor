@@ -1268,7 +1268,7 @@ class BaseLevel: UIViewController {
 
     // when back button is pressed, stop background music
     @IBAction func backOption(sender: AnyObject) {
-        backgroundMusicPlayer.stop()
+//        backgroundMusicPlayer.stop()
     }
     
     

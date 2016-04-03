@@ -56,8 +56,8 @@ extension BaseLevel {
         tryAgainLabel.enabled = false
         tryAgainLabel.layer.opacity = 0
         
-        playBackgroundMusic("background.mp3")
-        backgroundMusicPlayer.volume = 0.5
+//        playBackgroundMusic("background.mp3")
+//        backgroundMusicPlayer.volume = 0.5
 
         
     }
