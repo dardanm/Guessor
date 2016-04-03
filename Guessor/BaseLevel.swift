@@ -112,6 +112,9 @@ class BaseLevel: UIViewController {
     var buttonEight:String = "0"
     var buttonNine:String = "0"
     
+    // number tracker for real randomizing buttons
+    var numberTrackerForRandomizing:Int = 0
+    
     // LEVEL NUMBER
     var levelText:Int = 1
     
@@ -165,6 +168,8 @@ class BaseLevel: UIViewController {
         generateLabel.layer.opacity = 1
     }
     
+    var trueOrNot:Bool = false
+    
     // get time
     let date = NSDate()
     let calendar = NSCalendar.currentCalendar()
@@ -199,27 +204,10 @@ class BaseLevel: UIViewController {
     
     @IBAction func generateButtonNumbers(sender: AnyObject) {
         
-        buttonOneOptionsText()
-        buttonTwoOptionsText()
-        buttonThreeOptionsText()
-        buttonFourOptionsText()
-        buttonFiveOptionsText()
-        buttonSixOptionsText()
-        buttonSevenOptionsText()
-        buttonEightOptionsText()
-        buttonNineOptionsText()
+
         
-        generateButtonImages()
-        
-        buttonOneOptionsColors()
-        buttonTwoOptionsColors()
-        buttonThreeOptionsColors()
-        buttonFourOptionsColors()
-        buttonFiveOptionsColors()
-        buttonSixOptionsColors()
-        buttonSevenOptionsColors()
-        buttonEightOptionsColors()
-        buttonNineOptionsColors()
+        generateBottomButtons()
+        realRandomGeneratorFirst()
         
         
     }

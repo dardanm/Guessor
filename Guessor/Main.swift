@@ -51,7 +51,9 @@ extension BaseLevel {
         runOrNot = 4
         
         generateTopAndBottomButtons()
-                
+        realRandomGeneratorFirst()
+//        realRandomGeneratorFirst()
+        
         // try again
         tryAgainLabel.enabled = false
         tryAgainLabel.layer.opacity = 0
@@ -134,13 +136,9 @@ extension BaseLevel {
             count -= 1
         }
         
-        print("score : \(scoreKeep)")
-        
         if scoreKeep == 0{
             runOrNot = 4
         }
-        
-        print(runOrNot)
         
         updateTimerBar()
         updateLivesLeftIcons()

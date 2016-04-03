@@ -228,6 +228,31 @@ extension BaseLevel {
         }
     }
     
+    func generateBottomButtons(){
+        // bottom numbers randomize
+        self.buttonOneOptionsText()
+        self.buttonTwoOptionsText()
+        self.buttonThreeOptionsText()
+        self.buttonFourOptionsText()
+        self.buttonFiveOptionsText()
+        self.buttonSixOptionsText()
+        self.buttonSevenOptionsText()
+        self.buttonEightOptionsText()
+        self.buttonNineOptionsText()
+        
+        self.buttonOneOptionsColors()
+        self.buttonTwoOptionsColors()
+        self.buttonThreeOptionsColors()
+        self.buttonFourOptionsColors()
+        self.buttonFiveOptionsColors()
+        self.buttonSixOptionsColors()
+        self.buttonSevenOptionsColors()
+        self.buttonEightOptionsColors()
+        self.buttonNineOptionsColors()
+        
+        generateButtonImages()
+    }
+    
     func generateTopAndBottomButtons(){
         
         // top numbers randomize
@@ -268,6 +293,380 @@ extension BaseLevel {
         
     }
     
+    
+    
+    func topNumbersEqualSomeBottomButton(){
+
+        var count:Int = 0
+        
+        if
+        (
+        (       buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)  ||
+                buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) )
+            
+            &&
+            
+            // check second number
+            (   buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)  ||
+                buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) )
+            
+            &&
+            
+            // check third number
+            (   buttonOneText.text == thirdNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonTwoText.text == thirdNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonThreeText.text == thirdNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonFourText.text == thirdNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonFiveText.text == thirdNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonSixText.text == thirdNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonSevenText.text == thirdNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonEightText.text == thirdNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)  ||
+                buttonNineText.text == thirdNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) )
+            
+            &&
+            
+            // check fourth number
+            (   buttonOneText.text == fourthNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonTwoText.text == fourthNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonThreeText.text == fourthNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonFourText.text == fourthNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonFiveText.text == fourthNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonSixText.text == fourthNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonSevenText.text == fourthNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonEightText.text == fourthNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)  ||
+                buttonNineText.text == fourthNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) )
+        )
+        {trueOrNot = true}
+        
+        
+    }
+    
+    
+    func realRandomGeneratorFirst(){
+        
+        repeat{
+            generateBottomButtons()
+            topNumbersEqualSomeBottomButton()
+            print("before \(trueOrNot)")
+            numberOneNoMatchCheck()
+            numberTwoNoMatchCheck()
+            numberThreeNoMatchCheck()
+            numberFourNoMatchCheck()
+            while trueOrNot == false {
+                generateBottomButtons()
+                topNumbersEqualSomeBottomButton()
+            }
+            print("after \(trueOrNot)")
+        }
+        
+        while
+        (
+            // check first number
+            (   !(buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor))  &&
+                !(buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+                !(buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) )
+                
+                &&
+            
+            // check second number
+            (   !(buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor))  &&
+                !(buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) )
+            
+                &&
+                
+            // check third number
+            (   !(buttonOneText.text == thirdNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor))  &&
+                !(buttonTwoText.text == thirdNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonThreeText.text == thirdNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonFourText.text == thirdNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonFiveText.text == thirdNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonSixText.text == thirdNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonSevenText.text == thirdNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonEightText.text == thirdNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonNineText.text == thirdNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) )
+            
+                &&
+                
+            // check fourth number
+            (   !(buttonOneText.text == fourthNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor))  &&
+                !(buttonTwoText.text == fourthNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonThreeText.text == fourthNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonFourText.text == fourthNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonFiveText.text == fourthNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonSixText.text == fourthNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonSevenText.text == fourthNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonEightText.text == fourthNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonNineText.text == fourthNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) )
+            
+                &&
+                trueOrNot == false
+            
+
+            
+        )// end while par
+        
+        
+
+        
+        
+    }
+    
+    
+    func numberOneNoMatchCheck(){
+        if
+        (   !(buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor))  &&
+            !(buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) &&
+            !(buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor)) )
+        {trueOrNot = false}
+    }
+    
+    func numberTwoNoMatchCheck(){
+        if
+            (   !(buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor))  &&
+                !(buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) &&
+                !(buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor)) )
+        {trueOrNot = false}
+    }
+    
+    func numberThreeNoMatchCheck(){
+        if
+            (   !(buttonOneText.text == thirdNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor))  &&
+                !(buttonTwoText.text == thirdNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonThreeText.text == thirdNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonFourText.text == thirdNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonFiveText.text == thirdNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonSixText.text == thirdNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonSevenText.text == thirdNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonEightText.text == thirdNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) &&
+                !(buttonNineText.text == thirdNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor)) )
+        {trueOrNot = false}
+    }
+    
+    func numberFourNoMatchCheck(){
+        if
+            (   !(buttonOneText.text == fourthNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor))  &&
+                !(buttonTwoText.text == fourthNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonThreeText.text == fourthNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonFourText.text == fourthNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonFiveText.text == fourthNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonSixText.text == fourthNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonSevenText.text == fourthNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonEightText.text == fourthNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) &&
+                !(buttonNineText.text == fourthNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor)) )
+        {trueOrNot = false}
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // outdate
+    func realRandomGeneratorOld() {
+        
+        generateTopAndBottomButtons()
+        
+        var i: Int = 5
+        
+        while i >= 0 {
+            print(i)
+            i -= 1
+        }
+        print("success!")
+        
+        var count:Int = 0
+        
+        while count == 0 {
+        
+        if numberTrackerForRandomizing == 0 {
+            
+        if numberTrackerForRandomizing == 0 {
+        if buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        if numberTrackerForRandomizing == 0 {
+        if buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+            numberTrackerForRandomizing += 1
+            count += 1
+            }
+        }
+        
+        if count == 0 {
+          generateTopAndBottomButtons()
+        }
+            
+        } // end 'if numberTrackerForRandomizing == 0'
+            
+        } // end while loop
+
+        // reset count to zero aftering finding answer for #1
+        count = 0
+    
+        
+        while count == 0 {
+            
+            if numberTrackerForRandomizing == 0 {
+                
+                if numberTrackerForRandomizing == 0 {
+                    if buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                if numberTrackerForRandomizing == 0 {
+                    if buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                        numberTrackerForRandomizing += 1
+                        count += 1
+                    }
+                }
+                
+                if count == 0 {
+                    
+                    generateTopAndBottomButtons()
+                }
+                
+            } // end 'if numberTrackerForRandomizing == 0'
+            
+        } // end while loop
+        
+        // reset count to zero aftering finding answer for #1
+        count = 0
+    
+
+    }
+
     
     
     
