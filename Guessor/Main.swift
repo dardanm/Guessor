@@ -28,6 +28,7 @@ extension BaseLevel {
         batteryProgressKeep()
 
         
+        
         // Timer
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
         startTimer()

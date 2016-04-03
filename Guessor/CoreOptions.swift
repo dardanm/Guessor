@@ -44,6 +44,9 @@ extension BaseLevel {
         
         enableButtons()
         runOrNot = 4
+        scoreKeep = 0
+        generateTopAndBottomButtons()
+        realRandomGeneratorFirst()
         
         startTimer()
         
@@ -51,7 +54,6 @@ extension BaseLevel {
         self.countDownLabel.text = "\(count)"
         updateTimerBar()
         
-        scoreKeep = 0
         lives = 3
         
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
@@ -77,8 +79,10 @@ extension BaseLevel {
         enableButtons()
 
         delay(0.5){
-        self.generateTopAndBottomButtons()
+        self.runOrNot = 4
         self.scoreKeep = 0
+        self.generateTopAndBottomButtons()
+        self.realRandomGeneratorFirst()
         }
 
             
@@ -93,7 +97,10 @@ extension BaseLevel {
         if lives > 0{
 
         delay(0.5){
+        self.runOrNot = 4
+        self.scoreKeep = 0
         self.generateTopAndBottomButtons()
+        self.realRandomGeneratorFirst()
         self.startTimer()
         
         self.count = 10
@@ -519,6 +526,7 @@ extension BaseLevel {
     // outdate
     func realRandomGeneratorOld() {
         
+        
         generateTopAndBottomButtons()
         
         var i: Int = 5
@@ -577,6 +585,7 @@ extension BaseLevel {
             count += 1
             }
         }
+            
         if numberTrackerForRandomizing == 0 {
         if buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
             numberTrackerForRandomizing += 1
