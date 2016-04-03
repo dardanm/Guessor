@@ -144,7 +144,7 @@ class BaseLevel: UIViewController {
     var batteryNumber:Int = 100
     
     // timer
-    var count = 200
+    var count = 10
     var timer = NSTimer()
     
     // switch variable

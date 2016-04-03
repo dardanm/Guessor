@@ -60,9 +60,6 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
-        self.generateTopAndBottomButtons()
-        
-        
         tryAgainLabel.layer.opacity = 0
     }
     
