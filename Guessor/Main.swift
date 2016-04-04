@@ -30,7 +30,7 @@ extension BaseLevel {
         
         
         // Timer
-        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 8)
+        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 16)
         startTimer()
         
         // "XP" / Coins bar
@@ -94,9 +94,29 @@ extension BaseLevel {
     }
     
     func updateLivesLeftIcons(){
-        if lives <= 2 {lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)}
-        if lives <= 1 {lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)}
-        if lives <= 0 {lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)}
+        if lives == 3{
+            lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
+            lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
+            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        }
+        if lives == 2{
+            lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
+            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        }
+        if lives == 1{
+            lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        }
+        if lives == 1{
+            lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)
+        }
+        if lives > 3{
+            lives = 3
+        }
     }
     
     // timer + timer progress bar

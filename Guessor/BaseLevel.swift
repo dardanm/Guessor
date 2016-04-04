@@ -147,6 +147,9 @@ class BaseLevel: UIViewController {
     var count = 10
     var timer = NSTimer()
     
+    // score
+    var scoreTarget:Int = 1000
+    
     // switch variable
     var value = 0
     
@@ -158,6 +161,20 @@ class BaseLevel: UIViewController {
     // "generate" button
     @IBOutlet var generateLabel: UIButton!
 
+    // add time
+    @IBAction func addTimeButton(sender: AnyObject) {
+        count += 2
+        countDownLabel.text = "\(count)"
+    }
+    
+    // add life
+    @IBAction func addLifeButton(sender: AnyObject) {
+        lives += 1
+        updateLivesLeftIcons()
+        print(lives)
+    }
+    
+    
     // "try again" button background
     @IBOutlet var tryAgainLabel: UIButton!
     

@@ -45,6 +45,9 @@ extension BaseLevel {
         enableButtons()
         runOrNot = 4
         scoreKeep = 0
+        xpProgressBar.progress = 0
+        xp = 0
+        xpLabel.text = "\(xp)"
         generateTopAndBottomButtons()
         realRandomGeneratorFirst()
         
@@ -135,24 +138,32 @@ extension BaseLevel {
     
     func updateLevel(){
         
-        level.text = "LEVEL \(levelText)"
+        scoreTarget -= 10
+        level.text = "Target \(scoreTarget)"
         
-        if levelText == 1 {
-            xp += 1
-            xpLabel.text = "\(xp)"
-            xpProgressBar.progress += 0.10
-            if xp == 100 {
-                levelText = 2
-            }
-        }
-        if levelText >= 2 {
-            xp += 2
-            if runOrNot == 1{
-                xp += 3
-            }
-            xpLabel.text = "\(xp)"
-            xpProgressBar.progress += 0.05
-        }
+        xp += 1
+        xpLabel.text = "\(xp)"
+        // 500
+        xpProgressBar.progress += 0.05
+        
+        
+        
+//        if levelText == 1 {
+//            xp += 1
+//            xpLabel.text = "\(xp)"
+//            xpProgressBar.progress += 0.10
+//            if xp == 100 {
+//                levelText = 2
+//            }
+//        }
+//        if levelText >= 2 {
+//            xp += 2
+//            if runOrNot == 1{
+//                xp += 3
+//            }
+//            xpLabel.text = "\(xp)"
+//            xpProgressBar.progress += 0.05
+//        }
         
         
     }
@@ -367,7 +378,6 @@ extension BaseLevel {
         repeat{
             generateTopAndBottomButtons()
             topNumbersEqualSomeBottomButton()
-            print("before \(trueOrNot)")
 
                 numberOneNoMatchCheck()
 
@@ -380,8 +390,6 @@ extension BaseLevel {
                 generateBottomButtons()
                 topNumbersEqualSomeBottomButton()
             }
-            print("after \(trueOrNot)")
-            print("after \(runOrNot)")
         }
         
         while
@@ -509,194 +517,7 @@ extension BaseLevel {
         {trueOrNot = false}
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // outdate
-    func realRandomGeneratorOld() {
-        
-        
-        generateTopAndBottomButtons()
-        
-        var i: Int = 5
-        
-        while i >= 0 {
-            print(i)
-            i -= 1
-        }
-        print("success!")
-        
-        var count:Int = 0
-        
-        while count == 0 {
-        
-        if numberTrackerForRandomizing == 0 {
-            
-        if numberTrackerForRandomizing == 0 {
-        if buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-            
-        if numberTrackerForRandomizing == 0 {
-        if buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        if numberTrackerForRandomizing == 0 {
-        if buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
-            numberTrackerForRandomizing += 1
-            count += 1
-            }
-        }
-        
-        if count == 0 {
-          generateTopAndBottomButtons()
-        }
-            
-        } // end 'if numberTrackerForRandomizing == 0'
-            
-        } // end while loop
 
-        // reset count to zero aftering finding answer for #1
-        count = 0
-    
-        
-        while count == 0 {
-            
-            if numberTrackerForRandomizing == 0 {
-                
-                if numberTrackerForRandomizing == 0 {
-                    if buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                if numberTrackerForRandomizing == 0 {
-                    if buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
-                        numberTrackerForRandomizing += 1
-                        count += 1
-                    }
-                }
-                
-                if count == 0 {
-                    
-                    generateTopAndBottomButtons()
-                }
-                
-            } // end 'if numberTrackerForRandomizing == 0'
-            
-        } // end while loop
-        
-        // reset count to zero aftering finding answer for #1
-        count = 0
-    
-
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
