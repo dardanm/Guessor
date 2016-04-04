@@ -204,7 +204,8 @@ class BaseLevel: UIViewController {
     
     @IBAction func generateButtonNumbers(sender: AnyObject) {
         
-
+        count -= 1
+        countDownLabel.text = "\(count)"
         runOrNot = 4
         scoreKeep = 0
         generateTopAndBottomButtons()

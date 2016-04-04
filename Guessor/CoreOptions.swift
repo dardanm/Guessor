@@ -68,7 +68,7 @@ extension BaseLevel {
         
         startTimer()
 
-        count += 3
+        count += 2
         updateTimerBar()
         self.countDownLabel.text = "\(count)"
         
@@ -124,6 +124,7 @@ extension BaseLevel {
         // TIMER COUNT
         if scoreKeep <= 3 {
         count += 1
+        countDownLabel.text = "\(count)"
         }
         // PROGRESS BAR
         progressTimer.progress = progressTimer.progress + 0.1
@@ -147,7 +148,7 @@ extension BaseLevel {
         if levelText >= 2 {
             xp += 2
             if runOrNot == 1{
-                xp += 4
+                xp += 3
             }
             xpLabel.text = "\(xp)"
             xpProgressBar.progress += 0.05

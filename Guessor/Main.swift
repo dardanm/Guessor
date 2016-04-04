@@ -30,11 +30,11 @@ extension BaseLevel {
         
         
         // Timer
-        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 22)
+        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 8)
         startTimer()
         
         // "XP" / Coins bar
-        xpProgressBar.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 8)
+        xpProgressBar.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 16)
         xpProgressBar.progress = 0.0
         
         // Coundown timer color
