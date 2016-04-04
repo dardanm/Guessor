@@ -50,17 +50,12 @@ extension BaseLevel {
         
         // Set firstNUmber as first to check button
         runOrNot = 4
-        
 
         realRandomGeneratorFirst()
-//        realRandomGeneratorFirst()
         
         // try again
         tryAgainLabel.enabled = false
         tryAgainLabel.layer.opacity = 0
-        
-//        playBackgroundMusic("background.mp3")
-//        backgroundMusicPlayer.volume = 0.5
 
         
     }
