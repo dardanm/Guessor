@@ -186,6 +186,7 @@ class BaseLevel: UIViewController {
     }
     
     var trueOrNot:Bool = false
+    var trueOrNot2:Bool = false
     
     // get time
     let date = NSDate()
