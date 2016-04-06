@@ -68,7 +68,7 @@ extension BaseLevel {
     
     // Reset Roll
     func resetRoll(){
-        
+        stopTimer()
         startTimer()
 
         count += 2

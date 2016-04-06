@@ -257,6 +257,7 @@ class BaseLevel: UIViewController {
                     
                     // red color button - incorrect choice
                     buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    disableButtons()
                     pressButtonWrongSound()
                 }
         }

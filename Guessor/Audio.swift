@@ -28,7 +28,6 @@ extension BaseLevel {
     
     // BUTTON PRESS - INCORRECT
     func pressButtonWrongSound() {
-        
         do {
             self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonIncorrect", ofType: "mp3")!))
             self.buttonPressCorrectSound.play()
@@ -40,7 +39,7 @@ extension BaseLevel {
             print("Error")
         }
         buttonPressCorrectSound.volume = 0.05
-        
+        resetRoll()
     }
     
     // Score 4 Correct
@@ -80,10 +79,6 @@ extension BaseLevel {
     
     // Sound for just pressing a button
     func pressButtonSound() {
-        if (count == 0){
-            buttonPressSound.enableRate = false
-        }
-        
         do {
             self.buttonPressSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button-46", ofType: "mp3")!))
             self.buttonPressSound.play()

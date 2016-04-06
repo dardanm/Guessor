@@ -816,7 +816,6 @@ extension BaseLevel {
     
     
     func realRandomGeneratorFirst(){
-        
         topNumbersEqualSomeBottomButton()
         check3()
         numberCheck()

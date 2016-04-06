@@ -30,12 +30,12 @@ extension BaseLevel {
         
         
         // Timer
-        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 16)
+        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 15)
         startTimer()
         
         // "coin" / Coins bar
-        levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 16)
-        levelProgressBar.progress = 0.0
+        levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 15)
+//        levelProgressBar.progress = 0.0
         
         // Coundown timer color
         countDownLabel.textColor = UIColor(netHex: 0xf36723)
@@ -56,7 +56,8 @@ extension BaseLevel {
         // try again
         tryAgainLabel.enabled = false
         tryAgainLabel.layer.opacity = 0
-
+        
+        self.view.backgroundColor = .whiteColor()
         
     }
     
