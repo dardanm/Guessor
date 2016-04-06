@@ -148,7 +148,7 @@ extension BaseLevel {
         coin += 1
         coinLabel.text = "\(coin)"
         // 500
-        levelProgressBar.progress += 0.05
+        levelProgressBar.progress += 0.1
         }
         
         
