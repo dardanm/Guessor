@@ -43,6 +43,19 @@ extension BaseLevel {
         
     }
     
+    // Score 4 Correct
+    func pressCorrectFour() {
+        
+        do {
+            self.finalCorrect =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("correct", ofType: "mp3")!))
+            self.finalCorrect.play()
+        } catch {
+            print("Error")
+        }
+        finalCorrect.volume = 0.5
+        
+    }
+    
     // BACKGROUND MUSIC
     func playBackgroundMusic(filename: String) {
         let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)

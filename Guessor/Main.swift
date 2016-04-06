@@ -118,7 +118,7 @@ extension BaseLevel {
     func update() {
         
         if count > 0 {
-            count -= 1
+            count -= 0.75
         }
         
         if count > 10 {

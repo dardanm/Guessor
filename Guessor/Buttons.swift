@@ -827,7 +827,6 @@ extension BaseLevel {
             check3()
             numberCheck()
         }
-            print(trueOrNot)
     }
     
     func numberCheck(){

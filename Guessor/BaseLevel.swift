@@ -128,6 +128,7 @@ class BaseLevel: UIViewController {
     var buttonPressSound: AVAudioPlayer!
     var buttonPressCorrectSound: AVAudioPlayer!
     var backgroundMusicPlayer = AVAudioPlayer()
+    var finalCorrect = AVAudioPlayer()
 
     // top-right life 3
     @IBOutlet var lifeThree: UILabel!
@@ -144,7 +145,7 @@ class BaseLevel: UIViewController {
     var batteryNumber:Int = 100
     
     // timer
-    var count = 10
+    var count:Float = 10
     var timer = NSTimer()
     
     // score
