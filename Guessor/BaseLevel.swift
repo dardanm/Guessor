@@ -15,9 +15,9 @@ class BaseLevel: UIViewController {
     // level
     @IBOutlet weak var level: UILabel!
 
-    // xp label
-    @IBOutlet var xpLabel: UILabel!
-    var xp:Int = 0
+    // coin label
+    @IBOutlet var coinLabel: UILabel!
+    var coin:Int = 0
 
     // top numbers text
     @IBOutlet var firstNumber: UILabel!
@@ -194,7 +194,7 @@ class BaseLevel: UIViewController {
     
     var matchingAnswer:Bool = false
     
-    @IBOutlet weak var xpProgressBar: UIProgressView!
+    @IBOutlet weak var levelProgressBar: UIProgressView!
     
     // hide status bar
     override func prefersStatusBarHidden() -> Bool {

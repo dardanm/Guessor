@@ -1574,11 +1574,13 @@
                         <outlet property="caneN2" destination="VOF-51-IbV" id="6QU-es-tQV"/>
                         <outlet property="caneN3" destination="Nlk-aN-dvL" id="l7R-vT-mBa"/>
                         <outlet property="caneN4" destination="bYb-kS-d3Y" id="iwi-Ka-DZc"/>
+                        <outlet property="coinLabel" destination="vnf-Cy-RMZ" id="dg2-wm-oxO"/>
                         <outlet property="countDownLabel" destination="REi-2H-LxU" id="cLe-nd-9iJ"/>
                         <outlet property="firstNumber" destination="BhJ-hA-eeJ" id="JK3-5n-83l"/>
                         <outlet property="fourthNumber" destination="fGF-Lx-fNd" id="Fuf-bc-ziO"/>
                         <outlet property="generateLabel" destination="Axr-7v-xDS" id="nMo-yL-pBN"/>
                         <outlet property="level" destination="bj2-fG-YPc" id="ggt-JW-u0u"/>
+                        <outlet property="levelProgressBar" destination="HxD-aC-mEg" id="wjc-Lq-2VN"/>
                         <outlet property="lifeOne" destination="0pB-y6-KD8" id="uL7-Ae-SU0"/>
                         <outlet property="lifeThree" destination="byT-f1-swE" id="Uv4-md-MWI"/>
                         <outlet property="lifeTwo" destination="BJR-gq-rQV" id="Zlo-Ut-dCM"/>
@@ -1603,8 +1605,6 @@
                         <outlet property="secondNumber" destination="02f-i0-h6H" id="GL5-Lp-b2B"/>
                         <outlet property="thirdNumber" destination="lEi-O9-JEL" id="WSn-G9-4GC"/>
                         <outlet property="tryAgainLabel" destination="DLU-wt-WE7" id="sZH-ot-2vH"/>
-                        <outlet property="xpLabel" destination="vnf-Cy-RMZ" id="nA9-kO-zgv"/>
-                        <outlet property="xpProgressBar" destination="HxD-aC-mEg" id="0FV-ld-aAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rJ-lN-ssg" sceneMemberID="firstResponder"/>

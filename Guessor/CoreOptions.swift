@@ -45,9 +45,9 @@ extension BaseLevel {
         enableButtons()
         runOrNot = 4
         scoreKeep = 0
-        xpProgressBar.progress = 0
-        xp = 0
-        xpLabel.text = "\(xp)"
+        levelProgressBar.progress = 0
+        coin = 0
+        coinLabel.text = "\(coin)"
         generateTopAndBottomButtons()
         realRandomGeneratorFirst()
         
@@ -142,28 +142,28 @@ extension BaseLevel {
         scoreTarget -= 10
         level.text = "Target \(scoreTarget)"
         
-        xp += 1
-        xpLabel.text = "\(xp)"
+        coin += 1
+        coinLabel.text = "\(coin)"
         // 500
-        xpProgressBar.progress += 0.05
+        levelProgressBar.progress += 0.05
         }
         
         
 //        if levelText == 1 {
-//            xp += 1
-//            xpLabel.text = "\(xp)"
-//            xpProgressBar.progress += 0.10
-//            if xp == 100 {
+//            coin += 1
+//            coinLabel.text = "\(coin)"
+//            levelProgressBar.progress += 0.10
+//            if coin == 100 {
 //                levelText = 2
 //            }
 //        }
 //        if levelText >= 2 {
-//            xp += 2
+//            coin += 2
 //            if runOrNot == 1{
-//                xp += 3
+//                coin += 3
 //            }
-//            xpLabel.text = "\(xp)"
-//            xpProgressBar.progress += 0.05
+//            coinLabel.text = "\(coin)"
+//            levelProgressBar.progress += 0.05
 //        }
         
         

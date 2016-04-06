@@ -24,7 +24,7 @@ extension BaseLevel {
         // Battery
         UIDevice.currentDevice().batteryMonitoringEnabled = true
         batteryProgress.progress = UIDevice.currentDevice().batteryLevel
-        batteryProgress.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 5)
+        batteryProgress.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 5)
         batteryProgressKeep()
 
         
@@ -33,9 +33,9 @@ extension BaseLevel {
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 16)
         startTimer()
         
-        // "XP" / Coins bar
-        xpProgressBar.transform = CGAffineTransformScale(xpProgressBar.transform, 1, 16)
-        xpProgressBar.progress = 0.0
+        // "coin" / Coins bar
+        levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 16)
+        levelProgressBar.progress = 0.0
         
         // Coundown timer color
         countDownLabel.textColor = UIColor(netHex: 0xf36723)
@@ -142,7 +142,7 @@ extension BaseLevel {
         // don't remove
         countDownLabel.text = String(count)
 
-        if xpProgressBar.progress == 1.0 {
+        if levelProgressBar.progress == 1.0 {
             levelText += 1
         }
         
@@ -157,8 +157,8 @@ extension BaseLevel {
             tryAgainLabel.enabled = true
         }
         
-        if xpProgressBar.progress == 1.0 {
-            xpProgressBar.progress = 0.0
+        if levelProgressBar.progress == 1.0 {
+            levelProgressBar.progress = 0.0
         }
         
         generateButtonImages()
@@ -195,7 +195,7 @@ extension BaseLevel {
         // don't remove
         countDownLabel.text = String(count)
         
-        if xpProgressBar.progress == 1.0 {
+        if levelProgressBar.progress == 1.0 {
             levelText += 1
         }
         
@@ -210,8 +210,8 @@ extension BaseLevel {
             tryAgainLabel.enabled = true
         }
         
-        if xpProgressBar.progress == 1.0 {
-            xpProgressBar.progress = 0.0
+        if levelProgressBar.progress == 1.0 {
+            levelProgressBar.progress = 0.0
         }
         
         generateButtonImages()
