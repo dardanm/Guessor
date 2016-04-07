@@ -55,6 +55,15 @@ class BaseLevel: UIViewController {
     @IBOutlet var buttonEightLabel: UIButton!
     @IBOutlet var buttonNineLabel: UIButton!
     
+    // background for buttons and top
+    @IBOutlet var topBackground: UILabel!
+    @IBOutlet var topBackgroundScore: UILabel!
+    @IBOutlet var topBackgroundNumbers: UILabel!
+    @IBOutlet var middleBackground: UILabel!
+    @IBOutlet var bottomBackground: UILabel!
+    
+    
+    
     // top number pictures
     @IBOutlet var candyN1: UIImageView!
     @IBOutlet var popN1: UIImageView!

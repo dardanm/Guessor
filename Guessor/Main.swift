@@ -58,7 +58,9 @@ extension BaseLevel {
         tryAgainLabel.layer.opacity = 0
         
         self.view.backgroundColor = .whiteColor()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "b17@2x.jpg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background18@2x.jpg")!)
+  
+        whiteBackground()
         
     }
     
@@ -92,24 +94,24 @@ extension BaseLevel {
     
     func updateLivesLeftIcons(){
         if lives == 3{
-            lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-            lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+            lifeOne.layer.opacity = 1.0
+            lifeTwo.layer.opacity = 1.0
+            lifeThree.layer.opacity = 1.0
         }
         if lives == 2{
-            lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeOne.layer.opacity = 0.0
             lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
             lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         }
         if lives == 1{
-            lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
-            lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeOne.layer.opacity = 0.0
+            lifeTwo.layer.opacity = 0.0
             lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         }
         if lives == 0{
-            lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
-            lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)
-            lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)
+            lifeOne.layer.opacity = 0.0
+            lifeTwo.layer.opacity = 0.0
+            lifeThree.layer.opacity = 0.0
         }
         if lives > 3{
             lives = 3

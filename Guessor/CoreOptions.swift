@@ -58,10 +58,7 @@ extension BaseLevel {
         updateTimerBar()
         
         lives = 3
-        
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+        updateLivesLeftIcons()
         
         tryAgainLabel.layer.opacity = 0
     }
@@ -150,24 +147,6 @@ extension BaseLevel {
         // 500
         levelProgressBar.progress += 0.1
         }
-        
-        
-//        if levelText == 1 {
-//            coin += 1
-//            coinLabel.text = "\(coin)"
-//            levelProgressBar.progress += 0.10
-//            if coin == 100 {
-//                levelText = 2
-//            }
-//        }
-//        if levelText >= 2 {
-//            coin += 2
-//            if runOrNot == 1{
-//                coin += 3
-//            }
-//            coinLabel.text = "\(coin)"
-//            levelProgressBar.progress += 0.05
-//        }
         
         
     }
