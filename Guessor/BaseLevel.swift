@@ -149,7 +149,7 @@ class BaseLevel: UIViewController {
     var timer = NSTimer()
     
     // score
-    var scoreTarget:Int = 1000
+    var scoreTarget:Int = 100
     
     // switch variable
     var value = 0

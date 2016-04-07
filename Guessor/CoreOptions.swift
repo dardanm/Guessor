@@ -143,7 +143,7 @@ extension BaseLevel {
         
         if scoreKeep == 4{
         scoreTarget -= 10
-        level.text = "Target \(scoreTarget)"
+        level.text = "\(scoreTarget)"
         
         coin += 1
         coinLabel.text = "\(coin)"

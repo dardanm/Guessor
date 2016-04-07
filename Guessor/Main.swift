@@ -24,17 +24,17 @@ extension BaseLevel {
         // Battery
         UIDevice.currentDevice().batteryMonitoringEnabled = true
         batteryProgress.progress = UIDevice.currentDevice().batteryLevel
-        batteryProgress.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 5)
+        batteryProgress.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 6)
         batteryProgressKeep()
 
         
         
         // Timer
-        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 15)
+        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 20)
         startTimer()
         
         // "coin" / Coins bar
-        levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 15)
+        levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 8)
 //        levelProgressBar.progress = 0.0
         
         // Coundown timer color
@@ -105,7 +105,7 @@ extension BaseLevel {
             lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)
             lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         }
-        if lives == 1{
+        if lives == 0{
             lifeOne.backgroundColor = UIColor (netHex: 0xFFFFFF)
             lifeTwo.backgroundColor = UIColor (netHex: 0xFFFFFF)
             lifeThree.backgroundColor = UIColor (netHex: 0xFFFFFF)
