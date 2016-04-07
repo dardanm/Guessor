@@ -20,7 +20,7 @@ class Start: UIViewController {
     
     @IBAction func musicButton(sender: AnyObject) {
         playBackgroundMusic("background.mp3")
-        backgroundMusicPlayer.volume = 0.5
+        backgroundMusicPlayer.volume = 0.3
         
         backgroundMusicPlayer.stop()
         
@@ -47,6 +47,8 @@ class Start: UIViewController {
         if musicTracker == 0 {
             block.hidden = false
         }
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background4.png")!)
         
     }
     

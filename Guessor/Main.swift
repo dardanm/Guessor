@@ -30,7 +30,7 @@ extension BaseLevel {
         
         
         // Timer
-        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 20)
+        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 10)
         startTimer()
         
         // "coin" / Coins bar
@@ -58,6 +58,7 @@ extension BaseLevel {
         tryAgainLabel.layer.opacity = 0
         
         self.view.backgroundColor = .whiteColor()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "b17@2x.jpg")!)
         
     }
     
