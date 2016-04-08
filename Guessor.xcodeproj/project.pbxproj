@@ -15,6 +15,10 @@
 		DC237BAF1CB725A700DAA111 /* background1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC237BAE1CB725A700DAA111 /* background1@2x.jpg */; };
 		DC237BB11CB7269500DAA111 /* background2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC237BB01CB7269500DAA111 /* background2@2x.jpg */; };
 		DC237BB31CB8599500DAA111 /* Buttons3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB21CB8599500DAA111 /* Buttons3.swift */; };
+		DC237BB81CB85F1D00DAA111 /* TopButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB71CB85F1D00DAA111 /* TopButtonOne.swift */; };
+		DC237BBC1CB8627E00DAA111 /* TopButtonFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */; };
+		DC237BBD1CB8627E00DAA111 /* TopButtonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */; };
+		DC237BBE1CB8627E00DAA111 /* TopButtonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BBB1CB8627E00DAA111 /* TopButtonTwo.swift */; };
 		DC539F4C1CB6C25E00211970 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = DC539F4B1CB6C25E00211970 /* background4.png */; };
 		DC539F4E1CB6C3E500211970 /* background5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC539F4D1CB6C3E500211970 /* background5@2x.png */; };
 		DC539F501CB6C4EF00211970 /* background6@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */; };
@@ -49,21 +53,25 @@
 		DC0633941CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Black_31623.ttf"; sourceTree = "<group>"; };
 		DC0C51481CA5C67200925709 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DC11325F1C83D06600B19DCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC237BA61CB71CDB00DAA111 /* background21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background21@2x.png"; sourceTree = "<group>"; };
-		DC237BAA1CB723F400DAA111 /* background22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background22@2x.png"; sourceTree = "<group>"; };
-		DC237BAE1CB725A700DAA111 /* background1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background1@2x.jpg"; sourceTree = "<group>"; };
-		DC237BB01CB7269500DAA111 /* background2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2@2x.jpg"; sourceTree = "<group>"; };
+		DC237BA61CB71CDB00DAA111 /* background21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background21@2x.png"; path = "Guessor/background21@2x.png"; sourceTree = "<group>"; };
+		DC237BAA1CB723F400DAA111 /* background22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background22@2x.png"; path = "Guessor/background22@2x.png"; sourceTree = "<group>"; };
+		DC237BAE1CB725A700DAA111 /* background1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background1@2x.jpg"; path = "Guessor/background1@2x.jpg"; sourceTree = "<group>"; };
+		DC237BB01CB7269500DAA111 /* background2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background2@2x.jpg"; path = "Guessor/background2@2x.jpg"; sourceTree = "<group>"; };
 		DC237BB21CB8599500DAA111 /* Buttons3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons3.swift; sourceTree = "<group>"; };
-		DC539F4B1CB6C25E00211970 /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background4.png; sourceTree = "<group>"; };
-		DC539F4D1CB6C3E500211970 /* background5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background5@2x.png"; sourceTree = "<group>"; };
-		DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background6@2x.jpg"; sourceTree = "<group>"; };
-		DC539F511CB6CFB000211970 /* background8@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background8@2x.jpg"; sourceTree = "<group>"; };
-		DC539F551CB6D49900211970 /* background10@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background10@2x.jpg"; sourceTree = "<group>"; };
-		DC539F581CB6DC5D00211970 /* background12@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background12@2x.jpg"; sourceTree = "<group>"; };
-		DC539F631CB6E59200211970 /* background16@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background16@2x.jpg"; sourceTree = "<group>"; };
-		DC539F671CB6E9D000211970 /* background18@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background18@2x.jpg"; sourceTree = "<group>"; };
+		DC237BB71CB85F1D00DAA111 /* TopButtonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonOne.swift; sourceTree = "<group>"; };
+		DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonFour.swift; sourceTree = "<group>"; };
+		DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonThree.swift; sourceTree = "<group>"; };
+		DC237BBB1CB8627E00DAA111 /* TopButtonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonTwo.swift; sourceTree = "<group>"; };
+		DC539F4B1CB6C25E00211970 /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background4.png; path = Guessor/background4.png; sourceTree = "<group>"; };
+		DC539F4D1CB6C3E500211970 /* background5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background5@2x.png"; path = "Guessor/background5@2x.png"; sourceTree = "<group>"; };
+		DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background6@2x.jpg"; path = "Guessor/background6@2x.jpg"; sourceTree = "<group>"; };
+		DC539F511CB6CFB000211970 /* background8@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background8@2x.jpg"; path = "Guessor/background8@2x.jpg"; sourceTree = "<group>"; };
+		DC539F551CB6D49900211970 /* background10@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background10@2x.jpg"; path = "Guessor/background10@2x.jpg"; sourceTree = "<group>"; };
+		DC539F581CB6DC5D00211970 /* background12@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background12@2x.jpg"; path = "Guessor/background12@2x.jpg"; sourceTree = "<group>"; };
+		DC539F631CB6E59200211970 /* background16@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background16@2x.jpg"; path = "Guessor/background16@2x.jpg"; sourceTree = "<group>"; };
+		DC539F671CB6E9D000211970 /* background18@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background18@2x.jpg"; path = "Guessor/background18@2x.jpg"; sourceTree = "<group>"; };
 		DC539F6B1CB6F55D00211970 /* Buttons2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons2.swift; sourceTree = "<group>"; };
-		DC539F6F1CB71AF100211970 /* background20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background20@2x.png"; sourceTree = "<group>"; };
+		DC539F6F1CB71AF100211970 /* background20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background20@2x.png"; path = "Guessor/background20@2x.png"; sourceTree = "<group>"; };
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		DC90B84E1C7966D500CCC033 /* Guessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC90B8531C7966D500CCC033 /* BaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevel.swift; sourceTree = "<group>"; };
@@ -98,11 +106,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DC4675051CAF4A20001A8422 /* Images */ = {
+		DC237BB41CB85E9C00DAA111 /* Top Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				DC237BB71CB85F1D00DAA111 /* TopButtonOne.swift */,
+				DC237BBB1CB8627E00DAA111 /* TopButtonTwo.swift */,
+				DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */,
+				DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */,
 			);
-			name = Images;
+			name = "Top Buttons";
+			sourceTree = "<group>";
+		};
+		DC237BB61CB85EBD00DAA111 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				DC237BAE1CB725A700DAA111 /* background1@2x.jpg */,
+				DC237BB01CB7269500DAA111 /* background2@2x.jpg */,
+				DC539F4B1CB6C25E00211970 /* background4.png */,
+				DC539F4D1CB6C3E500211970 /* background5@2x.png */,
+				DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */,
+				DC539F511CB6CFB000211970 /* background8@2x.jpg */,
+				DC539F551CB6D49900211970 /* background10@2x.jpg */,
+				DC539F581CB6DC5D00211970 /* background12@2x.jpg */,
+				DC539F631CB6E59200211970 /* background16@2x.jpg */,
+				DC539F671CB6E9D000211970 /* background18@2x.jpg */,
+				DC539F6F1CB71AF100211970 /* background20@2x.png */,
+				DC237BA61CB71CDB00DAA111 /* background21@2x.png */,
+				DC237BAA1CB723F400DAA111 /* background22@2x.png */,
+			);
+			name = Backgrounds;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		DC90B8451C7966D500CCC033 = {
@@ -125,14 +158,14 @@
 		DC90B8501C7966D500CCC033 /* Guessor */ = {
 			isa = PBXGroup;
 			children = (
-				DC90B8551C7966D500CCC033 /* Main.storyboard */,
 				DCF94FD81C9F1AE000231CA3 /* Level 1 */,
+				DC90B8551C7966D500CCC033 /* Main.storyboard */,
+				DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */,
 				DC5AAD2F1C868083006B8BD3 /* Start.swift */,
 				DCAC77DF1CB0D04A00422EA5 /* Audio */,
 				DCAC77DE1CB0D04300422EA5 /* Images */,
 				DCAC77E01CB0D06C00422EA5 /* Fonts */,
 				DC11325F1C83D06600B19DCD /* AppDelegate.swift */,
-				DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */,
 				DC90B8581C7966D500CCC033 /* Assets.xcassets */,
 				DC90B85D1C7966D500CCC033 /* Info.plist */,
 			);
@@ -172,20 +205,7 @@
 		DCF94FD81C9F1AE000231CA3 /* Level 1 */ = {
 			isa = PBXGroup;
 			children = (
-				DC237BAE1CB725A700DAA111 /* background1@2x.jpg */,
-				DC237BB01CB7269500DAA111 /* background2@2x.jpg */,
-				DC539F4B1CB6C25E00211970 /* background4.png */,
-				DC539F4D1CB6C3E500211970 /* background5@2x.png */,
-				DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */,
-				DC539F511CB6CFB000211970 /* background8@2x.jpg */,
-				DC539F551CB6D49900211970 /* background10@2x.jpg */,
-				DC539F581CB6DC5D00211970 /* background12@2x.jpg */,
-				DC539F631CB6E59200211970 /* background16@2x.jpg */,
-				DC539F671CB6E9D000211970 /* background18@2x.jpg */,
-				DC539F6F1CB71AF100211970 /* background20@2x.png */,
-				DC237BA61CB71CDB00DAA111 /* background21@2x.png */,
-				DC237BAA1CB723F400DAA111 /* background22@2x.png */,
-				DC4675051CAF4A20001A8422 /* Images */,
+				DC237BB41CB85E9C00DAA111 /* Top Buttons */,
 				DC0C51481CA5C67200925709 /* Main.swift */,
 				DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */,
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
@@ -194,6 +214,7 @@
 				DC237BB21CB8599500DAA111 /* Buttons3.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
 				DC9CE1D71CA7883800817C02 /* Notes */,
+				DC237BB61CB85EBD00DAA111 /* Backgrounds */,
 			);
 			name = "Level 1";
 			sourceTree = "<group>";
@@ -295,7 +316,11 @@
 			files = (
 				DCAAC8C41C9E3572000F5C99 /* Audio.swift in Sources */,
 				DCAAC8C21C9E3494000F5C99 /* Buttons.swift in Sources */,
+				DC237BBC1CB8627E00DAA111 /* TopButtonFour.swift in Sources */,
+				DC237BB81CB85F1D00DAA111 /* TopButtonOne.swift in Sources */,
+				DC237BBD1CB8627E00DAA111 /* TopButtonThree.swift in Sources */,
 				DC539F6C1CB6F55D00211970 /* Buttons2.swift in Sources */,
+				DC237BBE1CB8627E00DAA111 /* TopButtonTwo.swift in Sources */,
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
