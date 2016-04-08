@@ -19,6 +19,15 @@
 		DC237BBC1CB8627E00DAA111 /* TopButtonFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */; };
 		DC237BBD1CB8627E00DAA111 /* TopButtonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */; };
 		DC237BBE1CB8627E00DAA111 /* TopButtonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BBB1CB8627E00DAA111 /* TopButtonTwo.swift */; };
+		DC237BC11CB86B9900DAA111 /* BottomButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC01CB86B9900DAA111 /* BottomButtonOne.swift */; };
+		DC237BCA1CB86D6B00DAA111 /* BottomButtonEight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC21CB86D6B00DAA111 /* BottomButtonEight.swift */; };
+		DC237BCB1CB86D6B00DAA111 /* BottomButtonFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC31CB86D6B00DAA111 /* BottomButtonFive.swift */; };
+		DC237BCC1CB86D6B00DAA111 /* BottomButtonFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC41CB86D6B00DAA111 /* BottomButtonFour.swift */; };
+		DC237BCD1CB86D6B00DAA111 /* BottomButtonNine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC51CB86D6B00DAA111 /* BottomButtonNine.swift */; };
+		DC237BCE1CB86D6B00DAA111 /* BottomButtonSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC61CB86D6B00DAA111 /* BottomButtonSeven.swift */; };
+		DC237BCF1CB86D6B00DAA111 /* BottomButtonSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC71CB86D6B00DAA111 /* BottomButtonSix.swift */; };
+		DC237BD01CB86D6B00DAA111 /* BottomButtonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC81CB86D6B00DAA111 /* BottomButtonThree.swift */; };
+		DC237BD11CB86D6B00DAA111 /* BottomButtonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BC91CB86D6B00DAA111 /* BottomButtonTwo.swift */; };
 		DC539F4C1CB6C25E00211970 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = DC539F4B1CB6C25E00211970 /* background4.png */; };
 		DC539F4E1CB6C3E500211970 /* background5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC539F4D1CB6C3E500211970 /* background5@2x.png */; };
 		DC539F501CB6C4EF00211970 /* background6@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */; };
@@ -62,6 +71,15 @@
 		DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonFour.swift; sourceTree = "<group>"; };
 		DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonThree.swift; sourceTree = "<group>"; };
 		DC237BBB1CB8627E00DAA111 /* TopButtonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonTwo.swift; sourceTree = "<group>"; };
+		DC237BC01CB86B9900DAA111 /* BottomButtonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonOne.swift; sourceTree = "<group>"; };
+		DC237BC21CB86D6B00DAA111 /* BottomButtonEight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonEight.swift; sourceTree = "<group>"; };
+		DC237BC31CB86D6B00DAA111 /* BottomButtonFive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonFive.swift; sourceTree = "<group>"; };
+		DC237BC41CB86D6B00DAA111 /* BottomButtonFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonFour.swift; sourceTree = "<group>"; };
+		DC237BC51CB86D6B00DAA111 /* BottomButtonNine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonNine.swift; sourceTree = "<group>"; };
+		DC237BC61CB86D6B00DAA111 /* BottomButtonSeven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonSeven.swift; sourceTree = "<group>"; };
+		DC237BC71CB86D6B00DAA111 /* BottomButtonSix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonSix.swift; sourceTree = "<group>"; };
+		DC237BC81CB86D6B00DAA111 /* BottomButtonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonThree.swift; sourceTree = "<group>"; };
+		DC237BC91CB86D6B00DAA111 /* BottomButtonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonTwo.swift; sourceTree = "<group>"; };
 		DC539F4B1CB6C25E00211970 /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background4.png; path = Guessor/background4.png; sourceTree = "<group>"; };
 		DC539F4D1CB6C3E500211970 /* background5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background5@2x.png"; path = "Guessor/background5@2x.png"; sourceTree = "<group>"; };
 		DC539F4F1CB6C4EF00211970 /* background6@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background6@2x.jpg"; path = "Guessor/background6@2x.jpg"; sourceTree = "<group>"; };
@@ -138,6 +156,22 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		DC237BBF1CB864D500DAA111 /* Bottom Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				DC237BC01CB86B9900DAA111 /* BottomButtonOne.swift */,
+				DC237BC91CB86D6B00DAA111 /* BottomButtonTwo.swift */,
+				DC237BC81CB86D6B00DAA111 /* BottomButtonThree.swift */,
+				DC237BC41CB86D6B00DAA111 /* BottomButtonFour.swift */,
+				DC237BC31CB86D6B00DAA111 /* BottomButtonFive.swift */,
+				DC237BC71CB86D6B00DAA111 /* BottomButtonSix.swift */,
+				DC237BC61CB86D6B00DAA111 /* BottomButtonSeven.swift */,
+				DC237BC21CB86D6B00DAA111 /* BottomButtonEight.swift */,
+				DC237BC51CB86D6B00DAA111 /* BottomButtonNine.swift */,
+			);
+			name = "Bottom Buttons";
+			sourceTree = "<group>";
+		};
 		DC90B8451C7966D500CCC033 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				DC237BB41CB85E9C00DAA111 /* Top Buttons */,
+				DC237BBF1CB864D500DAA111 /* Bottom Buttons */,
 				DC0C51481CA5C67200925709 /* Main.swift */,
 				DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */,
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
@@ -316,15 +351,24 @@
 			files = (
 				DCAAC8C41C9E3572000F5C99 /* Audio.swift in Sources */,
 				DCAAC8C21C9E3494000F5C99 /* Buttons.swift in Sources */,
+				DC237BCC1CB86D6B00DAA111 /* BottomButtonFour.swift in Sources */,
 				DC237BBC1CB8627E00DAA111 /* TopButtonFour.swift in Sources */,
 				DC237BB81CB85F1D00DAA111 /* TopButtonOne.swift in Sources */,
+				DC237BCF1CB86D6B00DAA111 /* BottomButtonSix.swift in Sources */,
 				DC237BBD1CB8627E00DAA111 /* TopButtonThree.swift in Sources */,
 				DC539F6C1CB6F55D00211970 /* Buttons2.swift in Sources */,
 				DC237BBE1CB8627E00DAA111 /* TopButtonTwo.swift in Sources */,
+				DC237BCD1CB86D6B00DAA111 /* BottomButtonNine.swift in Sources */,
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
+				DC237BC11CB86B9900DAA111 /* BottomButtonOne.swift in Sources */,
+				DC237BD01CB86D6B00DAA111 /* BottomButtonThree.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
+				DC237BCA1CB86D6B00DAA111 /* BottomButtonEight.swift in Sources */,
+				DC237BCE1CB86D6B00DAA111 /* BottomButtonSeven.swift in Sources */,
+				DC237BCB1CB86D6B00DAA111 /* BottomButtonFive.swift in Sources */,
 				DC0C51491CA5C67200925709 /* Main.swift in Sources */,
+				DC237BD11CB86D6B00DAA111 /* BottomButtonTwo.swift in Sources */,
 				DC237BB31CB8599500DAA111 /* Buttons3.swift in Sources */,
 				DC90B8541C7966D500CCC033 /* BaseLevel.swift in Sources */,
 			);

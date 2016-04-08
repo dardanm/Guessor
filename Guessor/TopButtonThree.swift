@@ -13,45 +13,45 @@ import QuartzCore
 extension BaseLevel {
 
     // SYMBOL
-    func createTopButtonRandomSymbolNumOne(){
+    func createTopButtonRandomSymbolNumThree(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topButtonSymbolOne = 1
-        case 2: topButtonSymbolOne = 2
-        case 3: topButtonSymbolOne = 3
-        case 4: topButtonSymbolOne = 4
-        default: topButtonSymbolOne = 10
+        case 1: topButtonSymbolThree = 1
+        case 2: topButtonSymbolThree = 2
+        case 3: topButtonSymbolThree = 3
+        case 4: topButtonSymbolThree = 4
+        default: topButtonSymbolThree = 10
         }
     }
     
     // BACKGROUND
-    func createTopButtonRandomColorNumOne(){
+    func createTopButtonRandomColorNumThree(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topButtonBackgroundColorOne = 1
-        case 2: topButtonBackgroundColorOne = 2
-        case 3: topButtonBackgroundColorOne = 3
-        case 4: topButtonBackgroundColorOne = 4
-        default: topButtonBackgroundColorOne = 10
+        case 1: topButtonBackgroundColorThree = 1
+        case 2: topButtonBackgroundColorThree = 2
+        case 3: topButtonBackgroundColorThree = 3
+        case 4: topButtonBackgroundColorThree = 4
+        default: topButtonBackgroundColorThree = 10
         }
     }
     
     // IMAGE
     func updateTopButtonImageNumOne(){
-        if topButtonSymbolOne == 1 {
-            caneN1.hidden = false
-            candyN1.hidden = true
-            popN1.hidden = true
+        if topButtonSymbolThree == 1 {
+            caneN3.hidden = false
+            candyN3.hidden = true
+            popN3.hidden = true
         }
-        if topButtonSymbolOne == 2 {
-            caneN1.hidden = true
-            candyN1.hidden = false
-            popN1.hidden = true
+        if topButtonSymbolThree == 2 {
+            caneN3.hidden = true
+            candyN3.hidden = false
+            popN3.hidden = true
         }
-        if topButtonSymbolOne == 3 {
-            caneN1.hidden = true
-            candyN1.hidden = true
-            popN1.hidden = false
+        if topButtonSymbolThree == 3 {
+            caneN3.hidden = true
+            candyN3.hidden = true
+            popN3.hidden = false
         }
     }
     
