@@ -37,21 +37,21 @@ extension BaseLevel {
     }
     
     // IMAGE
-    func updateTopButtonImageNumOne(){
-        if topButtonSymbolOne == 1 {
-            caneN1.hidden = false
-            candyN1.hidden = true
-            popN1.hidden = true
+    func updateBottomButtonImageNumFour(){
+        if bottomButtonSymbolFour == 1 {
+            caneB4.hidden = false
+            candyB4.hidden = true
+            popB4.hidden = true
         }
-        if topButtonSymbolOne == 2 {
-            caneN1.hidden = true
-            candyN1.hidden = false
-            popN1.hidden = true
+        if bottomButtonSymbolFour == 2 {
+            caneB4.hidden = true
+            candyB4.hidden = false
+            popB4.hidden = true
         }
-        if topButtonSymbolOne == 3 {
-            caneN1.hidden = true
-            candyN1.hidden = true
-            popN1.hidden = false
+        if bottomButtonSymbolFour == 3 {
+            caneB4.hidden = true
+            candyB4.hidden = true
+            popB4.hidden = false
         }
     }
     

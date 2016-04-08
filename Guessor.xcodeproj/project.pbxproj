@@ -14,7 +14,6 @@
 		DC237BAB1CB723F400DAA111 /* background22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC237BAA1CB723F400DAA111 /* background22@2x.png */; };
 		DC237BAF1CB725A700DAA111 /* background1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC237BAE1CB725A700DAA111 /* background1@2x.jpg */; };
 		DC237BB11CB7269500DAA111 /* background2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC237BB01CB7269500DAA111 /* background2@2x.jpg */; };
-		DC237BB31CB8599500DAA111 /* Buttons3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB21CB8599500DAA111 /* Buttons3.swift */; };
 		DC237BB81CB85F1D00DAA111 /* TopButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB71CB85F1D00DAA111 /* TopButtonOne.swift */; };
 		DC237BBC1CB8627E00DAA111 /* TopButtonFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */; };
 		DC237BBD1CB8627E00DAA111 /* TopButtonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */; };
@@ -66,7 +65,6 @@
 		DC237BAA1CB723F400DAA111 /* background22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background22@2x.png"; path = "Guessor/background22@2x.png"; sourceTree = "<group>"; };
 		DC237BAE1CB725A700DAA111 /* background1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background1@2x.jpg"; path = "Guessor/background1@2x.jpg"; sourceTree = "<group>"; };
 		DC237BB01CB7269500DAA111 /* background2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background2@2x.jpg"; path = "Guessor/background2@2x.jpg"; sourceTree = "<group>"; };
-		DC237BB21CB8599500DAA111 /* Buttons3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons3.swift; sourceTree = "<group>"; };
 		DC237BB71CB85F1D00DAA111 /* TopButtonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonOne.swift; sourceTree = "<group>"; };
 		DC237BB91CB8627E00DAA111 /* TopButtonFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonFour.swift; sourceTree = "<group>"; };
 		DC237BBA1CB8627E00DAA111 /* TopButtonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButtonThree.swift; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
 				DCAAC8C11C9E3494000F5C99 /* Buttons.swift */,
 				DC539F6B1CB6F55D00211970 /* Buttons2.swift */,
-				DC237BB21CB8599500DAA111 /* Buttons3.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
 				DC9CE1D71CA7883800817C02 /* Notes */,
 				DC237BB61CB85EBD00DAA111 /* Backgrounds */,
@@ -369,7 +366,6 @@
 				DC237BCB1CB86D6B00DAA111 /* BottomButtonFive.swift in Sources */,
 				DC0C51491CA5C67200925709 /* Main.swift in Sources */,
 				DC237BD11CB86D6B00DAA111 /* BottomButtonTwo.swift in Sources */,
-				DC237BB31CB8599500DAA111 /* Buttons3.swift in Sources */,
 				DC90B8541C7966D500CCC033 /* BaseLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

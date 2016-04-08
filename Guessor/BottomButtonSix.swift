@@ -25,24 +25,33 @@ extension BaseLevel {
     }
     
     // BACKGROUND
-
+    func createBottomButtonRandomColorNumSix(){
+        value = Int(arc4random_uniform(4) + 1)
+        switch value {
+        case 1: bottomButtonBackgroundColorSix = 1
+        case 2: bottomButtonBackgroundColorSix = 2
+        case 3: bottomButtonBackgroundColorSix = 3
+        case 4: bottomButtonBackgroundColorSix = 4
+        default: bottomButtonBackgroundColorSix = 10
+        }
+    }
     
     // IMAGE
-    func updateTopButtonImageNumOne(){
-        if topButtonSymbolOne == 1 {
-            caneN1.hidden = false
-            candyN1.hidden = true
-            popN1.hidden = true
+    func updateBottomButtonImageNumSix(){
+        if bottomButtonSymbolSix == 1 {
+            caneB6.hidden = false
+            candyB6.hidden = true
+            popB6.hidden = true
         }
-        if topButtonSymbolOne == 2 {
-            caneN1.hidden = true
-            candyN1.hidden = false
-            popN1.hidden = true
+        if bottomButtonSymbolSix == 2 {
+            caneB6.hidden = true
+            candyB6.hidden = false
+            popB6.hidden = true
         }
-        if topButtonSymbolOne == 3 {
-            caneN1.hidden = true
-            candyN1.hidden = true
-            popN1.hidden = false
+        if bottomButtonSymbolSix == 3 {
+            caneB6.hidden = true
+            candyB6.hidden = true
+            popB6.hidden = false
         }
     }
     
