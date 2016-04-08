@@ -114,10 +114,10 @@ class BaseLevel: UIViewController {
     var topButtonSymbolFour:Int = 0
     
     // create variable background for top 4 buttons
-    var topButtonBackgroundOne:Int = 0
-    var topButtonBackgroundTwo:Int = 0
-    var topButtonBackgroundThree:Int = 0
-    var topButtonBackgroundFour:Int = 0
+    var topButtonBackgroundColorOne:Int = 0
+    var topButtonBackgroundColorTwo:Int = 0
+    var topButtonBackgroundColorThree:Int = 0
+    var topButtonBackgroundColorFour:Int = 0
     
     // create variable symbol for middle 9 buttons
     var bottomButtonSymbolOne:Int = 0
@@ -131,15 +131,15 @@ class BaseLevel: UIViewController {
     var bottomButtonSymbolNine:Int = 0
     
     // create variable symbol for middle 9 buttons
-    var bottomButtonBackgroundOne:Int = 0
-    var bottomButtonBackgroundTwo:Int = 0
-    var bottomButtonBackgroundThree:Int = 0
-    var bottomButtonBackgroundFour:Int = 0
-    var bottomButtonBackgroundFive:Int = 0
-    var bottomButtonBackgroundSix:Int = 0
-    var bottomButtonBackgroundSeven:Int = 0
-    var bottomButtonBackgroundEight:Int = 0
-    var bottomButtonBackgroundNine:Int = 0
+    var bottomButtonBackgroundColorOne:Int = 0
+    var bottomButtonBackgroundColorTwo:Int = 0
+    var bottomButtonBackgroundColorThree:Int = 0
+    var bottomButtonBackgroundColorFour:Int = 0
+    var bottomButtonBackgroundColorFive:Int = 0
+    var bottomButtonBackgroundColorSix:Int = 0
+    var bottomButtonBackgroundColorSeven:Int = 0
+    var bottomButtonBackgroundColorEight:Int = 0
+    var bottomButtonBackgroundColorNine:Int = 0
     
     
     @IBOutlet weak var batteryProgress: UIProgressView!
