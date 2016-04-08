@@ -186,11 +186,11 @@
 				DC4675051CAF4A20001A8422 /* Images */,
 				DC0C51481CA5C67200925709 /* Main.swift */,
 				DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */,
+				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
 				DCAAC8C11C9E3494000F5C99 /* Buttons.swift */,
 				DC539F6B1CB6F55D00211970 /* Buttons2.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
 				DC9CE1D71CA7883800817C02 /* Notes */,
-				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
 			);
 			name = "Level 1";
 			sourceTree = "<group>";
