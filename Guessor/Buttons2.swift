@@ -34,5 +34,15 @@ extension BaseLevel {
         bottomBackground.layer.opacity = 1.0
         coinLabel.textColor = UIColor(netHex: 0xa3a3a3)
     }
+    
+    func mixBackground(){
+        // insert code here
+        topBackground.layer.opacity = 0.5
+        topBackgroundScore.layer.opacity = 0.5
+        topBackgroundNumbers.layer.opacity = 0.5
+        middleBackground.layer.opacity = 0.5
+        bottomBackground.layer.opacity = 0.5
+        coinLabel.textColor = UIColor(netHex: 0xffffff)
+    }
 
 }

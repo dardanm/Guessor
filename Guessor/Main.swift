@@ -58,9 +58,9 @@ extension BaseLevel {
         tryAgainLabel.layer.opacity = 0
         
         self.view.backgroundColor = .whiteColor()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background18@2x.jpg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background8@2x.jpg")!)
   
-        whiteBackground()
+        blackBackground()
         
     }
     
