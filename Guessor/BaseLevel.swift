@@ -107,6 +107,40 @@ class BaseLevel: UIViewController {
     @IBOutlet var popB9: UIImageView!
     @IBOutlet var caneB9: UIImageView!
 
+    // create variable symbol for top 4 buttons
+    var topButtonOne:Int = 0
+    var topButtonTwo:Int = 0
+    var topButtonThree:Int = 0
+    var topButtonFour:Int = 0
+    
+    // create variable background for top 4 buttons
+    var topButtonOneBackground:Int = 0
+    var topButtonTwoBackground:Int = 0
+    var topButtonThreeBackground:Int = 0
+    var topButtonFourBackground:Int = 0
+    
+    // create variable symbol for middle 9 buttons
+    var bottomButtonOne:Int = 0
+    var bottomButtonTwo:Int = 0
+    var bottomButtonThree:Int = 0
+    var bottomButtonFour:Int = 0
+    var bottomButtonFive:Int = 0
+    var bottomButtonSix:Int = 0
+    var bottomButtonSeven:Int = 0
+    var bottomButtonEight:Int = 0
+    var bottomButtonNine:Int = 0
+    
+    // create variable symbol for middle 9 buttons
+    var bottomButtonOneBackground:Int = 0
+    var bottomButtonTwoBackground:Int = 0
+    var bottomButtonThreeBackground:Int = 0
+    var bottomButtonFourBackground:Int = 0
+    var bottomButtonFiveBackground:Int = 0
+    var bottomButtonSixBackground:Int = 0
+    var bottomButtonSevenBackground:Int = 0
+    var bottomButtonEightBackground:Int = 0
+    var bottomButtonNineBackground:Int = 0
+    
     
     @IBOutlet weak var batteryProgress: UIProgressView!
     
