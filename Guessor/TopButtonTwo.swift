@@ -14,12 +14,11 @@ extension BaseLevel {
 
     // SYMBOL
     func createTopTwoSymbolRandom(){
-        value = Int(arc4random_uniform(4) + 1)
+        value = Int(arc4random_uniform(3) + 1)
         switch value {
         case 1: topTwoSymbol = 1
         case 2: topTwoSymbol = 2
         case 3: topTwoSymbol = 3
-        case 4: topTwoSymbol = 4
         default: topTwoSymbol = 10
         }
     }

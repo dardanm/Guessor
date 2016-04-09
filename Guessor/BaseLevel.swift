@@ -267,7 +267,7 @@ class BaseLevel: UIViewController {
         runOrNot = 4
         scoreKeep = 0
         generateTopAndBottomButtons()
-        realRandomGeneratorFirst()
+//        realRandomGeneratorFirst()
         
         
     }

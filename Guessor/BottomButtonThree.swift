@@ -14,12 +14,11 @@ extension BaseLevel {
     
     // SYMBOL
     func createBotThreeSymbolRandom(){
-        value = Int(arc4random_uniform(4) + 1)
+        value = Int(arc4random_uniform(3) + 1)
         switch value {
         case 1: botThreeSymbol = 1
         case 2: botThreeSymbol = 2
         case 3: botThreeSymbol = 3
-        case 4: botThreeSymbol = 4
         default: botThreeSymbol = 10
         }
     }

@@ -49,7 +49,7 @@ extension BaseLevel {
         coin = 0
         coinLabel.text = "\(coin)"
         generateTopAndBottomButtons()
-        realRandomGeneratorFirst()
+//        realRandomGeneratorFirst()
         
         startTimer()
         
@@ -79,7 +79,7 @@ extension BaseLevel {
         self.runOrNot = 4
         self.scoreKeep = 0
         self.generateTopAndBottomButtons()
-        self.realRandomGeneratorFirst()
+//        self.realRandomGeneratorFirst()
         }
 
             
@@ -97,7 +97,7 @@ extension BaseLevel {
         self.runOrNot = 4
         self.scoreKeep = 0
         self.generateTopAndBottomButtons()
-        self.realRandomGeneratorFirst()
+//        self.realRandomGeneratorFirst()
         self.startTimer()
         
         self.count = 10

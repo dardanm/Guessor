@@ -51,8 +51,24 @@ extension BaseLevel {
         // Set firstNUmber as first to check button
         runOrNot = 4
 
-        realRandomGeneratorFirst()
+//        realRandomGeneratorFirst()
+        generateTopAndBottomButtons()
         generateButtonImages()
+        print(topOneSymbol)
+        print(topTwoSymbol)
+        print(topThreeSymbol)
+        print(topFourSymbol)
+        print("")
+        print(botOneSymbol)
+        print(botTwoSymbol)
+        print(botThreeSymbol)
+        print(botFourSymbol)
+        print(botFiveSymbol)
+        print(botSixSymbol)
+        print(botSevenSymbol)
+        print(botEightSymbol)
+        print(botNineSymbol)
+        print("")
         
         // try again
         tryAgainLabel.enabled = false
