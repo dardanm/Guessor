@@ -73,9 +73,6 @@ extension BaseLevel {
     // GREEN BACKGROUND
     func setBotSevenGreenBackground(){
         botSevenGreenColor.hidden = false
-        delay(0.5){
-            self.removeBotSevenGreenBackground()
-        }
     }
     func removeBotSevenGreenBackground(){
         botSevenGreenColor.hidden = true
