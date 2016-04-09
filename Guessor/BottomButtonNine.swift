@@ -13,7 +13,7 @@ import QuartzCore
 extension BaseLevel {
     
     // SYMBOL
-    func createBottomButtonRandomSymbolNumNine(){
+    func createBotNineSymbolRandom(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
         case 1: botNineSymbol = 1
@@ -25,7 +25,7 @@ extension BaseLevel {
     }
     
     // BACKGROUND
-    func createBottomButtonRandomColorNumNine(){
+    func createBotNineColorRandom(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
         case 1: botNineColorBackground = 1
@@ -37,7 +37,7 @@ extension BaseLevel {
     }
     
     // IMAGE
-    func updateBottomButtonImageNumNine(){
+    func updateBotNineImage(){
         if botNineSymbol == 1 {
             caneB9.hidden = false
             candyB9.hidden = true
