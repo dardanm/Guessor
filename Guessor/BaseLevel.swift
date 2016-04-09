@@ -18,29 +18,12 @@ class BaseLevel: UIViewController {
     // coin label
     @IBOutlet var coinLabel: UILabel!
     var coin:Int = 0
-
-    // top numbers text
-    @IBOutlet var firstNumber: UILabel!
-    @IBOutlet var secondNumber: UILabel!
-    @IBOutlet var thirdNumber: UILabel!
-    @IBOutlet var fourthNumber: UILabel!
     
     // top numbers background
     @IBOutlet var topOneLabelColor: UILabel!
     @IBOutlet var topTwoLabelColor: UILabel!
     @IBOutlet var topThreeLabelColor: UILabel!
     @IBOutlet var topFourLabelColor: UILabel!
-
-    // bottom buttons text
-    @IBOutlet var buttonOneText: UILabel!
-    @IBOutlet var buttonTwoText: UILabel!
-    @IBOutlet var buttonThreeText: UILabel!
-    @IBOutlet var buttonFourText: UILabel!
-    @IBOutlet var buttonFiveText: UILabel!
-    @IBOutlet var buttonSixText: UILabel!
-    @IBOutlet var buttonSevenText: UILabel!
-    @IBOutlet var buttonEightText: UILabel!
-    @IBOutlet var buttonNineText: UILabel!
 
     // bottom buttons background
     @IBOutlet var botOneButtonColor: UIButton!
