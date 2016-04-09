@@ -16,11 +16,11 @@ extension BaseLevel {
     func createBottomButtonRandomSymbolNumEight(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: bottomButtonSymbolEight = 1
-        case 2: bottomButtonSymbolEight = 2
-        case 3: bottomButtonSymbolEight = 3
-        case 4: bottomButtonSymbolEight = 4
-        default: bottomButtonSymbolEight = 10
+        case 1: botEightSymbol = 1
+        case 2: botEightSymbol = 2
+        case 3: botEightSymbol = 3
+        case 4: botEightSymbol = 4
+        default: botEightSymbol = 10
         }
     }
     
@@ -28,27 +28,27 @@ extension BaseLevel {
     func createBottomButtonRandomColorNumEight(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: bottomButtonBackgroundColorEight = 1
-        case 2: bottomButtonBackgroundColorEight = 2
-        case 3: bottomButtonBackgroundColorEight = 3
-        case 4: bottomButtonBackgroundColorEight = 4
-        default: bottomButtonBackgroundColorEight = 10
+        case 1: botEightColorBackground = 1
+        case 2: botEightColorBackground = 2
+        case 3: botEightColorBackground = 3
+        case 4: botEightColorBackground = 4
+        default: botEightColorBackground = 10
         }
     }
     
     // IMAGE
     func updateBottomButtonImageNumEight(){
-        if bottomButtonSymbolEight == 1 {
+        if botEightSymbol == 1 {
             caneB8.hidden = false
             candyB8.hidden = true
             popB8.hidden = true
         }
-        if bottomButtonSymbolEight == 2 {
+        if botEightSymbol == 2 {
             caneB8.hidden = true
             candyB8.hidden = false
             popB8.hidden = true
         }
-        if bottomButtonSymbolEight == 3 {
+        if botEightSymbol == 3 {
             caneB8.hidden = true
             candyB8.hidden = true
             popB8.hidden = false

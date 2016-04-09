@@ -662,6 +662,8 @@ extension BaseLevel {
         generateButtonImages()
     }
     
+    
+    
     func generateTopAndBottomButtons(){
         
         // top numbers randomize

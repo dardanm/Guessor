@@ -16,11 +16,11 @@ extension BaseLevel {
     func createBottomButtonRandomSymbolNumOne(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: bottomButtonSymbolOne = 1
-        case 2: bottomButtonSymbolOne = 2
-        case 3: bottomButtonSymbolOne = 3
-        case 4: bottomButtonSymbolOne = 4
-        default: bottomButtonSymbolOne = 10
+        case 1: botOneSymbol = 1
+        case 2: botOneSymbol = 2
+        case 3: botOneSymbol = 3
+        case 4: botOneSymbol = 4
+        default: botOneSymbol = 10
         }
     }
     
@@ -28,27 +28,27 @@ extension BaseLevel {
     func createBottomButtonRandomColorNumOne(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: bottomButtonBackgroundColorOne = 1
-        case 2: bottomButtonBackgroundColorOne = 2
-        case 3: bottomButtonBackgroundColorOne = 3
-        case 4: bottomButtonBackgroundColorOne = 4
-        default: bottomButtonBackgroundColorOne = 10
+        case 1: botOneColorBackground = 1
+        case 2: botOneColorBackground = 2
+        case 3: botOneColorBackground = 3
+        case 4: botOneColorBackground = 4
+        default: botOneColorBackground = 10
         }
     }
     
     // IMAGE
     func updateBottomButtonImageNumOne(){
-        if bottomButtonSymbolOne == 1 {
+        if botOneSymbol == 1 {
             caneB1.hidden = false
             candyB1.hidden = true
             popB1.hidden = true
         }
-        if bottomButtonSymbolOne == 2 {
+        if botOneSymbol == 2 {
             caneB1.hidden = true
             candyB1.hidden = false
             popB1.hidden = true
         }
-        if bottomButtonSymbolOne == 3 {
+        if botOneSymbol == 3 {
             caneB1.hidden = true
             candyB1.hidden = true
             popB1.hidden = false

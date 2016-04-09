@@ -16,11 +16,11 @@ extension BaseLevel {
     func createTopButtonRandomSymbolNumThree(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topButtonSymbolThree = 1
-        case 2: topButtonSymbolThree = 2
-        case 3: topButtonSymbolThree = 3
-        case 4: topButtonSymbolThree = 4
-        default: topButtonSymbolThree = 10
+        case 1: topThreeSymbol = 1
+        case 2: topThreeSymbol = 2
+        case 3: topThreeSymbol = 3
+        case 4: topThreeSymbol = 4
+        default: topThreeSymbol = 10
         }
     }
     
@@ -28,27 +28,27 @@ extension BaseLevel {
     func createTopButtonRandomColorNumThree(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topButtonBackgroundColorThree = 1
-        case 2: topButtonBackgroundColorThree = 2
-        case 3: topButtonBackgroundColorThree = 3
-        case 4: topButtonBackgroundColorThree = 4
-        default: topButtonBackgroundColorThree = 10
+        case 1: topThreeColorBackground = 1
+        case 2: topThreeColorBackground = 2
+        case 3: topThreeColorBackground = 3
+        case 4: topThreeColorBackground = 4
+        default: topThreeColorBackground = 10
         }
     }
     
     // IMAGE
     func updateTopButtonImageNumOne(){
-        if topButtonSymbolThree == 1 {
+        if topThreeSymbol == 1 {
             caneN3.hidden = false
             candyN3.hidden = true
             popN3.hidden = true
         }
-        if topButtonSymbolThree == 2 {
+        if topThreeSymbol == 2 {
             caneN3.hidden = true
             candyN3.hidden = false
             popN3.hidden = true
         }
-        if topButtonSymbolThree == 3 {
+        if topThreeSymbol == 3 {
             caneN3.hidden = true
             candyN3.hidden = true
             popN3.hidden = false

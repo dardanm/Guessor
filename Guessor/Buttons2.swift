@@ -44,5 +44,41 @@ extension BaseLevel {
         bottomBackground.layer.opacity = 0.5
         coinLabel.textColor = UIColor(netHex: 0xffffff)
     }
+    
+    
+    // new system
+    
+    func generateTopAndBottomButtons2(){
+        
+        // top numbers randomize
+        createTopButtonRandomColorNumOne()
+        createTopButtonRandomSymbolNumOne()
+        createTopButtonRandomColorNumTwo()
+        createTopButtonRandomSymbolNumTwo()
+        createTopButtonRandomColorNumThree()
+        createTopButtonRandomSymbolNumThree()
+        createTopButtonRandomColorNumFour()
+        createTopButtonRandomSymbolNumFour()
+        
+        // bottom numbers randomize
+        createBottomButtonRandomSymbolNumOne()
+        
+        self.buttonOneOptionsColors()
+        self.buttonTwoOptionsColors()
+        self.buttonThreeOptionsColors()
+        self.buttonFourOptionsColors()
+        self.buttonFiveOptionsColors()
+        self.buttonSixOptionsColors()
+        self.buttonSevenOptionsColors()
+        self.buttonEightOptionsColors()
+        self.buttonNineOptionsColors()
+        
+    }
+    
+    
+    
+    
+    
+    
 
 }

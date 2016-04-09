@@ -108,38 +108,38 @@ class BaseLevel: UIViewController {
     @IBOutlet var caneB9: UIImageView!
 
     // create variable symbol for top 4 buttons
-    var topButtonSymbolOne:Int = 0
-    var topButtonSymbolTwo:Int = 0
-    var topButtonSymbolThree:Int = 0
-    var topButtonSymbolFour:Int = 0
+    var topOneSymbol:Int = 0
+    var topTwoSymbol:Int = 0
+    var topThreeSymbol:Int = 0
+    var topFourSymbol:Int = 0
     
     // create variable background for top 4 buttons
-    var topButtonBackgroundColorOne:Int = 0
-    var topButtonBackgroundColorTwo:Int = 0
-    var topButtonBackgroundColorThree:Int = 0
-    var topButtonBackgroundColorFour:Int = 0
+    var topOneColorBackground:Int = 0
+    var topTwoColorBackground:Int = 0
+    var topThreeColorBackground:Int = 0
+    var topFourTopColorBackground:Int = 0
     
     // create variable symbol for middle 9 buttons
-    var bottomButtonSymbolOne:Int = 0
-    var bottomButtonSymbolTwo:Int = 0
-    var bottomButtonSymbolThree:Int = 0
-    var bottomButtonSymbolFour:Int = 0
-    var bottomButtonSymbolFive:Int = 0
-    var bottomButtonSymbolSix:Int = 0
-    var bottomButtonSymbolSeven:Int = 0
-    var bottomButtonSymbolEight:Int = 0
-    var bottomButtonSymbolNine:Int = 0
+    var botOneSymbol:Int = 0
+    var botTwoSymbol:Int = 0
+    var botThreeSymbol:Int = 0
+    var botFourSymbol:Int = 0
+    var botFiveSymbol:Int = 0
+    var botSixSymbol:Int = 0
+    var botSevenSymbol:Int = 0
+    var botEightSymbol:Int = 0
+    var botNineSymbol:Int = 0
     
     // create variable symbol for middle 9 buttons
-    var bottomButtonBackgroundColorOne:Int = 0
-    var bottomButtonBackgroundColorTwo:Int = 0
-    var bottomButtonBackgroundColorThree:Int = 0
-    var bottomButtonBackgroundColorFour:Int = 0
-    var bottomButtonBackgroundColorFive:Int = 0
-    var bottomButtonBackgroundColorSix:Int = 0
-    var bottomButtonBackgroundColorSeven:Int = 0
-    var bottomButtonBackgroundColorEight:Int = 0
-    var bottomButtonBackgroundColorNine:Int = 0
+    var botOneColorBackground:Int = 0
+    var botTwoColorBackground:Int = 0
+    var botThreeColorBackground:Int = 0
+    var botFourColorBackground:Int = 0
+    var botFiveColorBackground:Int = 0
+    var botSixColorBackground:Int = 0
+    var botSevenColorBackground:Int = 0
+    var botEightColorBackground:Int = 0
+    var botNineColorBackground:Int = 0
     
     
     @IBOutlet weak var batteryProgress: UIProgressView!

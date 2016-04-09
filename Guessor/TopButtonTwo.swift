@@ -16,11 +16,11 @@ extension BaseLevel {
     func createTopButtonRandomSymbolNumTwo(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topButtonSymbolTwo = 1
-        case 2: topButtonSymbolTwo = 2
-        case 3: topButtonSymbolTwo = 3
-        case 4: topButtonSymbolTwo = 4
-        default: topButtonSymbolTwo = 10
+        case 1: topTwoSymbol = 1
+        case 2: topTwoSymbol = 2
+        case 3: topTwoSymbol = 3
+        case 4: topTwoSymbol = 4
+        default: topTwoSymbol = 10
         }
     }
     
@@ -28,27 +28,27 @@ extension BaseLevel {
     func createTopButtonRandomColorNumTwo(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topButtonBackgroundColorTwo = 1
-        case 2: topButtonBackgroundColorTwo = 2
-        case 3: topButtonBackgroundColorTwo = 3
-        case 4: topButtonBackgroundColorTwo = 4
-        default: topButtonBackgroundColorTwo = 10
+        case 1: topTwoColorBackground = 1
+        case 2: topTwoColorBackground = 2
+        case 3: topTwoColorBackground = 3
+        case 4: topTwoColorBackground = 4
+        default: topTwoColorBackground = 10
         }
     }
     
     // IMAGE
     func updateTopButtonImageNumOne(){
-        if topButtonSymbolTwo == 1 {
+        if topTwoSymbol == 1 {
             caneN2.hidden = false
             candyN2.hidden = true
             popN2.hidden = true
         }
-        if topButtonSymbolTwo == 2 {
+        if topTwoSymbol == 2 {
             caneN2.hidden = true
             candyN2.hidden = false
             popN2.hidden = true
         }
-        if topButtonSymbolTwo == 3 {
+        if topTwoSymbol == 3 {
             caneN2.hidden = true
             candyN2.hidden = true
             popN2.hidden = false

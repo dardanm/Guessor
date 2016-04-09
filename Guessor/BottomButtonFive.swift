@@ -16,11 +16,11 @@ extension BaseLevel {
     func createBottomButtonRandomSymbolNumFive(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: bottomButtonSymbolFive = 1
-        case 2: bottomButtonSymbolFive = 2
-        case 3: bottomButtonSymbolFive = 3
-        case 4: bottomButtonSymbolFive = 4
-        default: bottomButtonSymbolFive = 10
+        case 1: botFiveSymbol = 1
+        case 2: botFiveSymbol = 2
+        case 3: botFiveSymbol = 3
+        case 4: botFiveSymbol = 4
+        default: botFiveSymbol = 10
         }
     }
     
@@ -38,17 +38,17 @@ extension BaseLevel {
     
     // IMAGE
     func updateBottomButtonImageNumFive(){
-        if bottomButtonSymbolFive == 1 {
+        if botFiveSymbol == 1 {
             caneB5.hidden = false
             candyB5.hidden = true
             popB5.hidden = true
         }
-        if bottomButtonSymbolFive == 2 {
+        if botFiveSymbol == 2 {
             caneB5.hidden = true
             candyB5.hidden = false
             popB5.hidden = true
         }
-        if bottomButtonSymbolFive == 3 {
+        if botFiveSymbol == 3 {
             caneB5.hidden = true
             candyB5.hidden = true
             popB5.hidden = false
