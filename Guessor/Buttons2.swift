@@ -73,10 +73,10 @@ extension BaseLevel {
         topSmallTwoSymbol.textColor = UIColor(netHex: 0x7f7f7f)
         topSmallThreeSymbol.textColor = UIColor(netHex: 0x7f7f7f)
         topSmallFourSymbol.textColor = UIColor(netHex: 0x7f7f7f)
-        topSmallOneColor.backgroundColor = UIColor(netHex: 0xf8f7f7)
-        topSmallTwoColor.backgroundColor = UIColor(netHex: 0xf8f7f7)
-        topSmallThreeColor.backgroundColor = UIColor(netHex: 0xf8f7f7)
-        topSmallFourColor.backgroundColor = UIColor(netHex: 0xf8f7f7)
+        topSmallOneColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallTwoColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallThreeColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallFourColor.backgroundColor = UIColor(netHex: 0xffffff)
         topSmallOneColor.layer.opacity = 1.0
         topSmallTwoColor.layer.opacity = 1.0
         topSmallThreeColor.layer.opacity = 1.0
@@ -86,7 +86,7 @@ extension BaseLevel {
     
     func mixBackground(){
         topBackground.layer.opacity = 0.1
-        topBackgroundScore.layer.opacity = 1.0
+        topBackgroundScore.layer.opacity = 0.2
         middleBackground.layer.opacity = 0.3
         bottomBackground.layer.opacity = 0.1
         

@@ -95,10 +95,6 @@ extension BaseLevel {
         if lives > 0{
 
         delay(0.5){
-        self.resestTopColorBackground()
-        self.runOrNot = 4
-        self.scoreKeep = 0
-        self.realRandomGeneratorFirst()
         self.startTimer()
         
         self.count = 10
@@ -107,7 +103,6 @@ extension BaseLevel {
         
         self.enableButtons()
         
-        self.scoreKeep = 0
         
 
         }
