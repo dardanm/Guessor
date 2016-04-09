@@ -78,8 +78,7 @@ extension BaseLevel {
         delay(0.5){
         self.runOrNot = 4
         self.scoreKeep = 0
-        self.generateTopAndBottomButtons()
-//        self.realRandomGeneratorFirst()
+        self.realRandomGeneratorFirst()
         }
 
             
@@ -96,8 +95,7 @@ extension BaseLevel {
         delay(0.5){
         self.runOrNot = 4
         self.scoreKeep = 0
-        self.generateTopAndBottomButtons()
-//        self.realRandomGeneratorFirst()
+        self.realRandomGeneratorFirst()
         self.startTimer()
         
         self.count = 10

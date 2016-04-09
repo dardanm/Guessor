@@ -54,7 +54,21 @@ extension BaseLevel {
         }
     }
     
-    
+    // BACKGROUND IMAGE
+    func updateTopFourColorBackground(){
+        if topFourColorBackground == 1 {
+            topFourLabelColor.backgroundColor = UIColor(netHex: 0x99e1c3)
+        }
+        if topFourColorBackground == 2 {
+            topFourLabelColor.backgroundColor = UIColor(netHex: 0xf7b220)
+        }
+        if topFourColorBackground == 3 {
+            topFourLabelColor.backgroundColor = UIColor(netHex: 0xf77c2c)
+        }
+        if topFourColorBackground == 4 {
+            topFourLabelColor.backgroundColor = UIColor(netHex: 0xa7cfff)
+        }
+    }
     
     
 

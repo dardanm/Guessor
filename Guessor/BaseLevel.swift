@@ -266,7 +266,7 @@ class BaseLevel: UIViewController {
         countDownLabel.text = "\(count)"
         runOrNot = 4
         scoreKeep = 0
-        generateTopAndBottomButtons()
+        realRandomGeneratorFirst()
 //        realRandomGeneratorFirst()
         
         

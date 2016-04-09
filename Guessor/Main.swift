@@ -52,8 +52,9 @@ extension BaseLevel {
         runOrNot = 4
 
 //        realRandomGeneratorFirst()
-        generateTopAndBottomButtons()
-        generateButtonImages()
+        realRandomGeneratorFirst()
+
+        
         print(topOneSymbol)
         print(topTwoSymbol)
         print(topThreeSymbol)

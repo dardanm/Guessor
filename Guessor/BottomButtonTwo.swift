@@ -54,6 +54,22 @@ extension BaseLevel {
         }
     }
     
+    // BACKGROUND IMAGE
+    func updateBotTwoColorBackground(){
+        if botTwoColorBackground == 1 {
+            botTwoButtonColor.backgroundColor = UIColor(netHex: 0x99e1c3)
+        }
+        if botTwoColorBackground == 2 {
+            botTwoButtonColor.backgroundColor = UIColor(netHex: 0xf7b220)
+        }
+        if botTwoColorBackground == 3 {
+            botTwoButtonColor.backgroundColor = UIColor(netHex: 0xf77c2c)
+        }
+        if botTwoColorBackground == 4 {
+            botTwoButtonColor.backgroundColor = UIColor(netHex: 0xa7cfff)
+        }
+    }
+    
     // BUTTON DOWN PRESS
     func botTwoDownPress(){
         if runOrNot == 4 {

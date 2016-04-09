@@ -82,6 +82,9 @@ extension BaseLevel {
         createBotEightColorRandom()
         createBotNineColorRandom()
         
+        generateButtonImages()
+        updateButtonBackground()
+        
     }
     
     
