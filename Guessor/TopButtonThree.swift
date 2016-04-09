@@ -25,7 +25,7 @@ extension BaseLevel {
     }
     
     // BACKGROUND
-    func createTopTwoColorRandom(){
+    func createTopThreeColorRandom(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
         case 1: topThreeColorBackground = 1

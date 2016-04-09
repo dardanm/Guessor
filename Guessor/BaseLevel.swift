@@ -26,12 +26,10 @@ class BaseLevel: UIViewController {
     @IBOutlet var fourthNumber: UILabel!
     
     // top numbers background
-    @IBOutlet var numberOneLabel: UILabel!
-    @IBOutlet var numberTwoLabel: UILabel!
-    @IBOutlet var numberThreeLabel: UILabel!
-    @IBOutlet var numberFourLabel: UILabel!
-    
-    
+    @IBOutlet var topOneLabelColor: UILabel!
+    @IBOutlet var topTwoLabelColor: UILabel!
+    @IBOutlet var topThreeLabelColor: UILabel!
+    @IBOutlet var topFourLabelColor: UILabel!
 
     // bottom buttons text
     @IBOutlet var buttonOneText: UILabel!
@@ -45,15 +43,15 @@ class BaseLevel: UIViewController {
     @IBOutlet var buttonNineText: UILabel!
 
     // bottom buttons background
-    @IBOutlet var buttonOneLabel: UIButton!
-    @IBOutlet var buttonTwoLabel: UIButton!
-    @IBOutlet var buttonThreeLabel: UIButton!
-    @IBOutlet var buttonFourLabel: UIButton!
-    @IBOutlet var buttonFiveLabel: UIButton!
-    @IBOutlet var buttonSixLabel: UIButton!
-    @IBOutlet var buttonSevenLabel: UIButton!
-    @IBOutlet var buttonEightLabel: UIButton!
-    @IBOutlet var buttonNineLabel: UIButton!
+    @IBOutlet var botOneButtonColor: UIButton!
+    @IBOutlet var botTwoButtonColor: UIButton!
+    @IBOutlet var botThreeButtonColor: UIButton!
+    @IBOutlet var botFourButtonColor: UIButton!
+    @IBOutlet var botFiveButtonColor: UIButton!
+    @IBOutlet var botSixButtonColor: UIButton!
+    @IBOutlet var botSevenButtonColor: UIButton!
+    @IBOutlet var botEightButtonColor: UIButton!
+    @IBOutlet var botNineButtonColor: UIButton!
     
     // background for buttons and top
     @IBOutlet var topBackground: UILabel!
@@ -61,8 +59,6 @@ class BaseLevel: UIViewController {
     @IBOutlet var topBackgroundNumbers: UILabel!
     @IBOutlet var middleBackground: UILabel!
     @IBOutlet var bottomBackground: UILabel!
-    
-    
     
     // top number pictures
     @IBOutlet var candyN1: UIImageView!
@@ -287,19 +283,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonOneText.text == firstNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonOneText.text == firstNumber.text && botOneButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     disableButtons()
                     pressButtonWrongSound()
                 }
@@ -308,19 +304,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonOneText.text == secondNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonOneText.text == secondNumber.text && botOneButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -328,19 +324,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonOneText.text == thirdNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonOneText.text == thirdNumber.text && botOneButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -348,19 +344,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonOneText.text == fourthNumber.text && buttonOneLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonOneText.text == fourthNumber.text && botOneButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonOneLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botOneButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -373,25 +369,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonOneRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonOneLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonOneText.text == firstNumber.text{
+            if botOneButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonOneText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonOneLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonOneText.text == secondNumber.text {
+            if botOneButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonOneText.text == secondNumber.text {
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonOneLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonOneText.text == thirdNumber.text {
+            if botOneButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonOneText.text == thirdNumber.text {
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonOneLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonOneText.text == fourthNumber.text {
+            if botOneButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonOneText.text == fourthNumber.text {
                 runOrNot -= 1
             }
         }
@@ -402,19 +398,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonTwoText.text == firstNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonTwoText.text == firstNumber.text && botTwoButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -422,19 +418,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonTwoText.text == secondNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonTwoText.text == secondNumber.text && botTwoButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -442,19 +438,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonTwoText.text == thirdNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonTwoText.text == thirdNumber.text && botTwoButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -462,19 +458,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonTwoText.text == fourthNumber.text && buttonTwoLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonTwoText.text == fourthNumber.text && botTwoButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonTwoLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botTwoButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -488,25 +484,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonTwoRelease(sender: AnyObject) {
       
         if runOrNot == 4 {
-            if buttonTwoLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonTwoText.text == firstNumber.text{
+            if botTwoButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonTwoText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonTwoLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonTwoText.text == secondNumber.text{
+            if botTwoButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonTwoText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonTwoLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonTwoText.text == thirdNumber.text{
+            if botTwoButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonTwoText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonTwoLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonTwoText.text == fourthNumber.text{
+            if botTwoButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonTwoText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -518,19 +514,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonThreeText.text == firstNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonThreeText.text == firstNumber.text && botThreeButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -538,19 +534,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonThreeText.text == secondNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonThreeText.text == secondNumber.text && botThreeButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -558,19 +554,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonThreeText.text == thirdNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonThreeText.text == thirdNumber.text && botThreeButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -578,19 +574,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonThreeText.text == fourthNumber.text && buttonThreeLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonThreeText.text == fourthNumber.text && botThreeButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonThreeLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -603,25 +599,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonThreeRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonThreeLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonThreeText.text == firstNumber.text{
+            if botThreeButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonThreeText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonThreeLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonThreeText.text == secondNumber.text{
+            if botThreeButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonThreeText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonThreeLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonThreeText.text == thirdNumber.text{
+            if botThreeButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonThreeText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonThreeLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonThreeText.text == fourthNumber.text{
+            if botThreeButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonThreeText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -633,19 +629,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonFourText.text == firstNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonFourText.text == firstNumber.text && botFourButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -653,19 +649,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonFourText.text == secondNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonFourText.text == secondNumber.text && botFourButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -673,19 +669,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonFourText.text == thirdNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonFourText.text == thirdNumber.text && botFourButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -693,19 +689,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonFourText.text == fourthNumber.text && buttonFourLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonFourText.text == fourthNumber.text && botFourButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFourLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -718,25 +714,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonFourRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonFourLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonFourText.text == firstNumber.text{
+            if botFourButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonFourText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonFourLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonFourText.text == secondNumber.text{
+            if botFourButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonFourText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonFourLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonFourText.text == thirdNumber.text{
+            if botFourButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonFourText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonFourLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonFourText.text == fourthNumber.text{
+            if botFourButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonFourText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -748,19 +744,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonFiveText.text == firstNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonFiveText.text == firstNumber.text && botFiveButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -768,19 +764,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonFiveText.text == secondNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonFiveText.text == secondNumber.text && botFiveButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -788,19 +784,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonFiveText.text == thirdNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonFiveText.text == thirdNumber.text && botFiveButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -808,19 +804,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonFiveText.text == fourthNumber.text && buttonFiveLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonFiveText.text == fourthNumber.text && botFiveButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonFiveLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botFiveButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -833,25 +829,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonFiveRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonFiveLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonFiveText.text == firstNumber.text{
+            if botFiveButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonFiveText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonFiveLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonFiveText.text == secondNumber.text{
+            if botFiveButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonFiveText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonFiveLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonFiveText.text == thirdNumber.text{
+            if botFiveButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonFiveText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonFiveLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonFiveText.text == fourthNumber.text{
+            if botFiveButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonFiveText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -863,19 +859,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonSixText.text == firstNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonSixText.text == firstNumber.text && botSixButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -883,19 +879,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonSixText.text == secondNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonSixText.text == secondNumber.text && botSixButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -903,19 +899,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonSixText.text == thirdNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonSixText.text == thirdNumber.text && botSixButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -923,19 +919,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonSixText.text == fourthNumber.text && buttonSixLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonSixText.text == fourthNumber.text && botSixButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSixLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -948,25 +944,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonSixRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonSixLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonSixText.text == firstNumber.text{
+            if botSixButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonSixText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonSixLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonSixText.text == secondNumber.text{
+            if botSixButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonSixText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonSixLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonSixText.text == thirdNumber.text{
+            if botSixButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonSixText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonSixLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonSixText.text == fourthNumber.text{
+            if botSixButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonSixText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -978,19 +974,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonSevenText.text == firstNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonSevenText.text == firstNumber.text && botSevenButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -998,19 +994,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonSevenText.text == secondNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonSevenText.text == secondNumber.text && botSevenButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1018,19 +1014,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonSevenText.text == thirdNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonSevenText.text == thirdNumber.text && botSevenButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1038,19 +1034,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonSevenText.text == fourthNumber.text && buttonSevenLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonSevenText.text == fourthNumber.text && botSevenButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonSevenLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1063,25 +1059,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonSevenRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonSevenLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonSevenText.text == firstNumber.text{
+            if botSevenButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonSevenText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonSevenLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonSevenText.text == secondNumber.text{
+            if botSevenButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonSevenText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonSevenLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonSevenText.text == thirdNumber.text{
+            if botSevenButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonSevenText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonSevenLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonSevenText.text == fourthNumber.text{
+            if botSevenButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonSevenText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -1093,19 +1089,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonEightText.text == firstNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonEightText.text == firstNumber.text && botEightButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1113,19 +1109,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonEightText.text == secondNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonEightText.text == secondNumber.text && botEightButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1133,19 +1129,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonEightText.text == thirdNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonEightText.text == thirdNumber.text && botEightButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1153,19 +1149,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonEightText.text == fourthNumber.text && buttonEightLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonEightText.text == fourthNumber.text && botEightButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonEightLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botEightButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1178,25 +1174,25 @@ class BaseLevel: UIViewController {
     @IBAction func buttonEightRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonEightLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonEightText.text == firstNumber.text{
+            if botEightButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonEightText.text == firstNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 3 {
-            if buttonEightLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonEightText.text == secondNumber.text{
+            if botEightButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonEightText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonEightLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonEightText.text == thirdNumber.text{
+            if botEightButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonEightText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonEightLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonEightText.text == fourthNumber.text{
+            if botEightButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonEightText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }
@@ -1208,19 +1204,19 @@ class BaseLevel: UIViewController {
         
         
         if runOrNot == 4 {
-                if buttonNineText.text == firstNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor){
+                if buttonNineText.text == firstNumber.text && botNineButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberOneLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1228,19 +1224,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 3 {
-                if buttonNineText.text == secondNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor){
+                if buttonNineText.text == secondNumber.text && botNineButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberTwoLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1248,19 +1244,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 2 {
-                if buttonNineText.text == thirdNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor){
+                if buttonNineText.text == thirdNumber.text && botNineButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberThreeLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1268,19 +1264,19 @@ class BaseLevel: UIViewController {
         gameFinish()
         
         if runOrNot == 1 {
-                if buttonNineText.text == fourthNumber.text && buttonNineLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor){
+                if buttonNineText.text == fourthNumber.text && botNineButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor){
                     scoreKeep += 1
                     correctAnswer()
                     // green color button - correct coice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0x96f10d)
-                    numberFourLabel.backgroundColor = UIColor(netHex: 0x96f10d)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                    topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
                     matchingAnswer = true
                 } else {
                     // subtract life if incorrect choice is chosen
                     lives -= 1
                     
                     // red color button - incorrect choice
-                    buttonNineLabel.backgroundColor = UIColor(netHex: 0xff4f51)
+                    botNineButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
                     pressButtonWrongSound()
                 }
         }
@@ -1293,26 +1289,26 @@ class BaseLevel: UIViewController {
     @IBAction func buttonNineRelease(sender: AnyObject) {
         
         if runOrNot == 4 {
-            if buttonNineLabel.backgroundColor!.isEqual(numberOneLabel.backgroundColor) && buttonNineText.text == firstNumber.text{
+            if botNineButtonColor.backgroundColor!.isEqual(topOneLabelColor.backgroundColor) && buttonNineText.text == firstNumber.text{
                 runOrNot -= 1
                 
             }
         }
         
         if runOrNot == 3 {
-            if buttonNineLabel.backgroundColor!.isEqual(numberTwoLabel.backgroundColor) && buttonNineText.text == secondNumber.text{
+            if botNineButtonColor.backgroundColor!.isEqual(topTwoLabelColor.backgroundColor) && buttonNineText.text == secondNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 2 {
-            if buttonNineLabel.backgroundColor!.isEqual(numberThreeLabel.backgroundColor) && buttonNineText.text == thirdNumber.text{
+            if botNineButtonColor.backgroundColor!.isEqual(topThreeLabelColor.backgroundColor) && buttonNineText.text == thirdNumber.text{
                 runOrNot -= 1
             }
         }
         
         if runOrNot == 1 {
-            if buttonNineLabel.backgroundColor!.isEqual(numberFourLabel.backgroundColor) && buttonNineText.text == fourthNumber.text{
+            if botNineButtonColor.backgroundColor!.isEqual(topFourLabelColor.backgroundColor) && buttonNineText.text == fourthNumber.text{
                 runOrNot -= 1
             }
         }

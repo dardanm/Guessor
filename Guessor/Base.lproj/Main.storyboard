@@ -1564,24 +1564,24 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="batteryProgress" destination="YQw-x6-cMT" id="8KY-Nk-rAM"/>
+                        <outlet property="botEightButtonColor" destination="jYT-P7-Qyf" id="Frz-d4-gxx"/>
+                        <outlet property="botFiveButtonColor" destination="DXM-Fv-yFd" id="dSl-zR-biq"/>
+                        <outlet property="botFourButtonColor" destination="Sc6-uX-v1S" id="fCh-tR-s2Q"/>
+                        <outlet property="botNineButtonColor" destination="eBG-ZS-WmE" id="t0T-pt-fif"/>
+                        <outlet property="botOneButtonColor" destination="Pb6-ZH-pLd" id="YsE-OR-HkF"/>
+                        <outlet property="botSevenButtonColor" destination="VRD-K9-mgK" id="ZE2-Pu-9Hp"/>
+                        <outlet property="botSixButtonColor" destination="gXu-Pt-jpX" id="4Qh-Jn-aRm"/>
+                        <outlet property="botThreeButtonColor" destination="oyS-bq-DeW" id="Kp9-sm-aSf"/>
+                        <outlet property="botTwoButtonColor" destination="D3U-Kr-3bu" id="QwX-zp-n6W"/>
                         <outlet property="bottomBackground" destination="SrC-kW-KzT" id="4uO-go-qX4"/>
-                        <outlet property="buttonEightLabel" destination="jYT-P7-Qyf" id="Fkd-oW-Xhb"/>
                         <outlet property="buttonEightText" destination="h9P-VG-gcD" id="tmq-of-T2e"/>
-                        <outlet property="buttonFiveLabel" destination="DXM-Fv-yFd" id="bGq-m1-If8"/>
                         <outlet property="buttonFiveText" destination="D4F-ir-V8f" id="Dcd-Vu-Vpe"/>
-                        <outlet property="buttonFourLabel" destination="Sc6-uX-v1S" id="isZ-rT-7ij"/>
                         <outlet property="buttonFourText" destination="uBg-9u-G95" id="y6Q-ap-fpE"/>
-                        <outlet property="buttonNineLabel" destination="eBG-ZS-WmE" id="aV9-0m-rdV"/>
                         <outlet property="buttonNineText" destination="aR1-sl-DeY" id="qZK-4r-jhX"/>
-                        <outlet property="buttonOneLabel" destination="Pb6-ZH-pLd" id="fqk-i7-O7C"/>
                         <outlet property="buttonOneText" destination="cJ8-aO-FiP" id="z5H-Al-k1T"/>
-                        <outlet property="buttonSevenLabel" destination="VRD-K9-mgK" id="EW4-K6-Mbm"/>
                         <outlet property="buttonSevenText" destination="rKJ-US-6Ja" id="ERd-lq-veZ"/>
-                        <outlet property="buttonSixLabel" destination="gXu-Pt-jpX" id="LE7-gc-oMb"/>
                         <outlet property="buttonSixText" destination="tGo-Jl-dLn" id="3pD-6P-Gvf"/>
-                        <outlet property="buttonThreeLabel" destination="oyS-bq-DeW" id="ils-S5-XOr"/>
                         <outlet property="buttonThreeText" destination="OaG-7U-O0e" id="kg1-XG-ud3"/>
-                        <outlet property="buttonTwoLabel" destination="D3U-Kr-3bu" id="Ftc-Br-Wpb"/>
                         <outlet property="buttonTwoText" destination="Kwq-U5-ryF" id="pYv-pd-zb1"/>
                         <outlet property="candyB1" destination="7im-MU-g1H" id="wdG-xd-j84"/>
                         <outlet property="candyB2" destination="5WR-Ej-I28" id="YJw-LC-Xam"/>
@@ -1620,10 +1620,6 @@
                         <outlet property="lifeThree" destination="byT-f1-swE" id="Uv4-md-MWI"/>
                         <outlet property="lifeTwo" destination="BJR-gq-rQV" id="Zlo-Ut-dCM"/>
                         <outlet property="middleBackground" destination="Mc8-F7-PBA" id="oeS-cz-ycj"/>
-                        <outlet property="numberFourLabel" destination="CLo-Mj-wGH" id="1vx-Te-sjy"/>
-                        <outlet property="numberOneLabel" destination="jhP-hq-PgZ" id="DaO-ei-FzR"/>
-                        <outlet property="numberThreeLabel" destination="FFx-KX-8l7" id="vz4-gN-Frf"/>
-                        <outlet property="numberTwoLabel" destination="bRW-ww-qvL" id="pnM-MZ-zsl"/>
                         <outlet property="popB1" destination="KBe-iN-Cfo" id="Y3x-jd-w8h"/>
                         <outlet property="popB2" destination="Sbi-ET-Yj3" id="Hcm-r1-pax"/>
                         <outlet property="popB3" destination="Jj3-aC-72x" id="eUZ-YT-RJX"/>
@@ -1643,6 +1639,10 @@
                         <outlet property="topBackground" destination="wM9-dG-OzO" id="yuM-6Q-cnz"/>
                         <outlet property="topBackgroundNumbers" destination="uSn-N0-GIA" id="7gE-LI-MQ5"/>
                         <outlet property="topBackgroundScore" destination="hjM-2i-x3e" id="Zq0-IL-iFo"/>
+                        <outlet property="topFourLabelColor" destination="CLo-Mj-wGH" id="63q-zh-xoz"/>
+                        <outlet property="topOneLabelColor" destination="jhP-hq-PgZ" id="XLy-b9-3fr"/>
+                        <outlet property="topThreeLabelColor" destination="FFx-KX-8l7" id="9O1-5l-idJ"/>
+                        <outlet property="topTwoLabelColor" destination="bRW-ww-qvL" id="NfD-iZ-1dJ"/>
                         <outlet property="tryAgainLabel" destination="DLU-wt-WE7" id="sZH-ot-2vH"/>
                     </connections>
                 </viewController>

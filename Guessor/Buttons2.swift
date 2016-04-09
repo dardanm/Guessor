@@ -51,29 +51,40 @@ extension BaseLevel {
     func generateTopAndBottomButtons2(){
         
         // top numbers randomize
-        createTopButtonRandomColorNumOne()
-        createTopButtonRandomSymbolNumOne()
-        createTopButtonRandomColorNumTwo()
-        createTopButtonRandomSymbolNumTwo()
-        createTopButtonRandomColorNumThree()
-        createTopButtonRandomSymbolNumThree()
-        createTopButtonRandomColorNumFour()
-        createTopButtonRandomSymbolNumFour()
+        createTopOneSymbolRandom()
+        createTopTwoSymbolRandom()
+        createTopThreeSymbolRandom()
+        createTopFourSymbolRandom()
+        
+        createTopOneColorRandom()
+        createTopTwoColorRandom()
+        createTopThreeColorRandom()
+        createTopFourColorRandom()
         
         // bottom numbers randomize
-        createBottomButtonRandomSymbolNumOne()
+        createBotOneSymbolRandom()
+        createBotTwoSymbolRandom()
+        createBotThreeSymbolRandom()
+        createBotFourSymbolRandom()
+        createBotFiveSymbolRandom()
+        createBotSixSymbolRandom()
+        createBotSevenSymbolRandom()
+        createBotEightSymbolRandom()
+        createBotNineSymbolRandom()
         
-        self.buttonOneOptionsColors()
-        self.buttonTwoOptionsColors()
-        self.buttonThreeOptionsColors()
-        self.buttonFourOptionsColors()
-        self.buttonFiveOptionsColors()
-        self.buttonSixOptionsColors()
-        self.buttonSevenOptionsColors()
-        self.buttonEightOptionsColors()
-        self.buttonNineOptionsColors()
+        createBotOneColorRandom()
+        createBotTwoColorRandom()
+        createBotThreeColorRandom()
+        createBotFourColorRandom()
+        createBotFiveColorRandom()
+        createBotSixColorRandom()
+        createBotSevenColorRandom()
+        createBotEightColorRandom()
+        createBotNineColorRandom()
         
     }
+    
+    
     
     
     
