@@ -28,11 +28,11 @@ extension BaseLevel {
     func createTopFourColorRandom(){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
-        case 1: topFourTopColorBackground = 1
-        case 2: topFourTopColorBackground = 2
-        case 3: topFourTopColorBackground = 3
-        case 4: topFourTopColorBackground = 4
-        default: topFourTopColorBackground = 10
+        case 1: topFourColorBackground = 1
+        case 2: topFourColorBackground = 2
+        case 3: topFourColorBackground = 3
+        case 4: topFourColorBackground = 4
+        default: topFourColorBackground = 10
         }
     }
     

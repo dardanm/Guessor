@@ -55,5 +55,116 @@ extension BaseLevel {
         }
     }
     
+    // BUTTON DOWN PRESS
+    func botSevenDownPress(){
+        if runOrNot == 4 {
+            if botSevenSymbol == topOneSymbol && botSevenColorBackground == topOneColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                //                    disableButtons()
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+        
+        if runOrNot == 3 {
+            if botSevenSymbol == topTwoSymbol && botSevenColorBackground == topTwoColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+        
+        if runOrNot == 2 {
+            if botSevenSymbol == topThreeSymbol && botSevenColorBackground == topThreeColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+        
+        if runOrNot == 1 {
+            if botSevenSymbol == topFourSymbol && botSevenColorBackground == topFourColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSevenButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+    }
+    
+    // BUTTON RELEASE
+    func botSevenRelase(){
+        if runOrNot == 4 {
+            if botSevenColorBackground == topOneColorBackground && botSevenSymbol == topOneSymbol{
+                runOrNot -= 1
+            }
+        }
+        
+        if runOrNot == 3 {
+            if botSevenColorBackground == topTwoColorBackground && botSevenSymbol == topTwoSymbol {
+                runOrNot -= 1
+            }
+        }
+        
+        if runOrNot == 2 {
+            if botSevenColorBackground == topThreeColorBackground && botSevenSymbol == topThreeSymbol {
+                runOrNot -= 1
+            }
+        }
+        
+        if runOrNot == 1 {
+            if botSevenColorBackground == topFourColorBackground && botSevenSymbol == topFourSymbol {
+                runOrNot -= 1
+            }
+        }
+    }
+    
     
 }

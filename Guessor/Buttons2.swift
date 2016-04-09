@@ -48,7 +48,7 @@ extension BaseLevel {
     
     // new system
     
-    func generateTopAndBottomButtons2(){
+    func generateTopAndBottomButtons(){
         
         // top numbers randomize
         createTopOneSymbolRandom()

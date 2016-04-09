@@ -42,7 +42,7 @@ extension BaseLevel {
     // Try Again
     func tryAgain(){
         
-        enableButtons()
+//        enableButtons()
         runOrNot = 4
         scoreKeep = 0
         levelProgressBar.progress = 0
@@ -73,7 +73,7 @@ extension BaseLevel {
         self.countDownLabel.text = "\(count)"
         
         if lives >= 1 {
-        enableButtons()
+//        enableButtons()
 
         delay(0.5){
         self.runOrNot = 4
@@ -104,7 +104,7 @@ extension BaseLevel {
         self.updateTimerBar()
         self.countDownLabel.text = "\(self.count)"
         
-        self.enableButtons()
+//        self.enableButtons()
         
         self.scoreKeep = 0
         
@@ -151,48 +151,7 @@ extension BaseLevel {
         
     }
     
-    func printTopNumbers(){
-        print("Top Numbers:")
-        print("1 " + "\(firstNumber.text)")
-        print(firstNumber.backgroundColor)
-        print("2 " + "\(secondNumber.text)")
-        print(secondNumber.backgroundColor)
-        print("3 " + "\(thirdNumber.text)")
-        print(thirdNumber.backgroundColor)
-        print("4 " + "\(fourthNumber.text)")
-        print(fourthNumber.backgroundColor)
 
-    }
-    
-    func printButtonNumbers(){
-        print("Buttons:")
-        print("1 " + "\(buttonOneText.text)")
-        print(buttonOneLabel.backgroundColor)
-        print("2 " + "\(buttonTwoText.text)")
-        print(buttonTwoLabel.backgroundColor)
-        print("3 " + "\(buttonThreeText.text)")
-        print(buttonThreeLabel.backgroundColor)
-        print("4 " + "\(buttonFourText.text)")
-        print(buttonFourLabel.backgroundColor)
-        print("5 " + "\(buttonFiveText.text)")
-        print(buttonFiveLabel.backgroundColor)
-        print("6 " + "\(buttonSixText.text)")
-        print(buttonSixLabel.backgroundColor)
-        print("7 " + "\(buttonSevenText.text)")
-        print(buttonSevenLabel.backgroundColor)
-        print("8 " + "\(buttonEightText.text)")
-        print(buttonEightLabel.backgroundColor)
-        print("9 " + "\(buttonNineText.text)")
-        print(buttonNineLabel.backgroundColor)
-    }
-    
-    func bugTestNumbers(){
-        printTopNumbers()
-        print(" ")
-        printButtonNumbers()
-        print(" ")
-        print(" ")
-    }
     
     func updateTimer(){
         if count >= 10 {

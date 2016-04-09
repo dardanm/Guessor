@@ -55,5 +55,116 @@ extension BaseLevel {
         }
     }
     
+    // BUTTON DOWN PRESS
+    func botSixDownPress(){
+        if runOrNot == 4 {
+            if botSixSymbol == topOneSymbol && botSixColorBackground == topOneColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                //                    disableButtons()
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+        
+        if runOrNot == 3 {
+            if botSixSymbol == topTwoSymbol && botSixColorBackground == topTwoColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+        
+        if runOrNot == 2 {
+            if botSixSymbol == topThreeSymbol && botSixColorBackground == topThreeColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+        
+        if runOrNot == 1 {
+            if botSixSymbol == topFourSymbol && botSixColorBackground == topFourColorBackground{
+                scoreKeep += 1
+                correctAnswer()
+                // green color button - correct coice
+                topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                matchingAnswer = true
+            } else {
+                // subtract life if incorrect choice is chosen
+                lives -= 1
+                
+                // red color button - incorrect choice
+                botSixButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                pressButtonWrongSound()
+            }
+        }
+        
+        gameFinish()
+    }
+    
+    // BUTTON RELEASE
+    func botSixRelase(){
+        if runOrNot == 4 {
+            if botSixColorBackground == topOneColorBackground && botSixSymbol == topOneSymbol{
+                runOrNot -= 1
+            }
+        }
+        
+        if runOrNot == 3 {
+            if botSixColorBackground == topTwoColorBackground && botSixSymbol == topTwoSymbol {
+                runOrNot -= 1
+            }
+        }
+        
+        if runOrNot == 2 {
+            if botSixColorBackground == topThreeColorBackground && botSixSymbol == topThreeSymbol {
+                runOrNot -= 1
+            }
+        }
+        
+        if runOrNot == 1 {
+            if botSixColorBackground == topFourColorBackground && botSixSymbol == topFourSymbol {
+                runOrNot -= 1
+            }
+        }
+    }
+    
     
 }
