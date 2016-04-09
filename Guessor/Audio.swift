@@ -39,7 +39,6 @@ extension BaseLevel {
             print("Error")
         }
         buttonPressCorrectSound.volume = 0.05
-        resetRoll()
     }
     
     // Score 4 Correct

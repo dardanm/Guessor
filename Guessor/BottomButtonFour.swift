@@ -70,6 +70,27 @@ extension BaseLevel {
         }
     }
     
+    // GREEN BACKGROUND
+    func setBotFourGreenBackground(){
+        botFourGreenColor.hidden = false
+        delay(0.5){
+            self.removeBotFourGreenBackground()
+        }
+    }
+    func removeBotFourGreenBackground(){
+        botFourGreenColor.hidden = true
+    }
+    // RED BACKGROUND
+    func setBotFourRedBackground(){
+        botFourRedColor.hidden = false
+        delay(0.5){
+            self.removeBotFourRedBackground()
+        }
+    }
+    func removeBotFourRedBackground(){
+        botFourRedColor.hidden = true
+    }
+    
     // BUTTON DOWN PRESS
     func botFourDownPress(){
         if runOrNot == 4 {
@@ -77,16 +98,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopOneGreenBackground()
+                setBotFourGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
-                //                    disableButtons()
+                setBotFourRedBackground()
                 pressButtonWrongSound()
             }
         }
@@ -98,15 +118,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopTwoGreenBackground()
+                setBotFourGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                setBotFourRedBackground()
                 pressButtonWrongSound()
             }
         }
@@ -118,15 +138,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopThreeGreenBackground()
+                setBotFourGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                setBotFourRedBackground()
                 pressButtonWrongSound()
             }
         }
@@ -138,15 +158,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopFourGreenBackground()
+                setBotFourGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botFourButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                setBotFourRedBackground()
                 pressButtonWrongSound()
             }
         }

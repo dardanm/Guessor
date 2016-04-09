@@ -54,6 +54,7 @@ extension BaseLevel {
         startTimer()
         
         count = 10
+        resestTopColorBackground()
         self.countDownLabel.text = "\(count)"
         updateTimerBar()
         
@@ -76,6 +77,7 @@ extension BaseLevel {
         enableButtons()
 
         delay(0.5){
+        self.resestTopColorBackground()
         self.runOrNot = 4
         self.scoreKeep = 0
         self.realRandomGeneratorFirst()
@@ -93,6 +95,7 @@ extension BaseLevel {
         if lives > 0{
 
         delay(0.5){
+        self.resestTopColorBackground()
         self.runOrNot = 4
         self.scoreKeep = 0
         self.realRandomGeneratorFirst()
@@ -112,6 +115,14 @@ extension BaseLevel {
 
         }
         
+    }
+    
+    // reset top buttons background color
+    func resestTopColorBackground(){
+        removeTopOneGreenBackground()
+        removeTopTwoGreenBackground()
+        removeTopThreeGreenBackground()
+        removeTopFourGreenBackground()
     }
     
     func correctAnswer(){

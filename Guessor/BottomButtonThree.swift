@@ -70,6 +70,27 @@ extension BaseLevel {
         }
     }
     
+    // GREEN BACKGROUND
+    func setBotThreeGreenBackground(){
+        botThreeGreenColor.hidden = false
+        delay(0.5){
+            self.removeBotThreeGreenBackground()
+        }
+    }
+    func removeBotThreeGreenBackground(){
+        botThreeGreenColor.hidden = true
+    }
+    // RED BACKGROUND
+    func setBotThreeRedBackground(){
+        botThreeRedColor.hidden = false
+        delay(0.5){
+            self.removeBotThreeRedBackground()
+        }
+    }
+    func removeBotThreeRedBackground(){
+        botThreeRedColor.hidden = true
+    }
+    
     // BUTTON DOWN PRESS
     func botThreeDownPress(){
         if runOrNot == 4 {
@@ -77,16 +98,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topOneLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopOneGreenBackground()
+                setBotThreeGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
-                //                    disableButtons()
+                setBotThreeRedBackground()
                 pressButtonWrongSound()
             }
         }
@@ -98,15 +118,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topTwoLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopTwoGreenBackground()
+                setBotThreeGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                setBotThreeRedBackground()
                 pressButtonWrongSound()
             }
         }
@@ -118,15 +138,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topThreeLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopThreeGreenBackground()
+                setBotThreeGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                setBotThreeRedBackground()
                 pressButtonWrongSound()
             }
         }
@@ -138,15 +158,15 @@ extension BaseLevel {
                 scoreKeep += 1
                 correctAnswer()
                 // green color button - correct coice
-                topFourLabelColor.backgroundColor = UIColor(netHex: 0x96f10d)
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0x96f10d)
+                setTopFourGreenBackground()
+                setBotThreeGreenBackground()
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
                 lives -= 1
                 
                 // red color button - incorrect choice
-                botThreeButtonColor.backgroundColor = UIColor(netHex: 0xff4f51)
+                setBotThreeRedBackground()
                 pressButtonWrongSound()
             }
         }

@@ -70,6 +70,19 @@ extension BaseLevel {
         }
     }
     
-    
+    // GREEN BACKGROUND
+    func setTopThreeGreenBackground(){
+        topThreeGreenColor.hidden = false
+    }
+    func removeTopThreeGreenBackground(){
+        topThreeGreenColor.hidden = true
+    }
+    // RED BACKGROUND
+    func setTopThreeRedBackground(){
+        topThreeRedColor.hidden = false
+    }
+    func removeTopThreeRedBackground(){
+        topThreeRedColor.hidden = true
+    }
 
 }

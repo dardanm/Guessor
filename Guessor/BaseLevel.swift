@@ -24,6 +24,18 @@ class BaseLevel: UIViewController {
     @IBOutlet var topTwoLabelColor: UILabel!
     @IBOutlet var topThreeLabelColor: UILabel!
     @IBOutlet var topFourLabelColor: UILabel!
+    
+    // top buttons red/wrong background
+    @IBOutlet var topOneRedColor: UILabel!
+    @IBOutlet var topTwoRedColor: UILabel!
+    @IBOutlet var topThreeRedColor: UILabel!
+    @IBOutlet var topFourRedColor: UILabel!
+    
+    // top buttons green/correct background
+    @IBOutlet var topOneGreenColor: UILabel!
+    @IBOutlet var topTwoGreenColor: UILabel!
+    @IBOutlet var topThreeGreenColor: UILabel!
+    @IBOutlet var topFourGreenColor: UILabel!
 
     // bottom buttons background
     @IBOutlet var botOneButtonColor: UIButton!
@@ -35,6 +47,29 @@ class BaseLevel: UIViewController {
     @IBOutlet var botSevenButtonColor: UIButton!
     @IBOutlet var botEightButtonColor: UIButton!
     @IBOutlet var botNineButtonColor: UIButton!
+    
+    // bottom buttons red/wrong background
+    @IBOutlet var botOneRedColor: UILabel!
+    @IBOutlet var botTwoRedColor: UILabel!
+    @IBOutlet var botThreeRedColor: UILabel!
+    @IBOutlet var botFourRedColor: UILabel!
+    @IBOutlet var botFiveRedColor: UILabel!
+    @IBOutlet var botSixRedColor: UILabel!
+    @IBOutlet var botSevenRedColor: UILabel!
+    @IBOutlet var botEightRedColor: UILabel!
+    @IBOutlet var botNineRedColor: UILabel!
+    
+    // bottom buttons green/correct background
+    @IBOutlet var botOneGreenColor: UILabel!
+    @IBOutlet var botTwoGreenColor: UILabel!
+    @IBOutlet var botThreeGreenColor: UILabel!
+    @IBOutlet var botFourGreenColor: UILabel!
+    @IBOutlet var botFiveGreenColor: UILabel!
+    @IBOutlet var botSixGreenColor: UILabel!
+    @IBOutlet var botSevenGreenColor: UILabel!
+    @IBOutlet var botEightGreenColor: UILabel!
+    @IBOutlet var botNineGreenColor: UILabel!
+    
     
     // background for buttons and top
     @IBOutlet var topBackground: UILabel!
