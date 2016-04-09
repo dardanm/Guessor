@@ -42,14 +42,14 @@ extension BaseLevel {
     // Try Again
     func tryAgain(){
         
-//        enableButtons()
+        enableButtons()
         runOrNot = 4
         scoreKeep = 0
         levelProgressBar.progress = 0
         coin = 0
         coinLabel.text = "\(coin)"
         generateTopAndBottomButtons()
-//        realRandomGeneratorFirst()
+        realRandomGeneratorFirst()
         
         startTimer()
         
@@ -73,7 +73,7 @@ extension BaseLevel {
         self.countDownLabel.text = "\(count)"
         
         if lives >= 1 {
-//        enableButtons()
+        enableButtons()
 
         delay(0.5){
         self.runOrNot = 4
@@ -102,7 +102,7 @@ extension BaseLevel {
         self.updateTimerBar()
         self.countDownLabel.text = "\(self.count)"
         
-//        self.enableButtons()
+        self.enableButtons()
         
         self.scoreKeep = 0
         

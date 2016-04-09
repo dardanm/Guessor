@@ -156,7 +156,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if count <= 0 && lives > 0{
-//            disableButtons()
+            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
@@ -173,7 +173,7 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
             stopTimer()
-//            disableButtons()
+            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
@@ -195,7 +195,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if scoreKeep == 4 {
-//            disableButtons()
+            disableButtons()
             stopTimer()
             resetRoll()
         }
@@ -209,7 +209,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if count <= 0 && lives > 0{
-//            disableButtons()
+            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
@@ -226,7 +226,7 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
             stopTimer()
-//            disableButtons()
+            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true

@@ -16,34 +16,31 @@ extension BaseLevel {
     
 
     
-//    func disableButtons(){
-//        botOneButtonColor.enabled = false
-//        buttonTwoLabel.enabled = false
-//        buttonThreeLabel.enabled = false
-//        buttonFourLabel.enabled = false
-//        buttonFiveLabel.enabled = false
-//        buttonSixLabel.enabled = false
-//        buttonSevenLabel.enabled = false
-//        buttonEightLabel.enabled = false
-//        buttonNineLabel.enabled = false
-//        generateLabel.enabled = false
-//    }
-//    
-//    func enableButtons(){
-//        buttonOneLabel.enabled = true
-//        buttonTwoLabel.enabled = true
-//        buttonThreeLabel.enabled = true
-//        buttonFourLabel.enabled = true
-//        buttonFiveLabel.enabled = true
-//        buttonSixLabel.enabled = true
-//        buttonSevenLabel.enabled = true
-//        buttonEightLabel.enabled = true
-//        buttonNineLabel.enabled = true
-//        generateLabel.enabled = true
-//    }
-//
-
-
+    func disableButtons(){
+        botOneButtonColor.enabled = false
+        botTwoButtonColor.enabled = false
+        botThreeButtonColor.enabled = false
+        botFourButtonColor.enabled = false
+        botFiveButtonColor.enabled = false
+        botSixButtonColor.enabled = false
+        botSevenButtonColor.enabled = false
+        botEightButtonColor.enabled = false
+        botNineButtonColor.enabled = false
+        generateLabel.enabled = false
+    }
+    
+    func enableButtons(){
+        botOneButtonColor.enabled = true
+        botTwoButtonColor.enabled = true
+        botThreeButtonColor.enabled = true
+        botFourButtonColor.enabled = true
+        botFiveButtonColor.enabled = true
+        botSixButtonColor.enabled = true
+        botSevenButtonColor.enabled = true
+        botEightButtonColor.enabled = true
+        botNineButtonColor.enabled = true
+        generateLabel.enabled = true
+    }
 
     
     func generateButtonImages(){
