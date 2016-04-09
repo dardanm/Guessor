@@ -197,9 +197,7 @@ extension BaseLevel {
             progressTimer.progress = 0.0
         }
     }
-    
 
-    
 
     
     

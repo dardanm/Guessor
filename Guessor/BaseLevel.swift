@@ -37,6 +37,39 @@ class BaseLevel: UIViewController {
     @IBOutlet var topThreeGreenColor: UILabel!
     @IBOutlet var topFourGreenColor: UILabel!
 
+    // top buttons left small numbers
+    // 1
+    @IBOutlet var topSmallOneColor: UILabel!
+    @IBOutlet var topSmallOneSymbol: UILabel!
+    // 2
+    @IBOutlet var topSmallTwoColor: UILabel!
+    @IBOutlet var topSmallTwoSymbol: UILabel!
+    // 3
+    @IBOutlet var topSmallThreeColor: UILabel!
+    @IBOutlet var topSmallThreeSymbol: UILabel!
+    // 4
+    @IBOutlet var topSmallFourColor: UILabel!
+    @IBOutlet var topSmallFourSymbol: UILabel!
+    
+    // top buttons white background
+    // 1
+    @IBOutlet var topBigOneColor: UILabel!
+    // 2
+    @IBOutlet var topBigTwoColor: UILabel!
+    // 3
+    @IBOutlet var topBigThreeColor: UILabel!
+    // 4
+    @IBOutlet var topBigFourColor: UILabel!
+    
+    // connecting pipes
+    // 1
+    @IBOutlet var pipe1: UILabel!
+    // 2
+    @IBOutlet var pipe2: UILabel!
+    // 3
+    @IBOutlet var pipe3: UILabel!
+    
+    
     // bottom buttons background
     @IBOutlet var botOneButtonColor: UIButton!
     @IBOutlet var botTwoButtonColor: UIButton!
@@ -74,7 +107,6 @@ class BaseLevel: UIViewController {
     // background for buttons and top
     @IBOutlet var topBackground: UILabel!
     @IBOutlet var topBackgroundScore: UILabel!
-    @IBOutlet var topBackgroundNumbers: UILabel!
     @IBOutlet var middleBackground: UILabel!
     @IBOutlet var bottomBackground: UILabel!
     
@@ -356,14 +388,16 @@ class BaseLevel: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
+  
 
 } // end
+
+
+
+
+
+
+
 
 
 
