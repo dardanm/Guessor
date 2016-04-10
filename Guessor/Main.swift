@@ -10,13 +10,17 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
+
 extension BaseLevel {
     
     // ========= MAIN
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        coinLabel.text = "\(NSUserDefaults.standardUserDefaults().integerForKey("coinKey"))"
         
         // TO-DO LIST
         // ** pause game when home button is pressed
@@ -55,22 +59,6 @@ extension BaseLevel {
         realRandomGeneratorFirst()
 
         
-        print(topOneSymbol)
-        print(topTwoSymbol)
-        print(topThreeSymbol)
-        print(topFourSymbol)
-        print("")
-        print(botOneSymbol)
-        print(botTwoSymbol)
-        print(botThreeSymbol)
-        print(botFourSymbol)
-        print(botFiveSymbol)
-        print(botSixSymbol)
-        print(botSevenSymbol)
-        print(botEightSymbol)
-        print(botNineSymbol)
-        print("")
-        
         // try again
         tryAgainLabel.enabled = false
         tryAgainLabel.layer.opacity = 0
@@ -79,8 +67,7 @@ extension BaseLevel {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
   
         whiteBackground()
-        
-        
+
 
         
     }
@@ -143,7 +130,7 @@ extension BaseLevel {
     
     // timer + timer progress bar
     func update() {
-        
+ 
         if count > 0 {
             count -= 0.75
         }
@@ -189,13 +176,19 @@ extension BaseLevel {
         }
         
         generateButtonImages()
-        
-        
+
+
+
     }
 
     
     // check if game is finished
     func gameFinish(){
+        
+        NSUserDefaults.standardUserDefaults().setInteger(coin, forKey: "coinKey")
+        print(coin)
+        coinLabel.text = "\(coin)"
+        coin = NSUserDefaults.standardUserDefaults().integerForKey("coinKey")
         
         updateLivesLeftIcons()
         

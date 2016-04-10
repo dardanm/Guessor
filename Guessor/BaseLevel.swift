@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import QuartzCore
+import CoreData
 
 class BaseLevel: UIViewController {
     
@@ -17,8 +18,8 @@ class BaseLevel: UIViewController {
 
     // coin label
     @IBOutlet var coinLabel: UILabel!
-    var coin:Int = 0
-    
+    var coin:Int = NSUserDefaults.standardUserDefaults().integerForKey("coinKey")
+
     // top numbers background
     @IBOutlet var topOneLabelColor: UILabel!
     @IBOutlet var topTwoLabelColor: UILabel!
@@ -384,11 +385,12 @@ class BaseLevel: UIViewController {
     
     // when back button is pressed, stop background music
     @IBAction func backOption(sender: AnyObject) {
+        coin = NSUserDefaults.standardUserDefaults().integerForKey("coinKey")
 //        backgroundMusicPlayer.stop()
     }
+
     
     
-  
 
 } // end
 
