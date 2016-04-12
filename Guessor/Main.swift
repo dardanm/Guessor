@@ -55,8 +55,7 @@ extension BaseLevel {
         // Set firstNUmber as first to check button
         runOrNot = 4
 
-//        realRandomGeneratorFirst()
-        realRandomGeneratorFirst()
+        generateTopAndBottomButtons()
 
         
         // try again
@@ -68,8 +67,30 @@ extension BaseLevel {
   
         whiteBackground()
 
-
+        let button1 = GenerateButton()
+        let button2 = GenerateButton()
+        let button3 = GenerateButton()
+        let button4 = GenerateButton()
         
+        let botButton1 = GenerateButton()
+        
+        delay(1.0){
+            
+        // top buttons
+        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
+        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
+        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
+        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
+    
+        // bottom buttons
+        botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
+        
+        botButton1.compareButtonsDown(botButton1, topButOne: button1, topButTwo: button2, topButThree: button3, topButFour: button4)
+
+
+            
+        }
+            
     }
     
 

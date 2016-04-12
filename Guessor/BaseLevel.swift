@@ -6,6 +6,7 @@
 //  Copyright © 2016 Meha. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import AVFoundation
 import QuartzCore
@@ -330,7 +331,9 @@ class BaseLevel: UIViewController {
     
     
     // BUTTON #1 PRESS
-    @IBAction func buttonOneDown(sender: AnyObject) { botOneDownPress() }
+    @IBAction func buttonOneDown(sender: AnyObject) { botOneDownPress()
+
+    }
     // BUTTON #1 - RELEASE
     @IBAction func buttonOneRelease(sender: AnyObject) { botOneRelase() }
     

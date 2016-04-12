@@ -80,78 +80,6 @@ extension BaseLevel {
         updateBotNineColorBackground()
         
     }
-
-        
-
-    
-    
-//    func topNumbersEqualSomeBottomButton(){
-//        
-//        if
-//            (
-//                    // check first number
-//                    (
-//                        (topOneSymbol == botOneSymbol && topOneColorBackground == botOneColorBackground) ||
-//                        (topOneSymbol == botTwoSymbol && topOneColorBackground == botTwoColorBackground) ||
-//                        (topOneSymbol == botThreeSymbol && topOneColorBackground == botThreeColorBackground) ||
-//                        (topOneSymbol == botFourSymbol && topOneColorBackground == botFourColorBackground) ||
-//                        (topOneSymbol == botFiveSymbol && topOneColorBackground == botFiveColorBackground) ||
-//                        (topOneSymbol == botSixSymbol && topOneColorBackground == botSixColorBackground) ||
-//                        (topOneSymbol == botSevenSymbol && topOneColorBackground == botSevenColorBackground) ||
-//                        (topOneSymbol == botEightSymbol && topOneColorBackground == botEightColorBackground) ||
-//                        (topOneSymbol == botNineSymbol && topOneColorBackground == botNineColorBackground)
-//                    )
-//                    
-//                    &&
-//                    
-//                    // check second number
-//                        (
-//                                (topOneSymbol == botOneSymbol && topOneColorBackground == botOneColorBackground) ||
-//                                (topOneSymbol == botTwoSymbol && topOneColorBackground == botTwoColorBackground) ||
-//                                (topOneSymbol == botThreeSymbol && topOneColorBackground == botThreeColorBackground) ||
-//                                (topOneSymbol == botFourSymbol && topOneColorBackground == botFourColorBackground) ||
-//                                (topOneSymbol == botFiveSymbol && topOneColorBackground == botFiveColorBackground) ||
-//                                (topOneSymbol == botSixSymbol && topOneColorBackground == botSixColorBackground) ||
-//                                (topOneSymbol == botSevenSymbol && topOneColorBackground == botSevenColorBackground) ||
-//                                (topOneSymbol == botEightSymbol && topOneColorBackground == botEightColorBackground) ||
-//                                (topOneSymbol == botNineSymbol && topOneColorBackground == botNineColorBackground)
-//                        )
-//                    
-//                    &&
-//                    
-//                    // check third number
-//                        (
-//                            (topOneSymbol == botOneSymbol && topOneColorBackground == botOneColorBackground) ||
-//                                (topOneSymbol == botTwoSymbol && topOneColorBackground == botTwoColorBackground) ||
-//                                (topOneSymbol == botThreeSymbol && topOneColorBackground == botThreeColorBackground) ||
-//                                (topOneSymbol == botFourSymbol && topOneColorBackground == botFourColorBackground) ||
-//                                (topOneSymbol == botFiveSymbol && topOneColorBackground == botFiveColorBackground) ||
-//                                (topOneSymbol == botSixSymbol && topOneColorBackground == botSixColorBackground) ||
-//                                (topOneSymbol == botSevenSymbol && topOneColorBackground == botSevenColorBackground) ||
-//                                (topOneSymbol == botEightSymbol && topOneColorBackground == botEightColorBackground) ||
-//                                (topOneSymbol == botNineSymbol && topOneColorBackground == botNineColorBackground)
-//                        )
-//                    
-//                    &&
-//                    
-//                    // check fourth number
-//                        (
-//                                (topOneSymbol == botOneSymbol && topOneColorBackground == botOneColorBackground) ||
-//                                (topOneSymbol == botTwoSymbol && topOneColorBackground == botTwoColorBackground) ||
-//                                (topOneSymbol == botThreeSymbol && topOneColorBackground == botThreeColorBackground) ||
-//                                (topOneSymbol == botFourSymbol && topOneColorBackground == botFourColorBackground) ||
-//                                (topOneSymbol == botFiveSymbol && topOneColorBackground == botFiveColorBackground) ||
-//                                (topOneSymbol == botSixSymbol && topOneColorBackground == botSixColorBackground) ||
-//                                (topOneSymbol == botSevenSymbol && topOneColorBackground == botSevenColorBackground) ||
-//                                (topOneSymbol == botEightSymbol && topOneColorBackground == botEightColorBackground) ||
-//                                (topOneSymbol == botNineSymbol && topOneColorBackground == botNineColorBackground)
-//                )
-//                
-//            )
-//        {trueOrNot = true}
-//        
-//        
-//    }
     
     
     func realRandomGeneratorFirst(){
@@ -258,7 +186,46 @@ extension BaseLevel {
         
     }
 
+    // new system
     
+    func generateTopAndBottomButtons(){
+        
+        // top numbers randomize
+        createTopOneSymbolRandom()
+        createTopTwoSymbolRandom()
+        createTopThreeSymbolRandom()
+        createTopFourSymbolRandom()
+        
+        createTopOneColorRandom()
+        createTopTwoColorRandom()
+        createTopThreeColorRandom()
+        createTopFourColorRandom()
+        
+        // bottom numbers randomize
+        createBotOneSymbolRandom()
+        createBotTwoSymbolRandom()
+        createBotThreeSymbolRandom()
+        createBotFourSymbolRandom()
+        createBotFiveSymbolRandom()
+        createBotSixSymbolRandom()
+        createBotSevenSymbolRandom()
+        createBotEightSymbolRandom()
+        createBotNineSymbolRandom()
+        
+        createBotOneColorRandom()
+        createBotTwoColorRandom()
+        createBotThreeColorRandom()
+        createBotFourColorRandom()
+        createBotFiveColorRandom()
+        createBotSixColorRandom()
+        createBotSevenColorRandom()
+        createBotEightColorRandom()
+        createBotNineColorRandom()
+        
+        generateButtonImages()
+        updateButtonBackground()
+        
+    }
     
     
     
