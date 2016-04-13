@@ -120,13 +120,14 @@ class GenerateButton : BaseLevel {
     
     func compareButtonsDown(buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, topButOne:GenerateButton, green1:UILabel, topButTwo:GenerateButton, green2:UILabel,  topButThree:GenerateButton, green3:UILabel, topButFour:GenerateButton, green4:UILabel){
 
-        buttonGreen.layer.opacity = 0.8
-        print(buttonGreen.layer.opacity)
-        
         
         func correctAns(){
             pressButtonCorrectSound2()
             scoreKeep += 1
+            buttonGreen.hidden = false
+            delay(0.5){
+                buttonGreen.hidden = true
+            }
         }
         
         if runner == 4{
