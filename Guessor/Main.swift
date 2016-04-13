@@ -10,8 +10,9 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
-
 extension BaseLevel {
+    
+
     
     // ========= MAIN
     
@@ -55,7 +56,7 @@ extension BaseLevel {
         // Set firstNUmber as first to check button
         runOrNot = 4
 
-        generateTopAndBottomButtons()
+//        generateTopAndBottomButtons()
 
         
         // try again
@@ -64,33 +65,14 @@ extension BaseLevel {
         
         self.view.backgroundColor = .whiteColor()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
-  
-        whiteBackground()
 
-        let button1 = GenerateButton()
-        let button2 = GenerateButton()
-        let button3 = GenerateButton()
-        let button4 = GenerateButton()
+        runOrNot = 4
         
-        let botButton1 = GenerateButton()
-        
-        delay(1.0){
-            
-        // top buttons
-        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-    
-        // bottom buttons
-        botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
-        
-        botButton1.compareButtonsDown(botButton1, topButOne: button1, topButTwo: button2, topButThree: button3, topButFour: button4)
+
+        realRandomGeneratorFirst()
 
 
-            
-        }
-            
+        
     }
     
 
@@ -151,6 +133,17 @@ extension BaseLevel {
     
     // timer + timer progress bar
     func update() {
+
+        runOrNot = compare.runner
+        
+        if runOrNot == 0{
+            compare.runner = 4
+            generateTopButtons()
+        }
+
+//        button1.randomColor(topOneLabelColor)
+
+
  
         if count > 0 {
             count -= 0.75
@@ -169,7 +162,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if count <= 0 && lives > 0{
-            disableButtons()
+            //            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
@@ -186,7 +179,7 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
             stopTimer()
-            disableButtons()
+            //            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
@@ -195,8 +188,7 @@ extension BaseLevel {
         if levelProgressBar.progress == 1.0 {
             levelProgressBar.progress = 0.0
         }
-        
-        generateButtonImages()
+
 
 
 
@@ -214,7 +206,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if scoreKeep == 4 {
-            disableButtons()
+            //            disableButtons()
             stopTimer()
             resetRoll()
         }
@@ -228,7 +220,7 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if count <= 0 && lives > 0{
-            disableButtons()
+//            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
@@ -245,7 +237,7 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
             updateTimerBar()
             stopTimer()
-            disableButtons()
+//            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.enabled = true
@@ -254,8 +246,7 @@ extension BaseLevel {
         if levelProgressBar.progress == 1.0 {
             levelProgressBar.progress = 0.0
         }
-        
-        generateButtonImages()
+
 
 
     }

@@ -42,7 +42,7 @@ extension BaseLevel {
     // Try Again
     func tryAgain(){
         
-        enableButtons()
+//        enableButtons()
         runOrNot = 4
         scoreKeep = 0
         levelProgressBar.progress = 0
@@ -53,8 +53,7 @@ extension BaseLevel {
         startTimer()
         
         count = 10
-        resestTopColorBackground()
-        resestBotColorBackground()
+
         self.countDownLabel.text = "\(count)"
         updateTimerBar()
         
@@ -74,11 +73,10 @@ extension BaseLevel {
         self.countDownLabel.text = "\(count)"
         
         if lives >= 1 {
-        enableButtons()
+            //        enableButtons()
 
         delay(0.5){
-        self.resestTopColorBackground()
-        self.resestBotColorBackground()
+
         self.runOrNot = 4
         self.scoreKeep = 0
         self.realRandomGeneratorFirst()
@@ -102,7 +100,7 @@ extension BaseLevel {
         self.updateTimerBar()
         self.countDownLabel.text = "\(self.count)"
         
-        self.enableButtons()
+            //        enableButtons()
         
         
 
@@ -112,27 +110,7 @@ extension BaseLevel {
         }
         
     }
-    
-    // reset top buttons background color
-    func resestTopColorBackground(){
-        removeTopOneGreenBackground()
-        removeTopTwoGreenBackground()
-        removeTopThreeGreenBackground()
-        removeTopFourGreenBackground()
-    }
-    
-    // reset bottom buttons background color
-    func resestBotColorBackground(){
-        removeBotOneGreenBackground()
-        removeBotTwoGreenBackground()
-        removeBotThreeGreenBackground()
-        removeBotFourGreenBackground()
-        removeBotFiveGreenBackground()
-        removeBotSixGreenBackground()
-        removeBotSevenGreenBackground()
-        removeBotEightGreenBackground()
-        removeBotNineGreenBackground()
-    }
+
     
     
     func correctAnswer(){

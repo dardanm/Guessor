@@ -11,7 +11,13 @@ import UIKit
 import AVFoundation
 import QuartzCore
 
+
 class GenerateButton : BaseLevel {
+
+    var greentop1: UILabel?
+    var greentop2: UILabel?
+    var greentop3: UILabel?
+    var greentop4: UILabel?
     
     var symb:Int = 0
     var back:Int = 0
@@ -22,8 +28,8 @@ class GenerateButton : BaseLevel {
     var pop: UIImageView?
     var label: UILabel?
     
+    var runner: Int = 4
 
-    
     
     // Update top button image
     func randomImage(cane:UIImageView, candy:UIImageView, pop:UIImageView){
@@ -51,8 +57,8 @@ class GenerateButton : BaseLevel {
         }
     }
     
-    // BACKGROUND IMAGE
-    func updateTopOneColorBackground(labelcolor:UILabel){
+    // BACKGROUND COLOR
+    func randomColor(labelcolor:UILabel){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
         case 1: back = 1
@@ -73,44 +79,176 @@ class GenerateButton : BaseLevel {
         if back == 4 {
             labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
         }
-        print("back \(back)")
+    }
+    // BACKGROUND COLOR
+    func randomColorBottom(labelcolor:UIButton){
+        value = Int(arc4random_uniform(4) + 1)
+        switch value {
+        case 1: back = 1
+        case 2: back = 2
+        case 3: back = 3
+        case 4: back = 4
+        default: back = 10
+        }
+        if back == 1 {
+            labelcolor.backgroundColor = UIColor(netHex: 0x99e1c3)
+        }
+        if back == 2 {
+            labelcolor.backgroundColor = UIColor(netHex: 0xf7b220)
+        }
+        if back == 3 {
+            labelcolor.backgroundColor = UIColor(netHex: 0xf77c2c)
+        }
+        if back == 4 {
+            labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
+        }
+    }
+
+    
+    func pressButtonCorrectSound2() {
+        
+        do {
+            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonCorrect", ofType: "mp3")!))
+            self.buttonPressCorrectSound.play()
+            
+            
+        } catch {
+            print("Error")
+        }
+        buttonPressCorrectSound.volume = 0.5
     }
     
-    func compareButtonsDown(buttonToCompare:GenerateButton, topButOne:GenerateButton, topButTwo:GenerateButton, topButThree:GenerateButton, topButFour:GenerateButton){
-        var temp:Bool = false
+    func compareButtonsDown(buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, topButOne:GenerateButton, green1:UILabel, topButTwo:GenerateButton, green2:UILabel,  topButThree:GenerateButton, green3:UILabel, topButFour:GenerateButton, green4:UILabel){
+
+        buttonGreen.layer.opacity = 0.8
+        print(buttonGreen.layer.opacity)
         
-        // make into function
-        if runOrNot == 4{
-            if buttonToCompare.labelcolor == topButOne.labelcolor && buttonToCompare.symb == topButOne.symb{
-                temp = true
-                scoreKeep += 1
-                correctAnswer()
-                // green color button - correct coice
-                setTopOneGreenBackground()
-                setBotOneGreenBackground()
+        
+        func correctAns(){
+            pressButtonCorrectSound2()
+            scoreKeep += 1
+        }
+        
+        if runner == 4{
+            if buttonToCompare.back == topButOne.back && buttonToCompare.symb == topButOne.symb{
+                correctAns()
             } else{
-                temp = false
             }
         }
         
-        print(temp)
-        print(runOrNot)
-    }
-
-    func compareButtonsRelease(buttonToCompare:GenerateButton, topButOne:GenerateButton, topButTwo:GenerateButton, topButThree:GenerateButton, topButFour:GenerateButton){
-        var temp:Bool = false
-        
-        // make into function
-        if buttonToCompare.labelcolor == topButOne.labelcolor && buttonToCompare.symb == topButOne.symb{
-            temp = true
-            runOrNot -= 1
+        if runner == 3{
+            if buttonToCompare.labelcolor == topButTwo.labelcolor && buttonToCompare.symb == topButTwo.symb{
+                correctAns()
+            } else{
+            }
         }
         
-        print(temp)
-        print(runOrNot)
+        if runner == 2{
+            if buttonToCompare.labelcolor == topButThree.labelcolor && buttonToCompare.symb == topButThree.symb{
+                correctAns()
+            } else{
+            }
+        }
+        
+        if runner == 1{
+            if buttonToCompare.labelcolor == topButFour.labelcolor && buttonToCompare.symb == topButFour.symb{
+                correctAns()
+            } else{
+            }
+        }
+
+    } // END compareButtonsDown
+    
+    func compareButtonsRelease(buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, topButOne:GenerateButton, green1:UILabel, topButTwo:GenerateButton, green2:UILabel,  topButThree:GenerateButton, green3:UILabel, topButFour:GenerateButton, green4:UILabel){
+
+        func changeTrueOrNot(){
+            if runner == 4{
+                green1.hidden = false
+            }
+            if runner == 3{
+                green2.hidden = false
+            }
+            if runner == 2{
+                green3.hidden = false
+            }
+            if runner == 1{
+                green4.hidden = false
+            }
+            runner -= 1
+
+        }
+        
+        if runner == 4{
+            if buttonToCompare.back == topButOne.back && buttonToCompare.symb == topButOne.symb{
+                changeTrueOrNot()
+            }
+        }
+        
+        
+        if runner == 3{
+            if buttonToCompare.back == topButTwo.back && buttonToCompare.symb == topButTwo.symb{
+                changeTrueOrNot()
+            }
+        }
+        
+        if runner == 2{
+            if buttonToCompare.back == topButThree.back && buttonToCompare.symb == topButThree.symb{
+                changeTrueOrNot()
+            }
+        }
+        
+        
+        if runner == 1{
+            if buttonToCompare.back == topButFour.back && buttonToCompare.symb == topButFour.symb{
+                changeTrueOrNot()
+            }
+        }
+        
+        print("runner \(runner)")
+        
+    } // END compareButtonsDown
+    
+
+    
+    func numberCheckTop(topButton:GenerateButton){
+        
+        if
+            (
+                    !(topButton.symb == botButton1.symb && topButton.back == botButton1.back) &&
+                    !(topButton.symb == botButton2.symb && topButton.back == botButton2.back) &&
+                    !(topButton.symb == botButton3.symb && topButton.back == botButton3.back) &&
+                    !(topButton.symb == botButton4.symb && topButton.back == botButton4.back) &&
+                    !(topButton.symb == botButton5.symb && topButton.back == botButton5.back) &&
+                    !(topButton.symb == botButton6.symb && topButton.back == botButton6.back) &&
+                    !(topButton.symb == botButton7.symb && topButton.back == botButton7.back) &&
+                    !(topButton.symb == botButton8.symb && topButton.back == botButton8.back) &&
+                    !(topButton.symb == botButton9.symb && topButton.back == botButton9.back)
+            )
+        {trueOrNot = false}
+        
+        
     }
     
- 
     
-}
+    
+    
+} // END CLASS
+
+
+let button1 = GenerateButton()
+let button2 = GenerateButton()
+let button3 = GenerateButton()
+let button4 = GenerateButton()
+
+let botButton1 = GenerateButton()
+let botButton2 = GenerateButton()
+let botButton3 = GenerateButton()
+let botButton4 = GenerateButton()
+let botButton5 = GenerateButton()
+let botButton6 = GenerateButton()
+let botButton7 = GenerateButton()
+let botButton8 = GenerateButton()
+let botButton9 = GenerateButton()
+
+let compare = GenerateButton()
 
