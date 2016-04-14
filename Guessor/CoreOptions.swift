@@ -47,8 +47,8 @@ extension BaseLevel {
         scoreKeep = 0
         levelProgressBar.progress = 0
         coinLabel.text = "\(coin)"
-        generateTopAndBottomButtons()
-        realRandomGeneratorFirst()
+//        generateTopAndBottomButtons()
+//        realRandomGeneratorFirst()
         
         startTimer()
         
@@ -79,7 +79,7 @@ extension BaseLevel {
 
         self.runOrNot = 4
         self.scoreKeep = 0
-        self.realRandomGeneratorFirst()
+//        self.realRandomGeneratorFirst()
         }
 
             

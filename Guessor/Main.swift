@@ -69,9 +69,11 @@ extension BaseLevel {
         runOrNot = 4
         
 
-        realRandomGeneratorFirst()
 
+//        realRandomGeneratorFirst()
 
+        compare.getButtonInfo(button1, green1Temp: topOneGreenColor, topButTwo: button2, green2Temp: topTwoGreenColor, topButThree: button3, green3Temp: topThreeGreenColor, topButFour: button4, green4Temp: topFourGreenColor)
+        
         
     }
     
@@ -136,10 +138,7 @@ extension BaseLevel {
 
         runOrNot = compare.runner
         
-        if runOrNot == 0{
-            compare.runner = 4
-            generateTopButtons()
-        }
+
 
 //        button1.randomColor(topOneLabelColor)
 

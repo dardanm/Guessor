@@ -318,7 +318,7 @@ class BaseLevel: UIViewController {
     // GENERATE BUTTON
     @IBAction func generateButtonNumbers(sender: AnyObject) {
 
-        generateBottomButtons()
+
         
     }
 
@@ -330,91 +330,91 @@ class BaseLevel: UIViewController {
     
     // BUTTON #1 PRESS
     @IBAction func buttonOneDown(sender: AnyObject){
-        compare.compareButtonsDown(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
     }
     // BUTTON #1 - RELEASE
     @IBAction func buttonOneRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
     }
     
     
     // BUTTON #2 PRESS
     @IBAction func buttonTwoDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+                compare.compareButtonsDown(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botTwoGreenColor, buttonRed:botTwoRedColor)
     }
     // BUTTON #2 - RELEASE
     @IBAction func buttonTwoRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botTwoGreenColor, buttonRed:botTwoRedColor)
     }
     
     
     // BUTTON #3 PRESS
     @IBAction func buttonThreeDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botThreeGreenColor, buttonRed:botThreeRedColor)
     }
     // BUTTON #3 - RELEASE
     @IBAction func buttonThreeRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botThreeGreenColor, buttonRed:botThreeRedColor)
     }
     
     
     // BUTTON #4 PRESS
     @IBAction func buttonFourDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton4, buttonColor:botFourButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton4, buttonColor:botFourButtonColor, buttonGreen:botFourGreenColor, buttonRed:botFourRedColor)
     }
     // BUTTON #4 - RELEASE
     @IBAction func buttonFourRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton4, buttonColor:botFourButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton4, buttonColor:botFourButtonColor, buttonGreen:botFourGreenColor, buttonRed:botFourRedColor)
     }
     
     
     // BUTTON #5 PRESS
     @IBAction func buttonFiveDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botFiveGreenColor, buttonRed:botFiveRedColor)
     }
     // BUTTON #5 - RELEASE
     @IBAction func buttonFiveRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botFiveGreenColor, buttonRed:botFiveRedColor)
     }
     
     
     // BUTTON #6 PRESS
     @IBAction func buttonSixDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton6, buttonColor:botSixButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton6, buttonColor:botSixButtonColor, buttonGreen:botSixGreenColor, buttonRed:botSixRedColor)
     }
     // BUTTON #6 - RELEASE
     @IBAction func buttonSixRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton6, buttonColor:botSixButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton6, buttonColor:botSixButtonColor, buttonGreen:botSixGreenColor, buttonRed:botSixRedColor)
     }
     
     
     // BUTTON #7 PRESS
     @IBAction func buttonSevenDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botSevenGreenColor, buttonRed:botSevenRedColor)
     }
     // BUTTON #7 - RELEASE
     @IBAction func buttonSevenRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botSevenGreenColor, buttonRed:botSevenRedColor)
     }
     
     
     // BUTTON #8 PRESS
     @IBAction func buttonEightDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton8, buttonColor:botEightButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton8, buttonColor:botEightButtonColor, buttonGreen:botEightGreenColor, buttonRed:botEightRedColor)
     }
     // BUTTON #8 - RELEASE
     @IBAction func buttonEightRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton8, buttonColor:botEightButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton8, buttonColor:botEightButtonColor, buttonGreen:botEightGreenColor, buttonRed:botEightRedColor)
     }
     
     
     // BUTTON #9 PRESS
     @IBAction func buttonNineDown(sender: AnyObject) {
-        compare.compareButtonsDown(botButton9, buttonColor:botNineButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsDown(botButton9, buttonColor:botNineButtonColor, buttonGreen:botNineGreenColor, buttonRed:botNineRedColor)
     }
     // BUTTON #9 - RELEASE
     @IBAction func buttonNineRelease(sender: AnyObject) {
-        compare.compareButtonsRelease(botButton9, buttonColor:botNineButtonColor, buttonGreen:botOneGreenColor, topButOne: button1, green1: topOneGreenColor, topButTwo: button2, green2: topTwoGreenColor, topButThree: button3, green3: topThreeGreenColor, topButFour: button4, green4: topFourGreenColor)
+        compare.compareButtonsRelease(botButton9, buttonColor:botNineButtonColor, buttonGreen:botNineGreenColor, buttonRed:botNineRedColor)
     }
     
     
