@@ -31,9 +31,9 @@ extension BaseLevel {
         do {
             self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonIncorrect", ofType: "mp3")!))
             self.buttonPressCorrectSound.play()
-            count -= 1
-            progressTimer.progress = progressTimer.progress - 0.1
-            countDownLabel.text = String(count)
+//            count -= 1
+//            progressTimer.progress = progressTimer.progress - 0.1
+//            countDownLabel.text = String(count)
             
         } catch {
             print("Error")

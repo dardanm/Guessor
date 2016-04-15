@@ -39,6 +39,8 @@ class GenerateButton : BaseLevel {
     var green3:UILabel?
     var green4:UILabel?
     
+    var counter:Float = 10
+
     
     // Update top button image
     func randomImage(cane:UIImageView, candy:UIImageView, pop:UIImageView){
@@ -112,23 +114,6 @@ class GenerateButton : BaseLevel {
             labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
         }
     }
-
-    
-//    func pressButtonCorrectSound2() {
-//        
-//        do {
-//            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonCorrect", ofType: "mp3")!))
-//            self.buttonPressCorrectSound.play()
-//            
-//            
-//        } catch {
-//            print("Error")
-//        }
-//        buttonPressCorrectSound.volume = 0.5
-//    }
-    
-
-
     
     func getButtonInfo(topButOne:GenerateButton, green1Temp:UILabel, topButTwo:GenerateButton, green2Temp:UILabel,  topButThree:GenerateButton, green3Temp:UILabel, topButFour:GenerateButton, green4Temp:UILabel){
         topButOneTemp = topButOne
@@ -141,25 +126,47 @@ class GenerateButton : BaseLevel {
         green4 = green4Temp
     }
     
+    // Update top button image
+    func getImage(buttonNumber:Int, cane:UIImageView, candy:UIImageView, pop:UIImageView){
+
+
+        if buttonNumber == 1 {
+            cane.hidden = false
+            candy.hidden = true
+            pop.hidden = true
+        }
+        if buttonNumber == 2 {
+            cane.hidden = true
+            candy.hidden = false
+            pop.hidden = true
+        }
+        if buttonNumber == 3 {
+            cane.hidden = true
+            candy.hidden = true
+            pop.hidden = false
+        }
+
+    }
+    
 
     
     func compareButtonsDown(buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
-
 
         func correctAns(){
             pressButtonCorrectSound()
             scoreKeep += 1
             buttonGreen.hidden = false
-            delay(0.5){
+            counter += 1
+            delay(0.3){
                 buttonGreen.hidden = true
             }
         }
         func incorrectAns(){
-            pressButtonCorrectSound()
+            pressButtonWrongSound()
             
             lives -= 1
             buttonRed.hidden = false
-            delay(0.5){
+            delay(0.3){
                 buttonRed.hidden = true
             }
         }
@@ -206,6 +213,7 @@ class GenerateButton : BaseLevel {
             }
             if runner == 3{
                 green2!.hidden = false
+                // bottom buttons
             }
             if runner == 2{
                 green3!.hidden = false
@@ -246,7 +254,7 @@ class GenerateButton : BaseLevel {
         // clear green top colors
         if self.runner == 0{
             runner = 4
-            delay(1.5){
+            delay(0.5){
             self.green1?.hidden = true
             self.green2?.hidden = true
             self.green3?.hidden = true
@@ -280,78 +288,7 @@ class GenerateButton : BaseLevel {
     }
     
     
-    ///// generate
-    func generateTopAndBottomButtons(){
-        
-        // top buttons
-        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-        button1.randomColor(self.topOneLabelColor)
-        button2.randomColor(self.topTwoLabelColor)
-        button3.randomColor(self.topThreeLabelColor)
-        button4.randomColor(self.topFourLabelColor)
-        
-        // bottom buttons
-        botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
-        botButton1.randomColorBottom(self.botOneButtonColor)
-        botButton2.randomImage(self.caneB2, candy: self.candyB2, pop: self.popB2)
-        botButton2.randomColorBottom(self.botTwoButtonColor)
-        botButton3.randomImage(self.caneB3, candy: self.candyB3, pop: self.popB3)
-        botButton3.randomColorBottom(self.botThreeButtonColor)
-        botButton4.randomImage(self.caneB4, candy: self.candyB4, pop: self.popB4)
-        botButton4.randomColorBottom(self.botFourButtonColor)
-        botButton5.randomImage(self.caneB5, candy: self.candyB5, pop: self.popB5)
-        botButton5.randomColorBottom(self.botFiveButtonColor)
-        botButton6.randomImage(self.caneB6, candy: self.candyB6, pop: self.popB6)
-        botButton6.randomColorBottom(self.botSixButtonColor)
-        botButton7.randomImage(self.caneB7, candy: self.candyB7, pop: self.popB7)
-        botButton7.randomColorBottom(self.botSevenButtonColor)
-        botButton8.randomImage(self.caneB8, candy: self.candyB8, pop: self.popB8)
-        botButton8.randomColorBottom(self.botEightButtonColor)
-        botButton9.randomImage(self.caneB9, candy: self.candyB9, pop: self.popB9)
-        botButton9.randomColorBottom(self.botNineButtonColor)
-        
-    }
-    
-    func generateTopButtons(){
-        
-        // top buttons
-        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-        button1.randomColor(self.topOneLabelColor)
-        button2.randomColor(self.topTwoLabelColor)
-        button3.randomColor(self.topThreeLabelColor)
-        button4.randomColor(self.topFourLabelColor)
-        
-    }
-    
-    func generateBottomButtons(){
-        
-        // bottom buttons
-        botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
-        botButton1.randomColorBottom(self.botOneButtonColor)
-        botButton2.randomImage(self.caneB2, candy: self.candyB2, pop: self.popB2)
-        botButton2.randomColorBottom(self.botTwoButtonColor)
-        botButton3.randomImage(self.caneB3, candy: self.candyB3, pop: self.popB3)
-        botButton3.randomColorBottom(self.botThreeButtonColor)
-        botButton4.randomImage(self.caneB4, candy: self.candyB4, pop: self.popB4)
-        botButton4.randomColorBottom(self.botFourButtonColor)
-        botButton5.randomImage(self.caneB5, candy: self.candyB5, pop: self.popB5)
-        botButton5.randomColorBottom(self.botFiveButtonColor)
-        botButton6.randomImage(self.caneB6, candy: self.candyB6, pop: self.popB6)
-        botButton6.randomColorBottom(self.botSixButtonColor)
-        botButton7.randomImage(self.caneB7, candy: self.candyB7, pop: self.popB7)
-        botButton7.randomColorBottom(self.botSevenButtonColor)
-        botButton8.randomImage(self.caneB8, candy: self.candyB8, pop: self.popB8)
-        botButton8.randomColorBottom(self.botEightButtonColor)
-        botButton9.randomImage(self.caneB9, candy: self.candyB9, pop: self.popB9)
-        botButton9.randomColorBottom(self.botNineButtonColor)
-        
-    }
+
     
     
     

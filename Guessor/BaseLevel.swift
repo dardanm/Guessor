@@ -14,9 +14,7 @@ import CoreData
 
 class BaseLevel: UIViewController {
 
-    func biio(){
-        print(button1.back)
-    }
+    var temp:Double = 0
     
     // level
     @IBOutlet weak var level: UILabel!
@@ -318,7 +316,7 @@ class BaseLevel: UIViewController {
     // GENERATE BUTTON
     @IBAction func generateButtonNumbers(sender: AnyObject) {
 
-
+        generateBottomButtons()
         
     }
 

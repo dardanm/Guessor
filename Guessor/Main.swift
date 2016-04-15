@@ -68,12 +68,9 @@ extension BaseLevel {
 
         runOrNot = 4
         
-
-
-//        realRandomGeneratorFirst()
+        generateTopAndBottomButtons()
 
         compare.getButtonInfo(button1, green1Temp: topOneGreenColor, topButTwo: button2, green2Temp: topTwoGreenColor, topButThree: button3, green3Temp: topThreeGreenColor, topButFour: button4, green4Temp: topFourGreenColor)
-        
         
     }
     
@@ -91,17 +88,17 @@ extension BaseLevel {
     
     func updateTimerBar(){
         
-        progressTimer.progress = Float(count)/10
+        progressTimer.progress = Float(compare.counter)/10
         
-        if (count == 1 || count == 2 || count == 3){
+        if (compare.counter == 1 || compare.counter == 2 || compare.counter == 3){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
         
-        if (count == 0){
+        if (compare.counter == 0){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
         }
         
-        if count > 3 {
+        if compare.counter > 3 {
             countDownLabel.textColor = UIColor(netHex: 0xf36723)
         }
         
@@ -133,24 +130,32 @@ extension BaseLevel {
         }
     }
     
+
+    
     // timer + timer progress bar
     func update() {
-
-        runOrNot = compare.runner
         
 
 
-//        button1.randomColor(topOneLabelColor)
+        // every second generate new buttons
+        temp += 1
+        if temp == 1.0{
+        generateBottomButtons()
+        temp = 0
+        }
+        print("temp \(temp)")
 
+
+        print(compare.runner)
 
  
-        if count > 0 {
-            count -= 0.75
+        if compare.counter > 0 {
+            compare.counter -= 0.75
         }
         
-        if count > 10 {
-            count = 10
-            self.countDownLabel.text = "\(count)"
+        if compare.counter > 10 {
+            compare.counter = 10
+            self.countDownLabel.text = "\(compare.counter)"
         }
         
         if scoreKeep == 0{
@@ -160,14 +165,14 @@ extension BaseLevel {
         updateTimerBar()
         updateLivesLeftIcons()
         
-        if count <= 0 && lives > 0{
+        if compare.counter <= 0 && lives > 0{
             //            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
         
         // don't remove
-        countDownLabel.text = String(count)
+        countDownLabel.text = String(compare.counter)
 
         if levelProgressBar.progress == 1.0 {
             levelText += 1
@@ -175,7 +180,7 @@ extension BaseLevel {
         
         if lives <= 0 {
             
-            self.countDownLabel.text = "\(count)"
+            self.countDownLabel.text = "\(compare.counter)"
             updateTimerBar()
             stopTimer()
             //            disableButtons()
@@ -210,22 +215,22 @@ extension BaseLevel {
             resetRoll()
         }
         
-        if count > 10 {
-            count = 10
-            self.countDownLabel.text = "\(count)"
+        if compare.counter > 10 {
+            compare.counter = 10
+            self.countDownLabel.text = "\(compare.counter)"
         }
         
 
         updateLivesLeftIcons()
         
-        if count <= 0 && lives > 0{
+        if compare.counter <= 0 && lives > 0{
 //            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
         
         // don't remove
-        countDownLabel.text = String(count)
+        countDownLabel.text = String(compare.counter)
         
         if levelProgressBar.progress == 1.0 {
             levelText += 1
@@ -233,7 +238,7 @@ extension BaseLevel {
         
         if lives <= 0 {
             
-            self.countDownLabel.text = "\(count)"
+            self.countDownLabel.text = "\(compare.counter)"
             updateTimerBar()
             stopTimer()
 //            disableButtons()
