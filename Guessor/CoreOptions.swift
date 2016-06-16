@@ -159,8 +159,8 @@ extension BaseLevel {
     func updateLevel(){
         
         if scoreKeep == 4{
-        scoreTarget -= 10
-        level.text = "\(scoreTarget)"
+        score += 5
+        level.text = "\(score)"
         
         coin += 1
         coinLabel.text = "\(coin)"

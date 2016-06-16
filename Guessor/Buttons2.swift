@@ -20,19 +20,19 @@ extension BaseLevel {
         middleBackground.layer.opacity = 0.1
         bottomBackground.layer.opacity = 0.1
         
-        topBigOneColor.layer.opacity = 0.1
-        topBigTwoColor.layer.opacity = 0.1
-        topBigThreeColor.layer.opacity = 0.1
-        topBigFourColor.layer.opacity = 0.1
+//        topBigOneColor.layer.opacity = 0.1
+//        topBigTwoColor.layer.opacity = 0.1
+//        topBigThreeColor.layer.opacity = 0.1
+//        topBigFourColor.layer.opacity = 0.1
         
         coinLabel.textColor = UIColor(netHex: 0xffffff)
         
-        pipe1.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe2.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe3.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe1.layer.opacity = 0.1
-        pipe2.layer.opacity = 0.1
-        pipe3.layer.opacity = 0.1
+//        pipe1.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe2.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe3.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe1.layer.opacity = 0.1
+//        pipe2.layer.opacity = 0.1
+//        pipe3.layer.opacity = 0.1
         
         topSmallOneSymbol.textColor = UIColor(netHex: 0xffffff)
         topSmallTwoSymbol.textColor = UIColor(netHex: 0xffffff)
@@ -55,19 +55,19 @@ extension BaseLevel {
         middleBackground.layer.opacity = 1.0
         bottomBackground.layer.opacity = 1.0
         
-        topBigOneColor.layer.opacity = 1.0
-        topBigTwoColor.layer.opacity = 1.0
-        topBigThreeColor.layer.opacity = 1.0
-        topBigFourColor.layer.opacity = 1.0
+//        topBigOneColor.layer.opacity = 1.0
+//        topBigTwoColor.layer.opacity = 1.0
+//        topBigThreeColor.layer.opacity = 1.0
+//        topBigFourColor.layer.opacity = 1.0
         
         coinLabel.textColor = UIColor(netHex: 0xa3a3a3)
         
-        pipe1.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe2.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe3.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe1.layer.opacity = 1.0
-        pipe2.layer.opacity = 1.0
-        pipe3.layer.opacity = 1.0
+//        pipe1.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe2.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe3.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe1.layer.opacity = 1.0
+//        pipe2.layer.opacity = 1.0
+//        pipe3.layer.opacity = 1.0
         
         topSmallOneSymbol.textColor = UIColor(netHex: 0x7f7f7f)
         topSmallTwoSymbol.textColor = UIColor(netHex: 0x7f7f7f)
@@ -90,19 +90,19 @@ extension BaseLevel {
         middleBackground.layer.opacity = 0.3
         bottomBackground.layer.opacity = 0.1
         
-        topBigOneColor.layer.opacity = 0.3
-        topBigTwoColor.layer.opacity = 0.3
-        topBigThreeColor.layer.opacity = 0.3
-        topBigFourColor.layer.opacity = 0.3
+//        topBigOneColor.layer.opacity = 0.3
+//        topBigTwoColor.layer.opacity = 0.3
+//        topBigThreeColor.layer.opacity = 0.3
+//        topBigFourColor.layer.opacity = 0.3
         
         coinLabel.textColor = UIColor(netHex: 0xffffff)
         
-        pipe1.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe2.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe3.backgroundColor = UIColor(netHex: 0xffffff)
-        pipe1.layer.opacity = 0.3
-        pipe2.layer.opacity = 0.3
-        pipe3.layer.opacity = 0.3
+//        pipe1.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe2.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe3.backgroundColor = UIColor(netHex: 0xffffff)
+//        pipe1.layer.opacity = 0.3
+//        pipe2.layer.opacity = 0.3
+//        pipe3.layer.opacity = 0.3
         
         topSmallOneSymbol.textColor = UIColor(netHex: 0xffffff)
         topSmallTwoSymbol.textColor = UIColor(netHex: 0xffffff)

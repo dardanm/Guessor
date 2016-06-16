@@ -51,23 +51,23 @@ class BaseLevel: UIViewController {
     @IBOutlet var topSmallFourColor: UILabel!
     @IBOutlet var topSmallFourSymbol: UILabel!
     
-    // top buttons white background
-    // 1
-    @IBOutlet var topBigOneColor: UILabel!
-    // 2
-    @IBOutlet var topBigTwoColor: UILabel!
-    // 3
-    @IBOutlet var topBigThreeColor: UILabel!
-    // 4
-    @IBOutlet var topBigFourColor: UILabel!
+//    // top buttons white background
+//    // 1
+//    @IBOutlet var topBigOneColor: UILabel!
+//    // 2
+//    @IBOutlet var topBigTwoColor: UILabel!
+//    // 3
+//    @IBOutlet var topBigThreeColor: UILabel!
+//    // 4
+//    @IBOutlet var topBigFourColor: UILabel!
     
-    // connecting pipes
-    // 1
-    @IBOutlet var pipe1: UILabel!
-    // 2
-    @IBOutlet var pipe2: UILabel!
-    // 3
-    @IBOutlet var pipe3: UILabel!
+//    // connecting pipes
+//    // 1
+//    @IBOutlet var pipe1: UILabel!
+//    // 2
+//    @IBOutlet var pipe2: UILabel!
+//    // 3
+//    @IBOutlet var pipe3: UILabel!
     
     
     // bottom buttons background
@@ -231,14 +231,14 @@ class BaseLevel: UIViewController {
     @IBOutlet var countDownLabel: UILabel!
     
     // battery
-    var batteryNumber:Int = 100
+    var batteryNumber:Int = 0
     
     // timer
     var count:Float = 10
     var timer = NSTimer()
     
     // score
-    var scoreTarget:Int = 100
+    var score:Int = 0
     
     // switch variable
     var value = 0
