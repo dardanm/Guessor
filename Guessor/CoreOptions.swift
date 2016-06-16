@@ -147,10 +147,14 @@ extension BaseLevel {
           pressCorrectFour()
         }
         
+        if scoreKeep == 4{
+           count = 10;
+        }
+        
         updateLevel()
         
         // PROGRESS BAR
-        progressTimer.progress = progressTimer.progress + 0.1
+        progressTimer.progress = progressTimer.progress + 0.2
         countDownLabel.text = String(count)
         updateTimerBar()
         
@@ -158,7 +162,7 @@ extension BaseLevel {
     
     func updateLevel(){
         
-        if scoreKeep == 4{
+
         score += 5
         level.text = "\(score)"
         
@@ -166,7 +170,7 @@ extension BaseLevel {
         coinLabel.text = "\(coin)"
         // 500
         levelProgressBar.progress += 0.1
-        }
+
         
         
     }
@@ -174,6 +178,28 @@ extension BaseLevel {
 
     
     func updateTimer(){
+
+        if count == 5 {
+            progressTimer.progress = 1.0
+        }
+        if count == 4 {
+            progressTimer.progress = 0.75
+        }
+        if count == 3 {
+            progressTimer.progress = 0.50
+        }
+        if count == 2 {
+            progressTimer.progress = 0.25
+        }
+        if count == 1 {
+            progressTimer.progress = 0.1
+        }
+        if count == 0 {
+            progressTimer.progress = 0.0
+        }
+    }
+
+    func updateTimer2(){
         if count >= 10 {
             progressTimer.progress = 1.0
         }
@@ -208,8 +234,6 @@ extension BaseLevel {
             progressTimer.progress = 0.0
         }
     }
-
-
     
     
     

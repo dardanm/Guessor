@@ -48,7 +48,7 @@ class Start: UIViewController {
             block.hidden = false
         }
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
         
     }
     

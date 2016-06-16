@@ -53,23 +53,6 @@ extension BaseLevel {
 
 //        realRandomGeneratorFirst()
         realRandomGeneratorFirst()
-
-        
-        print(topOneSymbol)
-        print(topTwoSymbol)
-        print(topThreeSymbol)
-        print(topFourSymbol)
-        print("")
-        print(botOneSymbol)
-        print(botTwoSymbol)
-        print(botThreeSymbol)
-        print(botFourSymbol)
-        print(botFiveSymbol)
-        print(botSixSymbol)
-        print(botSevenSymbol)
-        print(botEightSymbol)
-        print(botNineSymbol)
-        print("")
         
         // try again
         tryAgainLabel.enabled = false
@@ -77,8 +60,21 @@ extension BaseLevel {
         
         self.view.backgroundColor = .whiteColor()
 //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background4.png")!)
-  
-        whiteBackground()
+        
+        coinLabel.textColor = UIColor(netHex: 0xa3a3a3)
+        
+        topSmallOneSymbol.textColor = UIColor(netHex: 0x7f7f7f)
+        topSmallTwoSymbol.textColor = UIColor(netHex: 0x7f7f7f)
+        topSmallThreeSymbol.textColor = UIColor(netHex: 0x7f7f7f)
+        topSmallFourSymbol.textColor = UIColor(netHex: 0x7f7f7f)
+        topSmallOneColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallTwoColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallThreeColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallFourColor.backgroundColor = UIColor(netHex: 0xffffff)
+        topSmallOneColor.layer.opacity = 1.0
+        topSmallTwoColor.layer.opacity = 1.0
+        topSmallThreeColor.layer.opacity = 1.0
+        topSmallFourColor.layer.opacity = 1.0
         
         
 
@@ -145,7 +141,8 @@ extension BaseLevel {
     func update() {
         
         if count > 0 {
-            count -= 0.75
+            // 5 seconds
+            count -= 2
         }
         
         if count > 10 {

@@ -11,13 +11,12 @@ import AVFoundation
 import QuartzCore
 
 class BaseLevel: UIViewController {
-    
+
     // level
     @IBOutlet weak var level: UILabel!
 
     // coin label
     @IBOutlet var coinLabel: UILabel!
-    var coin:Int = 0
     
     // top numbers background
     @IBOutlet var topOneLabelColor: UILabel!
@@ -104,11 +103,7 @@ class BaseLevel: UIViewController {
     @IBOutlet var botNineGreenColor: UILabel!
     
     
-    // background for buttons and top
-    @IBOutlet var topBackground: UILabel!
-    @IBOutlet var topBackgroundScore: UILabel!
-    @IBOutlet var middleBackground: UILabel!
-    @IBOutlet var bottomBackground: UILabel!
+
     
     // top number pictures
     @IBOutlet var candyN1: UIImageView!
@@ -225,32 +220,29 @@ class BaseLevel: UIViewController {
     @IBOutlet var lifeTwo: UILabel!
     // top-right life 1
     @IBOutlet var lifeOne: UILabel!
-    var lives = 3
     
     // timer label
     @IBOutlet var countDownLabel: UILabel!
     
-    // battery
-    var batteryNumber:Int = 0
-    
-    // timer
-    var count:Float = 10
-    var timer = NSTimer()
-    
-    // score
-    var score:Int = 0
-    
-    // switch variable
-    var value = 0
-    
-    var runOrNot:Int = 4
-    
     // PROGRESS BAR
     @IBOutlet var progressTimer: UIProgressView!
-    
     // "generate" button
     @IBOutlet var generateLabel: UIButton!
 
+    // battery
+    var batteryNumber:Int = 0
+    var lives = 3
+    // timer
+    var count:Float = 10
+    var timer = NSTimer()
+    // score
+    var score:Int = 0
+    // switch variable
+    var value = 0
+    var runOrNot:Int = 4
+    var coin:Int = 0
+    
+    
     // add time
     @IBAction func addTimeButton(sender: AnyObject) {
         count += 2
