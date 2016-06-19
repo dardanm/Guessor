@@ -243,6 +243,48 @@ class BaseLevel: UIViewController {
     var coin:Int = 0
     
     
+    @IBOutlet weak var pauseMenuLabel: UILabel!
+    // PAUSE
+    @IBAction func pauseMenu(sender: AnyObject) {
+        pauseGame()
+        pauseMenuLabel.hidden = false
+        goToMenuLabel.hidden = false
+        continueGameLabel.hidden = false
+        controlEffectsMusic.hidden = false
+        controlBackgroundMusic.hidden = false
+    }
+    // menu
+    @IBAction func goToMenu(sender: AnyObject) {
+        pauseMenuLabel.hidden = true
+        goToMenuLabel.hidden = true
+        continueGameLabel.hidden = true
+        controlEffectsMusic.hidden = true
+        controlBackgroundMusic.hidden = true
+    }
+    @IBOutlet weak var goToMenuLabel: UIButton!
+    
+    // continue
+    @IBAction func continueGame(sender: AnyObject) {
+        playGame()
+        pauseMenuLabel.hidden = true
+        goToMenuLabel.hidden = true
+        continueGameLabel.hidden = true
+        controlEffectsMusic.hidden = true
+        controlBackgroundMusic.hidden = true
+    }
+    @IBOutlet weak var continueGameLabel: UIButton!
+    // sfx
+    @IBAction func controlEffectsMusic(sender: AnyObject) {
+        
+    }
+    @IBOutlet weak var controlEffectsMusic: UIButton!
+    // background
+    @IBAction func controlBackgroundMusic(sender: AnyObject) {
+        
+    }
+    @IBOutlet weak var controlBackgroundMusic: UIButton!
+    
+    
     // add time
     @IBAction func addTimeButton(sender: AnyObject) {
         count += 2
@@ -372,12 +414,7 @@ class BaseLevel: UIViewController {
     @IBAction func buttonNineDown(sender: AnyObject) { botNineDownPress() }
     // BUTTON #9 - RELEASE
     @IBAction func buttonNineRelease(sender: AnyObject) { botNineRelase() }
-    
-    
-    // when back button is pressed, stop background music
-    @IBAction func backOption(sender: AnyObject) {
-//        backgroundMusicPlayer.stop()
-    }
+
     
     
   

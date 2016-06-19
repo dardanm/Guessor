@@ -114,6 +114,13 @@ extension BaseLevel {
         
     }
     
+    func pauseGame(){
+        stopTimer()
+    }
+    func playGame(){
+        startTimer()
+    }
+    
     // reset top buttons background color
     func resestTopColorBackground(){
         removeTopOneGreenBackground()
@@ -135,6 +142,11 @@ extension BaseLevel {
         removeBotNineGreenBackground()
     }
     
+    func incorrectAnswer(){
+        score -= 30
+        level.text = "\(score)"
+    }
+    
     
     func correctAnswer(){
         
@@ -145,6 +157,7 @@ extension BaseLevel {
         if scoreKeep == 4{
           pressButtonCorrectSound()
           pressCorrectFour()
+          coin += 1
         }
         
         if scoreKeep == 4{
@@ -165,8 +178,7 @@ extension BaseLevel {
 
         score += 5
         level.text = "\(score)"
-        
-        coin += 1
+
         coinLabel.text = "\(coin)"
         // 500
         levelProgressBar.progress += 0.1

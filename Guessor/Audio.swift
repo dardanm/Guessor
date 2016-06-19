@@ -30,11 +30,7 @@ extension BaseLevel {
     func pressButtonWrongSound() {
         do {
             self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonIncorrect", ofType: "mp3")!))
-            self.buttonPressCorrectSound.play()
-            count -= 1
-            progressTimer.progress = progressTimer.progress - 0.1
-            countDownLabel.text = String(count)
-            
+            self.buttonPressCorrectSound.play()            
         } catch {
             print("Error")
         }
@@ -54,6 +50,8 @@ extension BaseLevel {
         
     }
     
+    
+    
     // BACKGROUND MUSIC
     func playBackgroundMusic(filename: String) {
         let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
@@ -69,6 +67,7 @@ extension BaseLevel {
         } catch let error as NSError {
             print(error.description)
         }
+
     }
     
     override func didReceiveMemoryWarning() {

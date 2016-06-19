@@ -32,6 +32,7 @@ extension BaseLevel {
         // Timer
         progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 10)
         startTimer()
+        progressTimer.progressTintColor = UIColor(netHex: 0xf3a41b)
         
         // "coin" / Coins bar
         levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 8)
@@ -76,7 +77,14 @@ extension BaseLevel {
         topSmallThreeColor.layer.opacity = 1.0
         topSmallFourColor.layer.opacity = 1.0
         
+        countDownLabel.text = String(count/2)
         
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error as NSError {
+            print(error)
+        }
 
         
     }
@@ -97,16 +105,19 @@ extension BaseLevel {
         
         progressTimer.progress = Float(count)/10
         
-        if (count == 1 || count == 2 || count == 3){
+        if (count == 2 || count == 4){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
+            progressTimer.progressTintColor = UIColor(netHex: 0xf36723)
         }
         
-        if (count == 0){
+        if (count == 2){
             countDownLabel.textColor = UIColor(netHex: 0xff0000)
+            progressTimer.progressTintColor = UIColor(netHex: 0xff0000)
         }
         
-        if count > 3 {
+        if count >= 6 {
             countDownLabel.textColor = UIColor(netHex: 0xf36723)
+            progressTimer.progressTintColor = UIColor(netHex: 0xf3a41b)
         }
         
     }
@@ -164,7 +175,7 @@ extension BaseLevel {
         }
         
         // don't remove
-        countDownLabel.text = String(count)
+        countDownLabel.text = String(count/2)
 
         if levelProgressBar.progress == 1.0 {
             levelText += 1
@@ -211,7 +222,6 @@ extension BaseLevel {
         updateLivesLeftIcons()
         
         if count <= 0 && lives > 0{
-            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }

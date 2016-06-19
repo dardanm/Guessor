@@ -40,6 +40,7 @@
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
 		DC668B641CB987680063ADA5 /* background23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC668B631CB987680063ADA5 /* background23@2x.png */; };
 		DC668B681CB9C3160063ADA5 /* SegueFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC668B671CB9C3160063ADA5 /* SegueFade.swift */; };
+		DC81BD1B1D16642600BD25F3 /* bannerad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC81BD1A1D16642600BD25F3 /* bannerad.png */; };
 		DC90B8541C7966D500CCC033 /* BaseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90B8531C7966D500CCC033 /* BaseLevel.swift */; };
 		DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC90B8581C7966D500CCC033 /* Assets.xcassets */; };
 		DC90B8691C7981FC00CCC033 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC90B8681C7981FC00CCC033 /* AVFoundation.framework */; };
@@ -93,6 +94,7 @@
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		DC668B631CB987680063ADA5 /* background23@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background23@2x.png"; sourceTree = "<group>"; };
 		DC668B671CB9C3160063ADA5 /* SegueFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueFade.swift; path = ../SegueFade.swift; sourceTree = "<group>"; };
+		DC81BD1A1D16642600BD25F3 /* bannerad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerad.png; sourceTree = "<group>"; };
 		DC90B84E1C7966D500CCC033 /* Guessor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guessor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC90B8531C7966D500CCC033 /* BaseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevel.swift; sourceTree = "<group>"; };
 		DC90B8561C7966D500CCC033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		DCAC77DE1CB0D04300422EA5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DC81BD1A1D16642600BD25F3 /* bannerad.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				DC539F4C1CB6C25E00211970 /* background4.png in Resources */,
 				DC539F681CB6E9D000211970 /* background18@2x.jpg in Resources */,
 				DC237BA71CB71CDB00DAA111 /* background21@2x.png in Resources */,
+				DC81BD1B1D16642600BD25F3 /* bannerad.png in Resources */,
 				DCB3C1861CAC735E00B6BB87 /* LaunchScreen.storyboard in Resources */,
 				DC237BAF1CB725A700DAA111 /* background1@2x.jpg in Resources */,
 				DC9CE1D81CA7883800817C02 /* Notes in Resources */,

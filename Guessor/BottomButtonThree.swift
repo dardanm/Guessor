@@ -100,7 +100,7 @@ extension BaseLevel {
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
-                lives -= 1
+                incorrectAnswer()
                 
                 // red color button - incorrect choice
                 setBotThreeRedBackground()
@@ -120,7 +120,7 @@ extension BaseLevel {
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
-                lives -= 1
+                incorrectAnswer()
                 
                 // red color button - incorrect choice
                 setBotThreeRedBackground()
@@ -140,7 +140,7 @@ extension BaseLevel {
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
-                lives -= 1
+                incorrectAnswer()
                 
                 // red color button - incorrect choice
                 setBotThreeRedBackground()
@@ -160,7 +160,7 @@ extension BaseLevel {
                 matchingAnswer = true
             } else {
                 // subtract life if incorrect choice is chosen
-                lives -= 1
+                incorrectAnswer()
                 
                 // red color button - incorrect choice
                 setBotThreeRedBackground()

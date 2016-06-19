@@ -48,6 +48,13 @@ class Start: UIViewController {
             block.hidden = false
         }
         
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error as NSError {
+            print(error)
+        }
+        
 //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
         
     }
