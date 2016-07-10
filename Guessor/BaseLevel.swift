@@ -102,9 +102,6 @@ class BaseLevel: UIViewController {
     @IBOutlet var botEightGreenColor: UILabel!
     @IBOutlet var botNineGreenColor: UILabel!
     
-    
-
-    
     // top number pictures
     @IBOutlet var candyN1: UIImageView!
     @IBOutlet var popN1: UIImageView!

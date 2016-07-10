@@ -53,6 +53,34 @@ extension BaseLevel {
         
     }
     
+    func generateBottomButtons(){
+        
+        // bottom numbers randomize
+        createBotOneSymbolRandom()
+        createBotTwoSymbolRandom()
+        createBotThreeSymbolRandom()
+        createBotFourSymbolRandom()
+        createBotFiveSymbolRandom()
+        createBotSixSymbolRandom()
+        createBotSevenSymbolRandom()
+        createBotEightSymbolRandom()
+        createBotNineSymbolRandom()
+        
+        createBotOneColorRandom()
+        createBotTwoColorRandom()
+        createBotThreeColorRandom()
+        createBotFourColorRandom()
+        createBotFiveColorRandom()
+        createBotSixColorRandom()
+        createBotSevenColorRandom()
+        createBotEightColorRandom()
+        createBotNineColorRandom()
+        
+        generateButtonImages()
+        updateButtonBackground()
+        
+    }
+    
     
     
     

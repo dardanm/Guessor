@@ -42,12 +42,13 @@ extension BaseLevel {
     // Try Again
     func tryAgain(){
         
+        score = 0
+        level.text = "\(score)"
+        
         enableButtons()
         runOrNot = 4
         scoreKeep = 0
         levelProgressBar.progress = 0
-        coin = 0
-        coinLabel.text = "\(coin)"
         generateTopAndBottomButtons()
         realRandomGeneratorFirst()
         
@@ -143,7 +144,6 @@ extension BaseLevel {
     }
     
     func incorrectAnswer(){
-        score -= 30
         level.text = "\(score)"
     }
     
@@ -157,6 +157,8 @@ extension BaseLevel {
         if scoreKeep == 4{
           pressButtonCorrectSound()
           pressCorrectFour()
+          score += 5
+          level.text = "\(score)"
           coin += 1
         }
         
@@ -174,10 +176,6 @@ extension BaseLevel {
     }
     
     func updateLevel(){
-        
-
-        score += 5
-        level.text = "\(score)"
 
         coinLabel.text = "\(coin)"
         // 500
