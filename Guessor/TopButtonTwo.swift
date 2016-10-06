@@ -38,19 +38,19 @@ extension BaseLevel {
     // IMAGE
     func updateTopTwoImage(){
         if topTwoSymbol == 1 {
-            caneN2.hidden = false
-            candyN2.hidden = true
-            popN2.hidden = true
+            caneN2.isHidden = false
+            candyN2.isHidden = true
+            popN2.isHidden = true
         }
         if topTwoSymbol == 2 {
-            caneN2.hidden = true
-            candyN2.hidden = false
-            popN2.hidden = true
+            caneN2.isHidden = true
+            candyN2.isHidden = false
+            popN2.isHidden = true
         }
         if topTwoSymbol == 3 {
-            caneN2.hidden = true
-            candyN2.hidden = true
-            popN2.hidden = false
+            caneN2.isHidden = true
+            candyN2.isHidden = true
+            popN2.isHidden = false
         }
     }
     
@@ -72,17 +72,17 @@ extension BaseLevel {
     
     // GREEN BACKGROUND
     func setTopTwoGreenBackground(){
-        topTwoGreenColor.hidden = false
+        topTwoGreenColor.isHidden = false
     }
     func removeTopTwoGreenBackground(){
-        topTwoGreenColor.hidden = true
+        topTwoGreenColor.isHidden = true
     }
     // RED BACKGROUND
     func setTopTwoRedBackground(){
-        topTwoRedColor.hidden = false
+        topTwoRedColor.isHidden = false
     }
     func removeTopTwoRedBackground(){
-        topTwoRedColor.hidden = true
+        topTwoRedColor.isHidden = true
     }
 
 }

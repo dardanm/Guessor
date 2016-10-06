@@ -38,19 +38,19 @@ extension BaseLevel {
     // IMAGE
     func updateTopFourImage(){
         if topFourSymbol == 1 {
-            caneN4.hidden = false
-            candyN4.hidden = true
-            popN4.hidden = true
+            caneN4.isHidden = false
+            candyN4.isHidden = true
+            popN4.isHidden = true
         }
         if topFourSymbol == 2 {
-            caneN4.hidden = true
-            candyN4.hidden = false
-            popN4.hidden = true
+            caneN4.isHidden = true
+            candyN4.isHidden = false
+            popN4.isHidden = true
         }
         if topFourSymbol == 3 {
-            caneN4.hidden = true
-            candyN4.hidden = true
-            popN4.hidden = false
+            caneN4.isHidden = true
+            candyN4.isHidden = true
+            popN4.isHidden = false
         }
     }
     
@@ -72,17 +72,17 @@ extension BaseLevel {
     
     // GREEN BACKGROUND
     func setTopFourGreenBackground(){
-        topFourGreenColor.hidden = false
+        topFourGreenColor.isHidden = false
     }
     func removeTopFourGreenBackground(){
-        topFourGreenColor.hidden = true
+        topFourGreenColor.isHidden = true
     }
     // RED BACKGROUND
     func setTopFourRedBackground(){
-        topFourRedColor.hidden = false
+        topFourRedColor.isHidden = false
     }
     func removeTopFourRedBackground(){
-        topFourRedColor.hidden = true
+        topFourRedColor.isHidden = true
     }
 
 }

@@ -231,7 +231,7 @@ class BaseLevel: UIViewController {
     var lives = 3
     // timer
     var count:Float = 10
-    var timer = NSTimer()
+    var timer = Timer()
     // score
     var score:Int = 0
     // switch variable
@@ -242,54 +242,54 @@ class BaseLevel: UIViewController {
     
     @IBOutlet weak var pauseMenuLabel: UILabel!
     // PAUSE
-    @IBAction func pauseMenu(sender: AnyObject) {
+    @IBAction func pauseMenu(_ sender: AnyObject) {
         pauseGame()
-        pauseMenuLabel.hidden = false
-        goToMenuLabel.hidden = false
-        continueGameLabel.hidden = false
-        controlEffectsMusic.hidden = false
-        controlBackgroundMusic.hidden = false
+        pauseMenuLabel.isHidden = false
+        goToMenuLabel.isHidden = false
+        continueGameLabel.isHidden = false
+        controlEffectsMusic.isHidden = false
+        controlBackgroundMusic.isHidden = false
     }
     // menu
-    @IBAction func goToMenu(sender: AnyObject) {
-        pauseMenuLabel.hidden = true
-        goToMenuLabel.hidden = true
-        continueGameLabel.hidden = true
-        controlEffectsMusic.hidden = true
-        controlBackgroundMusic.hidden = true
+    @IBAction func goToMenu(_ sender: AnyObject) {
+        pauseMenuLabel.isHidden = true
+        goToMenuLabel.isHidden = true
+        continueGameLabel.isHidden = true
+        controlEffectsMusic.isHidden = true
+        controlBackgroundMusic.isHidden = true
     }
     @IBOutlet weak var goToMenuLabel: UIButton!
     
     // continue
-    @IBAction func continueGame(sender: AnyObject) {
+    @IBAction func continueGame(_ sender: AnyObject) {
         playGame()
-        pauseMenuLabel.hidden = true
-        goToMenuLabel.hidden = true
-        continueGameLabel.hidden = true
-        controlEffectsMusic.hidden = true
-        controlBackgroundMusic.hidden = true
+        pauseMenuLabel.isHidden = true
+        goToMenuLabel.isHidden = true
+        continueGameLabel.isHidden = true
+        controlEffectsMusic.isHidden = true
+        controlBackgroundMusic.isHidden = true
     }
     @IBOutlet weak var continueGameLabel: UIButton!
     // sfx
-    @IBAction func controlEffectsMusic(sender: AnyObject) {
+    @IBAction func controlEffectsMusic(_ sender: AnyObject) {
         
     }
     @IBOutlet weak var controlEffectsMusic: UIButton!
     // background
-    @IBAction func controlBackgroundMusic(sender: AnyObject) {
+    @IBAction func controlBackgroundMusic(_ sender: AnyObject) {
         
     }
     @IBOutlet weak var controlBackgroundMusic: UIButton!
     
     
     // add time
-    @IBAction func addTimeButton(sender: AnyObject) {
+    @IBAction func addTimeButton(_ sender: AnyObject) {
         count += 2
         countDownLabel.text = "\(count)"
     }
     
     // add life
-    @IBAction func addLifeButton(sender: AnyObject) {
+    @IBAction func addLifeButton(_ sender: AnyObject) {
         lives += 1
         updateLivesLeftIcons()
         print(lives)
@@ -300,7 +300,7 @@ class BaseLevel: UIViewController {
     @IBOutlet var tryAgainLabel: UIButton!
     
     // "try aagain" function
-    @IBAction func tryAgain(sender: AnyObject) {
+    @IBAction func tryAgain(_ sender: AnyObject) {
         stopTimer()
         tryAgain()
         generateLabel.layer.opacity = 1
@@ -310,30 +310,30 @@ class BaseLevel: UIViewController {
     var trueOrNot2:Bool = false
     
     // get time
-    let date = NSDate()
-    let calendar = NSCalendar.currentCalendar()
+    let date = Date()
+    let calendar = Calendar.current
     
     var matchingAnswer:Bool = false
     
     @IBOutlet weak var levelProgressBar: UIProgressView!
     
     // hide status bar
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(1, animations: { () -> Void in
+        UIView.animate(withDuration: 1, animations: { () -> Void in
             self.progressTimer.setProgress(1.0, animated: true)
         })
     }
 
     
     func startTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
     }
     func stopTimer(){
         timer.invalidate()
@@ -341,7 +341,7 @@ class BaseLevel: UIViewController {
     
 
     
-    @IBAction func generateButtonNumbers(sender: AnyObject) {
+    @IBAction func generateButtonNumbers(_ sender: AnyObject) {
         
         count -= 1
         countDownLabel.text = "\(count)"
@@ -353,64 +353,64 @@ class BaseLevel: UIViewController {
         
     }
 
-    @IBAction func generateButtonRelease(sender: AnyObject) {
+    @IBAction func generateButtonRelease(_ sender: AnyObject) {
 
     }
 
     
     
     // BUTTON #1 PRESS
-    @IBAction func buttonOneDown(sender: AnyObject) { botOneDownPress() }
+    @IBAction func buttonOneDown(_ sender: AnyObject) { botOneDownPress() }
     // BUTTON #1 - RELEASE
-    @IBAction func buttonOneRelease(sender: AnyObject) { botOneRelase() }
+    @IBAction func buttonOneRelease(_ sender: AnyObject) { botOneRelase() }
     
     
     // BUTTON #2 PRESS
-    @IBAction func buttonTwoDown(sender: AnyObject) { botTwoDownPress() }
+    @IBAction func buttonTwoDown(_ sender: AnyObject) { botTwoDownPress() }
     // BUTTON #2 - RELEASE
-    @IBAction func buttonTwoRelease(sender: AnyObject) { botTwoRelase() }
+    @IBAction func buttonTwoRelease(_ sender: AnyObject) { botTwoRelase() }
     
     
     // BUTTON #3 PRESS
-    @IBAction func buttonThreeDown(sender: AnyObject) { botThreeDownPress() }
+    @IBAction func buttonThreeDown(_ sender: AnyObject) { botThreeDownPress() }
     // BUTTON #3 - RELEASE
-    @IBAction func buttonThreeRelease(sender: AnyObject) { botThreeRelase() }
+    @IBAction func buttonThreeRelease(_ sender: AnyObject) { botThreeRelase() }
     
     
     // BUTTON #4 PRESS
-    @IBAction func buttonFourDown(sender: AnyObject) { botFourDownPress() }
+    @IBAction func buttonFourDown(_ sender: AnyObject) { botFourDownPress() }
     // BUTTON #4 - RELEASE
-    @IBAction func buttonFourRelease(sender: AnyObject) { botFourRelase() }
+    @IBAction func buttonFourRelease(_ sender: AnyObject) { botFourRelase() }
     
     
     // BUTTON #5 PRESS
-    @IBAction func buttonFiveDown(sender: AnyObject) { botFiveDownPress() }
+    @IBAction func buttonFiveDown(_ sender: AnyObject) { botFiveDownPress() }
     // BUTTON #5 - RELEASE
-    @IBAction func buttonFiveRelease(sender: AnyObject) { botFiveRelase() }
+    @IBAction func buttonFiveRelease(_ sender: AnyObject) { botFiveRelase() }
     
     
     // BUTTON #6 PRESS
-    @IBAction func buttonSixDown(sender: AnyObject) { botSixDownPress() }
+    @IBAction func buttonSixDown(_ sender: AnyObject) { botSixDownPress() }
     // BUTTON #6 - RELEASE
-    @IBAction func buttonSixRelease(sender: AnyObject) { botSixRelase() }
+    @IBAction func buttonSixRelease(_ sender: AnyObject) { botSixRelase() }
     
     
     // BUTTON #7 PRESS
-    @IBAction func buttonSevenDown(sender: AnyObject) { botSevenDownPress() }
+    @IBAction func buttonSevenDown(_ sender: AnyObject) { botSevenDownPress() }
     // BUTTON #7 - RELEASE
-    @IBAction func buttonSevenRelease(sender: AnyObject) { botSevenRelase() }
+    @IBAction func buttonSevenRelease(_ sender: AnyObject) { botSevenRelase() }
     
     
     // BUTTON #8 PRESS
-    @IBAction func buttonEightDown(sender: AnyObject) { botEightDownPress() }
+    @IBAction func buttonEightDown(_ sender: AnyObject) { botEightDownPress() }
     // BUTTON #8 - RELEASE
-    @IBAction func buttonEightRelease(sender: AnyObject) { botEightRelase() }
+    @IBAction func buttonEightRelease(_ sender: AnyObject) { botEightRelase() }
     
     
     // BUTTON #9 PRESS
-    @IBAction func buttonNineDown(sender: AnyObject) { botNineDownPress() }
+    @IBAction func buttonNineDown(_ sender: AnyObject) { botNineDownPress() }
     // BUTTON #9 - RELEASE
-    @IBAction func buttonNineRelease(sender: AnyObject) { botNineRelase() }
+    @IBAction func buttonNineRelease(_ sender: AnyObject) { botNineRelase() }
 
     
     

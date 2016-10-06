@@ -38,19 +38,19 @@ extension BaseLevel {
     // IMAGE
     func updateBotSevenImage(){
         if botSevenSymbol == 1 {
-            caneB7.hidden = false
-            candyB7.hidden = true
-            popB7.hidden = true
+            caneB7.isHidden = false
+            candyB7.isHidden = true
+            popB7.isHidden = true
         }
         if botSevenSymbol == 2 {
-            caneB7.hidden = true
-            candyB7.hidden = false
-            popB7.hidden = true
+            caneB7.isHidden = true
+            candyB7.isHidden = false
+            popB7.isHidden = true
         }
         if botSevenSymbol == 3 {
-            caneB7.hidden = true
-            candyB7.hidden = true
-            popB7.hidden = false
+            caneB7.isHidden = true
+            candyB7.isHidden = true
+            popB7.isHidden = false
         }
     }
     
@@ -72,20 +72,20 @@ extension BaseLevel {
     
     // GREEN BACKGROUND
     func setBotSevenGreenBackground(){
-        botSevenGreenColor.hidden = false
+        botSevenGreenColor.isHidden = false
     }
     func removeBotSevenGreenBackground(){
-        botSevenGreenColor.hidden = true
+        botSevenGreenColor.isHidden = true
     }
     // RED BACKGROUND
     func setBotSevenRedBackground(){
-        botSevenRedColor.hidden = false
+        botSevenRedColor.isHidden = false
         delay(0.5){
             self.removeBotSevenRedBackground()
         }
     }
     func removeBotSevenRedBackground(){
-        botSevenRedColor.hidden = true
+        botSevenRedColor.isHidden = true
     }
     
     // BUTTON DOWN PRESS
