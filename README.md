@@ -1,4 +1,6 @@
-# iOSgithub
+# Guessor
 Swift
 
-Learning how to make iOS Apps
+First iOS App - WIP
+
+![alt tag](http://i.imgur.com/sPBk43j.gif)
