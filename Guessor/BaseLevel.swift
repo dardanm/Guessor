@@ -35,20 +35,6 @@ class BaseLevel: UIViewController {
     @IBOutlet var topTwoGreenColor: UILabel!
     @IBOutlet var topThreeGreenColor: UILabel!
     @IBOutlet var topFourGreenColor: UILabel!
-
-    // top buttons left small numbers
-    // 1
-    @IBOutlet var topSmallOneColor: UILabel!
-    @IBOutlet var topSmallOneSymbol: UILabel!
-    // 2
-    @IBOutlet var topSmallTwoColor: UILabel!
-    @IBOutlet var topSmallTwoSymbol: UILabel!
-    // 3
-    @IBOutlet var topSmallThreeColor: UILabel!
-    @IBOutlet var topSmallThreeSymbol: UILabel!
-    // 4
-    @IBOutlet var topSmallFourColor: UILabel!
-    @IBOutlet var topSmallFourSymbol: UILabel!
     
 //    // top buttons white background
 //    // 1

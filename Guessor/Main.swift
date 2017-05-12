@@ -63,19 +63,6 @@ extension BaseLevel {
         
         coinLabel.textColor = UIColor(netHex: 0xa3a3a3)
         
-        topSmallOneSymbol.textColor = UIColor(netHex: 0x7f7f7f)
-        topSmallTwoSymbol.textColor = UIColor(netHex: 0x7f7f7f)
-        topSmallThreeSymbol.textColor = UIColor(netHex: 0x7f7f7f)
-        topSmallFourSymbol.textColor = UIColor(netHex: 0x7f7f7f)
-        topSmallOneColor.backgroundColor = UIColor(netHex: 0xffffff)
-        topSmallTwoColor.backgroundColor = UIColor(netHex: 0xffffff)
-        topSmallThreeColor.backgroundColor = UIColor(netHex: 0xffffff)
-        topSmallFourColor.backgroundColor = UIColor(netHex: 0xffffff)
-        topSmallOneColor.layer.opacity = 1.0
-        topSmallTwoColor.layer.opacity = 1.0
-        topSmallThreeColor.layer.opacity = 1.0
-        topSmallFourColor.layer.opacity = 1.0
-        
         countDownLabel.text = String(count/2)
         
         do {
