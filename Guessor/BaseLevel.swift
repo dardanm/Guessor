@@ -266,21 +266,7 @@ class BaseLevel: UIViewController {
         
     }
     @IBOutlet weak var controlBackgroundMusic: UIButton!
-    
-    
-    // add time
-    @IBAction func addTimeButton(_ sender: AnyObject) {
-        count += 2
-        countDownLabel.text = "\(count)"
-    }
-    
-    // add life
-    @IBAction func addLifeButton(_ sender: AnyObject) {
-        lives += 1
-        updateLivesLeftIcons()
-        print(lives)
-    }
-    
+
     
     // "try again" button background
     @IBOutlet var tryAgainLabel: UIButton!

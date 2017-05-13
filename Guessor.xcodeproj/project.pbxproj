@@ -57,6 +57,7 @@
 		DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */; };
 		DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */; };
 		DCDE3AD51CAB5FD400C8F559 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */; };
+		F8139D3F1EC6D78300541DC5 /* testad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8139D3E1EC6D78300541DC5 /* testad.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joystix monospace.ttf"; sourceTree = "<group>"; };
 		DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
+		F8139D3E1EC6D78300541DC5 /* testad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testad.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		DCAC77DE1CB0D04300422EA5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F8139D3E1EC6D78300541DC5 /* testad.jpg */,
 				DC81BD1A1D16642600BD25F3 /* bannerad.png */,
 			);
 			name = Images;
@@ -323,6 +326,7 @@
 				DC539F4E1CB6C3E500211970 /* background5@2x.png in Resources */,
 				DC0633951CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf in Resources */,
 				DC539F5C1CB6DC5D00211970 /* background12@2x.jpg in Resources */,
+				F8139D3F1EC6D78300541DC5 /* testad.jpg in Resources */,
 				DC539F561CB6D49900211970 /* background10@2x.jpg in Resources */,
 				DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */,
 				DC90B8591C7966D500CCC033 /* Assets.xcassets in Resources */,

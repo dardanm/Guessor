@@ -140,7 +140,12 @@ extension BaseLevel {
     }
     
     func incorrectAnswer(){
+        score -= 2
+        if score < 0 {
+            score = 0;
+        }
         level.text = "\(score)"
+
     }
     
     
