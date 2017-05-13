@@ -145,6 +145,10 @@ extension BaseLevel {
             score = 0;
         }
         level.text = "\(score)"
+        
+        // if answer inocorrect,
+        // break consecutive "add life" chain
+        manyCorrectsAddLife -= 1
 
     }
     
@@ -161,6 +165,14 @@ extension BaseLevel {
           score += 5
           level.text = "\(score)"
           coin += 1
+          manyCorrectsAddLife += 1
+        }
+        
+        
+        if manyCorrectsAddLife == 5{
+            lives += 1
+            updateLivesLeftIcons()
+            manyCorrectsAddLife = 0;
         }
         
         if scoreKeep == 4{

@@ -222,8 +222,11 @@ class BaseLevel: UIViewController {
     var score:Int = 0
     // switch variable
     var value = 0
-    var runOrNot:Int = 4
-    var coin:Int = 0
+    var runOrNot = 4
+    var coin = 0
+    
+    // add lives after corrects
+    var manyCorrectsAddLife = 0
     
     
     @IBOutlet weak var pauseMenuLabel: UILabel!
