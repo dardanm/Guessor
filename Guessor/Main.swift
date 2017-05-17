@@ -21,25 +21,25 @@ extension BaseLevel {
     {
         super.viewDidLoad()
         
-        coinLabel.text = "\(NSUserDefaults.standardUserDefaults().integerForKey("coinKey"))"
+        coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
         
         // TO-DO LIST
         // ** pause game when home button is pressed
         
         // Battery
-        UIDevice.currentDevice().batteryMonitoringEnabled = true
-        batteryProgress.progress = UIDevice.currentDevice().batteryLevel
-        batteryProgress.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 6)
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        batteryProgress.progress = UIDevice.current.batteryLevel
+        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 6)
         batteryProgressKeep()
 
         
         
         // Timer
-        progressTimer.transform = CGAffineTransformScale(progressTimer.transform, 1, 10)
+        progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 10)
         startTimer()
         
         // "coin" / Coins bar
-        levelProgressBar.transform = CGAffineTransformScale(levelProgressBar.transform, 1, 8)
+        levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 8)
 //        levelProgressBar.progress = 0.0
         
         // Coundown timer color
@@ -51,7 +51,7 @@ extension BaseLevel {
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
         // Hide status bar
-        prefersStatusBarHidden()
+        prefersStatusBarHidden
         
         // Set firstNUmber as first to check button
         runOrNot = 4
@@ -60,10 +60,10 @@ extension BaseLevel {
 
         
         // try again
-        tryAgainLabel.enabled = false
+        tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
         
-        self.view.backgroundColor = .whiteColor()
+        self.view.backgroundColor = .white
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
 
         runOrNot = 4
@@ -78,9 +78,9 @@ extension BaseLevel {
     
     func batteryProgressKeep(){
         
-        batteryProgress.progress = UIDevice.currentDevice().batteryLevel
+        batteryProgress.progress = UIDevice.current.batteryLevel
         
-        if UIDevice.currentDevice().batteryLevel <= 0.2{
+        if UIDevice.current.batteryLevel <= 0.2{
            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
         }
         
@@ -186,7 +186,7 @@ extension BaseLevel {
             //            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.enabled = true
+            tryAgainLabel.isEnabled = true
         }
         
         if levelProgressBar.progress == 1.0 {
@@ -202,10 +202,10 @@ extension BaseLevel {
     // check if game is finished
     func gameFinish(){
         
-        NSUserDefaults.standardUserDefaults().setInteger(coin, forKey: "coinKey")
+        UserDefaults.standard.set(coin, forKey: "coinKey")
         print(coin)
         coinLabel.text = "\(coin)"
-        coin = NSUserDefaults.standardUserDefaults().integerForKey("coinKey")
+        coin = UserDefaults.standard.integer(forKey: "coinKey")
         
         updateLivesLeftIcons()
         
@@ -244,7 +244,7 @@ extension BaseLevel {
 //            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.enabled = true
+            tryAgainLabel.isEnabled = true
         }
         
         if levelProgressBar.progress == 1.0 {

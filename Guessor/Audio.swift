@@ -16,7 +16,7 @@ extension BaseLevel {
     func pressButtonCorrectSound() {
         
         do {
-            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonCorrect", ofType: "mp3")!))
+            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "buttonCorrect", ofType: "mp3")!))
             self.buttonPressCorrectSound.play()
 
             
@@ -29,7 +29,7 @@ extension BaseLevel {
     // BUTTON PRESS - INCORRECT
     func pressButtonWrongSound() {
         do {
-            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buttonIncorrect", ofType: "mp3")!))
+            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "buttonIncorrect", ofType: "mp3")!))
             self.buttonPressCorrectSound.play()
 //            count -= 1
 //            progressTimer.progress = progressTimer.progress - 0.1
@@ -45,7 +45,7 @@ extension BaseLevel {
     func pressCorrectFour() {
         
         do {
-            self.finalCorrect =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("correct", ofType: "mp3")!))
+            self.finalCorrect =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!))
             self.finalCorrect.play()
         } catch {
             print("Error")
@@ -55,14 +55,14 @@ extension BaseLevel {
     }
     
     // BACKGROUND MUSIC
-    func playBackgroundMusic(filename: String) {
-        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
+    func playBackgroundMusic(_ filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
         guard let newURL = url else {
             print("Could not find file: \(filename)")
             return
         }
         do {
-            backgroundMusicPlayer = try AVAudioPlayer(contentsOfURL: newURL)
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
             backgroundMusicPlayer.numberOfLoops = -1
             backgroundMusicPlayer.prepareToPlay()
             backgroundMusicPlayer.play()
@@ -79,7 +79,7 @@ extension BaseLevel {
     // Sound for just pressing a button
     func pressButtonSound() {
         do {
-            self.buttonPressSound =  try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("button-46", ofType: "mp3")!))
+            self.buttonPressSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "button-46", ofType: "mp3")!))
             self.buttonPressSound.play()
             
         } catch {

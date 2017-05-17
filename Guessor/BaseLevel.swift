@@ -21,7 +21,7 @@ class BaseLevel: UIViewController {
 
     // coin label
     @IBOutlet var coinLabel: UILabel!
-    var coin:Int = NSUserDefaults.standardUserDefaults().integerForKey("coinKey")
+    var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
 
     // top numbers background
     @IBOutlet var topOneLabelColor: UILabel!
@@ -239,7 +239,7 @@ class BaseLevel: UIViewController {
     
     // timer
     var count:Float = 100
-    var timer = NSTimer()
+    var timer = Timer()
     
     // score
     var scoreTarget:Int = 100
@@ -256,13 +256,13 @@ class BaseLevel: UIViewController {
     @IBOutlet var generateLabel: UIButton!
 
     // add time
-    @IBAction func addTimeButton(sender: AnyObject) {
+    @IBAction func addTimeButton(_ sender: AnyObject) {
         count += 2
         countDownLabel.text = "\(count)"
     }
     
     // add life
-    @IBAction func addLifeButton(sender: AnyObject) {
+    @IBAction func addLifeButton(_ sender: AnyObject) {
         lives += 1
         updateLivesLeftIcons()
         print(lives)
@@ -273,7 +273,7 @@ class BaseLevel: UIViewController {
     @IBOutlet var tryAgainLabel: UIButton!
     
     // "try aagain" function
-    @IBAction func tryAgain(sender: AnyObject) {
+    @IBAction func tryAgain(_ sender: AnyObject) {
         stopTimer()
         tryAgain()
         generateLabel.layer.opacity = 1
@@ -283,30 +283,30 @@ class BaseLevel: UIViewController {
     var trueOrNot2:Bool = false
     
     // get time
-    let date = NSDate()
-    let calendar = NSCalendar.currentCalendar()
+    let date = Date()
+    let calendar = Calendar.current
     
     var matchingAnswer:Bool = false
     
     @IBOutlet weak var levelProgressBar: UIProgressView!
     
     // hide status bar
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(1, animations: { () -> Void in
+        UIView.animate(withDuration: 1, animations: { () -> Void in
             self.progressTimer.setProgress(1.0, animated: true)
         })
     }
 
     
     func startTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
     }
     func stopTimer(){
         timer.invalidate()
@@ -314,111 +314,111 @@ class BaseLevel: UIViewController {
     
 
     // GENERATE BUTTON
-    @IBAction func generateButtonNumbers(sender: AnyObject) {
+    @IBAction func generateButtonNumbers(_ sender: AnyObject) {
 
         generateBottomButtons()
         
     }
 
-    @IBAction func generateButtonRelease(sender: AnyObject) {
+    @IBAction func generateButtonRelease(_ sender: AnyObject) {
 
     }
 
     
     
     // BUTTON #1 PRESS
-    @IBAction func buttonOneDown(sender: AnyObject){
+    @IBAction func buttonOneDown(_ sender: AnyObject){
         compare.compareButtonsDown(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
     }
     // BUTTON #1 - RELEASE
-    @IBAction func buttonOneRelease(sender: AnyObject) {
+    @IBAction func buttonOneRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
     }
     
     
     // BUTTON #2 PRESS
-    @IBAction func buttonTwoDown(sender: AnyObject) {
+    @IBAction func buttonTwoDown(_ sender: AnyObject) {
                 compare.compareButtonsDown(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botTwoGreenColor, buttonRed:botTwoRedColor)
     }
     // BUTTON #2 - RELEASE
-    @IBAction func buttonTwoRelease(sender: AnyObject) {
+    @IBAction func buttonTwoRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botTwoGreenColor, buttonRed:botTwoRedColor)
     }
     
     
     // BUTTON #3 PRESS
-    @IBAction func buttonThreeDown(sender: AnyObject) {
+    @IBAction func buttonThreeDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botThreeGreenColor, buttonRed:botThreeRedColor)
     }
     // BUTTON #3 - RELEASE
-    @IBAction func buttonThreeRelease(sender: AnyObject) {
+    @IBAction func buttonThreeRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botThreeGreenColor, buttonRed:botThreeRedColor)
     }
     
     
     // BUTTON #4 PRESS
-    @IBAction func buttonFourDown(sender: AnyObject) {
+    @IBAction func buttonFourDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton4, buttonColor:botFourButtonColor, buttonGreen:botFourGreenColor, buttonRed:botFourRedColor)
     }
     // BUTTON #4 - RELEASE
-    @IBAction func buttonFourRelease(sender: AnyObject) {
+    @IBAction func buttonFourRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton4, buttonColor:botFourButtonColor, buttonGreen:botFourGreenColor, buttonRed:botFourRedColor)
     }
     
     
     // BUTTON #5 PRESS
-    @IBAction func buttonFiveDown(sender: AnyObject) {
+    @IBAction func buttonFiveDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botFiveGreenColor, buttonRed:botFiveRedColor)
     }
     // BUTTON #5 - RELEASE
-    @IBAction func buttonFiveRelease(sender: AnyObject) {
+    @IBAction func buttonFiveRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botFiveGreenColor, buttonRed:botFiveRedColor)
     }
     
     
     // BUTTON #6 PRESS
-    @IBAction func buttonSixDown(sender: AnyObject) {
+    @IBAction func buttonSixDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton6, buttonColor:botSixButtonColor, buttonGreen:botSixGreenColor, buttonRed:botSixRedColor)
     }
     // BUTTON #6 - RELEASE
-    @IBAction func buttonSixRelease(sender: AnyObject) {
+    @IBAction func buttonSixRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton6, buttonColor:botSixButtonColor, buttonGreen:botSixGreenColor, buttonRed:botSixRedColor)
     }
     
     
     // BUTTON #7 PRESS
-    @IBAction func buttonSevenDown(sender: AnyObject) {
+    @IBAction func buttonSevenDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botSevenGreenColor, buttonRed:botSevenRedColor)
     }
     // BUTTON #7 - RELEASE
-    @IBAction func buttonSevenRelease(sender: AnyObject) {
+    @IBAction func buttonSevenRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botSevenGreenColor, buttonRed:botSevenRedColor)
     }
     
     
     // BUTTON #8 PRESS
-    @IBAction func buttonEightDown(sender: AnyObject) {
+    @IBAction func buttonEightDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton8, buttonColor:botEightButtonColor, buttonGreen:botEightGreenColor, buttonRed:botEightRedColor)
     }
     // BUTTON #8 - RELEASE
-    @IBAction func buttonEightRelease(sender: AnyObject) {
+    @IBAction func buttonEightRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton8, buttonColor:botEightButtonColor, buttonGreen:botEightGreenColor, buttonRed:botEightRedColor)
     }
     
     
     // BUTTON #9 PRESS
-    @IBAction func buttonNineDown(sender: AnyObject) {
+    @IBAction func buttonNineDown(_ sender: AnyObject) {
         compare.compareButtonsDown(botButton9, buttonColor:botNineButtonColor, buttonGreen:botNineGreenColor, buttonRed:botNineRedColor)
     }
     // BUTTON #9 - RELEASE
-    @IBAction func buttonNineRelease(sender: AnyObject) {
+    @IBAction func buttonNineRelease(_ sender: AnyObject) {
         compare.compareButtonsRelease(botButton9, buttonColor:botNineButtonColor, buttonGreen:botNineGreenColor, buttonRed:botNineRedColor)
     }
     
     
     // when back button is pressed, stop background music
-    @IBAction func backOption(sender: AnyObject) {
-        coin = NSUserDefaults.standardUserDefaults().integerForKey("coinKey")
+    @IBAction func backOption(_ sender: AnyObject) {
+        coin = UserDefaults.standard.integer(forKey: "coinKey")
 //        backgroundMusicPlayer.stop()
     }
     

@@ -43,7 +43,7 @@ class GenerateButton : BaseLevel {
 
     
     // Update top button image
-    func randomImage(cane:UIImageView, candy:UIImageView, pop:UIImageView){
+    func randomImage(_ cane:UIImageView, candy:UIImageView, pop:UIImageView){
         value = Int(arc4random_uniform(3) + 1)
         switch value {
         case 1: symb = 1
@@ -52,24 +52,24 @@ class GenerateButton : BaseLevel {
         default: symb = 10
         }
         if symb == 1 {
-            cane.hidden = false
-            candy.hidden = true
-            pop.hidden = true
+            cane.isHidden = false
+            candy.isHidden = true
+            pop.isHidden = true
         }
         if symb == 2 {
-            cane.hidden = true
-            candy.hidden = false
-            pop.hidden = true
+            cane.isHidden = true
+            candy.isHidden = false
+            pop.isHidden = true
         }
         if symb == 3 {
-            cane.hidden = true
-            candy.hidden = true
-            pop.hidden = false
+            cane.isHidden = true
+            candy.isHidden = true
+            pop.isHidden = false
         }
     }
     
     // BACKGROUND COLOR
-    func randomColor(labelcolor:UILabel){
+    func randomColor(_ labelcolor:UILabel){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
         case 1: back = 1
@@ -92,7 +92,7 @@ class GenerateButton : BaseLevel {
         }
     }
     // BACKGROUND COLOR
-    func randomColorBottom(labelcolor:UIButton){
+    func randomColorBottom(_ labelcolor:UIButton){
         value = Int(arc4random_uniform(4) + 1)
         switch value {
         case 1: back = 1
@@ -115,7 +115,7 @@ class GenerateButton : BaseLevel {
         }
     }
     
-    func getButtonInfo(topButOne:GenerateButton, green1Temp:UILabel, topButTwo:GenerateButton, green2Temp:UILabel,  topButThree:GenerateButton, green3Temp:UILabel, topButFour:GenerateButton, green4Temp:UILabel){
+    func getButtonInfo(_ topButOne:GenerateButton, green1Temp:UILabel, topButTwo:GenerateButton, green2Temp:UILabel,  topButThree:GenerateButton, green3Temp:UILabel, topButFour:GenerateButton, green4Temp:UILabel){
         topButOneTemp = topButOne
         topButTwoTemp = topButTwo
         topButThreeTemp = topButThree
@@ -127,47 +127,47 @@ class GenerateButton : BaseLevel {
     }
     
     // Update top button image
-    func getImage(buttonNumber:Int, cane:UIImageView, candy:UIImageView, pop:UIImageView){
+    func getImage(_ buttonNumber:Int, cane:UIImageView, candy:UIImageView, pop:UIImageView){
 
 
         if buttonNumber == 1 {
-            cane.hidden = false
-            candy.hidden = true
-            pop.hidden = true
+            cane.isHidden = false
+            candy.isHidden = true
+            pop.isHidden = true
         }
         if buttonNumber == 2 {
-            cane.hidden = true
-            candy.hidden = false
-            pop.hidden = true
+            cane.isHidden = true
+            candy.isHidden = false
+            pop.isHidden = true
         }
         if buttonNumber == 3 {
-            cane.hidden = true
-            candy.hidden = true
-            pop.hidden = false
+            cane.isHidden = true
+            candy.isHidden = true
+            pop.isHidden = false
         }
 
     }
     
 
     
-    func compareButtonsDown(buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
+    func compareButtonsDown(_ buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
 
         func correctAns(){
             pressButtonCorrectSound()
             scoreKeep += 1
-            buttonGreen.hidden = false
+            buttonGreen.isHidden = false
             counter += 1
             delay(0.3){
-                buttonGreen.hidden = true
+                buttonGreen.isHidden = true
             }
         }
         func incorrectAns(){
             pressButtonWrongSound()
             
             lives -= 1
-            buttonRed.hidden = false
+            buttonRed.isHidden = false
             delay(0.3){
-                buttonRed.hidden = true
+                buttonRed.isHidden = true
             }
         }
         
@@ -205,21 +205,21 @@ class GenerateButton : BaseLevel {
 
     } // END compareButtonsDown
     
-    func compareButtonsRelease(buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
+    func compareButtonsRelease(_ buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
 
         func changeTrueOrNot(){
             if runner == 4{
-                green1!.hidden = false
+                green1!.isHidden = false
             }
             if runner == 3{
-                green2!.hidden = false
+                green2!.isHidden = false
                 // bottom buttons
             }
             if runner == 2{
-                green3!.hidden = false
+                green3!.isHidden = false
             }
             if runner == 1{
-                green4!.hidden = false
+                green4!.isHidden = false
             }
             runner -= 1
 
@@ -255,10 +255,10 @@ class GenerateButton : BaseLevel {
         if self.runner == 0{
             runner = 4
             delay(0.5){
-            self.green1?.hidden = true
-            self.green2?.hidden = true
-            self.green3?.hidden = true
-            self.green4?.hidden = true
+            self.green1?.isHidden = true
+            self.green2?.isHidden = true
+            self.green3?.isHidden = true
+            self.green4?.isHidden = true
         }
         }
         
@@ -268,7 +268,7 @@ class GenerateButton : BaseLevel {
     
 
     
-    func numberCheckTop(topButton:GenerateButton){
+    func numberCheckTop(_ topButton:GenerateButton){
         
         if
             (

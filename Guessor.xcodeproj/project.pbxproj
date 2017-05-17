@@ -238,6 +238,7 @@
 					DC90B84D1C7966D500CCC033 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = Y6SG367258;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -422,6 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.meha.Guessor2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -438,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.meha.Guessor2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
