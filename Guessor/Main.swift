@@ -137,13 +137,13 @@ extension BaseLevel {
         
 
 
-        // every second generate new buttons
-        temp += 1
-        if temp == 1.0{
-        generateBottomButtons()
-        temp = 0
-        }
-        print("temp \(temp)")
+//        // every second generate new buttons
+//        temp += 1
+//        if temp == 1.0{
+//        generateBottomButtons()
+//        temp = 0
+//        }
+//        print("temp \(temp)")
 
 
         print(compare.runner)
