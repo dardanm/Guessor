@@ -17,9 +17,15 @@ extension BaseLevel {
     // ========= MAIN
     
     
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+
+        
+        
         
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
         
@@ -51,12 +57,12 @@ extension BaseLevel {
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
         // Hide status bar
-        prefersStatusBarHidden
+        // prefersStatusBarHidden
         
         // Set firstNUmber as first to check button
         runOrNot = 4
 
-//        generateTopAndBottomButtons()
+        generateTopAndBottomButtons()
 
         
         // try again
@@ -64,13 +70,15 @@ extension BaseLevel {
         tryAgainLabel.layer.opacity = 0
         
         self.view.backgroundColor = .white
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
 
         runOrNot = 4
         
-        generateTopAndBottomButtons()
 
         compare.getButtonInfo(button1, green1Temp: topOneGreenColor, topButTwo: button2, green2Temp: topTwoGreenColor, topButThree: button3, green3Temp: topThreeGreenColor, topButFour: button4, green4Temp: topFourGreenColor)
+        
+        //realRandomGeneratorFirst()
+
         
     }
     
@@ -130,23 +138,23 @@ extension BaseLevel {
         }
     }
     
-
     
     // timer + timer progress bar
     func update() {
+
+        gameFinish()
+        
+        
+        // if two correct answers at once
+        
+        //if button1.back == button1.back
         
 
+        print("run is: \(compare.runner)")
 
-//        // every second generate new buttons
-//        temp += 1
-//        if temp == 1.0{
-//        generateBottomButtons()
-//        temp = 0
-//        }
-//        print("temp \(temp)")
-
-
-        print(compare.runner)
+        print("count is: \(compare.counter)")
+        
+        print("scoreKeep is: \(compare.scoreKeep)")
 
  
         if compare.counter > 0 {
@@ -162,6 +170,20 @@ extension BaseLevel {
             runOrNot = 4
         }
         
+        if compare.scoreKeep == 4 {
+            stopTimer()
+            resetRoll()
+            generateTopButtons()
+            compare.scoreKeep = 0
+            coin += 1
+            coinLabel.text = "\(coin)"
+        }
+        
+//        if count <= 0 && lives > 0{
+//            stopTimer()
+//            resetRollZeroCount()
+//        }
+
         updateTimerBar()
         updateLivesLeftIcons()
         
@@ -203,16 +225,18 @@ extension BaseLevel {
     func gameFinish(){
         
         UserDefaults.standard.set(coin, forKey: "coinKey")
-        print(coin)
+        print("coin: \(coin)")
         coinLabel.text = "\(coin)"
         coin = UserDefaults.standard.integer(forKey: "coinKey")
         
         updateLivesLeftIcons()
         
         if scoreKeep == 4 {
-            //            disableButtons()
             stopTimer()
             resetRoll()
+            generateTopButtons()
+            scoreKeep = 0
+            coin += 1
         }
         
         if compare.counter > 10 {

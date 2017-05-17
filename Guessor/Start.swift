@@ -15,7 +15,7 @@ var backgroundMusicPlayer = AVAudioPlayer()
 var musicTracker:Int = 0
 
 class Start: UIViewController {
-
+    
     @IBOutlet var block: UIImageView!
     
     @IBAction func musicButton(_ sender: AnyObject) {
@@ -27,28 +27,35 @@ class Start: UIViewController {
         musicTracker += 1
         switch musicTracker {
         case 1: playBackgroundMusic("background.mp3")
-                block.isHidden = true
+        block.isHidden = true
         case 2: backgroundMusicPlayer.stop()
-                block.isHidden = false
-                musicTracker = 0
+        block.isHidden = false
+        musicTracker = 0
         default: backgroundMusicPlayer.stop()
         }
-
+        
     }
     
     @IBAction func musicButtonRelease(_ sender: AnyObject) {
-
+        
     }
     
-
+    
     
     override func viewDidLoad() {
-
+        
         if musicTracker == 0 {
             block.isHidden = false
         }
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
         
     }
     
@@ -72,5 +79,5 @@ class Start: UIViewController {
             print(error.description)
         }
     }
-
+    
 }

@@ -89,19 +89,14 @@ extension BaseLevel {
         
         if lives > 0{
 
-        delay(0.5){
-        self.startTimer()
+//            delay(0.5){
+            self.startTimer()
         
-        self.count = 10
-        self.updateTimerBar()
-        self.countDownLabel.text = "\(self.count)"
+            compare.counter = 10
+            self.updateTimerBar()
+            self.countDownLabel.text = "\(self.count)"
         
-            //        enableButtons()
-        
-        
-
-        }
-
+//            }
 
         }
         

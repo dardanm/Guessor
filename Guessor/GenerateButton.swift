@@ -268,24 +268,24 @@ class GenerateButton : BaseLevel {
     
 
     
-    func numberCheckTop(_ topButton:GenerateButton){
-        
-        if
-            (
-                    !(topButton.symb == botButton1.symb && topButton.back == botButton1.back) &&
-                    !(topButton.symb == botButton2.symb && topButton.back == botButton2.back) &&
-                    !(topButton.symb == botButton3.symb && topButton.back == botButton3.back) &&
-                    !(topButton.symb == botButton4.symb && topButton.back == botButton4.back) &&
-                    !(topButton.symb == botButton5.symb && topButton.back == botButton5.back) &&
-                    !(topButton.symb == botButton6.symb && topButton.back == botButton6.back) &&
-                    !(topButton.symb == botButton7.symb && topButton.back == botButton7.back) &&
-                    !(topButton.symb == botButton8.symb && topButton.back == botButton8.back) &&
-                    !(topButton.symb == botButton9.symb && topButton.back == botButton9.back)
-            )
-        {trueOrNot = false}
-        
-        
-    }
+//    func numberCheckTop(_ topButton:GenerateButton){
+//        
+//        if
+//            (
+//                    !(topButton.symb == botButton1.symb && topButton.back == botButton1.back) &&
+//                    !(topButton.symb == botButton2.symb && topButton.back == botButton2.back) &&
+//                    !(topButton.symb == botButton3.symb && topButton.back == botButton3.back) &&
+//                    !(topButton.symb == botButton4.symb && topButton.back == botButton4.back) &&
+//                    !(topButton.symb == botButton5.symb && topButton.back == botButton5.back) &&
+//                    !(topButton.symb == botButton6.symb && topButton.back == botButton6.back) &&
+//                    !(topButton.symb == botButton7.symb && topButton.back == botButton7.back) &&
+//                    !(topButton.symb == botButton8.symb && topButton.back == botButton8.back) &&
+//                    !(topButton.symb == botButton9.symb && topButton.back == botButton9.back)
+//            )
+//        {trueOrNot = false}
+//        
+//        
+//    }
     
     
 
@@ -296,10 +296,10 @@ class GenerateButton : BaseLevel {
 } // END CLASS
 
 
-let button1 = GenerateButton()
-let button2 = GenerateButton()
-let button3 = GenerateButton()
-let button4 = GenerateButton()
+var button1 = GenerateButton()
+var button2 = GenerateButton()
+var button3 = GenerateButton()
+var button4 = GenerateButton()
 
 let botButton1 = GenerateButton()
 let botButton2 = GenerateButton()
@@ -312,4 +312,6 @@ let botButton8 = GenerateButton()
 let botButton9 = GenerateButton()
 
 let compare = GenerateButton()
+
+var tempButton = GenerateButton()
 
