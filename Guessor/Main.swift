@@ -148,6 +148,7 @@ extension BaseLevel {
         // if two correct answers at once
         
         //if button1.back == button1.back
+        //button1.back = 0
         
 
         print("run is: \(compare.runner)")
@@ -170,19 +171,16 @@ extension BaseLevel {
             runOrNot = 4
         }
         
-        if compare.scoreKeep == 4 {
+        if compare.scoreKeep >= 4 {
+            pressCorrectFour()
             stopTimer()
             resetRoll()
             generateTopButtons()
             compare.scoreKeep = 0
             coin += 1
             coinLabel.text = "\(coin)"
+            compare.counter += 3
         }
-        
-//        if count <= 0 && lives > 0{
-//            stopTimer()
-//            resetRollZeroCount()
-//        }
 
         updateTimerBar()
         updateLivesLeftIcons()

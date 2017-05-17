@@ -101,6 +101,10 @@ extension BaseLevel {
         }
         
     }
+    
+    func incorrectAnswer(){
+        pressButtonWrongSound()
+    }
 
     
     
@@ -111,7 +115,6 @@ extension BaseLevel {
         }
         
         if scoreKeep == 4{
-          pressButtonCorrectSound()
           pressCorrectFour()
         }
         
@@ -142,39 +145,53 @@ extension BaseLevel {
 
     
     func updateTimer(){
-        if count >= 10 {
-            progressTimer.progress = 1.0
+        
+        for i in 0...9 {
+            for j in 0...1 {
+                if count >= 10 {
+                    progressTimer.progress = 1.0
+                }
+                if count == Float(i) {
+                    progressTimer.progress = Float(j)
+                } else {
+                    progressTimer.progress = -1
+                }
+            }
         }
-        if count == 9 {
-            progressTimer.progress = 0.9
-        }
-        if count == 8 {
-            progressTimer.progress = 0.8
-        }
-        if count == 7 {
-            progressTimer.progress = 0.7
-        }
-        if count == 6 {
-            progressTimer.progress = 0.6
-        }
-        if count == 5 {
-            progressTimer.progress = 0.5
-        }
-        if count == 4 {
-            progressTimer.progress = 0.4
-        }
-        if count == 3 {
-            progressTimer.progress = 0.3
-        }
-        if count == 2 {
-            progressTimer.progress = 0.2
-        }
-        if count == 1 {
-            progressTimer.progress = 0.1
-        }
-        if count == 0 {
-            progressTimer.progress = 0.0
-        }
+        
+//        if count >= 10 {
+//            progressTimer.progress = 1.0
+//        }
+//        if count == 9 {
+//            progressTimer.progress = 0.9
+//        }
+//        if count == 8 {
+//            progressTimer.progress = 0.8
+//        }
+//        if count == 7 {
+//            progressTimer.progress = 0.7
+//        }
+//        if count == 6 {
+//            progressTimer.progress = 0.6
+//        }
+//        if count == 5 {
+//            progressTimer.progress = 0.5
+//        }
+//        if count == 4 {
+//            progressTimer.progress = 0.4
+//        }
+//        if count == 3 {
+//            progressTimer.progress = 0.3
+//        }
+//        if count == 2 {
+//            progressTimer.progress = 0.2
+//        }
+//        if count == 1 {
+//            progressTimer.progress = 0.1
+//        }
+//        if count == 0 {
+//            progressTimer.progress = 0.0
+//        }
     }
 
 

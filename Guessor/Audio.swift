@@ -41,7 +41,7 @@ extension BaseLevel {
     func pressCorrectFour() {
         
         do {
-            self.finalCorrect =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "mp3")!))
+            self.finalCorrect =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "fourCorrect", ofType: "mp3")!))
             self.finalCorrect.play()
         } catch {
             print("Error")

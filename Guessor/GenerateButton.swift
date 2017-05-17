@@ -148,6 +148,12 @@ class GenerateButton : BaseLevel {
 
     }
     
+//    func checkIfGreen(buttonToCompare:GenerateButton) -> Bool{
+//    
+//        
+//        return false
+//    }
+    
 
     
     func compareButtonsDown(_ buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
