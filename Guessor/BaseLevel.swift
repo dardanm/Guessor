@@ -329,6 +329,7 @@ class BaseLevel: UIViewController {
     
     // BUTTON #1 PRESS
     @IBAction func buttonOneDown(_ sender: AnyObject){
+        
         compare.compareButtonsDown(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
     }
     // BUTTON #1 - RELEASE

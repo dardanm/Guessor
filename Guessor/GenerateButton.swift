@@ -157,6 +157,8 @@ class GenerateButton : BaseLevel {
 
     
     func compareButtonsDown(_ buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
+        
+        print(buttonToCompare.back)
 
         func correctAns(){
             pressButtonCorrectSound()
@@ -169,7 +171,6 @@ class GenerateButton : BaseLevel {
         }
         func incorrectAns(){
             pressButtonWrongSound()
-            
             lives -= 1
             buttonRed.isHidden = false
             delay(0.3){
@@ -178,7 +179,7 @@ class GenerateButton : BaseLevel {
         }
         
         if runner == 4{
-            if buttonToCompare.back == topButOneTemp!.back && buttonToCompare.symb == topButOneTemp!.symb{
+            if (buttonToCompare.back == topButOneTemp!.back) && (buttonToCompare.symb == topButOneTemp!.symb){
                 correctAns()
             } else{
                 incorrectAns()
@@ -186,7 +187,7 @@ class GenerateButton : BaseLevel {
         }
         
         if runner == 3{
-            if buttonToCompare.labelcolor == topButTwoTemp!.labelcolor && buttonToCompare.symb == topButTwoTemp!.symb{
+            if (buttonToCompare.back == topButTwoTemp!.back) && (buttonToCompare.symb == topButTwoTemp!.symb){
                 correctAns()
             } else{
                 incorrectAns()
@@ -194,7 +195,7 @@ class GenerateButton : BaseLevel {
         }
         
         if runner == 2{
-            if buttonToCompare.labelcolor == topButThreeTemp!.labelcolor && buttonToCompare.symb == topButThreeTemp!.symb{
+            if (buttonToCompare.back == topButThreeTemp!.back) && (buttonToCompare.symb == topButThreeTemp!.symb){
                 correctAns()
             } else{
                 incorrectAns()
@@ -202,7 +203,7 @@ class GenerateButton : BaseLevel {
         }
         
         if runner == 1{
-            if buttonToCompare.labelcolor == topButFourTemp!.labelcolor && buttonToCompare.symb == topButFourTemp!.symb{
+            if (buttonToCompare.back == topButFourTemp!.back) && (buttonToCompare.symb == topButFourTemp!.symb){
                 correctAns()
             } else{
                 incorrectAns()
@@ -232,14 +233,14 @@ class GenerateButton : BaseLevel {
         }
         
         if runner == 4{
-            if buttonToCompare.back == topButOneTemp!.back && buttonToCompare.symb == topButOneTemp!.symb{
+            if (buttonToCompare.back == topButOneTemp!.back) && (buttonToCompare.symb == topButOneTemp!.symb){
                 changeTrueOrNot()
             }
         }
         
         
         if runner == 3{
-            if buttonToCompare.back == topButTwoTemp!.back && buttonToCompare.symb == topButTwoTemp!.symb{
+            if (buttonToCompare.back == topButTwoTemp!.back) && (buttonToCompare.symb == topButTwoTemp!.symb){
                 changeTrueOrNot()
             }
         }
