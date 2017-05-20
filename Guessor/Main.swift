@@ -76,8 +76,10 @@ extension BaseLevel {
         
         // compare button gets info from top buttons
 
-        compare.getButtonInfo(button1, green1Temp: topOneGreenColor, topButTwo: button2, green2Temp: topTwoGreenColor, topButThree: button3, green3Temp: topThreeGreenColor, topButFour: button4, green4Temp: topFourGreenColor)
-                
+        compare.getButtonInfo(topButton1, green1Temp: topOneGreenColor, topButTwo: topButton2, green2Temp: topTwoGreenColor, topButThree: topButton3, green3Temp: topThreeGreenColor, topButFour: topButton4, green4Temp: topFourGreenColor)
+        
+
+        
         
     }
     
@@ -146,8 +148,8 @@ extension BaseLevel {
         
         // if two correct answers at once
         
-        //if button1.back == button1.back
-        //button1.back = 0
+        //if topButton1.back == topButton1.back
+        //topButton1.back = 0
         
 
         print("run is: \(compare.runner)")

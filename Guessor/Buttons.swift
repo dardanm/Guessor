@@ -16,27 +16,27 @@ extension BaseLevel {
     func generateTopAndBottomButtons(){
         
         // top buttons
-        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-        button1.randomColor(self.topOneLabelColor)
-        button2.randomColor(self.topTwoLabelColor)
-        button3.randomColor(self.topThreeLabelColor)
-        button4.randomColor(self.topFourLabelColor)
+        topButton1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
+        topButton2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
+        topButton3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
+        topButton4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
+        topButton1.randomColor(self.topOneLabelColor)
+        topButton2.randomColor(self.topTwoLabelColor)
+        topButton3.randomColor(self.topThreeLabelColor)
+        topButton4.randomColor(self.topFourLabelColor)
         
         while
-        ( (button1.symb == button2.symb) || (button2.symb == button3.symb) ||
-          (button3.symb == button4.symb))
+        ( (topButton1.symb == topButton2.symb) || (topButton2.symb == topButton3.symb) ||
+          (topButton3.symb == topButton4.symb))
         {
-        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-        button1.randomColor(self.topOneLabelColor)
-        button2.randomColor(self.topTwoLabelColor)
-        button3.randomColor(self.topThreeLabelColor)
-        button4.randomColor(self.topFourLabelColor)
+        topButton1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
+        topButton2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
+        topButton3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
+        topButton4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
+        topButton1.randomColor(self.topOneLabelColor)
+        topButton2.randomColor(self.topTwoLabelColor)
+        topButton3.randomColor(self.topThreeLabelColor)
+        topButton4.randomColor(self.topFourLabelColor)
         }
         
         // bottom buttons
@@ -64,34 +64,38 @@ extension BaseLevel {
     func generateTopButtons(){
         
         // top buttons
-        button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-        button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-        button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-        button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-        button1.randomColor(self.topOneLabelColor)
-        button2.randomColor(self.topTwoLabelColor)
-        button3.randomColor(self.topThreeLabelColor)
-        button4.randomColor(self.topFourLabelColor)
+        topButton1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
+        topButton2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
+        topButton3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
+        topButton4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
+        topButton1.randomColor(self.topOneLabelColor)
+        topButton2.randomColor(self.topTwoLabelColor)
+        topButton3.randomColor(self.topThreeLabelColor)
+        topButton4.randomColor(self.topFourLabelColor)
         
         
         while
-            ( (button1.symb == button2.symb) || (button2.symb == button3.symb) ||
-                (button3.symb == button4.symb))
+            ( (topButton1.symb == topButton2.symb) || (topButton2.symb == topButton3.symb) ||
+                (topButton3.symb == topButton4.symb))
         {
-            button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-            button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-            button3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-            button4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-            button1.randomColor(self.topOneLabelColor)
-            button2.randomColor(self.topTwoLabelColor)
-            button3.randomColor(self.topThreeLabelColor)
-            button4.randomColor(self.topFourLabelColor)
+            topButton1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
+            topButton2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
+            topButton3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
+            topButton4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
+            topButton1.randomColor(self.topOneLabelColor)
+            topButton2.randomColor(self.topTwoLabelColor)
+            topButton3.randomColor(self.topThreeLabelColor)
+            topButton4.randomColor(self.topFourLabelColor)
         }
         
     }
     
     func generateBottomButtons(){
         // bottom buttons
+        while
+            ( (topButton1.symb == topButton2.symb) || (topButton2.symb == topButton3.symb) ||
+                (topButton3.symb == topButton4.symb))
+        {
         botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
         botButton1.randomColorBottom(self.botOneButtonColor)
         botButton2.randomImage(self.caneB2, candy: self.candyB2, pop: self.popB2)
@@ -110,6 +114,7 @@ extension BaseLevel {
         botButton8.randomColorBottom(self.botEightButtonColor)
         botButton9.randomImage(self.caneB9, candy: self.candyB9, pop: self.popB9)
         botButton9.randomColorBottom(self.botNineButtonColor)
+        }
     }
 
     
