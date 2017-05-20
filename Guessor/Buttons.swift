@@ -26,9 +26,8 @@ extension BaseLevel {
         button4.randomColor(self.topFourLabelColor)
         
         while
-        ( (button1.back,button1.symb) == (button2.back,button2.symb) &&
-          (button2.back,button2.symb) == (button3.back,button3.symb) &&
-          (button3.back,button3.symb) == (button4.back,button4.symb))
+        ( (button1.symb == button2.symb) || (button2.symb == button3.symb) ||
+          (button3.symb == button4.symb))
         {
         button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
         button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
@@ -74,10 +73,10 @@ extension BaseLevel {
         button3.randomColor(self.topThreeLabelColor)
         button4.randomColor(self.topFourLabelColor)
         
+        
         while
-        ( (button1.back,button1.symb) == (button2.back,button2.symb) &&
-          (button2.back,button2.symb) == (button3.back,button3.symb) &&
-          (button3.back,button3.symb) == (button4.back,button4.symb))
+            ( (button1.symb == button2.symb) || (button2.symb == button3.symb) ||
+                (button3.symb == button4.symb))
         {
             button1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
             button2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)

@@ -18,7 +18,7 @@ class GenerateButton : BaseLevel {
     var greentop2: UILabel?
     var greentop3: UILabel?
     var greentop4: UILabel?
-    
+
     var symb:Int = 0
     var back:Int = 0
     var labelcolor:UILabel?
@@ -79,7 +79,7 @@ class GenerateButton : BaseLevel {
         default: back = 10
         }
         if back == 1 {
-            labelcolor.backgroundColor = UIColor(netHex: 0x99e1c3)
+            labelcolor.backgroundColor = UIColor(netHex: 0x857AFF)
         }
         if back == 2 {
             labelcolor.backgroundColor = UIColor(netHex: 0xf7b220)
@@ -102,7 +102,7 @@ class GenerateButton : BaseLevel {
         default: back = 10
         }
         if back == 1 {
-            labelcolor.backgroundColor = UIColor(netHex: 0x99e1c3)
+            labelcolor.backgroundColor = UIColor(netHex: 0x857AFF)
         }
         if back == 2 {
             labelcolor.backgroundColor = UIColor(netHex: 0xf7b220)

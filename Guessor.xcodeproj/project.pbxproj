@@ -22,7 +22,6 @@
 		DC539F5C1CB6DC5D00211970 /* background12@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F581CB6DC5D00211970 /* background12@2x.jpg */; };
 		DC539F641CB6E59200211970 /* background16@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F631CB6E59200211970 /* background16@2x.jpg */; };
 		DC539F681CB6E9D000211970 /* background18@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F671CB6E9D000211970 /* background18@2x.jpg */; };
-		DC539F6C1CB6F55D00211970 /* Buttons2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC539F6B1CB6F55D00211970 /* Buttons2.swift */; };
 		DC539F701CB71AF100211970 /* background20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC539F6F1CB71AF100211970 /* background20@2x.png */; };
 		DC57516E1CBD817300257E47 /* GenerateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57516D1CBD817300257E47 /* GenerateButton.swift */; };
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
@@ -63,7 +62,6 @@
 		DC539F581CB6DC5D00211970 /* background12@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background12@2x.jpg"; path = "Guessor/background12@2x.jpg"; sourceTree = "<group>"; };
 		DC539F631CB6E59200211970 /* background16@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background16@2x.jpg"; path = "Guessor/background16@2x.jpg"; sourceTree = "<group>"; };
 		DC539F671CB6E9D000211970 /* background18@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background18@2x.jpg"; path = "Guessor/background18@2x.jpg"; sourceTree = "<group>"; };
-		DC539F6B1CB6F55D00211970 /* Buttons2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons2.swift; sourceTree = "<group>"; };
 		DC539F6F1CB71AF100211970 /* background20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background20@2x.png"; path = "Guessor/background20@2x.png"; sourceTree = "<group>"; };
 		DC57516D1CBD817300257E47 /* GenerateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateButton.swift; sourceTree = "<group>"; };
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				DC0C51481CA5C67200925709 /* Main.swift */,
 				DCAAC8BF1C9E338D000F5C99 /* CoreOptions.swift */,
 				DCAAC8C11C9E3494000F5C99 /* Buttons.swift */,
-				DC539F6B1CB6F55D00211970 /* Buttons2.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
 				DC9CE1D71CA7883800817C02 /* Notes */,
 			);
@@ -304,7 +301,6 @@
 			files = (
 				DCAAC8C41C9E3572000F5C99 /* Audio.swift in Sources */,
 				DCAAC8C21C9E3494000F5C99 /* Buttons.swift in Sources */,
-				DC539F6C1CB6F55D00211970 /* Buttons2.swift in Sources */,
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
