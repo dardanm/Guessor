@@ -92,10 +92,14 @@ extension BaseLevel {
     
     func generateBottomButtons(){
         // bottom buttons
-        while
-            ( (topButton1.symb == topButton2.symb) || (topButton2.symb == topButton3.symb) ||
-                (topButton3.symb == topButton4.symb))
-        {
+        
+        // MAKE IT SO THAT ONLY ONE OF THE BOTTOM BUTTONS WILL MATCH TOP BUTTON,
+        // STARTING WITH BUTTON #1
+//        while(
+//        (botButton1.symb == topButton2.symb) && (topButton2.symb == topButton3.symb) ||
+//        (topButton3.symb == topButton4.symb)
+//        )
+//        {
         botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
         botButton1.randomColorBottom(self.botOneButtonColor)
         botButton2.randomImage(self.caneB2, candy: self.candyB2, pop: self.popB2)
@@ -114,7 +118,7 @@ extension BaseLevel {
         botButton8.randomColorBottom(self.botEightButtonColor)
         botButton9.randomImage(self.caneB9, candy: self.candyB9, pop: self.popB9)
         botButton9.randomColorBottom(self.botNineButtonColor)
-        }
+        
     }
 
     
