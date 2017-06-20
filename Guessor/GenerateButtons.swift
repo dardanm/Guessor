@@ -12,7 +12,7 @@ import AVFoundation
 import QuartzCore
 
 
-class GenerateButton : BaseLevel {
+class GenerateButtons : BaseLevel {
 
     var greentop1: UILabel?
     var greentop2: UILabel?
@@ -30,10 +30,10 @@ class GenerateButton : BaseLevel {
     
     var runner: Int = 4
 
-    var topButOneTemp:GenerateButton?
-    var topButTwoTemp:GenerateButton?
-    var topButThreeTemp:GenerateButton?
-    var topButFourTemp:GenerateButton?
+    var topButOneTemp:GenerateButtons?
+    var topButTwoTemp:GenerateButtons?
+    var topButThreeTemp:GenerateButtons?
+    var topButFourTemp:GenerateButtons?
     var green1:UILabel?
     var green2:UILabel?
     var green3:UILabel?
@@ -115,7 +115,7 @@ class GenerateButton : BaseLevel {
         }
     }
     
-    func getButtonInfo(_ topButOne:GenerateButton, green1Temp:UILabel, topButTwo:GenerateButton, green2Temp:UILabel,  topButThree:GenerateButton, green3Temp:UILabel, topButFour:GenerateButton, green4Temp:UILabel){
+    func getButtonInfo(_ topButOne:GenerateButtons, green1Temp:UILabel, topButTwo:GenerateButtons, green2Temp:UILabel,  topButThree:GenerateButtons, green3Temp:UILabel, topButFour:GenerateButtons, green4Temp:UILabel){
         topButOneTemp = topButOne
         topButTwoTemp = topButTwo
         topButThreeTemp = topButThree
@@ -148,7 +148,7 @@ class GenerateButton : BaseLevel {
 
     }
     
-//    func checkIfGreen(buttonToCompare:GenerateButton) -> Bool{
+//    func checkIfGreen(buttonToCompare:GenerateButtons) -> Bool{
 //    
 //        
 //        return false
@@ -156,7 +156,7 @@ class GenerateButton : BaseLevel {
     
 
     
-    func compareButtonsDown(_ buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
+    func compareButtonsDown(_ buttonToCompare:GenerateButtons, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
         
         print(buttonToCompare.back)
 
@@ -212,7 +212,7 @@ class GenerateButton : BaseLevel {
 
     } // END compareButtonsDown
     
-    func compareButtonsRelease(_ buttonToCompare:GenerateButton, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
+    func compareButtonsRelease(_ buttonToCompare:GenerateButtons, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
 
         func changeTrueOrNot(){
             if runner == 4{
@@ -279,22 +279,22 @@ class GenerateButton : BaseLevel {
 } // END CLASS
 
 
-var topButton1 = GenerateButton()
-var topButton2 = GenerateButton()
-var topButton3 = GenerateButton()
-var topButton4 = GenerateButton()
+var topButton1 = GenerateButtons()
+var topButton2 = GenerateButtons()
+var topButton3 = GenerateButtons()
+var topButton4 = GenerateButtons()
 
-let botButton1 = GenerateButton()
-let botButton2 = GenerateButton()
-let botButton3 = GenerateButton()
-let botButton4 = GenerateButton()
-let botButton5 = GenerateButton()
-let botButton6 = GenerateButton()
-let botButton7 = GenerateButton()
-let botButton8 = GenerateButton()
-let botButton9 = GenerateButton()
+let botButton1 = GenerateButtons()
+let botButton2 = GenerateButtons()
+let botButton3 = GenerateButtons()
+let botButton4 = GenerateButtons()
+let botButton5 = GenerateButtons()
+let botButton6 = GenerateButtons()
+let botButton7 = GenerateButtons()
+let botButton8 = GenerateButtons()
+let botButton9 = GenerateButtons()
 
-let compare = GenerateButton()
+let compare = GenerateButtons()
 
-var tempButton = GenerateButton()
+var tempButton = GenerateButtons()
 
