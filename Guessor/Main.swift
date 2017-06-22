@@ -30,11 +30,10 @@ extension BaseLevel {
         batteryProgress.progress = UIDevice.current.batteryLevel
         batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 6)
         batteryProgressKeep()
-
         
         // Timer
         progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 10)
-        //startTimer()
+        startTimer()
         
         // "coin" / Coins bar
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 8)
@@ -65,6 +64,7 @@ extension BaseLevel {
         
         generateBottomButtons()
         
+
     }
     
     func batteryProgressKeep(){
@@ -124,6 +124,13 @@ extension BaseLevel {
     
     // timer + timer progress bar
     func update() {
+        
+        if (lives > 0){
+        UIView.animate(withDuration: 0.5) { () -> Void in
+            self.topOneLabelColor.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
+        }
+        }
+
 
         gameFinish()
  
