@@ -52,24 +52,6 @@ extension BaseLevel {
         
     }
     
-    func generateTopButtons2(){
-        
-        while
-            ( (topButton1.symb == topButton2.symb) || (topButton2.symb == topButton3.symb) ||
-                (topButton3.symb == topButton4.symb))
-        {
-            topButton1.randomImage(self.caneN1, candy: self.candyN1, pop: self.popN1)
-            topButton2.randomImage(self.caneN2, candy: self.candyN2, pop: self.popN2)
-            topButton3.randomImage(self.caneN3, candy: self.candyN3, pop: self.popN3)
-            topButton4.randomImage(self.caneN4, candy: self.candyN4, pop: self.popN4)
-            topButton1.randomColor(self.topOneLabelColor)
-            topButton2.randomColor(self.topTwoLabelColor)
-            topButton3.randomColor(self.topThreeLabelColor)
-            topButton4.randomColor(self.topFourLabelColor)
-        }
-        
-    }
-
     
     func generateBottomButtons(){
         botButton1.randomImage(self.caneB1, candy: self.candyB1, pop: self.popB1)
