@@ -80,7 +80,7 @@ extension BaseLevel {
 
             self.startTimer()
         
-            compare.counter = 10
+//            compare.counter = 10
             self.updateTimerBar()
             self.countDownLabel.text = "\(self.count)"
         

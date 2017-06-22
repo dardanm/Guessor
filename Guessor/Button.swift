@@ -33,6 +33,14 @@ class Button {
         
     }
     
+    init(buttonBackground:UIButton, buttonCane:UIImageView, buttonCandy:UIImageView, buttonPop:UIImageView) {
+        
+        self.randomImage(cane: buttonCane, candy: buttonCandy, pop: buttonPop)
+        self.randomColor(buttonBackground)
+        
+    }
+
+    
     
     // BACKGROUND COLOR
     func randomColor(_ labelcolor:UILabel){
@@ -51,6 +59,25 @@ class Button {
             labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
         }
     }
+    
+    // BACKGROUND COLOR
+    func randomColor(_ labelcolor:UIButton){
+        
+        back = randomize()
+        if back == 1 {
+            labelcolor.backgroundColor = UIColor(netHex: 0x857AFF)
+        }
+        if back == 2 {
+            labelcolor.backgroundColor = UIColor(netHex: 0xf7b220)
+        }
+        if back == 3 {
+            labelcolor.backgroundColor = UIColor(netHex: 0xf77c2c)
+        }
+        if back == 4 {
+            labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
+        }
+    }
+
     
     // Update top button image
     func randomImage(cane:UIImageView, candy:UIImageView, pop:UIImageView){

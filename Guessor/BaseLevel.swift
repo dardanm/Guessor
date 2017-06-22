@@ -14,6 +14,15 @@ import CoreData
 
 class BaseLevel: UIViewController{
 
+    var topButtonUno: Button?
+    var topButtonDos: Button?
+    var topButtonTres: Button?
+    var topButtonCuatro: Button?
+    
+    var botButtonUno: Button?
+    var botButtonDos: Button?
+    var botButtonTres: Button?
+    
 
     var temp:Double = 0
     
@@ -29,32 +38,6 @@ class BaseLevel: UIViewController{
     @IBOutlet var topTwoLabelColor: UILabel!
     @IBOutlet var topThreeLabelColor: UILabel!
     @IBOutlet var topFourLabelColor: UILabel!
-    
-    // top buttons red/wrong background
-    @IBOutlet var topOneRedColor: UILabel!
-    @IBOutlet var topTwoRedColor: UILabel!
-    @IBOutlet var topThreeRedColor: UILabel!
-    @IBOutlet var topFourRedColor: UILabel!
-    
-    // top buttons green/correct background
-    @IBOutlet var topOneGreenColor: UILabel!
-    @IBOutlet var topTwoGreenColor: UILabel!
-    @IBOutlet var topThreeGreenColor: UILabel!
-    @IBOutlet var topFourGreenColor: UILabel!
-
-    // top buttons left small numbers
-    // 1
-    @IBOutlet var topSmallOneColor: UILabel!
-    @IBOutlet var topSmallOneSymbol: UILabel!
-    // 2
-    @IBOutlet var topSmallTwoColor: UILabel!
-    @IBOutlet var topSmallTwoSymbol: UILabel!
-    // 3
-    @IBOutlet var topSmallThreeColor: UILabel!
-    @IBOutlet var topSmallThreeSymbol: UILabel!
-    // 4
-    @IBOutlet var topSmallFourColor: UILabel!
-    @IBOutlet var topSmallFourSymbol: UILabel!
     
     // top buttons white background
     // 1
@@ -74,7 +57,6 @@ class BaseLevel: UIViewController{
     // 3
     @IBOutlet var pipe3: UILabel!
     
-    
     // bottom buttons background
     @IBOutlet var botOneButtonColor: UIButton!
     @IBOutlet var botTwoButtonColor: UIButton!
@@ -85,29 +67,6 @@ class BaseLevel: UIViewController{
     @IBOutlet var botSevenButtonColor: UIButton!
     @IBOutlet var botEightButtonColor: UIButton!
     @IBOutlet var botNineButtonColor: UIButton!
-    
-    // bottom buttons red/wrong background
-    @IBOutlet var botOneRedColor: UILabel!
-    @IBOutlet var botTwoRedColor: UILabel!
-    @IBOutlet var botThreeRedColor: UILabel!
-    @IBOutlet var botFourRedColor: UILabel!
-    @IBOutlet var botFiveRedColor: UILabel!
-    @IBOutlet var botSixRedColor: UILabel!
-    @IBOutlet var botSevenRedColor: UILabel!
-    @IBOutlet var botEightRedColor: UILabel!
-    @IBOutlet var botNineRedColor: UILabel!
-    
-    // bottom buttons green/correct background
-    @IBOutlet var botOneGreenColor: UILabel!
-    @IBOutlet var botTwoGreenColor: UILabel!
-    @IBOutlet var botThreeGreenColor: UILabel!
-    @IBOutlet var botFourGreenColor: UILabel!
-    @IBOutlet var botFiveGreenColor: UILabel!
-    @IBOutlet var botSixGreenColor: UILabel!
-    @IBOutlet var botSevenGreenColor: UILabel!
-    @IBOutlet var botEightGreenColor: UILabel!
-    @IBOutlet var botNineGreenColor: UILabel!
-    
     
     // background for buttons and top
     @IBOutlet var topBackground: UILabel!
@@ -322,98 +281,6 @@ class BaseLevel: UIViewController{
 
     }
 
-    
-    
-    // BUTTON #1 PRESS
-    @IBAction func buttonOneDown(_ sender: AnyObject){
-        
-        compare.compareButtonsDown(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
-    }
-    // BUTTON #1 - RELEASE
-    @IBAction func buttonOneRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton1, buttonColor:botOneButtonColor, buttonGreen:botOneGreenColor, buttonRed:botOneRedColor)
-    }
-    
-    
-    // BUTTON #2 PRESS
-    @IBAction func buttonTwoDown(_ sender: AnyObject) {
-                compare.compareButtonsDown(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botTwoGreenColor, buttonRed:botTwoRedColor)
-    }
-    // BUTTON #2 - RELEASE
-    @IBAction func buttonTwoRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton2, buttonColor:botTwoButtonColor, buttonGreen:botTwoGreenColor, buttonRed:botTwoRedColor)
-    }
-    
-    
-    // BUTTON #3 PRESS
-    @IBAction func buttonThreeDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botThreeGreenColor, buttonRed:botThreeRedColor)
-    }
-    // BUTTON #3 - RELEASE
-    @IBAction func buttonThreeRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton3, buttonColor:botThreeButtonColor, buttonGreen:botThreeGreenColor, buttonRed:botThreeRedColor)
-    }
-    
-    
-    // BUTTON #4 PRESS
-    @IBAction func buttonFourDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton4, buttonColor:botFourButtonColor, buttonGreen:botFourGreenColor, buttonRed:botFourRedColor)
-    }
-    // BUTTON #4 - RELEASE
-    @IBAction func buttonFourRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton4, buttonColor:botFourButtonColor, buttonGreen:botFourGreenColor, buttonRed:botFourRedColor)
-    }
-    
-    
-    // BUTTON #5 PRESS
-    @IBAction func buttonFiveDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botFiveGreenColor, buttonRed:botFiveRedColor)
-    }
-    // BUTTON #5 - RELEASE
-    @IBAction func buttonFiveRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton5, buttonColor:botFiveButtonColor, buttonGreen:botFiveGreenColor, buttonRed:botFiveRedColor)
-    }
-    
-    
-    // BUTTON #6 PRESS
-    @IBAction func buttonSixDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton6, buttonColor:botSixButtonColor, buttonGreen:botSixGreenColor, buttonRed:botSixRedColor)
-    }
-    // BUTTON #6 - RELEASE
-    @IBAction func buttonSixRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton6, buttonColor:botSixButtonColor, buttonGreen:botSixGreenColor, buttonRed:botSixRedColor)
-    }
-    
-    
-    // BUTTON #7 PRESS
-    @IBAction func buttonSevenDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botSevenGreenColor, buttonRed:botSevenRedColor)
-    }
-    // BUTTON #7 - RELEASE
-    @IBAction func buttonSevenRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton7, buttonColor:botSevenButtonColor, buttonGreen:botSevenGreenColor, buttonRed:botSevenRedColor)
-    }
-    
-    
-    // BUTTON #8 PRESS
-    @IBAction func buttonEightDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton8, buttonColor:botEightButtonColor, buttonGreen:botEightGreenColor, buttonRed:botEightRedColor)
-    }
-    // BUTTON #8 - RELEASE
-    @IBAction func buttonEightRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton8, buttonColor:botEightButtonColor, buttonGreen:botEightGreenColor, buttonRed:botEightRedColor)
-    }
-    
-    
-    // BUTTON #9 PRESS
-    @IBAction func buttonNineDown(_ sender: AnyObject) {
-        compare.compareButtonsDown(botButton9, buttonColor:botNineButtonColor, buttonGreen:botNineGreenColor, buttonRed:botNineRedColor)
-    }
-    // BUTTON #9 - RELEASE
-    @IBAction func buttonNineRelease(_ sender: AnyObject) {
-        compare.compareButtonsRelease(botButton9, buttonColor:botNineButtonColor, buttonGreen:botNineGreenColor, buttonRed:botNineRedColor)
-    }
-    
     
     // when back button is pressed, stop background music
     @IBAction func backOption(_ sender: AnyObject) {

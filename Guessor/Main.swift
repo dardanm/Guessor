@@ -12,12 +12,9 @@ import QuartzCore
 
 extension BaseLevel {
     
-
+    
     
     // ========= MAIN
-    
-    
-    
     
     override func viewDidLoad()
     {
@@ -27,8 +24,6 @@ extension BaseLevel {
         
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
         
-        // TO-DO LIST
-        // ** pause game when home button is pressed
         
         // Battery
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -37,14 +32,12 @@ extension BaseLevel {
         batteryProgressKeep()
 
         
-        
         // Timer
         progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 10)
-        startTimer()
+        //startTimer()
         
         // "coin" / Coins bar
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 8)
-//        levelProgressBar.progress = 0.0
         
         // Coundown timer color
         countDownLabel.textColor = UIColor(netHex: 0xf36723)
@@ -54,33 +47,25 @@ extension BaseLevel {
         lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
         lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
-        // Hide status bar
-        // prefersStatusBarHidden
         
         // Set firstNUmber as first to check button
         runOrNot = 4
 
-        generateTopAndBottomButtons()
-
-        
         // try again
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
-        
-
+    
         runOrNot = 4
 
-
         // Creating button number one
-        var topButtonUno = Button(buttonBackground: topOneLabelColor, buttonCane: caneN1, buttonCandy: candyN1, buttonPop: popN1)
-        print(topButtonUno.back)
-        print(topButtonUno.symb)
-        topButtonUno.makeBackgroundGreen(buttonBackground: topOneLabelColor)
+        topButtonUno = Button(buttonBackground: topOneLabelColor, buttonCane: caneN1, buttonCandy: candyN1, buttonPop: popN1)
+        topButtonDos = Button(buttonBackground: topTwoLabelColor, buttonCane: caneN2, buttonCandy: candyN2, buttonPop: popN2)
+        topButtonTres = Button(buttonBackground: topThreeLabelColor, buttonCane: caneN3, buttonCandy: candyN3, buttonPop: popN3)
+        topButtonCuatro = Button(buttonBackground: topFourLabelColor, buttonCane: caneN4, buttonCandy: candyN4, buttonPop: popN4)
         
+        generateBottomButtons()
         
     }
-    
-
     
     func batteryProgressKeep(){
         
@@ -94,19 +79,19 @@ extension BaseLevel {
     
     func updateTimerBar(){
         
-        progressTimer.progress = Float(compare.counter)/10
-        
-        if (compare.counter == 1 || compare.counter == 2 || compare.counter == 3){
-            countDownLabel.textColor = UIColor(netHex: 0xff0000)
-        }
-        
-        if (compare.counter == 0){
-            countDownLabel.textColor = UIColor(netHex: 0xff0000)
-        }
-        
-        if compare.counter > 3 {
-            countDownLabel.textColor = UIColor(netHex: 0xf36723)
-        }
+//        progressTimer.progress = Float(compare.counter)/10
+//        
+//        if (compare.counter == 1 || compare.counter == 2 || compare.counter == 3){
+//            countDownLabel.textColor = UIColor(netHex: 0xff0000)
+//        }
+//        
+//        if (compare.counter == 0){
+//            countDownLabel.textColor = UIColor(netHex: 0xff0000)
+//        }
+//        
+//        if compare.counter > 3 {
+//            countDownLabel.textColor = UIColor(netHex: 0xf36723)
+//        }
         
     }
     
@@ -142,56 +127,56 @@ extension BaseLevel {
 
         gameFinish()
  
-        if compare.counter > 0 {
-            compare.counter -= 0.75
-        }
-        
-        if compare.counter > 10 {
-            compare.counter = 10
-            self.countDownLabel.text = "\(compare.counter)"
-        }
+//        if compare.counter > 0 {
+//            compare.counter -= 0.75
+//        }
+//        
+//        if compare.counter > 10 {
+//            compare.counter = 10
+//            self.countDownLabel.text = "\(compare.counter)"
+//        }
         
         if scoreKeep == 0{
             runOrNot = 4
         }
         
-        if compare.scoreKeep == 4 {
-            stopTimer()
-            pressCorrectFour()
-            coin += 1
-            coinLabel.text = "\(coin)"
-            compare.counter += 3
-            compare.scoreKeep = 0
-            resetRoll()
-            generateTopButtons()
-        }
+//        if compare.scoreKeep == 4 {
+//            stopTimer()
+//            pressCorrectFour()
+//            coin += 1
+//            coinLabel.text = "\(coin)"
+//            compare.counter += 3
+//            compare.scoreKeep = 0
+//            resetRoll()
+//            generateTopButtons()
+//        }
 
         updateTimerBar()
         updateLivesLeftIcons()
         
-        if compare.counter <= 0 && lives > 0{
-            //            disableButtons()
-            stopTimer()
-            resetRollZeroCount()
-        }
-        
-        // don't remove
-        countDownLabel.text = String(compare.counter)
-
-        if levelProgressBar.progress == 1.0 {
-            levelText += 1
-        }
-        
-        if lives <= 0 {
-            
-            self.countDownLabel.text = "\(compare.counter)"
-            updateTimerBar()
-            stopTimer()
-            //            disableButtons()
-            generateLabel.layer.opacity = 0
-            tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.isEnabled = true
-        }
+//        if compare.counter <= 0 && lives > 0{
+//            //            disableButtons()
+//            stopTimer()
+//            resetRollZeroCount()
+//        }
+//        
+//        // don't remove
+//        countDownLabel.text = String(compare.counter)
+//
+//        if levelProgressBar.progress == 1.0 {
+//            levelText += 1
+//        }
+//        
+//        if lives <= 0 {
+//            
+//            self.countDownLabel.text = "\(compare.counter)"
+//            updateTimerBar()
+//            stopTimer()
+//            //            disableButtons()
+//            generateLabel.layer.opacity = 0
+//            tryAgainLabel.layer.opacity = 1
+//            tryAgainLabel.isEnabled = true
+//        }
         
         if levelProgressBar.progress == 1.0 {
             levelProgressBar.progress = 0.0
@@ -212,34 +197,34 @@ extension BaseLevel {
         
         updateLivesLeftIcons()
         
-        if compare.counter > 10 {
-            compare.counter = 10
-            self.countDownLabel.text = "\(compare.counter)"
-        }
-        
-        updateLivesLeftIcons()
-        
-        if compare.counter <= 0 && lives > 0{
-            stopTimer()
-            resetRollZeroCount()
-        }
-        
-        // don't remove
-        countDownLabel.text = String(compare.counter)
-        
-        if levelProgressBar.progress == 1.0 {
-            levelText += 1
-        }
-        
-        if lives <= 0 {
-            
-            self.countDownLabel.text = "\(compare.counter)"
-            updateTimerBar()
-            stopTimer()
-            generateLabel.layer.opacity = 0
-            tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.isEnabled = true
-        }
+//        if compare.counter > 10 {
+//            compare.counter = 10
+//            self.countDownLabel.text = "\(compare.counter)"
+//        }
+//        
+//        updateLivesLeftIcons()
+//        
+//        if compare.counter <= 0 && lives > 0{
+//            stopTimer()
+//            resetRollZeroCount()
+//        }
+//        
+//        // don't remove
+//        countDownLabel.text = String(compare.counter)
+//        
+//        if levelProgressBar.progress == 1.0 {
+//            levelText += 1
+//        }
+//        
+//        if lives <= 0 {
+//            
+//            self.countDownLabel.text = "\(compare.counter)"
+//            updateTimerBar()
+//            stopTimer()
+//            generateLabel.layer.opacity = 0
+//            tryAgainLabel.layer.opacity = 1
+//            tryAgainLabel.isEnabled = true
+//        }
         
         if levelProgressBar.progress == 1.0 {
             levelProgressBar.progress = 0.0
