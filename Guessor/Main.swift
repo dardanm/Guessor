@@ -23,17 +23,6 @@ extension BaseLevel {
     {
         super.viewDidLoad()
         
-
-        // Creating button number one
-        var topButtonUno = TopButton()
-        topButtonUno.randomColor(topOneLabelColor)
-        topButtonUno.randomImage(caneN1, candy: candyN1, pop: popN1)
-        print(topButtonUno.back)
-        print(topButtonUno.symb)
-        
-        
-        
-        
         ///
         
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
@@ -78,23 +67,17 @@ extension BaseLevel {
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
         
-        self.view.backgroundColor = .white
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
 
         runOrNot = 4
-        
-        // compare button gets info from top buttons
 
-        compare.getButtonInfo(topButton1, green1Temp: topOneGreenColor, topButTwo: topButton2, green2Temp: topTwoGreenColor, topButThree: topButton3, green3Temp: topThreeGreenColor, topButFour: topButton4, green4Temp: topFourGreenColor)
-        
 
         // Creating button number one
-        var topButtonUno1 = TopButton()
-        topButtonUno1.randomColor(topOneLabelColor)
-        topButtonUno1.randomImage(caneN1, candy: candyN1, pop: popN1)
-        print(topButtonUno1.back)
-        print(topButtonUno1.symb)
-        topButtonUno1.setImage(cane: caneN1, candy: candyN1, pop: popN1, s: 3)
+        var topButtonUno = Button(buttonBackground: topOneLabelColor, buttonCane: caneN1, buttonCandy: candyN1, buttonPop: popN1)
+        print(topButtonUno.back)
+        print(topButtonUno.symb)
+        topButtonUno.makeBackgroundGreen(buttonBackground: topOneLabelColor)
+        
+        
     }
     
 

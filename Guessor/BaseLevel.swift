@@ -12,7 +12,7 @@ import AVFoundation
 import QuartzCore
 import CoreData
 
-class BaseLevel: UIViewController {
+class BaseLevel: UIViewController{
 
 
     var temp:Double = 0
@@ -245,9 +245,6 @@ class BaseLevel: UIViewController {
     // score
     var scoreTarget:Int = 100
     
-    // switch variable
-    var value = 0
-    
     var runOrNot:Int = 4
     
     // PROGRESS BAR
@@ -421,7 +418,6 @@ class BaseLevel: UIViewController {
     // when back button is pressed, stop background music
     @IBAction func backOption(_ sender: AnyObject) {
         coin = UserDefaults.standard.integer(forKey: "coinKey")
-//        backgroundMusicPlayer.stop()
     }
     
     

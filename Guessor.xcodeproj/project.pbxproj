@@ -44,7 +44,7 @@
 		DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */; };
 		DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */; };
 		DCDE3AD51CAB5FD400C8F559 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */; };
-		F8B00A9B1EFBA57D0025E840 /* TopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B00A9A1EFBA57D0025E840 /* TopButton.swift */; };
+		F8B00A9B1EFBA57D0025E840 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B00A9A1EFBA57D0025E840 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +87,7 @@
 		DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joystix monospace.ttf"; sourceTree = "<group>"; };
 		DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
-		F8B00A9A1EFBA57D0025E840 /* TopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopButton.swift; sourceTree = "<group>"; };
+		F8B00A9A1EFBA57D0025E840 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 				DC90B8551C7966D500CCC033 /* Main.storyboard */,
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
 				DC57516D1CBD817300257E47 /* GenerateButtons.swift */,
-				F8B00A9A1EFBA57D0025E840 /* TopButton.swift */,
+				F8B00A9A1EFBA57D0025E840 /* Button.swift */,
 				DCF94FD81C9F1AE000231CA3 /* Level 1 */,
 				DC5AAD2F1C868083006B8BD3 /* Start.swift */,
 				DC237BB61CB85EBD00DAA111 /* Backgrounds */,
@@ -305,7 +305,7 @@
 				DCAAC8C41C9E3572000F5C99 /* Audio.swift in Sources */,
 				DCAAC8C21C9E3494000F5C99 /* Buttons.swift in Sources */,
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
-				F8B00A9B1EFBA57D0025E840 /* TopButton.swift in Sources */,
+				F8B00A9B1EFBA57D0025E840 /* Button.swift in Sources */,
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
 				DC668B681CB9C3160063ADA5 /* SegueFade.swift in Sources */,

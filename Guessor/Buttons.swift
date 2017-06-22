@@ -74,10 +74,5 @@ extension BaseLevel {
         botButton9.randomColorBottom(self.botNineButtonColor)
         
     }
-
-    
-
-    
-    
     
 }

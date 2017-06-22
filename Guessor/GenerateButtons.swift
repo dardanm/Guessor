@@ -13,6 +13,10 @@ import QuartzCore
 
 
 class GenerateButtons : BaseLevel {
+    
+    // switch variable
+    var value = 0
+
 
     var greentop1: UILabel?
     var greentop2: UILabel?
