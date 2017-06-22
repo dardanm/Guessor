@@ -5,4 +5,5 @@ First iOS apps - mostly messing with... everything.
 
 WIP
 
-Link to preview video with sound: https://streamable.com/aey3i
+Link to preview video with sound: https://youtu.be/gEv4vvfJJYY
+
