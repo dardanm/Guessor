@@ -144,20 +144,6 @@ extension BaseLevel {
     func update() {
 
         gameFinish()
-        
-        
-        // if two correct answers at once
-        
-        //if topButton1.back == topButton1.back
-        //topButton1.back = 0
-        
-
-        print("run is: \(compare.runner)")
-
-        print("count is: \(compare.counter)")
-        
-        print("scoreKeep is: \(compare.scoreKeep)")
-
  
         if compare.counter > 0 {
             compare.counter -= 0.75
@@ -172,15 +158,15 @@ extension BaseLevel {
             runOrNot = 4
         }
         
-        if compare.scoreKeep >= 4 {
-            pressCorrectFour()
+        if compare.scoreKeep == 4 {
             stopTimer()
-            resetRoll()
-            generateTopButtons()
-            compare.scoreKeep = 0
+            pressCorrectFour()
             coin += 1
             coinLabel.text = "\(coin)"
             compare.counter += 3
+            compare.scoreKeep = 0
+            resetRoll()
+            generateTopButtons()
         }
 
         updateTimerBar()
@@ -224,30 +210,19 @@ extension BaseLevel {
     func gameFinish(){
         
         UserDefaults.standard.set(coin, forKey: "coinKey")
-        print("coin: \(coin)")
         coinLabel.text = "\(coin)"
         coin = UserDefaults.standard.integer(forKey: "coinKey")
         
         updateLivesLeftIcons()
-        
-        if scoreKeep == 4 {
-            stopTimer()
-            resetRoll()
-            generateTopButtons()
-            scoreKeep = 0
-            coin += 1
-        }
         
         if compare.counter > 10 {
             compare.counter = 10
             self.countDownLabel.text = "\(compare.counter)"
         }
         
-
         updateLivesLeftIcons()
         
         if compare.counter <= 0 && lives > 0{
-//            disableButtons()
             stopTimer()
             resetRollZeroCount()
         }
@@ -264,7 +239,6 @@ extension BaseLevel {
             self.countDownLabel.text = "\(compare.counter)"
             updateTimerBar()
             stopTimer()
-//            disableButtons()
             generateLabel.layer.opacity = 0
             tryAgainLabel.layer.opacity = 1
             tryAgainLabel.isEnabled = true
@@ -273,8 +247,14 @@ extension BaseLevel {
         if levelProgressBar.progress == 1.0 {
             levelProgressBar.progress = 0.0
         }
-
-
+        
+//        if compare.scoreKeep == 4 {
+//            stopTimer()
+//            resetRoll()
+//            scoreKeep = 0
+//            coin += 1
+//            generateTopButtons2()
+//        }
 
     }
     

@@ -148,17 +148,9 @@ class GenerateButtons : BaseLevel {
 
     }
     
-//    func checkIfGreen(buttonToCompare:GenerateButtons) -> Bool{
-//    
-//        
-//        return false
-//    }
-    
-
-    
     func compareButtonsDown(_ buttonToCompare:GenerateButtons, buttonColor:UIButton, buttonGreen:UILabel, buttonRed:UILabel){
         
-        print(buttonToCompare.back)
+        //print(buttonToCompare.back)
 
         func correctAns(){
             pressButtonCorrectSound()
@@ -269,7 +261,7 @@ class GenerateButtons : BaseLevel {
         }
         }
         
-        print("runner \(runner)")
+//        print("runner \(runner)")
         
     } // END compareButtonsDown
     
