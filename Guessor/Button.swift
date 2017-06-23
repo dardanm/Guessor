@@ -12,11 +12,7 @@ import AVFoundation
 import QuartzCore
 
 class Button {
-    
-    // switch variable
-    //var value = 0
 
-    
     var symb:Int = 1
     var back:Int = 1
     var labelcolor:UILabel?
@@ -81,7 +77,7 @@ class Button {
     
     // Update top button image
     func randomImage(cane:UIImageView, candy:UIImageView, pop:UIImageView){
-        symb = randomize()
+        symb = randomizeSymb()
         if symb == 1 {
             cane.isHidden = false
             candy.isHidden = true
@@ -101,7 +97,7 @@ class Button {
 
     
     func setImage(cane:UIImageView, candy:UIImageView, pop:UIImageView, s:Int){
-        symb = randomize()
+        symb = randomizeSymb()
         
         if symb == 1 {
             cane.isHidden = false
@@ -126,6 +122,12 @@ class Button {
         value = Int(arc4random_uniform(4) + 1)
         return value
     }
+    func randomizeSymb() -> Int{
+        var value = 0
+        value = Int(arc4random_uniform(3) + 1)
+        return value
+    }
+
     
     func makeBackgroundGreen(buttonBackground:UILabel){
         buttonBackground.backgroundColor = UIColor(netHex: 0x96F10D)
@@ -134,13 +136,6 @@ class Button {
     func makeBackgroundRed(buttonBackground:UILabel){
         buttonBackground.backgroundColor = UIColor(netHex: 0xFB5737)
     }
-
-
-    
-
-    
-    
-    
     
     
 } // END CLASS

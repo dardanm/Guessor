@@ -57,12 +57,9 @@ extension BaseLevel {
         runOrNot = 4
 
         // Creating button number one
-        topButtonUno = Button(buttonBackground: topOneLabelColor, buttonCane: caneN1, buttonCandy: candyN1, buttonPop: popN1)
-        topButtonDos = Button(buttonBackground: topTwoLabelColor, buttonCane: caneN2, buttonCandy: candyN2, buttonPop: popN2)
-        topButtonTres = Button(buttonBackground: topThreeLabelColor, buttonCane: caneN3, buttonCandy: candyN3, buttonPop: popN3)
-        topButtonCuatro = Button(buttonBackground: topFourLabelColor, buttonCane: caneN4, buttonCandy: candyN4, buttonPop: popN4)
+
         
-        generateBottomButtons()
+        generateTopAndBottomButtons()
         
 
     }
@@ -96,6 +93,7 @@ extension BaseLevel {
     }
     
     func updateLivesLeftIcons(){
+        
         if lives == 3{
             lifeOne.layer.opacity = 1.0
             lifeTwo.layer.opacity = 1.0
@@ -125,10 +123,20 @@ extension BaseLevel {
     // timer + timer progress bar
     func update() {
         
+        // ANIMATED TOP BUTTONS
         if (lives > 0){
         UIView.animate(withDuration: 0.5) { () -> Void in
-            self.topOneLabelColor.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
+            self.topButtonNumberOne.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
         }
+            UIView.animate(withDuration: 0.5) { () -> Void in
+                self.topButtonNumberTwo.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
+            }
+            UIView.animate(withDuration: 0.5) { () -> Void in
+                self.topButtonNumberThree.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
+            }
+            UIView.animate(withDuration: 0.5) { () -> Void in
+                self.topButtonNumberFour.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
+            }
         }
 
 

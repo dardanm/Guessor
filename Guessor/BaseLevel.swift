@@ -23,9 +23,6 @@ class BaseLevel: UIViewController{
     var botButtonDos: Button?
     var botButtonTres: Button?
     
-
-    var temp:Double = 0
-    
     // level
     @IBOutlet weak var level: UILabel!
 
@@ -34,45 +31,21 @@ class BaseLevel: UIViewController{
     var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
 
     // top numbers background
-    @IBOutlet var topOneLabelColor: UILabel!
-    @IBOutlet var topTwoLabelColor: UILabel!
-    @IBOutlet var topThreeLabelColor: UILabel!
-    @IBOutlet var topFourLabelColor: UILabel!
-    
-    // top buttons white background
-    // 1
-    @IBOutlet var topBigOneColor: UILabel!
-    // 2
-    @IBOutlet var topBigTwoColor: UILabel!
-    // 3
-    @IBOutlet var topBigThreeColor: UILabel!
-    // 4
-    @IBOutlet var topBigFourColor: UILabel!
-    
-    // connecting pipes
-    // 1
-    @IBOutlet var pipe1: UILabel!
-    // 2
-    @IBOutlet var pipe2: UILabel!
-    // 3
-    @IBOutlet var pipe3: UILabel!
+    @IBOutlet var topButtonNumberOne: UILabel!
+    @IBOutlet var topButtonNumberTwo: UILabel!
+    @IBOutlet var topButtonNumberThree: UILabel!
+    @IBOutlet var topButtonNumberFour: UILabel!
     
     // bottom buttons background
-    @IBOutlet var botOneButtonColor: UIButton!
-    @IBOutlet var botTwoButtonColor: UIButton!
-    @IBOutlet var botThreeButtonColor: UIButton!
-    @IBOutlet var botFourButtonColor: UIButton!
-    @IBOutlet var botFiveButtonColor: UIButton!
-    @IBOutlet var botSixButtonColor: UIButton!
-    @IBOutlet var botSevenButtonColor: UIButton!
-    @IBOutlet var botEightButtonColor: UIButton!
-    @IBOutlet var botNineButtonColor: UIButton!
-    
-    // background for buttons and top
-    @IBOutlet var topBackground: UILabel!
-    @IBOutlet var topBackgroundScore: UILabel!
-    @IBOutlet var middleBackground: UILabel!
-    @IBOutlet var bottomBackground: UILabel!
+    @IBOutlet var bottomButtonNumberOne: UIButton!
+    @IBOutlet var bottomButtonNumberTwo: UIButton!
+    @IBOutlet var bottomButtonNumberThree: UIButton!
+    @IBOutlet var bottomButtonNumberFour: UIButton!
+    @IBOutlet var bottomButtonNumberFive: UIButton!
+    @IBOutlet var bottomButtonNumberSix: UIButton!
+    @IBOutlet var bottomButtonNumberSeven: UIButton!
+    @IBOutlet var bottomButtonNumberEight: UIButton!
+    @IBOutlet var bottomButtonNumberNine: UIButton!
     
     // top number pictures
     @IBOutlet var candyN1: UIImageView!
@@ -116,54 +89,8 @@ class BaseLevel: UIViewController{
     @IBOutlet var candyB9: UIImageView!
     @IBOutlet var popB9: UIImageView!
     @IBOutlet var caneB9: UIImageView!
-
-    // create variable symbol for top 4 buttons
-    var topOneSymbol:Int = 0
-    var topTwoSymbol:Int = 0
-    var topThreeSymbol:Int = 0
-    var topFourSymbol:Int = 0
-    
-    // create variable background for top 4 buttons
-    var topOneColorBackground:Int = 0
-    var topTwoColorBackground:Int = 0
-    var topThreeColorBackground:Int = 0
-    var topFourColorBackground:Int = 0
-    
-    // create variable symbol for middle 9 buttons
-    var botOneSymbol:Int = 0
-    var botTwoSymbol:Int = 0
-    var botThreeSymbol:Int = 0
-    var botFourSymbol:Int = 0
-    var botFiveSymbol:Int = 0
-    var botSixSymbol:Int = 0
-    var botSevenSymbol:Int = 0
-    var botEightSymbol:Int = 0
-    var botNineSymbol:Int = 0
-    
-    // create variable symbol for middle 9 buttons
-    var botOneColorBackground:Int = 0
-    var botTwoColorBackground:Int = 0
-    var botThreeColorBackground:Int = 0
-    var botFourColorBackground:Int = 0
-    var botFiveColorBackground:Int = 0
-    var botSixColorBackground:Int = 0
-    var botSevenColorBackground:Int = 0
-    var botEightColorBackground:Int = 0
-    var botNineColorBackground:Int = 0
-    
     
     @IBOutlet weak var batteryProgress: UIProgressView!
-    
-    // initialized bottom buttons
-    var buttonOne:String = "0"
-    var buttonTwo:String = "0"
-    var buttonThree:String = "0"
-    var buttonFour:String = "0"
-    var buttonFive:String = "0"
-    var buttonSix:String = "0"
-    var buttonSeven:String = "0"
-    var buttonEight:String = "0"
-    var buttonNine:String = "0"
     
     // number tracker for real randomizing buttons
     var numberTrackerForRandomizing:Int = 0
