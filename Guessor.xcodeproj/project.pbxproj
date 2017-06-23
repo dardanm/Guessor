@@ -23,7 +23,6 @@
 		DC539F641CB6E59200211970 /* background16@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F631CB6E59200211970 /* background16@2x.jpg */; };
 		DC539F681CB6E9D000211970 /* background18@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC539F671CB6E9D000211970 /* background18@2x.jpg */; };
 		DC539F701CB71AF100211970 /* background20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC539F6F1CB71AF100211970 /* background20@2x.png */; };
-		DC57516E1CBD817300257E47 /* GenerateButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC57516D1CBD817300257E47 /* GenerateButtons.swift */; };
 		DC5AAD301C868083006B8BD3 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AAD2F1C868083006B8BD3 /* Start.swift */; };
 		DC668B641CB987680063ADA5 /* background23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC668B631CB987680063ADA5 /* background23@2x.png */; };
 		DC668B681CB9C3160063ADA5 /* SegueFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC668B671CB9C3160063ADA5 /* SegueFade.swift */; };
@@ -64,7 +63,6 @@
 		DC539F631CB6E59200211970 /* background16@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background16@2x.jpg"; path = "Guessor/background16@2x.jpg"; sourceTree = "<group>"; };
 		DC539F671CB6E9D000211970 /* background18@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "background18@2x.jpg"; path = "Guessor/background18@2x.jpg"; sourceTree = "<group>"; };
 		DC539F6F1CB71AF100211970 /* background20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background20@2x.png"; path = "Guessor/background20@2x.png"; sourceTree = "<group>"; };
-		DC57516D1CBD817300257E47 /* GenerateButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateButtons.swift; sourceTree = "<group>"; };
 		DC5AAD2F1C868083006B8BD3 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		DC668B631CB987680063ADA5 /* background23@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background23@2x.png"; sourceTree = "<group>"; };
 		DC668B671CB9C3160063ADA5 /* SegueFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueFade.swift; path = ../SegueFade.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			children = (
 				DC90B8551C7966D500CCC033 /* Main.storyboard */,
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
-				DC57516D1CBD817300257E47 /* GenerateButtons.swift */,
 				F8B00A9A1EFBA57D0025E840 /* Button.swift */,
 				DCF94FD81C9F1AE000231CA3 /* Level 1 */,
 				DC5AAD2F1C868083006B8BD3 /* Start.swift */,
@@ -309,7 +306,6 @@
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
 				DC668B681CB9C3160063ADA5 /* SegueFade.swift in Sources */,
-				DC57516E1CBD817300257E47 /* GenerateButtons.swift in Sources */,
 				DC0C51491CA5C67200925709 /* Main.swift in Sources */,
 				DC90B8541C7966D500CCC033 /* BaseLevel.swift in Sources */,
 			);
