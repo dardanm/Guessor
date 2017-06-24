@@ -60,6 +60,7 @@ class Button {
     
     func makeBackgroundGreen(buttonBackground:UIButton){
         buttonBackground.backgroundColor = UIColor(netHex: 0x96F10D)
+        
     }
     
     func makeBackgroundRed(buttonBackground:UIButton){

@@ -22,6 +22,12 @@ class BaseLevel: UIViewController{
     var oneButtonBottom: Button?
     var twoButtonBottom: Button?
     var threeButtonBottom: Button?
+    var fourButtonBottom: Button?
+    var fiveButtonBottom: Button?
+    var sixButtonBottom: Button?
+    var sevenButtonBottom: Button?
+    var eightButtonBottom: Button?
+    var nineButtonBottom: Button?
     
     // level
     @IBOutlet weak var level: UILabel!
@@ -171,7 +177,15 @@ class BaseLevel: UIViewController{
         coin = UserDefaults.standard.integer(forKey: "coinKey")
     }
     
+    @IBAction func buttonRelease(_ sender: Any) {
+
+    }
     
+    @IBAction func buttonPress(_ sender: Any) {
+        
+        oneButtonBottom?.makeBackgroundGreen(buttonBackground: bottomButtonNumberOne)
+        
+    }
     
     
 

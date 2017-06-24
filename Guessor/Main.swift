@@ -55,9 +55,6 @@ extension BaseLevel {
         tryAgainLabel.layer.opacity = 0
     
         runOrNot = 4
-
-        // Creating button number one
-
         
         generateTopAndBottomButtons()
         
@@ -94,26 +91,25 @@ extension BaseLevel {
     
     func updateLivesLeftIcons(){
         
+        func allLives(){
+            lifeOne.isHidden = false
+            lifeTwo.isHidden = false
+            lifeThree.isHidden = false
+        }
+        
         if lives == 3{
-            lifeOne.layer.opacity = 1.0
-            lifeTwo.layer.opacity = 1.0
-            lifeThree.layer.opacity = 1.0
+           allLives()
         }
         if lives == 2{
-            lifeOne.layer.opacity = 0.0
-            lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+            allLives()
+            lifeOne.isHidden = true
         }
         if lives == 1{
-            lifeOne.layer.opacity = 0.0
-            lifeTwo.layer.opacity = 0.0
-            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
+            allLives()
+            lifeTwo.isHidden = true
         }
         if lives == 0{
-            lifeOne.layer.opacity = 0.0
-            lifeTwo.layer.opacity = 0.0
-            lifeThree.layer.opacity = 0.0
-        }
+            lifeThree.isHidden = true        }
         if lives > 3{
             lives = 3
         }
