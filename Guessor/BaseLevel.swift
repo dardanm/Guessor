@@ -28,6 +28,9 @@ class BaseLevel: UIViewController{
     var sevenButtonBottom: Button?
     var eightButtonBottom: Button?
     var nineButtonBottom: Button?
+    var tenButtonBottom: Button?
+    var elevenButtonBottom: Button?
+    var twelveButtonBottom: Button?
     
     // level
     @IBOutlet weak var level: UILabel!
@@ -52,6 +55,10 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberSeven: UIButton!
     @IBOutlet var bottomButtonNumberEight: UIButton!
     @IBOutlet var bottomButtonNumberNine: UIButton!
+    @IBOutlet var bottomButtonNumberTen: UIButton!
+    @IBOutlet var bottomButtonNumberEleven: UIButton!
+    @IBOutlet var bottomButtonNumberTwelve: UIButton!
+    
         
     @IBOutlet weak var batteryProgress: UIProgressView!
     

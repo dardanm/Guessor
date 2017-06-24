@@ -44,8 +44,9 @@ class Button {
     
     // Update top button image
     func randomImage(button: UIButton){
+        
         symb = Int(arc4random_uniform(3) + 1)
-        print(symb)
+
         if symb == 1 {
             button.setImage(UIImage(named: "cane.png"), for: UIControlState.normal)
         }

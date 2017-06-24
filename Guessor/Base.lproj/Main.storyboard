@@ -1141,8 +1141,63 @@
                                 <rect key="frame" x="283" y="628" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-ZH-pLd">
+                                <rect key="frame" x="20" y="265" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.66274509803921566" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPress:" destination="i14-yE-1Lw" eventType="touchDown" id="E0H-Lb-9qg"/>
+                                    <action selector="buttonRelease:" destination="i14-yE-1Lw" eventType="touchUpInside" id="zSa-CW-Dyl"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3U-Kr-3bu">
+                                <rect key="frame" x="105" y="265" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.82352941176470584" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-bq-DeW">
+                                <rect key="frame" x="190" y="265" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.79774652775260146" blue="0.61615001567213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc6-uX-v1S">
-                                <rect key="frame" x="49" y="350" width="80" height="80"/>
+                                <rect key="frame" x="275" y="265" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70196078431372544" green="0.78431372549019607" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1159,7 +1214,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXM-Fv-yFd">
-                                <rect key="frame" x="143" y="350" width="80" height="80"/>
+                                <rect key="frame" x="20" y="350" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70196078431372544" green="0.78431372549019607" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1176,7 +1231,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXu-Pt-jpX">
-                                <rect key="frame" x="237" y="350" width="80" height="80"/>
+                                <rect key="frame" x="20" y="435" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.75294117647058822" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1193,7 +1248,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRD-K9-mgK">
-                                <rect key="frame" x="49" y="443" width="80" height="80"/>
+                                <rect key="frame" x="105" y="350" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.66274509803921566" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1210,7 +1265,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYT-P7-Qyf">
-                                <rect key="frame" x="143" y="443" width="80" height="80"/>
+                                <rect key="frame" x="190" y="350" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.66274509803921566" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1227,7 +1282,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBG-ZS-WmE">
-                                <rect key="frame" x="237" y="443" width="80" height="80"/>
+                                <rect key="frame" x="275" y="350" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70196078431372544" green="0.78431372549019607" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1259,7 +1314,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="KBZ-JH-dOE">
-                                <rect key="frame" x="1" y="236" width="375" height="2"/>
+                                <rect key="frame" x="1" y="233" width="375" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="progressTintColor" red="0.96862745100000003" green="0.69803921570000005" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1299,7 +1354,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLU-wt-WE7">
-                                <rect key="frame" x="83" y="73" width="200" height="100"/>
+                                <rect key="frame" x="83" y="93" width="200" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98431372549019602" green="0.3411764705882353" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -1315,51 +1370,26 @@
                                 <rect key="frame" x="30" y="103" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96904855966567993" green="0.69676846265792847" blue="0.12553957104682922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="candy"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0r-tr-Zdj">
                                 <rect key="frame" x="108" y="136" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96904855970000003" green="0.69676846270000004" blue="0.12553957099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="candy"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNx-LJ-N6e">
                                 <rect key="frame" x="189" y="103" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96904855970000003" green="0.69676846270000004" blue="0.12553957099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="candy"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tl-7C-P29">
                                 <rect key="frame" x="271" y="136" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96904855970000003" green="0.69676846270000004" blue="0.12553957099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="candy"/>
                             </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-ZH-pLd">
-                                <rect key="frame" x="49" y="257" width="80" height="80"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qij-tj-KEH">
+                                <rect key="frame" x="105" y="435" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99215686274509807" green="0.66274509803921566" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
-                                <size key="titleShadowOffset" width="4" height="4"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="buttonPress:" destination="i14-yE-1Lw" eventType="touchDown" id="E0H-Lb-9qg"/>
-                                    <action selector="buttonRelease:" destination="i14-yE-1Lw" eventType="touchUpInside" id="zSa-CW-Dyl"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3U-Kr-3bu">
-                                <rect key="frame" x="142" y="257" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93333333333333335" green="0.82352941176470584" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
                                 <size key="titleShadowOffset" width="4" height="4"/>
@@ -1373,10 +1403,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-bq-DeW">
-                                <rect key="frame" x="237" y="257" width="80" height="80"/>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1u-lp-Irk">
+                                <rect key="frame" x="190" y="435" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.79774652775260146" blue="0.61615001567213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfZ-7w-i25">
+                                <rect key="frame" x="275" y="435" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.75294117650000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
                                 <size key="titleShadowOffset" width="4" height="4"/>
@@ -1397,13 +1444,16 @@
                     <connections>
                         <outlet property="batteryProgress" destination="YQw-x6-cMT" id="8KY-Nk-rAM"/>
                         <outlet property="bottomButtonNumberEight" destination="jYT-P7-Qyf" id="8Sj-bx-kSg"/>
+                        <outlet property="bottomButtonNumberEleven" destination="Y1u-lp-Irk" id="P2t-hp-j7a"/>
                         <outlet property="bottomButtonNumberFive" destination="DXM-Fv-yFd" id="Xhl-5f-Inx"/>
                         <outlet property="bottomButtonNumberFour" destination="Sc6-uX-v1S" id="cvJ-4r-Lnc"/>
                         <outlet property="bottomButtonNumberNine" destination="eBG-ZS-WmE" id="gQF-6u-Mef"/>
                         <outlet property="bottomButtonNumberOne" destination="Pb6-ZH-pLd" id="33h-Hd-vS4"/>
                         <outlet property="bottomButtonNumberSeven" destination="VRD-K9-mgK" id="rTD-Ud-gmv"/>
                         <outlet property="bottomButtonNumberSix" destination="gXu-Pt-jpX" id="prQ-DM-IVJ"/>
+                        <outlet property="bottomButtonNumberTen" destination="qij-tj-KEH" id="DXZ-SZ-Svz"/>
                         <outlet property="bottomButtonNumberThree" destination="oyS-bq-DeW" id="Qwr-vB-zxX"/>
+                        <outlet property="bottomButtonNumberTwelve" destination="PfZ-7w-i25" id="x00-LT-wJS"/>
                         <outlet property="bottomButtonNumberTwo" destination="D3U-Kr-3bu" id="hDC-8g-WqS"/>
                         <outlet property="coinLabel" destination="vnf-Cy-RMZ" id="dg2-wm-oxO"/>
                         <outlet property="countDownLabel" destination="REi-2H-LxU" id="cLe-nd-9iJ"/>
@@ -1442,7 +1492,6 @@
         <image name="addlife" width="128" height="128"/>
         <image name="addtime" width="128" height="128"/>
         <image name="block" width="128" height="128"/>
-        <image name="candy" width="128" height="128"/>
         <image name="music" width="128" height="128"/>
     </resources>
 </document>

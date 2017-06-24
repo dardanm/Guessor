@@ -58,8 +58,33 @@ extension BaseLevel {
         
         generateTopAndBottomButtons()
         
+        topButtonNumberOne.tag=1
+        topButtonNumberOne.addTarget(self,action:#selector(buttonClicked),
+                          for:.touchUpInside)
+        topButtonNumberTwo.tag=2
+        topButtonNumberTwo.addTarget(self,action:#selector(buttonClicked),
+                          for:.touchUpInside)
+        topButtonNumberThree.tag=3
+        topButtonNumberThree.addTarget(self,action:#selector(buttonClicked),
+                          for:.touchUpInside)
+        
 
     }
+
+    func buttonClicked(sender:UIButton)
+    {
+        switch sender.tag
+        {
+        case 1: print("1")     //when Button1 is clicked...
+            break
+        case 2: print("2")     //when Button2 is clicked...
+            break
+        case 3: print("3")     //when Button3 is clicked...
+            break
+        default: print("Other...")
+        }
+    }
+
     
     func batteryProgressKeep(){
         
@@ -118,8 +143,7 @@ extension BaseLevel {
     
     // timer + timer progress bar
     func update() {
-
-
+        
         gameFinish()
  
 //        if compare.counter > 0 {

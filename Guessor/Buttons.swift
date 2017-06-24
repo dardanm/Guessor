@@ -47,6 +47,11 @@ extension BaseLevel {
         eightButtonBottom = Button(button: bottomButtonNumberEight)
         nineButtonBottom = Button(button: bottomButtonNumberNine)
         
+        tenButtonBottom = Button(button: bottomButtonNumberTen)
+        elevenButtonBottom = Button(button: bottomButtonNumberEleven)
+        twelveButtonBottom = Button(button: bottomButtonNumberTwelve)
+        
+        
     }
     
 }
