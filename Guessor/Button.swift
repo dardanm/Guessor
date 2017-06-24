@@ -15,78 +15,54 @@ class Button {
 
     var symb:Int = 1
     var back:Int = 1
-    var labelcolor:UILabel?
     
-//    var cane: UIImageView?
-//    var candy: UIImageView?
-//    var pop: UIImageView?
-    var label: UILabel?
-    
-    
-    
-    init(buttonBackground:UIButton) {
+    init(button :UIButton) {
         
-        self.randomColor(buttonBackground)
-        
+        self.randomColor(buttonBackgroundColor: button)
+        self.randomImage(button: button)
         
     }
     
     // BACKGROUND COLOR
-    func randomColor(_ labelcolor:UIButton){
+    func randomColor(buttonBackgroundColor:UIButton){
         
-        back = randomize()
+        back = Int(arc4random_uniform(4) + 1)
         if back == 1 {
-            labelcolor.backgroundColor = UIColor(netHex: 0x857AFF)
+            buttonBackgroundColor.backgroundColor = UIColor(netHex: 0x857AFF)
         }
         if back == 2 {
-            labelcolor.backgroundColor = UIColor(netHex: 0xf7b220)
+            buttonBackgroundColor.backgroundColor = UIColor(netHex: 0xf7b220)
         }
         if back == 3 {
-            labelcolor.backgroundColor = UIColor(netHex: 0xf77c2c)
+            buttonBackgroundColor.backgroundColor = UIColor(netHex: 0xf77c2c)
         }
         if back == 4 {
-            labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
+            buttonBackgroundColor.backgroundColor = UIColor(netHex: 0xa7cfff)
         }
     }
 
     
     // Update top button image
-    func randomImage(){
-        symb = randomizeSymb()
+    func randomImage(button: UIButton){
+        symb = Int(arc4random_uniform(3) + 1)
+        print(symb)
         if symb == 1 {
-            self.
+            button.setImage(UIImage(named: "cane.png"), for: UIControlState.normal)
         }
         if symb == 2 {
-            cane.isHidden = true
-            candy.isHidden = false
-            pop.isHidden = true
+            button.setImage(UIImage(named: "candy.png"), for: UIControlState.normal)
         }
         if symb == 3 {
-            cane.isHidden = true
-            candy.isHidden = true
-            pop.isHidden = false
+            button.setImage(UIImage(named: "pop.png"), for: UIControlState.normal)
         }
     }
 
     
-    // randomize
-    func randomize() -> Int{
-        var value = 0
-        value = Int(arc4random_uniform(4) + 1)
-        return value
-    }
-    func randomizeSymb() -> Int{
-        var value = 0
-        value = Int(arc4random_uniform(3) + 1)
-        return value
-    }
-
-    
-    func makeBackgroundGreen(buttonBackground:UILabel){
+    func makeBackgroundGreen(buttonBackground:UIButton){
         buttonBackground.backgroundColor = UIColor(netHex: 0x96F10D)
     }
     
-    func makeBackgroundRed(buttonBackground:UILabel){
+    func makeBackgroundRed(buttonBackground:UIButton){
         buttonBackground.backgroundColor = UIColor(netHex: 0xFB5737)
     }
     

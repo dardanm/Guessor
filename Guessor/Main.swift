@@ -122,22 +122,6 @@ extension BaseLevel {
     
     // timer + timer progress bar
     func update() {
-        
-        // ANIMATED TOP BUTTONS
-        if (lives > 0){
-        UIView.animate(withDuration: 0.5) { () -> Void in
-            self.topButtonNumberOne.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
-        }
-            UIView.animate(withDuration: 0.5) { () -> Void in
-                self.topButtonNumberTwo.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
-            }
-            UIView.animate(withDuration: 0.5) { () -> Void in
-                self.topButtonNumberThree.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
-            }
-            UIView.animate(withDuration: 0.5) { () -> Void in
-                self.topButtonNumberFour.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 1);
-            }
-        }
 
 
         gameFinish()
