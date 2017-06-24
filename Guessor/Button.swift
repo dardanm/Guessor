@@ -17,43 +17,18 @@ class Button {
     var back:Int = 1
     var labelcolor:UILabel?
     
-    var cane: UIImageView?
-    var candy: UIImageView?
-    var pop: UIImageView?
+//    var cane: UIImageView?
+//    var candy: UIImageView?
+//    var pop: UIImageView?
     var label: UILabel?
     
-    init(buttonBackground:UILabel, buttonCane:UIImageView, buttonCandy:UIImageView, buttonPop:UIImageView) {
+    
+    
+    init(buttonBackground:UIButton) {
         
-        self.randomImage(cane: buttonCane, candy: buttonCandy, pop: buttonPop)
         self.randomColor(buttonBackground)
         
-    }
-    
-    init(buttonBackground:UIButton, buttonCane:UIImageView, buttonCandy:UIImageView, buttonPop:UIImageView) {
         
-        self.randomImage(cane: buttonCane, candy: buttonCandy, pop: buttonPop)
-        self.randomColor(buttonBackground)
-        
-    }
-
-    
-    
-    // BACKGROUND COLOR
-    func randomColor(_ labelcolor:UILabel){
-        
-        back = randomize()
-        if back == 1 {
-            labelcolor.backgroundColor = UIColor(netHex: 0x857AFF)
-        }
-        if back == 2 {
-            labelcolor.backgroundColor = UIColor(netHex: 0xf7b220)
-        }
-        if back == 3 {
-            labelcolor.backgroundColor = UIColor(netHex: 0xf77c2c)
-        }
-        if back == 4 {
-            labelcolor.backgroundColor = UIColor(netHex: 0xa7cfff)
-        }
     }
     
     // BACKGROUND COLOR
@@ -76,12 +51,10 @@ class Button {
 
     
     // Update top button image
-    func randomImage(cane:UIImageView, candy:UIImageView, pop:UIImageView){
+    func randomImage(){
         symb = randomizeSymb()
         if symb == 1 {
-            cane.isHidden = false
-            candy.isHidden = true
-            pop.isHidden = true
+            self.
         }
         if symb == 2 {
             cane.isHidden = true
@@ -95,26 +68,6 @@ class Button {
         }
     }
 
-    
-    func setImage(cane:UIImageView, candy:UIImageView, pop:UIImageView, s:Int){
-        symb = randomizeSymb()
-        
-        if symb == 1 {
-            cane.isHidden = false
-            candy.isHidden = true
-            pop.isHidden = true
-        }
-        if symb == 2 {
-            cane.isHidden = true
-            candy.isHidden = false
-            pop.isHidden = true
-        }
-        if symb == 3 {
-            cane.isHidden = true
-            candy.isHidden = true
-            pop.isHidden = false
-        }
-    }
     
     // randomize
     func randomize() -> Int{

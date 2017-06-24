@@ -31,7 +31,8 @@ class BaseLevel: UIViewController{
     var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
 
     // top numbers background
-    @IBOutlet var topButtonNumberOne: UILabel!
+    
+    @IBOutlet weak var topButtonNumberOne: UIButton!
     @IBOutlet var topButtonNumberTwo: UILabel!
     @IBOutlet var topButtonNumberThree: UILabel!
     @IBOutlet var topButtonNumberFour: UILabel!
@@ -46,50 +47,7 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberSeven: UIButton!
     @IBOutlet var bottomButtonNumberEight: UIButton!
     @IBOutlet var bottomButtonNumberNine: UIButton!
-    
-    // top number pictures
-    @IBOutlet var candyN1: UIImageView!
-    @IBOutlet var popN1: UIImageView!
-    @IBOutlet var caneN1: UIImageView!
-    @IBOutlet var candyN2: UIImageView!
-    @IBOutlet var popN2: UIImageView!
-    @IBOutlet var caneN2: UIImageView!
-    @IBOutlet var candyN3: UIImageView!
-    @IBOutlet var popN3: UIImageView!
-    @IBOutlet var caneN3: UIImageView!
-    @IBOutlet var candyN4: UIImageView!
-    @IBOutlet var popN4: UIImageView!
-    @IBOutlet var caneN4: UIImageView!
-    
-    //bottom buttons pictures
-    @IBOutlet var candyB1: UIImageView!
-    @IBOutlet var popB1: UIImageView!
-    @IBOutlet var caneB1: UIImageView!
-    @IBOutlet var candyB2: UIImageView!
-    @IBOutlet var popB2: UIImageView!
-    @IBOutlet var caneB2: UIImageView!
-    @IBOutlet var candyB3: UIImageView!
-    @IBOutlet var popB3: UIImageView!
-    @IBOutlet var caneB3: UIImageView!
-    @IBOutlet var candyB4: UIImageView!
-    @IBOutlet var popB4: UIImageView!
-    @IBOutlet var caneB4: UIImageView!
-    @IBOutlet var candyB5: UIImageView!
-    @IBOutlet var popB5: UIImageView!
-    @IBOutlet var caneB5: UIImageView!
-    @IBOutlet var candyB6: UIImageView!
-    @IBOutlet var popB6: UIImageView!
-    @IBOutlet var caneB6: UIImageView!
-    @IBOutlet var candyB7: UIImageView!
-    @IBOutlet var popB7: UIImageView!
-    @IBOutlet var caneB7: UIImageView!
-    @IBOutlet var candyB8: UIImageView!
-    @IBOutlet var popB8: UIImageView!
-    @IBOutlet var caneB8: UIImageView!
-    @IBOutlet var candyB9: UIImageView!
-    @IBOutlet var popB9: UIImageView!
-    @IBOutlet var caneB9: UIImageView!
-    
+        
     @IBOutlet weak var batteryProgress: UIProgressView!
     
     // number tracker for real randomizing buttons

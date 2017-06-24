@@ -26,9 +26,7 @@ extension BaseLevel {
     
     func generateTopButtons(){
         topButtonUno = Button(buttonBackground: topButtonNumberOne, buttonCane: caneN1, buttonCandy: candyN1, buttonPop: popN1)
-        topButtonDos = Button(buttonBackground: topButtonNumberTwo, buttonCane: caneN2, buttonCandy: candyN2, buttonPop: popN2)
-        topButtonTres = Button(buttonBackground: topButtonNumberThree, buttonCane: caneN3, buttonCandy: candyN3, buttonPop: popN3)
-        topButtonCuatro = Button(buttonBackground: topButtonNumberFour, buttonCane: caneN4, buttonCandy: candyN4, buttonPop: popN4)
+
     }
     
     
