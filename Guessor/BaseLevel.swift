@@ -80,11 +80,6 @@ class BaseLevel: UIViewController{
     var backgroundMusicPlayer = AVAudioPlayer()
     var finalCorrect = AVAudioPlayer()
 
-    // top-right life 3
-    @IBOutlet var lifeThree: UILabel!
-    // top-right life 2
-    @IBOutlet var lifeTwo: UILabel!
-    // top-right life 1
     @IBOutlet var lifeOne: UILabel!
     var lives = 3
     

@@ -13,3 +13,7 @@ NOTES
 --- IF NONE OF THE BUTTONS ON TOP MATCH THE BOTTOM,
 --- USE CASES TO RANDOMLY COPY TEXT AND BACKGROUND
 --- FROM TOP
+
+
+Working on method to check if correct button was pressed
+Looking at "find button pressed, if button matches top box x ( = 4) turn green, x--, then turn back to it's older color

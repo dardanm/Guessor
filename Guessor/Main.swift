@@ -28,11 +28,11 @@ extension BaseLevel {
         // Battery
         UIDevice.current.isBatteryMonitoringEnabled = true
         batteryProgress.progress = UIDevice.current.batteryLevel
-        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 6)
+        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 2)
         batteryProgressKeep()
         
         // Timer
-        progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 10)
+        progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 8)
         startTimer()
         
         // "coin" / Coins bar
@@ -43,8 +43,6 @@ extension BaseLevel {
         
         // Lives Color
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
         
         
         // Set firstNUmber as first to check button
@@ -115,29 +113,7 @@ extension BaseLevel {
     }
     
     func updateLivesLeftIcons(){
-        
-        func allLives(){
-            lifeOne.isHidden = false
-            lifeTwo.isHidden = false
-            lifeThree.isHidden = false
-        }
-        
-        if lives == 3{
-           allLives()
-        }
-        if lives == 2{
-            allLives()
-            lifeOne.isHidden = true
-        }
-        if lives == 1{
-            allLives()
-            lifeTwo.isHidden = true
-        }
-        if lives == 0{
-            lifeThree.isHidden = true        }
-        if lives > 3{
-            lives = 3
-        }
+
     }
     
     
