@@ -14,14 +14,14 @@ import CoreData
 
 class BaseLevel: UIViewController{
 
-    var topButtonUno: Button?
-    var topButtonDos: Button?
-    var topButtonTres: Button?
-    var topButtonCuatro: Button?
+    var oneButtonTop: Button?
+    var twoButtonTop: Button?
+    var threeButtonTop: Button?
+    var fourButtonTop: Button?
     
-    var botButtonUno: Button?
-    var botButtonDos: Button?
-    var botButtonTres: Button?
+    var oneButtonBottom: Button?
+    var twoButtonBottom: Button?
+    var threeButtonBottom: Button?
     
     // level
     @IBOutlet weak var level: UILabel!
@@ -29,15 +29,14 @@ class BaseLevel: UIViewController{
     // coin label
     @IBOutlet var coinLabel: UILabel!
     var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
-
-    // top numbers background
     
+    // top buttons
     @IBOutlet weak var topButtonNumberOne: UIButton!
-    @IBOutlet var topButtonNumberTwo: UILabel!
-    @IBOutlet var topButtonNumberThree: UILabel!
-    @IBOutlet var topButtonNumberFour: UILabel!
-    
-    // bottom buttons background
+    @IBOutlet weak var topButtonNumberTwo: UIButton!
+    @IBOutlet weak var topButtonNumberThree: UIButton!
+    @IBOutlet weak var topButtonNumberFour: UIButton!
+
+    // bottom buttons
     @IBOutlet var bottomButtonNumberOne: UIButton!
     @IBOutlet var bottomButtonNumberTwo: UIButton!
     @IBOutlet var bottomButtonNumberThree: UIButton!
