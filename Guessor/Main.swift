@@ -57,9 +57,10 @@ extension BaseLevel {
             bottomButtons[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
         }
         
-//        for i in 0..<bottomButtons.count {
-//            bottomButtons[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchUpInside)
-//        }
+        for i in 0..<bottomButtons.count {
+            bottomButtons[i].addTarget(self, action: #selector(afterRelease), for: .touchUpInside)
+        }
+        
         
         generateTopAndBottomButtons()
 
@@ -70,11 +71,20 @@ extension BaseLevel {
         if runOrNot == runOrNot {
             if (((sender.backgroundColor == topButtons[runOrNot].backgroundColor) &&
                  (sender.currentImage == topButtons[runOrNot].currentImage))){
-                    print("found!")
+                    tempButton = sender
                     topButtons[runOrNot].makeBackgroundGreen()
                     sender.makeBackgroundGreen()
                     runOrNot += 1
             }
+        }
+    }
+    func afterRelease(sender: UIButton){
+        if runOrNot >= 4{
+            generateTopButtons()
+            runOrNot = 0
+        }
+        if sender.backgroundColor ==  UIColor(netHex: 0x96F10D) {
+            sender.randomColorAndImage()
         }
     }
 
@@ -90,145 +100,73 @@ extension BaseLevel {
     
     func updateTimerBar(){
         
-//        progressTimer.progress = Float(compare.counter)/10
-//        
-//        if (compare.counter == 1 || compare.counter == 2 || compare.counter == 3){
-//            countDownLabel.textColor = UIColor(netHex: 0xff0000)
-//        }
-//        
-//        if (compare.counter == 0){
-//            countDownLabel.textColor = UIColor(netHex: 0xff0000)
-//        }
-//        
-//        if compare.counter > 3 {
-//            countDownLabel.textColor = UIColor(netHex: 0xf36723)
-//        }
+        progressTimer.progress = Float(count)/10
+        
+        if (count == 1 || count == 2 || count == 3){
+            countDownLabel.textColor = UIColor(netHex: 0xff0000)
+        }
+        
+        if (count == 0){
+            countDownLabel.textColor = UIColor(netHex: 0xff0000)
+        }
+        
+        if count > 3 {
+            countDownLabel.textColor = UIColor(netHex: 0xf36723)
+        }
         
     }
-    
-    func updateLivesLeftIcons(){
-
-    }
-    
     
     // timer + timer progress bar
     func update() {
         
-        gameFinish()
- 
-//        if compare.counter > 0 {
-//            compare.counter -= 0.75
-//        }
-//        
-//        if compare.counter > 10 {
-//            compare.counter = 10
-//            self.countDownLabel.text = "\(compare.counter)"
-//        }
+        lives = 3
+        
+        if count > 0 {
+            count -= 0.75
+        }
+        
+        if count > 10 {
+            count = 10
+            self.countDownLabel.text = "\(count)"
+        }
         
         if scoreKeep == 0{
             //runOrNot = 4
         }
         
-//        if compare.scoreKeep == 4 {
-//            stopTimer()
-//            pressCorrectFour()
-//            coin += 1
-//            coinLabel.text = "\(coin)"
-//            compare.counter += 3
-//            compare.scoreKeep = 0
-//            resetRoll()
-//            generateTopButtons()
-//        }
-
         updateTimerBar()
-        updateLivesLeftIcons()
         
-//        if compare.counter <= 0 && lives > 0{
-//            //            disableButtons()
-//            stopTimer()
-//            resetRollZeroCount()
-//        }
-//        
-//        // don't remove
-//        countDownLabel.text = String(compare.counter)
-//
-//        if levelProgressBar.progress == 1.0 {
-//            levelText += 1
-//        }
-//        
-//        if lives <= 0 {
-//            
-//            self.countDownLabel.text = "\(compare.counter)"
-//            updateTimerBar()
-//            stopTimer()
-//            //            disableButtons()
-//            generateLabel.layer.opacity = 0
-//            tryAgainLabel.layer.opacity = 1
-//            tryAgainLabel.isEnabled = true
-//        }
+        if count <= 0 && lives > 0{
+            //disableButtons()
+            stopTimer()
+            resetRollZeroCount()
+        }
+        
+        // don't remove
+        countDownLabel.text = String(count)
         
         if levelProgressBar.progress == 1.0 {
-            levelProgressBar.progress = 0.0
+            levelText += 1
         }
-
-
-
-
-    }
-
-    
-    // check if game is finished
-    func gameFinish(){
         
-        UserDefaults.standard.set(coin, forKey: "coinKey")
-        coinLabel.text = "\(coin)"
-        coin = UserDefaults.standard.integer(forKey: "coinKey")
-        
-        updateLivesLeftIcons()
-        
-//        if compare.counter > 10 {
-//            compare.counter = 10
-//            self.countDownLabel.text = "\(compare.counter)"
-//        }
-//        
-//        updateLivesLeftIcons()
-//        
-//        if compare.counter <= 0 && lives > 0{
-//            stopTimer()
-//            resetRollZeroCount()
-//        }
-//        
-//        // don't remove
-//        countDownLabel.text = String(compare.counter)
-//        
-//        if levelProgressBar.progress == 1.0 {
-//            levelText += 1
-//        }
-//        
-//        if lives <= 0 {
-//            
-//            self.countDownLabel.text = "\(compare.counter)"
-//            updateTimerBar()
-//            stopTimer()
-//            generateLabel.layer.opacity = 0
-//            tryAgainLabel.layer.opacity = 1
-//            tryAgainLabel.isEnabled = true
-//        }
+        if lives <= 0 {
+            
+            self.countDownLabel.text = "\(count)"
+            updateTimerBar()
+            stopTimer()
+            //disableButtons()
+            generateLabel.layer.opacity = 0
+            tryAgainLabel.layer.opacity = 1
+            //tryAgainLabel.enabled = true
+        }
         
         if levelProgressBar.progress == 1.0 {
             levelProgressBar.progress = 0.0
         }
         
-//        if compare.scoreKeep == 4 {
-//            stopTimer()
-//            resetRoll()
-//            scoreKeep = 0
-//            coin += 1
-//            generateTopButtons2()
-//        }
-
+        generateBottomButtons()
+        
     }
-    
     
     
 }

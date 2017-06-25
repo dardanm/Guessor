@@ -48,10 +48,8 @@ extension BaseLevel {
         count = 10
 
         self.countDownLabel.text = "\(count)"
-        updateTimerBar()
         
         lives = 3
-        updateLivesLeftIcons()
         
         tryAgainLabel.layer.opacity = 0
     }
@@ -62,7 +60,6 @@ extension BaseLevel {
         startTimer()
 
         count += 2
-        updateTimerBar()
         //self.countDownLabel.text = "\(count)"
         
         if lives >= 1 {
@@ -74,14 +71,12 @@ extension BaseLevel {
     func resetRollZeroCount(){
         
         lives -= 1
-        updateLivesLeftIcons()
         
         if lives > 0{
 
             self.startTimer()
         
 //            compare.counter = 10
-            self.updateTimerBar()
             self.countDownLabel.text = "\(self.count)"
         
         }
@@ -109,7 +104,6 @@ extension BaseLevel {
         // PROGRESS BAR
         progressTimer.progress = progressTimer.progress + 0.1
         countDownLabel.text = String(count)
-        updateTimerBar()
         
     }
     

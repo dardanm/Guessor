@@ -17,6 +17,8 @@ class BaseLevel: UIViewController{
     var symb:Int = 1
     var back:Int = 1
     
+    var tempButton: UIButton?
+    
     // level
     @IBOutlet weak var level: UILabel!
 
@@ -92,7 +94,7 @@ class BaseLevel: UIViewController{
     // add life
     @IBAction func addLifeButton(_ sender: AnyObject) {
         lives += 1
-        updateLivesLeftIcons()
+        //updateLivesLeftIcons()
         print(lives)
     }
     
