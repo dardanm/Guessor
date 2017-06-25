@@ -25,23 +25,22 @@ extension BaseLevel {
     
     
     func generateTopButtons(){
-        oneButtonTop = Button(button: topButtonNumberOne)
-        twoButtonTop = Button(button: topButtonNumberTwo)
-        threeButtonTop = Button(button: topButtonNumberThree)
-        fourButtonTop = Button(button: topButtonNumberFour)
-
+        
+        for i in 0..<topButtons.count {
+            topButtons[i].randomColorAndImage()
+        }
+        
     }
     
     
     func generateBottomButtons(){
-        
-        oneButtonBottom = Button(button: bottomButtonNumberOne)
-        twoButtonBottom = Button(button: bottomButtonNumberTwo)
-        threeButtonBottom = Button(button: bottomButtonNumberThree)
-        
-        fourButtonBottom = Button(button: bottomButtonNumberFour)
-        
+    
+        for i in 0..<bottomButtons.count {
+            bottomButtons[i].randomColorAndImage()
+        }
         
     }
+
+
     
 }

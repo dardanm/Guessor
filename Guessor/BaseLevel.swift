@@ -13,24 +13,6 @@ import QuartzCore
 import CoreData
 
 class BaseLevel: UIViewController{
-
-    var oneButtonTop: Button?
-    var twoButtonTop: Button?
-    var threeButtonTop: Button?
-    var fourButtonTop: Button?
-    
-    var oneButtonBottom: Button?
-    var twoButtonBottom: Button?
-    var threeButtonBottom: Button?
-    var fourButtonBottom: Button?
-    var fiveButtonBottom: Button?
-    var sixButtonBottom: Button?
-    var sevenButtonBottom: Button?
-    var eightButtonBottom: Button?
-    var nineButtonBottom: Button?
-    var tenButtonBottom: Button?
-    var elevenButtonBottom: Button?
-    var twelveButtonBottom: Button?
     
     var symb:Int = 1
     var back:Int = 1
@@ -43,10 +25,10 @@ class BaseLevel: UIViewController{
     var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
     
     // top buttons
-    @IBOutlet weak var topButtonNumberOne: UIButton!
-    @IBOutlet weak var topButtonNumberTwo: UIButton!
-    @IBOutlet weak var topButtonNumberThree: UIButton!
-    @IBOutlet weak var topButtonNumberFour: UIButton!
+    @IBOutlet var topButtonNumberOne: UIButton!
+    @IBOutlet var topButtonNumberTwo: UIButton!
+    @IBOutlet var topButtonNumberThree: UIButton!
+    @IBOutlet var topButtonNumberFour: UIButton!
 
     // bottom buttons
     @IBOutlet var bottomButtonNumberOne: UIButton!
@@ -54,6 +36,8 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberThree: UIButton!
     @IBOutlet var bottomButtonNumberFour: UIButton!
     
+    var topButtons = [UIButton]()
+    var bottomButtons = [UIButton]()
         
     @IBOutlet weak var batteryProgress: UIProgressView!
     

@@ -20,6 +20,9 @@ extension BaseLevel {
     {
         super.viewDidLoad()
         
+        topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
+        bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
+        
         ///
         
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
@@ -43,29 +46,24 @@ extension BaseLevel {
         
         // Lives Color
         lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        
-        
-        // Set firstNUmber as first to check button
-        runOrNot = 4
 
         // try again
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
-    
-        runOrNot = 4
+        
+        for i in 0..<bottomButtons.count {
+            bottomButtons[i].addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        }
         
         generateTopAndBottomButtons()
-        
-        bottomButtonNumberOne.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        bottomButtonNumberTwo.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        bottomButtonNumberThree.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        bottomButtonNumberFour.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
     }
+
     
     func buttonAction(sender: UIButton!) {
         print("Button tapped")
-        sender.backgroundColor = UIColor(netHex: 0x96F10D)
+        sender.randomImage()
+        sender.randomColor()
     }
 
     
