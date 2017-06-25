@@ -56,31 +56,16 @@ extension BaseLevel {
         
         generateTopAndBottomButtons()
         
-        topButtonNumberOne.tag=1
-        topButtonNumberOne.addTarget(self,action:#selector(buttonClicked),
-                          for:.touchUpInside)
-        topButtonNumberTwo.tag=2
-        topButtonNumberTwo.addTarget(self,action:#selector(buttonClicked),
-                          for:.touchUpInside)
-        topButtonNumberThree.tag=3
-        topButtonNumberThree.addTarget(self,action:#selector(buttonClicked),
-                          for:.touchUpInside)
-        
+        bottomButtonNumberOne.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        bottomButtonNumberTwo.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        bottomButtonNumberThree.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        bottomButtonNumberFour.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
     }
-
-    func buttonClicked(sender:UIButton)
-    {
-        switch sender.tag
-        {
-        case 1: print("1")     //when Button1 is clicked...
-            break
-        case 2: print("2")     //when Button2 is clicked...
-            break
-        case 3: print("3")     //when Button3 is clicked...
-            break
-        default: print("Other...")
-        }
+    
+    func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+        sender.backgroundColor = UIColor(netHex: 0x96F10D)
     }
 
     

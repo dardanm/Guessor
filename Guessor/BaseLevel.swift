@@ -32,6 +32,9 @@ class BaseLevel: UIViewController{
     var elevenButtonBottom: Button?
     var twelveButtonBottom: Button?
     
+    var symb:Int = 1
+    var back:Int = 1
+    
     // level
     @IBOutlet weak var level: UILabel!
 
@@ -50,14 +53,6 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberTwo: UIButton!
     @IBOutlet var bottomButtonNumberThree: UIButton!
     @IBOutlet var bottomButtonNumberFour: UIButton!
-    @IBOutlet var bottomButtonNumberFive: UIButton!
-    @IBOutlet var bottomButtonNumberSix: UIButton!
-    @IBOutlet var bottomButtonNumberSeven: UIButton!
-    @IBOutlet var bottomButtonNumberEight: UIButton!
-    @IBOutlet var bottomButtonNumberNine: UIButton!
-    @IBOutlet var bottomButtonNumberTen: UIButton!
-    @IBOutlet var bottomButtonNumberEleven: UIButton!
-    @IBOutlet var bottomButtonNumberTwelve: UIButton!
     
         
     @IBOutlet weak var batteryProgress: UIProgressView!
@@ -185,7 +180,6 @@ class BaseLevel: UIViewController{
     
     @IBAction func buttonPress(_ sender: Any) {
         
-        oneButtonBottom?.makeBackgroundGreen(buttonBackground: bottomButtonNumberOne)
         
     }
     
