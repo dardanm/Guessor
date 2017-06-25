@@ -51,19 +51,31 @@ extension BaseLevel {
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
         
+        // Add targets for bottoms buttons so when they're pressed,
+        // they can be used to watch the top buttons
         for i in 0..<bottomButtons.count {
-            bottomButtons[i].addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            bottomButtons[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
         }
+        
+//        for i in 0..<bottomButtons.count {
+//            bottomButtons[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchUpInside)
+//        }
         
         generateTopAndBottomButtons()
 
     }
 
     
-    func buttonAction(sender: UIButton!) {
-        print("Button tapped")
-        sender.randomImage()
-        sender.randomColor()
+    func checkIfCorrect(sender: UIButton!) {
+        if runOrNot == runOrNot {
+            if (((sender.backgroundColor == topButtons[runOrNot].backgroundColor) &&
+                 (sender.currentImage == topButtons[runOrNot].currentImage))){
+                    print("found!")
+                    topButtons[runOrNot].makeBackgroundGreen()
+                    sender.makeBackgroundGreen()
+                    runOrNot += 1
+            }
+        }
     }
 
     
@@ -74,7 +86,6 @@ extension BaseLevel {
         if UIDevice.current.batteryLevel <= 0.2{
            batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
         }
-        
     }
     
     func updateTimerBar(){
@@ -115,7 +126,7 @@ extension BaseLevel {
 //        }
         
         if scoreKeep == 0{
-            runOrNot = 4
+            //runOrNot = 4
         }
         
 //        if compare.scoreKeep == 4 {

@@ -75,7 +75,7 @@ class BaseLevel: UIViewController{
     // score
     var scoreTarget:Int = 100
     
-    var runOrNot:Int = 4
+    var runOrNot:Int = 0
     
     // PROGRESS BAR
     @IBOutlet var progressTimer: UIProgressView!
@@ -151,28 +151,13 @@ class BaseLevel: UIViewController{
     @IBAction func generateButtonRelease(_ sender: AnyObject) {
 
     }
-
     
     // when back button is pressed, stop background music
     @IBAction func backOption(_ sender: AnyObject) {
         coin = UserDefaults.standard.integer(forKey: "coinKey")
     }
-    
-    @IBAction func buttonRelease(_ sender: Any) {
 
-    }
-    
-    @IBAction func buttonPress(_ sender: Any) {
-        
-        
-    }
-    
-    
-
-    
-    
-
-} // end
+}
 
 
 
