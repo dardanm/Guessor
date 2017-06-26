@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import AVFoundation
 import QuartzCore
+import UIColor_Hex_Swift
+
 
 extension UIButton {
 
@@ -19,16 +21,16 @@ extension UIButton {
         var back = 1
         back = Int(arc4random_uniform(4) + 1)
         if back == 1 {
-            self.backgroundColor = UIColor(netHex: 0x857AFF)
+            self.backgroundColor = UIColor("#857AFF")
         }
         if back == 2 {
-            self.backgroundColor = UIColor(netHex: 0xf7b220)
+            self.backgroundColor = UIColor("#f7b220")
         }
         if back == 3 {
-            self.backgroundColor = UIColor(netHex: 0xf77c2c)
+            self.backgroundColor = UIColor("#f77c2c")
         }
         if back == 4 {
-            self.backgroundColor = UIColor(netHex: 0xa7cfff)
+            self.backgroundColor = UIColor("#a7cfff")
         }
     }
 
@@ -57,12 +59,11 @@ extension UIButton {
 
     
     func makeBackgroundGreen(){
-        self.backgroundColor = UIColor(netHex: 0x96F10D)
-        
+        self.backgroundColor = UIColor("#96F10D")
     }
     
     func makeBackgroundRed(){
-        self.backgroundColor = UIColor(netHex: 0xFB5737)
+        self.backgroundColor = UIColor("#FB5737")
     }
     
     

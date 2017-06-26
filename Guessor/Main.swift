@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import QuartzCore
+import UIColor_Hex_Swift
 
 extension BaseLevel {
     
@@ -38,12 +39,6 @@ extension BaseLevel {
         // "coin" / Coins bar
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 8)
         
-        // Coundown timer color
-        countDownLabel.textColor = UIColor(netHex: 0xf36723)
-        
-        // Lives Color
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-
         // try again
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
@@ -109,7 +104,8 @@ extension BaseLevel {
         batteryProgress.progress = UIDevice.current.batteryLevel
         
         if UIDevice.current.batteryLevel <= 0.2{
-           batteryProgress.progressTintColor = UIColor (netHex: 0xff4f51)
+            
+           batteryProgress.progressTintColor = UIColor ("ff4f51")
         }
     }
     
@@ -118,15 +114,15 @@ extension BaseLevel {
         progressTimer.progress = Float(count)/10
         
         if (count == 1 || count == 2 || count == 3){
-            countDownLabel.textColor = UIColor(netHex: 0xff0000)
+            countDownLabel.textColor = UIColor("ff0000")
         }
         
         if (count == 0){
-            countDownLabel.textColor = UIColor(netHex: 0xff0000)
+            countDownLabel.textColor = UIColor("ff0000")
         }
         
         if count > 3 {
-            countDownLabel.textColor = UIColor(netHex: 0xf36723)
+            countDownLabel.textColor = UIColor("f36723")
         }
         
     }
@@ -174,16 +170,16 @@ extension BaseLevel {
 // EXTRA - OUTSIDE - EXTENSIONS
 
 
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        assert(red >= 0 && red <= 255, "Invalid red component")
-        assert(green >= 0 && green <= 255, "Invalid green component")
-        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    }
-    
-    convenience init(netHex:Int) {
-        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
-    }
-}
+//extension UIColor {
+//    convenience init(red: Int, green: Int, blue: Int) {
+//        assert(red >= 0 && red <= 255, "Invalid red component")
+//        assert(green >= 0 && green <= 255, "Invalid green component")
+//        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+//        
+//        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+//    }
+//    
+//    convenience init(netHex:Int) {
+//        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
+//    }
+//}

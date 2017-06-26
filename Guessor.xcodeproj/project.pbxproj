@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D591738203C63BBDCF4F0F89 /* Pods_Guessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B545EBF16B56A1F6067C53 /* Pods_Guessor.framework */; };
 		DC0633951CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC0633941CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf */; };
 		DC0C51491CA5C67200925709 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C51481CA5C67200925709 /* Main.swift */; };
 		DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC11325F1C83D06600B19DCD /* AppDelegate.swift */; };
@@ -48,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79B545EBF16B56A1F6067C53 /* Pods_Guessor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guessor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1DB0F6F9410615371D9474 /* Pods-Guessor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guessor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Guessor/Pods-Guessor.debug.xcconfig"; sourceTree = "<group>"; };
 		DC0633941CACB832007FBB82 /* Myriad-Pro-Black_31623.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro-Black_31623.ttf"; sourceTree = "<group>"; };
 		DC0C51481CA5C67200925709 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DC11325F1C83D06600B19DCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joystix monospace.ttf"; sourceTree = "<group>"; };
 		DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
+		F031DC9DCC248F8A3686A855 /* Pods-Guessor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guessor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guessor/Pods-Guessor.release.xcconfig"; sourceTree = "<group>"; };
 		F8A1ED9B1EFE36BE0043DE42 /* ControlPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPlay.swift; sourceTree = "<group>"; };
 		F8B00A9A1EFBA57D0025E840 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,12 +100,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC90B8691C7981FC00CCC033 /* AVFoundation.framework in Frameworks */,
+				D591738203C63BBDCF4F0F89 /* Pods_Guessor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B92C66DA4500583F159E79F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF1DB0F6F9410615371D9474 /* Pods-Guessor.debug.xcconfig */,
+				F031DC9DCC248F8A3686A855 /* Pods-Guessor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		33A91C7A56BFFB9A1D40593B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79B545EBF16B56A1F6067C53 /* Pods_Guessor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC237BB61CB85EBD00DAA111 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +152,8 @@
 				DC90B8501C7966D500CCC033 /* Guessor */,
 				DC90B8681C7981FC00CCC033 /* AVFoundation.framework */,
 				DC90B84F1C7966D500CCC033 /* Products */,
+				2B92C66DA4500583F159E79F /* Pods */,
+				33A91C7A56BFFB9A1D40593B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC90B8601C7966D500CCC033 /* Build configuration list for PBXNativeTarget "Guessor" */;
 			buildPhases = (
+				483598828FE43A9A16C0EFB5 /* [CP] Check Pods Manifest.lock */,
 				DC90B84A1C7966D500CCC033 /* Sources */,
 				DC90B84B1C7966D500CCC033 /* Frameworks */,
 				DC90B84C1C7966D500CCC033 /* Resources */,
+				5BDC9C3DDFC37D3710863FB8 /* [CP] Embed Pods Frameworks */,
+				ED2AF22BAD0D1B88125CC4E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +323,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		483598828FE43A9A16C0EFB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5BDC9C3DDFC37D3710863FB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Guessor/Pods-Guessor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED2AF22BAD0D1B88125CC4E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Guessor/Pods-Guessor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC90B84A1C7966D500CCC033 /* Sources */ = {
@@ -412,6 +487,7 @@
 		};
 		DC90B8611C7966D500CCC033 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1DB0F6F9410615371D9474 /* Pods-Guessor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -429,6 +505,7 @@
 		};
 		DC90B8621C7966D500CCC033 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F031DC9DCC248F8A3686A855 /* Pods-Guessor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
