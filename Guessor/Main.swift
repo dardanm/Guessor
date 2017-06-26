@@ -60,6 +60,10 @@ extension BaseLevel {
         }
         
         generateTopAndBottomButtons()
+        
+        // Adding background
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background12@2x.jpg")!)
+
 
     }
 
@@ -70,7 +74,7 @@ extension BaseLevel {
             if (((sender.backgroundColor == topButtons[runOrNot].backgroundColor) &&
                  (sender.currentImage == topButtons[runOrNot].currentImage))){
                     coin += 1
-                    count += 1
+                    count += 2
                     coinLabel.text = "\(coin)"
                     progressTimer.progress = Float(count)/10
                 
@@ -86,7 +90,7 @@ extension BaseLevel {
                     sender.makeBackgroundRed()
                     pressButtonWrongSound()
                     coin -= 2
-                    count -= 0.5
+                    count -= 1
                     coinLabel.text = "\(coin)"
                     progressTimer.progress = Float(count)/10
                 
@@ -147,7 +151,7 @@ extension BaseLevel {
         }
         
         if count > 0 {
-            count -= 0.5
+            count -= 1
         }
         
         if count > 10 {
