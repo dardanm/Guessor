@@ -17,7 +17,8 @@ class BaseLevel: UIViewController{
     var symb:Int = 1
     var back:Int = 1
     
-    var tempButton: UIButton?
+    // Starting from top button 1
+    var correctInARow = 0
     
     // level
     @IBOutlet weak var level: UILabel!
@@ -87,8 +88,10 @@ class BaseLevel: UIViewController{
 
     // add time
     @IBAction func addTimeButton(_ sender: AnyObject) {
-        count += 2
+        count += 5
         countDownLabel.text = "\(count)"
+        coin -= 1
+        coinLabel.text = "\(coin)"
     }
     
     // add life

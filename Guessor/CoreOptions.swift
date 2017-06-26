@@ -83,30 +83,6 @@ extension BaseLevel {
         
     }
     
-    func incorrectAnswer(){
-        pressButtonWrongSound()
-    }
-
-    
-    
-    func correctAnswer(){
-        
-        if scoreKeep <= 3{
-        pressButtonCorrectSound()
-        }
-        
-        if scoreKeep == 4{
-          pressCorrectFour()
-        }
-        
-        updateLevel()
-        
-        // PROGRESS BAR
-        progressTimer.progress = progressTimer.progress + 0.1
-        countDownLabel.text = String(count)
-        
-    }
-    
     func updateLevel(){
         
         if scoreKeep == 4{

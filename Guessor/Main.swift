@@ -23,10 +23,7 @@ extension BaseLevel {
         topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
         bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
         
-        ///
-        
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
-        
         
         // Battery
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -35,7 +32,7 @@ extension BaseLevel {
         batteryProgressKeep()
         
         // Timer
-        progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 8)
+        progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 10)
         startTimer()
         
         // "coin" / Coins bar
@@ -51,6 +48,7 @@ extension BaseLevel {
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
         
+        
         // Add targets for bottoms buttons so when they're pressed,
         // they can be used to watch the top buttons
         for i in 0..<bottomButtons.count {
@@ -61,7 +59,6 @@ extension BaseLevel {
             bottomButtons[i].addTarget(self, action: #selector(afterRelease), for: .touchUpInside)
         }
         
-        
         generateTopAndBottomButtons()
 
     }
@@ -69,23 +66,37 @@ extension BaseLevel {
     
     func checkIfCorrect(sender: UIButton!) {
         if runOrNot == runOrNot {
+            // CORRECT BUTTON PRESSED
             if (((sender.backgroundColor == topButtons[runOrNot].backgroundColor) &&
                  (sender.currentImage == topButtons[runOrNot].currentImage))){
-                    tempButton = sender
-                    topButtons[runOrNot].makeBackgroundGreen()
+                    coin += 1
+                    count += 1
+                    coinLabel.text = "\(coin)"
+                    progressTimer.progress = Float(count)/10
+                
                     sender.makeBackgroundGreen()
+                    topButtons[runOrNot].makeBackgroundGreen()
+                    pressButtonCorrectSound()
+                
                     runOrNot += 1
+                
+                    correctInARow += 1
+            } else {
+            // INCORRECT BUTTON PRESSED
+                    sender.makeBackgroundRed()
+                    pressButtonWrongSound()
+                    coin -= 2
+                    count -= 0.5
+                    coinLabel.text = "\(coin)"
+                    progressTimer.progress = Float(count)/10
+                
+                    correctInARow = 0
             }
         }
     }
+    
     func afterRelease(sender: UIButton){
-        if runOrNot >= 4{
-            generateTopButtons()
-            runOrNot = 0
-        }
-        if sender.backgroundColor ==  UIColor(netHex: 0x96F10D) {
-            sender.randomColorAndImage()
-        }
+
     }
 
     
@@ -118,11 +129,25 @@ extension BaseLevel {
     
     // timer + timer progress bar
     func update() {
-        
+            
         lives = 3
+
+        if runOrNot == 4 && correctInARow != 4 {
+            correctInARow = 0
+        }
+        if runOrNot >= 4{
+            pressCorrectFour()
+            if correctInARow == 4{
+                correctInARow = 0
+                coin += 3
+                coinLabel.text = "\(coin)"
+            }
+            runOrNot = 0
+            generateTopButtons()
+        }
         
         if count > 0 {
-            count -= 0.75
+            count -= 0.5
         }
         
         if count > 10 {
@@ -130,41 +155,12 @@ extension BaseLevel {
             self.countDownLabel.text = "\(count)"
         }
         
-        if scoreKeep == 0{
-            //runOrNot = 4
-        }
-        
         updateTimerBar()
-        
-        if count <= 0 && lives > 0{
-            //disableButtons()
-            stopTimer()
-            resetRollZeroCount()
-        }
         
         // don't remove
         countDownLabel.text = String(count)
-        
-        if levelProgressBar.progress == 1.0 {
-            levelText += 1
-        }
-        
-        if lives <= 0 {
-            
-            self.countDownLabel.text = "\(count)"
-            updateTimerBar()
-            stopTimer()
-            //disableButtons()
-            generateLabel.layer.opacity = 0
-            tryAgainLabel.layer.opacity = 1
-            //tryAgainLabel.enabled = true
-        }
-        
-        if levelProgressBar.progress == 1.0 {
-            levelProgressBar.progress = 0.0
-        }
-        
-        generateBottomButtons()
+
+        generateAtLeastOneMatchBottomButtons()
         
     }
     
