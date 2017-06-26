@@ -1,4 +1,4 @@
-# iOSgithub
+# Guessor
 Swift
 
 First iOS apps - mostly messing with... everything.
