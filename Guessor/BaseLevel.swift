@@ -165,6 +165,7 @@ class BaseLevel: UIViewController{
     }
 
     @IBAction func generateButtonRelease(_ sender: AnyObject) { }
+
     
 }
 

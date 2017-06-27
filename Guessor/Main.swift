@@ -10,12 +10,14 @@ import UIKit
 import AVFoundation
 import QuartzCore
 import UIColor_Hex_Swift
+import SpriteKit
 
 extension BaseLevel {
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
             
         topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
         bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
@@ -56,7 +58,15 @@ extension BaseLevel {
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background12@2x.jpg")!)
         
         gpView.isHidden = true
+        
+        
+        
 
+
+    }
+
+    func poop(){
+        print("poop")
     }
 
     func checkIfCorrect(sender: UIButton!) {
@@ -109,9 +119,9 @@ extension BaseLevel {
         
         progressTimer.progress = Float(count)/10
         
-//        if (count <= 3){
-//            progressTimer.progressTintColor = UIColor("#B24433")
-//        }
+        if (count <= 3){
+            progressTimer.progressTintColor = UIColor("#B24433")
+        }
         
     }
 
