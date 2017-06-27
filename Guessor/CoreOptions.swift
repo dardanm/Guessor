@@ -28,19 +28,4 @@ extension BaseLevel {
         return [UIInterfaceOrientationMask.portrait ,UIInterfaceOrientationMask.portraitUpsideDown]
     }
     
-    func updateTimer(){
-        for i in 0...9 {
-            for j in 0...1 {
-                if count >= 10 {
-                    progressTimer.progress = 1.0
-                }
-                if count == Float(i) {
-                    progressTimer.progress = Float(j)
-                } else {
-                    progressTimer.progress = -1
-                }
-            }
-        }
-    }
-    
 }

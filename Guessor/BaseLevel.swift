@@ -143,14 +143,6 @@ class BaseLevel: UIViewController{
     // last timer value
     var tempCountTracker: Float!
 
-    override func viewDidAppear(_ animated: Bool)
-    {
-        super.viewDidAppear(animated)
-        
-        UIView.animate(withDuration: 1, animations: { () -> Void in
-            self.progressTimer.setProgress(1.0, animated: true)
-        })
-    }
 
     func startTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)

@@ -14,10 +14,15 @@ import SpriteKit
 
 extension BaseLevel {
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+    }
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
             
         topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
         bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
@@ -41,7 +46,6 @@ extension BaseLevel {
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
         
-        
         // Add targets for bottoms buttons so when they're pressed,
         // they can be used to watch the top buttons
         for i in 0..<bottomButtons.count {
@@ -59,14 +63,8 @@ extension BaseLevel {
         
         gpView.isHidden = true
         
-        
-        
+        print("timer at bottom \(count)")
 
-
-    }
-
-    func poop(){
-        print("poop")
     }
 
     func checkIfCorrect(sender: UIButton!) {
@@ -111,21 +109,16 @@ extension BaseLevel {
         
         if UIDevice.current.batteryLevel <= 0.2{
             
-           batteryProgress.progressTintColor = UIColor ("ff4f51")
+           batteryProgress.progressTintColor = UIColor ("#ff4f51")
         }
     }
     
     func updateTimerBar(){
-        
         progressTimer.progress = Float(count)/10
-        
-        if (count <= 3){
-            progressTimer.progressTintColor = UIColor("#B24433")
-        }
-        
     }
 
-    func update() {
+    func update() {        
+        print("timer at update \(count)")
         updateTimerBar()
         
         lives = 3
@@ -152,6 +145,9 @@ extension BaseLevel {
         if gamePaused == false {
         generateAtLeastOneMatchBottomButtons()
         }
+        
+        print("timer at update bottom \(count)")
+
         
     }
     
