@@ -23,22 +23,16 @@ extension BaseLevel {
     {
         super.viewDidLoad()
         
-
-        
-        
+        topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
+        bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
         
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
-        
-        // TO-DO LIST
-        // ** pause game when home button is pressed
         
         // Battery
         UIDevice.current.isBatteryMonitoringEnabled = true
         batteryProgress.progress = UIDevice.current.batteryLevel
-        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 6)
+        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 5)
         batteryProgressKeep()
-
-        
         
         // Timer
         progressTimer.transform = progressTimer.transform.scaledBy(x: 1, y: 10)
@@ -46,42 +40,71 @@ extension BaseLevel {
         
         // "coin" / Coins bar
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 8)
-//        levelProgressBar.progress = 0.0
-        
-        // Coundown timer color
-        countDownLabel.textColor = UIColor(netHex: 0xf36723)
-        
-        // Lives Color
-        lifeOne.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-        lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        
-        // Hide status bar
-        // prefersStatusBarHidden
-        
-        // Set firstNUmber as first to check button
-        runOrNot = 4
-
-        generateTopAndBottomButtons()
-
         
         // try again
         tryAgainLabel.isEnabled = false
         tryAgainLabel.layer.opacity = 0
         
-        self.view.backgroundColor = .white
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background16@2x.jpg")!)
-
-        runOrNot = 4
+        // Add targets for bottoms buttons so when they're pressed,
+        // they can be used to watch the top buttons
+        for i in 0..<bottomButtons.count {
+            bottomButtons[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
+        }
         
-        // compare button gets info from top buttons
+        for i in 0..<bottomButtons.count {
+            bottomButtons[i].addTarget(self, action: #selector(afterRelease), for: .touchUpInside)
+        }
+        
+        generateTopAndBottomButtons()
+        
+        // Adding background
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background12@2x.jpg")!)
+        
+        //gpView.isHidden = true
+        
+        print("timer at bottom \(count)")
 
-        compare.getButtonInfo(topButton1, green1Temp: topOneGreenColor, topButTwo: topButton2, green2Temp: topTwoGreenColor, topButThree: topButton3, green3Temp: topThreeGreenColor, topButFour: topButton4, green4Temp: topFourGreenColor)
         
 
         
         
     }
+    
+    func checkIfCorrect(sender: UIButton!) {
+        if runOrNot == runOrNot {
+            // CORRECT BUTTON PRESSED
+            if (((sender.backgroundColor == topButtons[runOrNot].backgroundColor) &&
+                (sender.currentImage == topButtons[runOrNot].currentImage))){
+                coin += 1
+                count += 2
+                coinLabel.text = "\(coin)"
+                progressTimer.progress = Float(count)/10
+                
+                sender.makeBackgroundGreen()
+                topButtons[runOrNot].makeBackgroundGreen()
+                pressButtonCorrectSound()
+                
+                runOrNot += 1
+                
+                correctInARow += 1
+            } else {
+                // INCORRECT BUTTON PRESSED
+                sender.makeBackgroundRed()
+                pressButtonWrongSound()
+                coin -= 2
+                count -= 1
+                coinLabel.text = "\(coin)"
+                progressTimer.progress = Float(count)/10
+                
+                correctInARow = 0
+            }
+        }
+    }
+    
+    func afterRelease(sender: UIButton){
+        
+    }
+
     
 
     
@@ -97,166 +120,51 @@ extension BaseLevel {
     
     func updateTimerBar(){
         
-        progressTimer.progress = Float(compare.counter)/10
-        
-        if (compare.counter == 1 || compare.counter == 2 || compare.counter == 3){
-            countDownLabel.textColor = UIColor(netHex: 0xff0000)
-        }
-        
-        if (compare.counter == 0){
-            countDownLabel.textColor = UIColor(netHex: 0xff0000)
-        }
-        
-        if compare.counter > 3 {
-            countDownLabel.textColor = UIColor(netHex: 0xf36723)
-        }
+        progressTimer.progress = Float(count)/10
+
         
     }
-    
-    func updateLivesLeftIcons(){
-        if lives == 3{
-            lifeOne.layer.opacity = 1.0
-            lifeTwo.layer.opacity = 1.0
-            lifeThree.layer.opacity = 1.0
-        }
-        if lives == 2{
-            lifeOne.layer.opacity = 0.0
-            lifeTwo.backgroundColor = UIColor (netHex: 0xF54040)
-            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        }
-        if lives == 1{
-            lifeOne.layer.opacity = 0.0
-            lifeTwo.layer.opacity = 0.0
-            lifeThree.backgroundColor = UIColor (netHex: 0xF54040)
-        }
-        if lives == 0{
-            lifeOne.layer.opacity = 0.0
-            lifeTwo.layer.opacity = 0.0
-            lifeThree.layer.opacity = 0.0
-        }
-        if lives > 3{
-            lives = 3
-        }
-    }
+
     
     
     // timer + timer progress bar
     func update() {
 
-        gameFinish()
- 
-        if compare.counter > 0 {
-            compare.counter -= 0.75
-        }
+        print("timer at update \(count)")
+        updateTimerBar()
         
-        if compare.counter > 10 {
-            compare.counter = 10
-            self.countDownLabel.text = "\(compare.counter)"
-        }
+        lives = 3
+        //tempCountTracker = count
         
-        if scoreKeep == 0{
-            runOrNot = 4
+        if runOrNot == 4 && correctInARow != 4 {
+            correctInARow = 0
         }
-        
-        if compare.scoreKeep == 4 {
-            stopTimer()
+        if runOrNot >= 4{
             pressCorrectFour()
-            coin += 1
-            coinLabel.text = "\(coin)"
-            compare.counter += 3
-            compare.scoreKeep = 0
-            resetRoll()
+            if correctInARow == 4{
+                correctInARow = 0
+                coin += 3
+                coinLabel.text = "\(coin)"
+            }
+            runOrNot = 0
             generateTopButtons()
         }
-
-        updateTimerBar()
-        updateLivesLeftIcons()
         
-        if compare.counter <= 0 && lives > 0{
-            //            disableButtons()
-            stopTimer()
-            resetRollZeroCount()
+        if count > 0 {
+            count -= 1
         }
         
-        // don't remove
-        countDownLabel.text = String(compare.counter)
-
-        if levelProgressBar.progress == 1.0 {
-            levelText += 1
-        }
+            generateBottomButtons()
         
-        if lives <= 0 {
-            
-            self.countDownLabel.text = "\(compare.counter)"
-            updateTimerBar()
-            stopTimer()
-            //            disableButtons()
-            generateLabel.layer.opacity = 0
-            tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.isEnabled = true
-        }
         
-        if levelProgressBar.progress == 1.0 {
-            levelProgressBar.progress = 0.0
-        }
+        print("timer at update bottom \(count)")
 
 
 
 
     }
 
-    
-    // check if game is finished
-    func gameFinish(){
-        
-        UserDefaults.standard.set(coin, forKey: "coinKey")
-        coinLabel.text = "\(coin)"
-        coin = UserDefaults.standard.integer(forKey: "coinKey")
-        
-        updateLivesLeftIcons()
-        
-        if compare.counter > 10 {
-            compare.counter = 10
-            self.countDownLabel.text = "\(compare.counter)"
-        }
-        
-        updateLivesLeftIcons()
-        
-        if compare.counter <= 0 && lives > 0{
-            stopTimer()
-            resetRollZeroCount()
-        }
-        
-        // don't remove
-        countDownLabel.text = String(compare.counter)
-        
-        if levelProgressBar.progress == 1.0 {
-            levelText += 1
-        }
-        
-        if lives <= 0 {
-            
-            self.countDownLabel.text = "\(compare.counter)"
-            updateTimerBar()
-            stopTimer()
-            generateLabel.layer.opacity = 0
-            tryAgainLabel.layer.opacity = 1
-            tryAgainLabel.isEnabled = true
-        }
-        
-        if levelProgressBar.progress == 1.0 {
-            levelProgressBar.progress = 0.0
-        }
-        
-//        if compare.scoreKeep == 4 {
-//            stopTimer()
-//            resetRoll()
-//            scoreKeep = 0
-//            coin += 1
-//            generateTopButtons2()
-//        }
 
-    }
     
     
     
