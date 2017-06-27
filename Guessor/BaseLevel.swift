@@ -101,7 +101,6 @@ class BaseLevel: UIViewController{
         print(lives)
     }
     
-    
     // "try again" button background
     @IBOutlet var tryAgainLabel: UIButton!
     
@@ -153,7 +152,6 @@ class BaseLevel: UIViewController{
         })
     }
 
-    
     func startTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
     }
@@ -161,19 +159,13 @@ class BaseLevel: UIViewController{
         timer.invalidate()
     }
     
-
     // GENERATE BUTTON
     @IBAction func generateButtonNumbers(_ sender: AnyObject) {
-
         generateBottomButtons()
-        
     }
 
-    @IBAction func generateButtonRelease(_ sender: AnyObject) {
-
-    }
+    @IBAction func generateButtonRelease(_ sender: AnyObject) { }
     
-
 }
 
 
