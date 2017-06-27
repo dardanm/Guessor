@@ -63,10 +63,6 @@ extension BaseLevel {
         //gpView.isHidden = true
         
         print("timer at bottom \(count)")
-
-        
-
-        
         
     }
     
@@ -134,7 +130,6 @@ extension BaseLevel {
         updateTimerBar()
         
         lives = 3
-        //tempCountTracker = count
         
         if runOrNot == 4 && correctInARow != 4 {
             correctInARow = 0
