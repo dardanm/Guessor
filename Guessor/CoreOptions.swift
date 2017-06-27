@@ -12,7 +12,6 @@ import QuartzCore
 
 extension BaseLevel {
     
-    
     // LOCK PORTRAIT
     override var shouldAutorotate : Bool {
         if (UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft ||
@@ -29,79 +28,7 @@ extension BaseLevel {
         return [UIInterfaceOrientationMask.portrait ,UIInterfaceOrientationMask.portraitUpsideDown]
     }
     
-    // function to delay executing code
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        DispatchQueue.main.asyncAfter(
-            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
-    }
-    
-    // Try Again
-    func tryAgain(){
-        
-        runOrNot = 4
-        scoreKeep = 0
-        levelProgressBar.progress = 0
-        coinLabel.text = "\(coin)"
-        
-        startTimer()
-        
-        count = 10
-
-        self.countDownLabel.text = "\(count)"
-        
-        lives = 3
-        
-        tryAgainLabel.layer.opacity = 0
-    }
-    
-    // Reset Roll
-    func resetRoll(){
-        stopTimer()
-        startTimer()
-
-        count += 2
-        //self.countDownLabel.text = "\(count)"
-        
-        if lives >= 1 {
-        self.runOrNot = 4
-        self.scoreKeep = 0
-        }
-    }
-    
-    func resetRollZeroCount(){
-        
-        lives -= 1
-        
-        if lives > 0{
-
-            self.startTimer()
-        
-//            compare.counter = 10
-            self.countDownLabel.text = "\(self.count)"
-        
-        }
-        
-    }
-    
-    func updateLevel(){
-        
-        if scoreKeep == 4{
-        scoreTarget -= 10
-        level.text = "\(scoreTarget)"
-        
-        coin += 1
-        coinLabel.text = "\(coin)"
-        // 500
-        levelProgressBar.progress += 0.1
-        }
-        
-        
-    }
-    
-
-    
     func updateTimer(){
-        
         for i in 0...9 {
             for j in 0...1 {
                 if count >= 10 {
@@ -115,10 +42,5 @@ extension BaseLevel {
             }
         }
     }
-
-
-    
-    
-    
     
 }

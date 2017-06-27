@@ -44,7 +44,6 @@
 		DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */; };
 		DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */; };
 		DCDE3AD51CAB5FD400C8F559 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */; };
-		F8A1ED9C1EFE36BE0043DE42 /* ControlPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1ED9B1EFE36BE0043DE42 /* ControlPlay.swift */; };
 		F8B00A9B1EFBA57D0025E840 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B00A9A1EFBA57D0025E840 /* Button.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +89,6 @@
 		DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joystix monospace.ttf"; sourceTree = "<group>"; };
 		DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
 		F031DC9DCC248F8A3686A855 /* Pods-Guessor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guessor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guessor/Pods-Guessor.release.xcconfig"; sourceTree = "<group>"; };
-		F8A1ED9B1EFE36BE0043DE42 /* ControlPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPlay.swift; sourceTree = "<group>"; };
 		F8B00A9A1EFBA57D0025E840 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,7 +222,6 @@
 				DCAAC8C11C9E3494000F5C99 /* Buttons.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
 				DC9CE1D71CA7883800817C02 /* Notes */,
-				F8A1ED9B1EFE36BE0043DE42 /* ControlPlay.swift */,
 			);
 			name = "Level 1";
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
 				F8B00A9B1EFBA57D0025E840 /* Button.swift in Sources */,
 				DCAAC8C01C9E338D000F5C99 /* CoreOptions.swift in Sources */,
-				F8A1ED9C1EFE36BE0043DE42 /* ControlPlay.swift in Sources */,
 				DC5AAD301C868083006B8BD3 /* Start.swift in Sources */,
 				DC668B681CB9C3160063ADA5 /* SegueFade.swift in Sources */,
 				DC0C51491CA5C67200925709 /* Main.swift in Sources */,

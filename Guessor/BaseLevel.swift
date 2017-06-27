@@ -72,9 +72,9 @@ class BaseLevel: UIViewController{
     var batteryNumber:Int = 100
     
     // timer
-    var count:Float = 100
     var timer = Timer()
-    
+    var count:Float = 9
+
     // score
     var scoreTarget:Int = 100
     
@@ -88,9 +88,9 @@ class BaseLevel: UIViewController{
 
     // add time
     @IBAction func addTimeButton(_ sender: AnyObject) {
-        count += 5
+        //count += 5
         countDownLabel.text = "\(count)"
-        coin -= 1
+        //coin -= 1
         coinLabel.text = "\(coin)"
     }
     
@@ -108,7 +108,6 @@ class BaseLevel: UIViewController{
     // "try aagain" function
     @IBAction func tryAgain(_ sender: AnyObject) {
         stopTimer()
-        tryAgain()
         generateLabel.layer.opacity = 1
     }
     
@@ -128,6 +127,23 @@ class BaseLevel: UIViewController{
         return true
     }
     
+    // Game Paused
+    @IBOutlet var gpView: UIView!
+    @IBAction func resumeButton(_ sender: Any) {
+        self.gameUnpauseMode()
+        gamePaused = false
+        count = tempCountTracker!
+        updateTimerBar()
+    }
+    @IBAction func pauseButton(_ sender: Any) {
+        self.gamePausedMode()
+        gamePaused = true
+    }
+
+    var gamePaused: Bool = false
+    // last timer value
+    var tempCountTracker: Float!
+
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
@@ -157,10 +173,6 @@ class BaseLevel: UIViewController{
 
     }
     
-    // when back button is pressed, stop background music
-    @IBAction func backOption(_ sender: AnyObject) {
-        coin = UserDefaults.standard.integer(forKey: "coinKey")
-    }
 
 }
 

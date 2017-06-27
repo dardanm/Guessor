@@ -13,14 +13,10 @@ import UIColor_Hex_Swift
 
 extension BaseLevel {
     
-    
-    
-    // ========= MAIN
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+            
         topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
         bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
         
@@ -29,7 +25,7 @@ extension BaseLevel {
         // Battery
         UIDevice.current.isBatteryMonitoringEnabled = true
         batteryProgress.progress = UIDevice.current.batteryLevel
-        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 2)
+        batteryProgress.transform = levelProgressBar.transform.scaledBy(x: 1, y: 5)
         batteryProgressKeep()
         
         // Timer
@@ -58,11 +54,11 @@ extension BaseLevel {
         
         // Adding background
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background12@2x.jpg")!)
-
+        
+        gpView.isHidden = true
 
     }
 
-    
     func checkIfCorrect(sender: UIButton!) {
         if runOrNot == runOrNot {
             // CORRECT BUTTON PRESSED
@@ -113,25 +109,18 @@ extension BaseLevel {
         
         progressTimer.progress = Float(count)/10
         
-        if (count == 1 || count == 2 || count == 3){
-            countDownLabel.textColor = UIColor("ff0000")
-        }
-        
-        if (count == 0){
-            countDownLabel.textColor = UIColor("ff0000")
-        }
-        
-        if count > 3 {
-            countDownLabel.textColor = UIColor("f36723")
-        }
+//        if (count <= 3){
+//            progressTimer.progressTintColor = UIColor("#B24433")
+//        }
         
     }
-    
-    // timer + timer progress bar
-    func update() {
-            
-        lives = 3
 
+    func update() {
+        updateTimerBar()
+        
+        lives = 3
+        tempCountTracker = count
+        
         if runOrNot == 4 && correctInARow != 4 {
             correctInARow = 0
         }
@@ -149,37 +138,22 @@ extension BaseLevel {
         if count > 0 {
             count -= 1
         }
-        
-        if count > 10 {
-            count = 10
-            self.countDownLabel.text = "\(count)"
-        }
-        
-        updateTimerBar()
-        
-        // don't remove
-        countDownLabel.text = String(count)
 
+        if gamePaused == false {
         generateAtLeastOneMatchBottomButtons()
+        }
         
     }
     
+    func gamePausedMode(){
+            gpView.isHidden = false
+            stopTimer()
+    }
+    
+    func gameUnpauseMode(){
+            gpView.isHidden = true
+            startTimer()
+            gamePaused = true
+    }
     
 }
-
-// EXTRA - OUTSIDE - EXTENSIONS
-
-
-//extension UIColor {
-//    convenience init(red: Int, green: Int, blue: Int) {
-//        assert(red >= 0 && red <= 255, "Invalid red component")
-//        assert(green >= 0 && green <= 255, "Invalid green component")
-//        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-//        
-//        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-//    }
-//    
-//    convenience init(netHex:Int) {
-//        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
-//    }
-//}
