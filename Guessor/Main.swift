@@ -48,6 +48,9 @@ extension BaseLevel {
         for i in 0..<bottomButtonsCollection!.count {
             bottomButtonsCollection?[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
         }
+        for i in 0..<bottomButtonsCollection!.count {
+            bottomButtonsCollection?[i].addTarget(self, action: #selector(buttonRelease), for: .touchUpInside)
+        }
         
         buttonIndex = 0
 
@@ -62,6 +65,14 @@ extension BaseLevel {
         //topButtonsCollection.
         
     }
+    
+    func buttonRelease(sender: UIButton!){
+        if buttonIndex >= 4 {
+            for i in 0..<bottomButtonsCollection!.count{
+                bottomButtonsCollection[i].isEnabled = false
+            }
+        }
+    }
 
     func checkIfCorrect(sender: UIButton!) {
         if buttonIndex == buttonIndex {
@@ -70,7 +81,14 @@ extension BaseLevel {
                  (sender.currentImage?.imageAsset == topButtonsCollection?[buttonIndex].currentImage?.imageAsset))){
                 
                     coin += 1
+                    // double coins if counter is still going
+                    if count >= 4 {
+                        coin += 1
+                        points += 2
+                    }
+                    points += 2
                     count += 2
+                    scoreKeep.text = "\(points)"
                     coinLabel.text = "\(coin)"
                     progressTimer.progress = Float(count)/10
                 
@@ -112,9 +130,17 @@ extension BaseLevel {
     func updateTimerBar(){
         progressTimer.progress = Float(count)/10
     }
+    
 
     func update() {
-        
+        print("button index \(buttonIndex)")
+        if buttonIndex < 4 {
+            for i in 0..<bottomButtonsCollection!.count{
+                bottomButtonsCollection[i].isEnabled = true
+            }
+        }
+
+        scoreKeep.text = "\(points)"
         updateTimerBar()
         
         lives = 3
@@ -136,6 +162,9 @@ extension BaseLevel {
         
         if count > 0 {
             count -= 1
+        }
+        if count > 9 {
+            count = 9
         }
 
         generateAtLeastOneMatchBottomButtons()

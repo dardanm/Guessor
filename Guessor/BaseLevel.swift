@@ -21,7 +21,7 @@ class BaseLevel: UIViewController{
     var correctInARow = 0
     
     // level
-    @IBOutlet weak var level: UILabel!
+    @IBOutlet weak var scoreKeep: UILabel!
 
     // coin label
     @IBOutlet var coinLabel: UILabel!
@@ -54,7 +54,7 @@ class BaseLevel: UIViewController{
     var numMultiply = 0
 
     // keep track of score 0/30
-    var scoreKeep:Int = 0
+    var points:Int = 0
     
     // initalize audio
     var buttonPressSound: AVAudioPlayer!
