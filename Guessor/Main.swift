@@ -94,7 +94,6 @@ extension BaseLevel {
                     coinLabel.text = "\(coin)"
                     progressTimer.progress = Float(count)/10
                 
-                    sender.makeBackgroundGreen()
                     topButtonsCollection?[buttonIndex].makeBackgroundGreen()
                     pressButtonCorrectSound()
                 
@@ -107,7 +106,7 @@ extension BaseLevel {
                     }
             } else {
             // INCORRECT BUTTON PRESSED                
-                    sender.makeBackgroundRed()
+                    //sender.makeBackgroundRed()
                     pressButtonWrongSound()
                     if coin >= 2{
                         coin -= 2
