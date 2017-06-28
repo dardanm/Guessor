@@ -18,27 +18,26 @@ extension BaseLevel {
     }
     
     func generateTopButtons(){
-        for i in 0..<topButtons.count {
-            topButtons[i].randomColorAndImage()
+        for i in 0..<topButtonsCollection!.count {
+            topButtonsCollection![i].randomColorAndImage()
         }
     }
     
     func generateBottomButtons(){
-        for i in 0..<bottomButtons.count {
-            bottomButtons[i].randomColorAndImage()
+        for i in 0..<bottomButtonsCollection!.count {
+            bottomButtonsCollection![i].randomColorAndImage()
         }
     }
     
     func generateAtLeastOneMatchBottomButtons(){
         generateBottomButtons()
         
-        let temp = Int(arc4random_uniform((UInt32(bottomButtons.count))) + 1)
-        print(temp)
+        let temp = Int(arc4random_uniform((UInt32(bottomButtonsCollection!.count))) + 1)
         for i in 0..<temp {
-            while (bottomButtons[i].backgroundColor != topButtons[runOrNot].backgroundColor ||
-                   bottomButtons[i].currentImage != topButtons[runOrNot].currentImage){
+            while (bottomButtonsCollection?[i].backgroundColor != topButtonsCollection?[buttonIndex].backgroundColor ||
+                   bottomButtonsCollection?[i].currentImage?.imageAsset != topButtonsCollection?[buttonIndex].currentImage?.imageAsset){
                    generateBottomButtons()
-                    generateBottomButtons()
+                   generateBottomButtons()
             }
         }
     }

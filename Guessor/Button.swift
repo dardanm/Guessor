@@ -48,8 +48,9 @@ extension UIButton {
             self.setImage(UIImage(named: "candy.png"), for: UIControlState.normal)
         }
         if symb == 3 {
-            self.setImage(UIImage(named: "pop.png"), for: UIControlState.normal)
+            self.setImage(UIImage(named: "candy.png"), for: UIControlState.normal)
         }
+        
     }
     
     func randomColorAndImage(){

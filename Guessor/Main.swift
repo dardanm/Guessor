@@ -17,16 +17,13 @@ extension BaseLevel {
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
-        
+
     }
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-            
-        topButtons = [topButtonNumberOne,topButtonNumberTwo,topButtonNumberThree,topButtonNumberFour]
-        bottomButtons = [bottomButtonNumberOne,bottomButtonNumberTwo,bottomButtonNumberThree,bottomButtonNumberFour]
-        
+
         coinLabel.text = "\(UserDefaults.standard.integer(forKey: "coinKey"))"
         
         // Battery
@@ -48,13 +45,12 @@ extension BaseLevel {
         
         // Add targets for bottoms buttons so when they're pressed,
         // they can be used to watch the top buttons
-        for i in 0..<bottomButtons.count {
-            bottomButtons[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
+        for i in 0..<bottomButtonsCollection!.count {
+            bottomButtonsCollection?[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
         }
         
-        for i in 0..<bottomButtons.count {
-            bottomButtons[i].addTarget(self, action: #selector(afterRelease), for: .touchUpInside)
-        }
+        buttonIndex = 0
+
         
         generateTopAndBottomButtons()
         
@@ -63,43 +59,43 @@ extension BaseLevel {
         
         gpView.isHidden = true
         
-        print("timer at bottom \(count)")
-
+        //topButtonsCollection.
+        
     }
 
     func checkIfCorrect(sender: UIButton!) {
-        if runOrNot == runOrNot {
+        if buttonIndex == buttonIndex {
             // CORRECT BUTTON PRESSED
-            if (((sender.backgroundColor == topButtons[runOrNot].backgroundColor) &&
-                 (sender.currentImage == topButtons[runOrNot].currentImage))){
+            if (((sender.backgroundColor == topButtonsCollection?[buttonIndex].backgroundColor) &&
+                 (sender.currentImage?.imageAsset == topButtonsCollection?[buttonIndex].currentImage?.imageAsset))){
+                
                     coin += 1
                     count += 2
                     coinLabel.text = "\(coin)"
                     progressTimer.progress = Float(count)/10
                 
                     sender.makeBackgroundGreen()
-                    topButtons[runOrNot].makeBackgroundGreen()
+                    topButtonsCollection?[buttonIndex].makeBackgroundGreen()
                     pressButtonCorrectSound()
                 
-                    runOrNot += 1
+                    buttonIndex += 1
                 
                     correctInARow += 1
             } else {
-            // INCORRECT BUTTON PRESSED
+            // INCORRECT BUTTON PRESSED                
                     sender.makeBackgroundRed()
                     pressButtonWrongSound()
-                    coin -= 2
+                    if coin >= 2{
+                        coin -= 2
+                        coinLabel.text = "\(coin)"
+                    }
                     count -= 1
-                    coinLabel.text = "\(coin)"
                     progressTimer.progress = Float(count)/10
                 
                     correctInARow = 0
+                
             }
         }
-    }
-    
-    func afterRelease(sender: UIButton){
-
     }
 
     
@@ -117,24 +113,24 @@ extension BaseLevel {
         progressTimer.progress = Float(count)/10
     }
 
-    func update() {        
-        print("timer at update \(count)")
+    func update() {
+        
         updateTimerBar()
         
         lives = 3
         tempCountTracker = count
         
-        if runOrNot == 4 && correctInARow != 4 {
+        if buttonIndex == 4 && correctInARow != 4 {
             correctInARow = 0
         }
-        if runOrNot >= 4{
+        if buttonIndex >= 4{
             pressCorrectFour()
             if correctInARow == 4{
                 correctInARow = 0
                 coin += 3
                 coinLabel.text = "\(coin)"
             }
-            runOrNot = 0
+            buttonIndex = 0
             generateTopButtons()
         }
         
@@ -142,12 +138,7 @@ extension BaseLevel {
             count -= 1
         }
 
-        if gamePaused == false {
         generateAtLeastOneMatchBottomButtons()
-        }
-        
-        print("timer at update bottom \(count)")
-
         
     }
     

@@ -39,9 +39,9 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberThree: UIButton!
     @IBOutlet var bottomButtonNumberFour: UIButton!
     
-    var topButtons = [UIButton]()
-    var bottomButtons = [UIButton]()
-        
+    @IBOutlet var topButtonsCollection: Array<UIButton>!
+    @IBOutlet var bottomButtonsCollection: Array<UIButton>!
+            
     @IBOutlet weak var batteryProgress: UIProgressView!
     
     // number tracker for real randomizing buttons
@@ -78,7 +78,7 @@ class BaseLevel: UIViewController{
     // score
     var scoreTarget:Int = 100
     
-    var runOrNot:Int = 0
+    var buttonIndex:Int = 0
     
     // PROGRESS BAR
     @IBOutlet var progressTimer: UIProgressView!
