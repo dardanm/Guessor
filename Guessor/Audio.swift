@@ -15,40 +15,35 @@ extension BaseLevel {
     
     // BUTTON PRESS - CORRECT
     func pressButtonCorrectSound() {
-        
         do {
-            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "buttonCorrect", ofType: "mp3")!))
-            self.buttonPressCorrectSound.play()
-            
-            
+            self.correctSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "buttonCorrect", ofType: "mp3")!))
+            self.correctSound.play()
         } catch {
             print("Error")
         }
-        buttonPressCorrectSound.volume = 0.5
+        correctSound.volume = 0.1
     }
     
     // BUTTON PRESS - INCORRECT
     func pressButtonWrongSound() {
         do {
-            self.buttonPressCorrectSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "buttonIncorrect", ofType: "mp3")!))
-            self.buttonPressCorrectSound.play()
+            self.incorrectSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "buttonIncorrect", ofType: "mp3")!))
+            self.incorrectSound.play()
         } catch {
             print("Error")
         }
-        buttonPressCorrectSound.volume = 0.05
+        incorrectSound.volume = 0.05
     }
     
     // Score 4 Correct
     func pressCorrectFour() {
-        
         do {
-            self.finalCorrect =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "fourCorrect", ofType: "mp3")!))
-            self.finalCorrect.play()
+            self.correctFourSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "fourCorrect", ofType: "mp3")!))
+            self.correctFourSound.play()
         } catch {
             print("Error")
         }
-        finalCorrect.volume = 0.5
-        
+        correctFourSound.volume = 0.1
     }
     
     
@@ -75,17 +70,6 @@ extension BaseLevel {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // Sound for just pressing a button
-    func pressButtonSound() {
-        do {
-            self.buttonPressSound =  try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "button-46", ofType: "mp3")!))
-            self.buttonPressSound.play()
-            
-        } catch {
-            print("Error")
-        }
-        buttonPressSound.volume = 0.05
-    }
+
     
 }

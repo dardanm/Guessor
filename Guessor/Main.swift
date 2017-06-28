@@ -47,6 +47,8 @@ extension BaseLevel {
         // they can be used to watch the top buttons
         for i in 0..<bottomButtonsCollection!.count {
             bottomButtonsCollection?[i].addTarget(self, action: #selector(checkIfCorrect), for: .touchDown)
+            // exclusive touch
+            bottomButtonsCollection?[i].isExclusiveTouch = true
         }
         for i in 0..<bottomButtonsCollection!.count {
             bottomButtonsCollection?[i].addTarget(self, action: #selector(buttonRelease), for: .touchUpInside)
@@ -68,7 +70,7 @@ extension BaseLevel {
     
     func buttonRelease(sender: UIButton!){
         if buttonIndex >= 4 {
-            for i in 0..<bottomButtonsCollection!.count{
+                for i in 0..<bottomButtonsCollection!.count{
                 bottomButtonsCollection[i].isEnabled = false
             }
         }
@@ -99,6 +101,10 @@ extension BaseLevel {
                     buttonIndex += 1
                 
                     correctInARow += 1
+                
+                    if buttonIndex >= 4 {
+                        pressCorrectFour()
+                    }
             } else {
             // INCORRECT BUTTON PRESSED                
                     sender.makeBackgroundRed()
@@ -113,6 +119,8 @@ extension BaseLevel {
                     correctInARow = 0
                 
             }
+
+
         }
     }
 
@@ -133,11 +141,13 @@ extension BaseLevel {
     
 
     func update() {
-        print("button index \(buttonIndex)")
         if buttonIndex == 0 {
             for i in 0..<bottomButtonsCollection!.count{
                 bottomButtonsCollection[i].isEnabled = true
             }
+        }
+        if buttonIndex != 4{
+            generateAtLeastOneMatchBottomButtons()
         }
 
         scoreKeep.text = "\(points)"
@@ -150,7 +160,6 @@ extension BaseLevel {
             correctInARow = 0
         }
         if buttonIndex >= 4{
-            pressCorrectFour()
             if correctInARow == 4{
                 correctInARow = 0
                 coin += 3
@@ -167,9 +176,7 @@ extension BaseLevel {
             count = 9
         }
         
-        if buttonIndex != 4{
-        generateAtLeastOneMatchBottomButtons()
-        }
+
         
     }
     

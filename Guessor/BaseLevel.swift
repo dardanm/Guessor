@@ -57,10 +57,10 @@ class BaseLevel: UIViewController{
     var points:Int = 0
     
     // initalize audio
-    var buttonPressSound: AVAudioPlayer!
-    var buttonPressCorrectSound: AVAudioPlayer!
+    var correctSound: AVAudioPlayer!
+    var incorrectSound: AVAudioPlayer!
     var backgroundMusicPlayer = AVAudioPlayer()
-    var finalCorrect = AVAudioPlayer()
+    var correctFourSound = AVAudioPlayer()
 
     @IBOutlet var lifeOne: UILabel!
     var lives = 3
