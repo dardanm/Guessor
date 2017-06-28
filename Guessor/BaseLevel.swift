@@ -14,19 +14,21 @@ import CoreData
 
 class BaseLevel: UIViewController{
     
-    var symb:Int = 1
-    var back:Int = 1
-    
-    // Starting from top button 1
+    var symb = 1
+    var back = 1
+    var lives = 3
+    var points = 0
     var correctInARow = 0
-    
-    // level
-    @IBOutlet weak var scoreKeep: UILabel!
-
-    // coin label
-    @IBOutlet var coinLabel: UILabel!
+    var buttonIndex = 0
+    var batteryNumber = 100
+    var timer = Timer()
+    var count:Float = 9
+    var gamePaused: Bool = false
     var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
     
+    // last timer value
+    var tempCountTracker: Float!
+
     // top buttons
     @IBOutlet var topButtonNumberOne: UIButton!
     @IBOutlet var topButtonNumberTwo: UIButton!
@@ -39,46 +41,25 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberThree: UIButton!
     @IBOutlet var bottomButtonNumberFour: UIButton!
     
-    @IBOutlet var topButtonsCollection: Array<UIButton>!
-    @IBOutlet var bottomButtonsCollection: Array<UIButton>!
+    var topButtons = [UIButton]()
+    var bottomButtons = [UIButton]()
+    
+//    @IBOutlet var topButtonsCollection: Array<UIButton>!
+//    @IBOutlet var bottomButtonsCollection: Array<UIButton>!
             
     @IBOutlet weak var batteryProgress: UIProgressView!
     
-    // number tracker for real randomizing buttons
-    var numberTrackerForRandomizing:Int = 0
+    // score/points label
+    @IBOutlet weak var scoreKeep: UILabel!
     
-    // LEVEL NUMBER
-    var levelText:Int = 1
-    
-    // multiply top-left # by top-right #
-    var numMultiply = 0
-
-    // keep track of score 0/30
-    var points:Int = 0
+    // coin label
+    @IBOutlet var coinLabel: UILabel!
     
     // initalize audio
     var correctSound: AVAudioPlayer!
     var incorrectSound: AVAudioPlayer!
     var backgroundMusicPlayer = AVAudioPlayer()
     var correctFourSound = AVAudioPlayer()
-
-    @IBOutlet var lifeOne: UILabel!
-    var lives = 3
-    
-    // timer label
-    @IBOutlet var countDownLabel: UILabel!
-    
-    // battery
-    var batteryNumber:Int = 100
-    
-    // timer
-    var timer = Timer()
-    var count:Float = 9
-
-    // score
-    var scoreTarget:Int = 100
-    
-    var buttonIndex:Int = 0
     
     // PROGRESS BAR
     @IBOutlet var progressTimer: UIProgressView!
@@ -86,19 +67,16 @@ class BaseLevel: UIViewController{
     // "generate" button
     @IBOutlet var generateLabel: UIButton!
 
-    // add time
     @IBAction func addTimeButton(_ sender: AnyObject) {
-        //count += 5
-        countDownLabel.text = "\(count)"
-        //coin -= 1
+        count += 5
+        coin -= 1
         coinLabel.text = "\(coin)"
     }
     
-    // add life
     @IBAction func addLifeButton(_ sender: AnyObject) {
         lives += 1
-        //updateLivesLeftIcons()
-        print(lives)
+        coin -= 1
+        coinLabel.text = "\(coin)"
     }
     
     // "try again" button background
@@ -110,21 +88,14 @@ class BaseLevel: UIViewController{
         generateLabel.layer.opacity = 1
     }
     
-    var trueOrNot:Bool = false
-    var trueOrNot2:Bool = false
-    
     // get time
     let date = Date()
     let calendar = Calendar.current
     
-    var matchingAnswer:Bool = false
-    
     @IBOutlet weak var levelProgressBar: UIProgressView!
     
     // hide status bar
-    override var prefersStatusBarHidden : Bool {
-        return true
-    }
+    override var prefersStatusBarHidden : Bool { return true }
     
     // Game Paused
     @IBOutlet var gpView: UIView!
@@ -139,24 +110,29 @@ class BaseLevel: UIViewController{
         gamePaused = true
     }
 
-    var gamePaused: Bool = false
-    // last timer value
-    var tempCountTracker: Float!
-
-
-    func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true)
-    }
-    func stopTimer(){
-        timer.invalidate()
-    }
+    // TIMER
+    func startTimer(){ timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true) }
+    func stopTimer(){ timer.invalidate() }
     
     // GENERATE BUTTON
-    @IBAction func generateButtonNumbers(_ sender: AnyObject) {
-        generateBottomButtons()
-    }
-
+    @IBAction func generateButtonNumbers(_ sender: AnyObject) { generateBottomButtons() }
     @IBAction func generateButtonRelease(_ sender: AnyObject) { }
+    
+    // LOCK PORTRAIT
+    override var shouldAutorotate : Bool {
+        if (UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft ||
+            UIDevice.current.orientation == UIDeviceOrientation.landscapeRight ||
+            UIDevice.current.orientation == UIDeviceOrientation.unknown) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.portrait ,UIInterfaceOrientationMask.portraitUpsideDown]
+    }
 
     
 }
