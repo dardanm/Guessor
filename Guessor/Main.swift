@@ -134,7 +134,7 @@ extension BaseLevel {
 
     func update() {
         print("button index \(buttonIndex)")
-        if buttonIndex < 4 {
+        if buttonIndex == 0 {
             for i in 0..<bottomButtonsCollection!.count{
                 bottomButtonsCollection[i].isEnabled = true
             }
@@ -166,8 +166,10 @@ extension BaseLevel {
         if count > 9 {
             count = 9
         }
-
+        
+        if buttonIndex != 4{
         generateAtLeastOneMatchBottomButtons()
+        }
         
     }
     
