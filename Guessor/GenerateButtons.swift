@@ -29,7 +29,7 @@ extension BaseLevel {
         }
     }
     
-    func generateAtLeastOneMatchBottomButtons(){
+    func generateAtLeastOneMatchBottomButtons() {
         generateBottomButtons()
         
         let temp = Int(arc4random_uniform((UInt32(topButtons.count))) + 1)
@@ -42,8 +42,6 @@ extension BaseLevel {
         }
     }
     
-    func makeThisButtonMatchTopButton(b: UIButton){
-        
-    }
+    func makeThisButtonMatchTopButton(b: UIButton){}
 
 }

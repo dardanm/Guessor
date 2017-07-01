@@ -42,6 +42,7 @@
 		DCDE3AD11CAB592400C8F559 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD01CAB592400C8F559 /* Minecraft.ttf */; };
 		DCDE3AD31CAB59DB00C8F559 /* joystix monospace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */; };
 		DCDE3AD51CAB5FD400C8F559 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */; };
+		F876DBB81F0862C2005830A4 /* CoreOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F876DBB71F0862C2005830A4 /* CoreOptions.swift */; };
 		F8B00A9B1EFBA57D0025E840 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B00A9A1EFBA57D0025E840 /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		DCDE3AD21CAB59DB00C8F559 /* joystix monospace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "joystix monospace.ttf"; sourceTree = "<group>"; };
 		DCDE3AD41CAB5FD400C8F559 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
 		F031DC9DCC248F8A3686A855 /* Pods-Guessor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guessor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guessor/Pods-Guessor.release.xcconfig"; sourceTree = "<group>"; };
+		F876DBB71F0862C2005830A4 /* CoreOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreOptions.swift; sourceTree = "<group>"; };
 		F8B00A9A1EFBA57D0025E840 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,11 +164,13 @@
 		DC90B8501C7966D500CCC033 /* Guessor */ = {
 			isa = PBXGroup;
 			children = (
-				DC0C51481CA5C67200925709 /* Main.swift */,
 				DC90B8531C7966D500CCC033 /* BaseLevel.swift */,
+				F876DBB71F0862C2005830A4 /* CoreOptions.swift */,
+				F8B00A9A1EFBA57D0025E840 /* UIButton.swift */,
 				DCAAC8C11C9E3494000F5C99 /* GenerateButtons.swift */,
 				DCAAC8C31C9E3572000F5C99 /* Audio.swift */,
-				DCF94FD81C9F1AE000231CA3 /* Level 1 */,
+				DC9CE1D71CA7883800817C02 /* Notes */,
+				DCF94FD81C9F1AE000231CA3 /* Levels */,
 				DC5AAD2F1C868083006B8BD3 /* Start.swift */,
 				DCB3C1851CAC735E00B6BB87 /* LaunchScreen.storyboard */,
 				DC237BB61CB85EBD00DAA111 /* Backgrounds */,
@@ -202,14 +206,13 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		DCF94FD81C9F1AE000231CA3 /* Level 1 */ = {
+		DCF94FD81C9F1AE000231CA3 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				DC0C51481CA5C67200925709 /* Main.swift */,
 				DC90B8551C7966D500CCC033 /* Main.storyboard */,
-				F8B00A9A1EFBA57D0025E840 /* UIButton.swift */,
-				DC9CE1D71CA7883800817C02 /* Notes */,
 			);
-			name = "Level 1";
+			name = Levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCAAC8C41C9E3572000F5C99 /* Audio.swift in Sources */,
+				F876DBB81F0862C2005830A4 /* CoreOptions.swift in Sources */,
 				DCAAC8C21C9E3494000F5C99 /* GenerateButtons.swift in Sources */,
 				DC1132651C83D06600B19DCD /* AppDelegate.swift in Sources */,
 				F8B00A9B1EFBA57D0025E840 /* UIButton.swift in Sources */,
@@ -422,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -462,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

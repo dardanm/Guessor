@@ -12,16 +12,25 @@ import AVFoundation
 import QuartzCore
 import CoreData
 
-class BaseLevel: UIViewController{
-    
+    var colorPickArray = [String]()
+    var iconPickArray = [String]()
     var symb = 1
     var back = 1
+    var level = 1
+
+class BaseLevel: UIViewController {
+    
     var lives = 3
     var points = 0
+    var pointsTarget = 0
     var correctInARow = 0
+    
     var buttonIndex = 0
-    var batteryNumber = 100
+    var topButtons = [UIButton]()
+    var bottomButtons = [UIButton]()
+    
     var timer = Timer()
+    var batteryNumber = 100
     var count:Float = 9
     var gamePaused: Bool = false
     var coin:Int = UserDefaults.standard.integer(forKey: "coinKey")
@@ -40,9 +49,6 @@ class BaseLevel: UIViewController{
     @IBOutlet var bottomButtonNumberTwo: UIButton!
     @IBOutlet var bottomButtonNumberThree: UIButton!
     @IBOutlet var bottomButtonNumberFour: UIButton!
-    
-    var topButtons = [UIButton]()
-    var bottomButtons = [UIButton]()
     
 //    @IBOutlet var topButtonsCollection: Array<UIButton>!
 //    @IBOutlet var bottomButtonsCollection: Array<UIButton>!
@@ -109,30 +115,12 @@ class BaseLevel: UIViewController{
         self.gamePausedMode()
         gamePaused = true
     }
-
-    // TIMER
-    func startTimer(){ timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UIMenuController.update), userInfo: nil, repeats: true) }
-    func stopTimer(){ timer.invalidate() }
     
     // GENERATE BUTTON
     @IBAction func generateButtonNumbers(_ sender: AnyObject) { generateBottomButtons() }
     @IBAction func generateButtonRelease(_ sender: AnyObject) { }
     
-    // LOCK PORTRAIT
-    override var shouldAutorotate : Bool {
-        if (UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft ||
-            UIDevice.current.orientation == UIDeviceOrientation.landscapeRight ||
-            UIDevice.current.orientation == UIDeviceOrientation.unknown) {
-            return false
-        }
-        else {
-            return true
-        }
-    }
-    
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
-        return [UIInterfaceOrientationMask.portrait ,UIInterfaceOrientationMask.portraitUpsideDown]
-    }
+
 
     
 }
