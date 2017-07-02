@@ -1298,7 +1298,7 @@
                                     <action selector="tryAgain:" destination="i14-yE-1Lw" eventType="touchUpInside" id="ynH-Ev-fPw"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-X0-2ce" userLabel="Game Pause Menu">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-X0-2ce" userLabel="Game Pause Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1311,7 +1311,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjp-xw-7s5">
-                                        <rect key="frame" x="0.0" y="229" width="375" height="208"/>
+                                        <rect key="frame" x="0.0" y="229" width="375" height="284"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1334,14 +1334,14 @@
                                         <color key="trackTintColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAUSED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzf-a3-srN">
-                                        <rect key="frame" x="80" y="261" width="214" height="59"/>
+                                        <rect key="frame" x="80" y="247" width="214" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <color key="textColor" red="0.4692060596446701" green="0.4692060596446701" blue="0.4692060596446701" alpha="0.8027878852739726" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFI-uU-06g">
-                                        <rect key="frame" x="126" y="338" width="122" height="48"/>
+                                        <rect key="frame" x="0.0" y="393" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <state key="normal" title="RESUME">
@@ -1351,10 +1351,21 @@
                                             <action selector="resumeButton:" destination="i14-yE-1Lw" eventType="touchUpInside" id="X0z-ng-tqi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meT-3z-8oF">
+                                        <rect key="frame" x="0.0" y="337" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="MAIN MENU">
+                                            <color key="titleColor" red="0.57248467209999998" green="0.57258617879999996" blue="0.57247829439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resumeButton:" destination="i14-yE-1Lw" eventType="touchUpInside" id="Mhn-j0-iEZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.79760273972602735" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-e8-dXM" userLabel="Level Complete Menu">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-e8-dXM" userLabel="Level Complete Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1415,8 +1426,6 @@
                                 <exclude reference="HxD-aC-mEg"/>
                                 <exclude reference="Axr-7v-xDS"/>
                                 <exclude reference="DLU-wt-WE7"/>
-                                <exclude reference="sY8-X0-2ce"/>
-                                <exclude reference="F8z-e8-dXM"/>
                             </mask>
                         </variation>
                     </view>
@@ -1433,6 +1442,10 @@
                         <outlet property="levelProgressBar" destination="HxD-aC-mEg" id="wjc-Lq-2VN"/>
                         <outlet property="progressTimer" destination="KBZ-JH-dOE" id="AXk-38-p0O"/>
                         <outlet property="scoreKeep" destination="bj2-fG-YPc" id="oEV-hS-EMZ"/>
+                        <outlet property="smallNumberTopFour" destination="LKA-EK-Joa" id="NtP-5g-RuT"/>
+                        <outlet property="smallNumberTopOne" destination="LKI-d5-9zj" id="9d1-dZ-ocw"/>
+                        <outlet property="smallNumberTopThree" destination="THT-3s-PBa" id="RZb-z8-uCr"/>
+                        <outlet property="smallNumberTopTwo" destination="ReY-La-8bX" id="qmb-JZ-KVc"/>
                         <outlet property="topButtonNumberFour" destination="2Tl-7C-P29" id="Hhc-Lt-5Zq"/>
                         <outlet property="topButtonNumberOne" destination="C0r-tr-Zdj" id="rdn-Nv-5NB"/>
                         <outlet property="topButtonNumberThree" destination="qNx-LJ-N6e" id="fRV-WO-1V4"/>
@@ -1589,7 +1602,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-wi-Hst">
-                                <rect key="frame" x="72" y="341" width="112" height="81"/>
+                                <rect key="frame" x="72" y="341" width="112" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.66274509800000003" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1603,7 +1616,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-bv-gnA">
-                                <rect key="frame" x="72" y="433" width="112" height="112"/>
+                                <rect key="frame" x="72" y="407" width="112" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.79774652779999999" blue="0.61615001570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1619,7 +1632,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWV-rY-tV7">
-                                <rect key="frame" x="195" y="433" width="122" height="112"/>
+                                <rect key="frame" x="195" y="488" width="122" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.7843137255" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -1635,7 +1648,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-vy-Pqc">
-                                <rect key="frame" x="195" y="341" width="122" height="81"/>
+                                <rect key="frame" x="195" y="341" width="122" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.82352941180000006" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>

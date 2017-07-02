@@ -35,9 +35,9 @@ extension BaseLevel {
         let temp = Int(arc4random_uniform((UInt32(topButtons.count))) + 1)
         for i in 0..<temp {
             while (bottomButtons[i].backgroundColor != topButtons[buttonIndex].backgroundColor ||
-                   bottomButtons[i].currentImage?.imageAsset != topButtons[buttonIndex].currentImage?.imageAsset){
-                   generateBottomButtons()
-                   generateBottomButtons()
+                bottomButtons[i].currentImage?.imageAsset != topButtons[buttonIndex].currentImage?.imageAsset){
+                    generateBottomButtons()
+                    generateBottomButtons()
             }
         }
     }

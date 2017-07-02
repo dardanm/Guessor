@@ -14,6 +14,29 @@ import SpriteKit
 
 extension BaseLevel {
     
+    func update() {
+        
+        lives = 3
+        tempCountTracker = count
+        scoreKeep.text = "\(points) / \(pointsTarget)"
+        if buttonIndex != topButtons.count+1{ generateAtLeastOneMatchBottomButtons()
+        }
+        
+        if count > 0 {count -= 1}
+        if count > 9 {count = 9}
+        // testing
+        if count < 5 {count = 5}
+        
+        updateTimerBar()
+        
+    }
+    
+    func setSmallNumbers(arr: [Int]){
+        for i in 0..<topSmallNumbers.count{
+            topSmallNumbers[i].text = "\(arr[i])"
+        }
+    }
+    
     func gamePausedMode() {
         gpView.isHidden = false
         stopTimer()
@@ -64,8 +87,8 @@ extension BaseLevel {
     }
     
     func buttonRelease(sender: UIButton!) {
-        if buttonIndex >= 4{
-            if correctInARow == 4{
+        if buttonIndex >= topButtons.count{
+            if correctInARow == topButtons.count{
                 correctInARow = 0
                 coin += 3
                 coinLabel.text = "\(coin)"
@@ -73,7 +96,7 @@ extension BaseLevel {
             buttonIndex = 0
             generateTopButtons()
         }
-        if buttonIndex == 4 && correctInARow != 4 {correctInARow = 0}
+        if buttonIndex == topButtons.count+1 && correctInARow != topButtons.count+1 {correctInARow = 0}
         if points >= pointsTarget {
             levelFinishedMenuOn()
         }
@@ -86,7 +109,7 @@ extension BaseLevel {
             if (((sender.backgroundColor == topButtons[buttonIndex].backgroundColor) &&
                 (sender.currentImage?.imageAsset == topButtons[buttonIndex].currentImage?.imageAsset))){
                 // double rewards if counter is higher than x
-                if count >= 4 {
+                if count >= Float(topButtons.count+1) {
                     coin += 1
                     points += 2
                 }
@@ -100,7 +123,7 @@ extension BaseLevel {
                 buttonIndex += 1
                 correctInARow += 1
                 
-                if buttonIndex >= 4 { pressCorrectFour() }
+                if buttonIndex >= topButtons.count { pressCorrectFour() }
                 
             } else {
                 // INCORRECT BUTTON PRESSED

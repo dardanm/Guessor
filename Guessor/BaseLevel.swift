@@ -28,7 +28,7 @@ class BaseLevel: UIViewController {
     var buttonIndex = 0
     var topButtons = [UIButton]()
     var bottomButtons = [UIButton]()
-    var tempButton: UIButton?
+    var topSmallNumbers = [UILabel]()
     
     var timer = Timer()
     var batteryNumber = 100
@@ -44,6 +44,11 @@ class BaseLevel: UIViewController {
     @IBOutlet var topButtonNumberTwo: UIButton!
     @IBOutlet var topButtonNumberThree: UIButton!
     @IBOutlet var topButtonNumberFour: UIButton!
+    
+    @IBOutlet var smallNumberTopOne: UILabel!
+    @IBOutlet var smallNumberTopTwo: UILabel!
+    @IBOutlet var smallNumberTopThree: UILabel!
+    @IBOutlet var smallNumberTopFour: UILabel!
 
     // bottom buttons
     @IBOutlet var bottomButtonNumberOne: UIButton!
