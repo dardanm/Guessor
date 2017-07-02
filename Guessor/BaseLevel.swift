@@ -28,6 +28,7 @@ class BaseLevel: UIViewController {
     var buttonIndex = 0
     var topButtons = [UIButton]()
     var bottomButtons = [UIButton]()
+    var tempButton: UIButton?
     
     var timer = Timer()
     var batteryNumber = 100
@@ -115,6 +116,9 @@ class BaseLevel: UIViewController {
         self.gamePausedMode()
         gamePaused = true
     }
+    // Level Finished
+    @IBOutlet var levelFinishedMenu: UIView!
+    
     
     // GENERATE BUTTON
     @IBAction func generateButtonNumbers(_ sender: AnyObject) { generateBottomButtons() }

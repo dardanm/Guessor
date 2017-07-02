@@ -13,23 +13,6 @@ import UIColor_Hex_Swift
 import SpriteKit
 
 extension BaseLevel {
-
-    func update() {
-        // testing
-        if count < 5 {count = 5}
-        
-        lives = 3
-        tempCountTracker = count
-        
-        if buttonIndex != 4{ generateAtLeastOneMatchBottomButtons() }
-        
-        if count > 0 {count -= 1}
-        if count > 9 {count = 9}
-        
-        scoreKeep.text = "\(points) / \(pointsTarget)"
-        updateTimerBar()
-        
-    }
     
     func gamePausedMode() {
         gpView.isHidden = false
@@ -42,7 +25,16 @@ extension BaseLevel {
         gamePaused = true
     }
     
+    func levelFinishedMenuOn(){
+        levelFinishedMenu.isHidden = false
+    }
+    func levelFinishedMenuOff(){
+        levelFinishedMenu.isHidden = true
+    }
+    
     func setupScene() {
+        scoreKeep.text = "\(points) / \(pointsTarget)"
+        coinLabel.text = "\(coin)"
         
         // BATTERY
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -82,6 +74,10 @@ extension BaseLevel {
             generateTopButtons()
         }
         if buttonIndex == 4 && correctInARow != 4 {correctInARow = 0}
+        if points >= pointsTarget {
+            levelFinishedMenuOn()
+        }
+        scoreKeep.text = "\(points) / \(pointsTarget)"
     }
     
     func checkIfCorrect(sender: UIButton!) {
@@ -89,19 +85,14 @@ extension BaseLevel {
             // CORRECT BUTTON PRESSED
             if (((sender.backgroundColor == topButtons[buttonIndex].backgroundColor) &&
                 (sender.currentImage?.imageAsset == topButtons[buttonIndex].currentImage?.imageAsset))){
-                
                 // double rewards if counter is higher than x
                 if count >= 4 {
                     coin += 1
                     points += 2
                 }
-                
                 coin += 1
                 points += 2
                 count += 2
-                scoreKeep.text = "\(points) / \(pointsTarget)"
-                coinLabel.text = "\(coin)"
-                progressTimer.progress = Float(count)/10
                 
                 topButtons[buttonIndex].makeBackgroundGreen()
                 pressButtonCorrectSound()
@@ -117,14 +108,15 @@ extension BaseLevel {
                 pressButtonWrongSound()
                 if coin >= 2{
                     coin -= 2
-                    coinLabel.text = "\(coin)"
                 }
                 count -= 1
-                progressTimer.progress = Float(count)/10
                 
                 correctInARow = 0
             }
         }
+        scoreKeep.text = "\(points) / \(pointsTarget)"
+        coinLabel.text = "\(coin)"
+        progressTimer.progress = Float(count)/10
     }
     
     
