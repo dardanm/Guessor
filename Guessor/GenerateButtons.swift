@@ -32,16 +32,14 @@ extension BaseLevel {
     func generateAtLeastOneMatchBottomButtons() {
         generateBottomButtons()
         
-        let temp = Int(arc4random_uniform((UInt32(topButtons.count))) + 1)
-        for i in 0..<temp {
+        let temp = Int(arc4random_uniform((UInt32(topButtons.count))))
+
+        for i in 0..<temp+1 {
             while (bottomButtons[i].backgroundColor != topButtons[buttonIndex].backgroundColor ||
                 bottomButtons[i].currentImage?.imageAsset != topButtons[buttonIndex].currentImage?.imageAsset){
-                    generateBottomButtons()
                     generateBottomButtons()
             }
         }
     }
     
-    func makeThisButtonMatchTopButton(b: UIButton){}
-
 }

@@ -14,6 +14,8 @@ import CoreData
 
     var colorPickArray = [String]()
     var iconPickArray = [String]()
+    var smallNumbersArray = [Int]()
+    var aer = [Int]()
     var symb = 1
     var back = 1
     var level = 1
@@ -40,21 +42,23 @@ class BaseLevel: UIViewController {
     var tempCountTracker: Float!
 
     // top buttons
-    @IBOutlet var topButtonNumberOne: UIButton!
-    @IBOutlet var topButtonNumberTwo: UIButton!
-    @IBOutlet var topButtonNumberThree: UIButton!
-    @IBOutlet var topButtonNumberFour: UIButton!
+    // tbn = Top Button Number
+    @IBOutlet var tbn1: UIButton!
+    @IBOutlet var tbn2: UIButton!
+    @IBOutlet var tbn3: UIButton!
+    @IBOutlet var tbn4: UIButton!
     
-    @IBOutlet var smallNumberTopOne: UILabel!
-    @IBOutlet var smallNumberTopTwo: UILabel!
-    @IBOutlet var smallNumberTopThree: UILabel!
-    @IBOutlet var smallNumberTopFour: UILabel!
+    // snt = Small Number Top
+    @IBOutlet var snt1: UILabel!
+    @IBOutlet var snt2: UILabel!
+    @IBOutlet var snt3: UILabel!
+    @IBOutlet var snt4: UILabel!
 
     // bottom buttons
-    @IBOutlet var bottomButtonNumberOne: UIButton!
-    @IBOutlet var bottomButtonNumberTwo: UIButton!
-    @IBOutlet var bottomButtonNumberThree: UIButton!
-    @IBOutlet var bottomButtonNumberFour: UIButton!
+    @IBOutlet var bbn1: UIButton!
+    @IBOutlet var bbn2: UIButton!
+    @IBOutlet var bbn3: UIButton!
+    @IBOutlet var bbn4: UIButton!
     
 //    @IBOutlet var topButtonsCollection: Array<UIButton>!
 //    @IBOutlet var bottomButtonsCollection: Array<UIButton>!

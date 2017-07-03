@@ -31,11 +31,7 @@ extension BaseLevel {
         
     }
     
-    func setSmallNumbers(arr: [Int]){
-        for i in 0..<topSmallNumbers.count{
-            topSmallNumbers[i].text = "\(arr[i])"
-        }
-    }
+
     
     func gamePausedMode() {
         gpView.isHidden = false
@@ -82,7 +78,6 @@ extension BaseLevel {
         // when they're released
         for i in 0..<bottomButtons.count {bottomButtons[i].addTarget(self, action: #selector(buttonRelease), for: .touchUpInside)}
         
-        generateTopAndBottomButtons()
         
     }
     

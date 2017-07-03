@@ -1298,7 +1298,7 @@
                                     <action selector="tryAgain:" destination="i14-yE-1Lw" eventType="touchUpInside" id="ynH-Ev-fPw"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-X0-2ce" userLabel="Game Pause Menu">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-X0-2ce" userLabel="Game Pause Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1365,7 +1365,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.79760273972602735" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-e8-dXM" userLabel="Level Complete Menu">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-e8-dXM" userLabel="Level Complete Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1426,15 +1426,17 @@
                                 <exclude reference="HxD-aC-mEg"/>
                                 <exclude reference="Axr-7v-xDS"/>
                                 <exclude reference="DLU-wt-WE7"/>
+                                <exclude reference="sY8-X0-2ce"/>
+                                <exclude reference="F8z-e8-dXM"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="batteryProgress" destination="YQw-x6-cMT" id="8KY-Nk-rAM"/>
-                        <outlet property="bottomButtonNumberFour" destination="Sc6-uX-v1S" id="cvJ-4r-Lnc"/>
-                        <outlet property="bottomButtonNumberOne" destination="Pb6-ZH-pLd" id="33h-Hd-vS4"/>
-                        <outlet property="bottomButtonNumberThree" destination="oyS-bq-DeW" id="Qwr-vB-zxX"/>
-                        <outlet property="bottomButtonNumberTwo" destination="D3U-Kr-3bu" id="hDC-8g-WqS"/>
+                        <outlet property="bbn1" destination="Pb6-ZH-pLd" id="LQF-J0-8HS"/>
+                        <outlet property="bbn2" destination="D3U-Kr-3bu" id="URW-2G-ggV"/>
+                        <outlet property="bbn3" destination="oyS-bq-DeW" id="kvR-Ay-qiv"/>
+                        <outlet property="bbn4" destination="Sc6-uX-v1S" id="Cob-AC-UWK"/>
                         <outlet property="coinLabel" destination="vnf-Cy-RMZ" id="dg2-wm-oxO"/>
                         <outlet property="generateLabel" destination="Axr-7v-xDS" id="nMo-yL-pBN"/>
                         <outlet property="gpView" destination="sY8-X0-2ce" id="WVo-pW-X4F"/>
@@ -1442,14 +1444,14 @@
                         <outlet property="levelProgressBar" destination="HxD-aC-mEg" id="wjc-Lq-2VN"/>
                         <outlet property="progressTimer" destination="KBZ-JH-dOE" id="AXk-38-p0O"/>
                         <outlet property="scoreKeep" destination="bj2-fG-YPc" id="oEV-hS-EMZ"/>
-                        <outlet property="smallNumberTopFour" destination="LKA-EK-Joa" id="NtP-5g-RuT"/>
-                        <outlet property="smallNumberTopOne" destination="LKI-d5-9zj" id="9d1-dZ-ocw"/>
-                        <outlet property="smallNumberTopThree" destination="THT-3s-PBa" id="RZb-z8-uCr"/>
-                        <outlet property="smallNumberTopTwo" destination="ReY-La-8bX" id="qmb-JZ-KVc"/>
-                        <outlet property="topButtonNumberFour" destination="2Tl-7C-P29" id="Hhc-Lt-5Zq"/>
-                        <outlet property="topButtonNumberOne" destination="C0r-tr-Zdj" id="rdn-Nv-5NB"/>
-                        <outlet property="topButtonNumberThree" destination="qNx-LJ-N6e" id="fRV-WO-1V4"/>
-                        <outlet property="topButtonNumberTwo" destination="Fc6-YM-Fg7" id="gIE-IG-uy3"/>
+                        <outlet property="snt1" destination="LKI-d5-9zj" id="8tc-ck-uAS"/>
+                        <outlet property="snt2" destination="ReY-La-8bX" id="o6e-Ss-Fh3"/>
+                        <outlet property="snt3" destination="THT-3s-PBa" id="z2N-We-d9h"/>
+                        <outlet property="snt4" destination="LKA-EK-Joa" id="Ijz-li-hdu"/>
+                        <outlet property="tbn1" destination="C0r-tr-Zdj" id="fdU-mv-Xpm"/>
+                        <outlet property="tbn2" destination="Fc6-YM-Fg7" id="uZV-s8-pVv"/>
+                        <outlet property="tbn3" destination="qNx-LJ-N6e" id="RVC-kd-XhM"/>
+                        <outlet property="tbn4" destination="2Tl-7C-P29" id="i0q-To-fSj"/>
                         <outlet property="tryAgainLabel" destination="DLU-wt-WE7" id="sZH-ot-2vH"/>
                     </connections>
                 </viewController>
