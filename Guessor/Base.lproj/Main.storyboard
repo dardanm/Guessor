@@ -1298,7 +1298,7 @@
                                     <action selector="tryAgain:" destination="i14-yE-1Lw" eventType="touchUpInside" id="ynH-Ev-fPw"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-X0-2ce" userLabel="Game Pause Menu">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sY8-X0-2ce" userLabel="Game Pause Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1365,7 +1365,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.79760273972602735" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-e8-dXM" userLabel="Level Complete Menu">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8z-e8-dXM" userLabel="Level Complete Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1426,8 +1426,6 @@
                                 <exclude reference="HxD-aC-mEg"/>
                                 <exclude reference="Axr-7v-xDS"/>
                                 <exclude reference="DLU-wt-WE7"/>
-                                <exclude reference="sY8-X0-2ce"/>
-                                <exclude reference="F8z-e8-dXM"/>
                             </mask>
                         </variation>
                     </view>

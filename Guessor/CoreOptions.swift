@@ -19,8 +19,9 @@ extension BaseLevel {
         lives = 3
         tempCountTracker = count
         scoreKeep.text = "\(points) / \(pointsTarget)"
-        if buttonIndex != topButtons.count+1{ generateAtLeastOneMatchBottomButtons()
-        }
+//        if buttonIndex != topButtons.count+1{ generateAtLeastOneMatchBottomButtons()
+//        }
+        generateAtLeastOneMatchBottomButtons()
         
         if count > 0 {count -= 1}
         if count > 9 {count = 9}

@@ -18,21 +18,21 @@ extension BaseLevel {
         
         switch level {
             
-        case 0:
-            pointsTarget = 150
+        case 1:
+            pointsTarget = 100
             
             colorPickArray = ["#857AFF","#F7B220","#F77C2C","#A7CFFF"]
             iconPickArray = ["cane.png","candy.png","candy.png"]
             
-            topButtons = [tbn1,tbn2,tbn3]
-            topSmallNumbers = [snt1,snt2,snt3]
-            setSmallNumbers(arr: [1,2,3])
+            topButtons = [tbn1,tbn2,tbn3,tbn4]
+            topSmallNumbers = [snt1,snt2,snt3,snt4]
+            setSmallNumbers(arr: [1,2,3,4])
             print(topSmallNumbers.count)
         
-        case 1:
+        case 0:
             pointsTarget = 100
 
-            aer = [1,2,3,4]
+            aer = [1,2,3,3]
             aer.shuffle()
 
             topButtons = [topButtons[aer[0]-1],topButtons[aer[1]-1],topButtons[aer[2]-1],topButtons[aer[3]-1]]
