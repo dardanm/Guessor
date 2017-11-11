@@ -46,6 +46,7 @@ extension BaseLevel {
     }
     
     func levelFinishedMenuOn(){
+        pressCorrectFour()
         levelFinishedMenu.isHidden = false
     }
     func levelFinishedMenuOff(){
