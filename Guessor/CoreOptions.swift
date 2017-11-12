@@ -21,6 +21,7 @@ extension BaseLevel {
         scoreKeep.text = "\(points) / \(pointsTarget)"
 //        if buttonIndex != topButtons.count+1{ generateAtLeastOneMatchBottomButtons()
 //        }
+        //test
         generateAtLeastOneMatchBottomButtons()
         
         if count > 0 {count -= 1}
