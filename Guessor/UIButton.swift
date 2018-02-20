@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import QuartzCore
-import UIColor_Hex_Swift
+import SwiftColor
 
 extension UIButton {
     

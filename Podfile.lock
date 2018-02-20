@@ -1,12 +1,12 @@
 PODS:
-  - UIColor_Hex_Swift (3.0.2)
+  - SwiftColor (0.4.0)
 
 DEPENDENCIES:
-  - UIColor_Hex_Swift (~> 3.0.2)
+  - SwiftColor
 
 SPEC CHECKSUMS:
-  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
+  SwiftColor: c240d8cb2e1a29d731ae8deca8739eac6b9c56bd
 
-PODFILE CHECKSUM: 164d82ccfd8f79e6d66a84d100562ce9296c5724
+PODFILE CHECKSUM: 82f87389921ad14ff5338d0ca44b4dcaac00ef6a
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0

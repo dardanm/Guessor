@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import QuartzCore
-import UIColor_Hex_Swift
+import SwiftColor
 import SpriteKit
 
 extension BaseLevel {
@@ -84,7 +84,7 @@ extension BaseLevel {
         
     }
     
-    func buttonRelease(sender: UIButton!) {
+    @objc func buttonRelease(sender: UIButton!) {
         if buttonIndex >= topButtons.count{
             if correctInARow == topButtons.count{
                 correctInARow = 0
@@ -101,7 +101,7 @@ extension BaseLevel {
         scoreKeep.text = "\(points) / \(pointsTarget)"
     }
     
-    func checkIfCorrect(sender: UIButton!) {
+    @objc func checkIfCorrect(sender: UIButton!) {
         if buttonIndex == buttonIndex {
             // CORRECT BUTTON PRESSED
             if (((sender.backgroundColor == topButtons[buttonIndex].backgroundColor) &&

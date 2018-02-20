@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import QuartzCore
-import UIColor_Hex_Swift
+import SwiftColor
 import SpriteKit
 
 extension BaseLevel {
@@ -26,13 +26,9 @@ extension BaseLevel {
         
         generateTopAndBottomButtons()
 
-        
         worldOneLevels()
-
-        
         
         setupScene()
-        
         
         startTimer()
         
